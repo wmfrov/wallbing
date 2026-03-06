@@ -31,8 +31,8 @@ jobs:
           fetch-depth: 0
         continue-on-error: true
 
-      - name: Ensure site/outputs exists
-        run: mkdir -p site/outputs
+      - name: Ensure site/images exists
+        run: mkdir -p site/images
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -44,7 +44,7 @@ jobs:
 
       - name: Download Bing image
         env:
-          BING_OUTPUT_DIR: site/outputs
+          BING_OUTPUT_DIR: site/images
           BING_REQUEST_TIMEOUT: "30"
         run: python app.py
 
@@ -71,10 +71,10 @@ jobs:
             <p class="meta">Collected by GitHub Actions. New image every 6 hours.</p>
             <div class="grid">
           INDEX
-          for f in site/outputs/*.png; do
+          for f in site/images/*.png; do
             [ -f "$f" ] || continue
             name=$(basename "$f")
-            echo "      <a href=\"outputs/$name\"><img src=\"outputs/$name\" alt=\"$name\"></a>" >> site/index.html
+            echo "      <a href=\"images/$name\"><img src=\"images/$name\" alt=\"$name\"></a>" >> site/index.html
           done
           echo '    </div></body></html>' >> site/index.html
 
