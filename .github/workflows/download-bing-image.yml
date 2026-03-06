@@ -22,6 +22,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout gh-pages (existing images)
         uses: actions/checkout@v4
@@ -104,9 +106,25 @@ jobs:
           echo "Contents of deploy/images:"
           ls -la deploy/images/
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./deploy
-          force_orphan: true
+      - name: Deploy to GitHub Pages (explicit git commit + push)
+        run: |
+          # Use the same token that can push; checkout gh-pages in this repo
+          git fetch origin gh-pages 2>/dev/null || true
+          if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
+            git checkout gh-pages
+            git rm -rf . 2>/dev/null || true
+          else
+            git checkout --orphan gh-pages
+            git rm -rf . 2>/dev/null || true
+          fi
+          # Copy built site to repo root (no .gitignore in play on gh-pages)
+          cp deploy/index.html .
+          cp -r deploy/images .
+          git add .
+          echo "--- Files that will be committed ---"
+          git status
+          git diff --cached --stat
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update gallery: Bing image of the day"
+          git push origin gh-pages
