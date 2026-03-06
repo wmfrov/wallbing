@@ -101,7 +101,8 @@ jobs:
 
       - name: Deploy to GitHub Pages (explicit git commit + push)
         run: |
-          # Use the same token that can push; checkout gh-pages in this repo
+          # Stash deploy dir so checkout doesn't overwrite it
+          mv deploy /tmp/deploy_to_publish
           git fetch origin gh-pages 2>/dev/null || true
           if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
             git checkout gh-pages
@@ -110,9 +111,8 @@ jobs:
             git checkout --orphan gh-pages
             git rm -rf . 2>/dev/null || true
           fi
-          # Copy built site to repo root (no .gitignore in play on gh-pages)
-          cp deploy/index.html .
-          cp -r deploy/images .
+          cp /tmp/deploy_to_publish/index.html .
+          cp -r /tmp/deploy_to_publish/images .
           git add .
           echo "--- Files that will be committed ---"
           git status
