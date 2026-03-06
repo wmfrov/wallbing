@@ -31,8 +31,8 @@ jobs:
           fetch-depth: 0
         continue-on-error: true
 
-      - name: Ensure site/images exists
-        run: mkdir -p site/images
+      - name: Ensure site directories exist
+        run: mkdir -p site/images site/outputs
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -71,7 +71,7 @@ jobs:
             <p class="meta">Collected by GitHub Actions. New image every 6 hours.</p>
             <div class="grid">
           INDEX
-          for f in site/images/*.png; do
+          for f in site/images/*.png site/outputs/*.png; do
             [ -f "$f" ] || continue
             name=$(basename "$f")
             echo "      <a href=\"images/$name\"><img src=\"images/$name\" alt=\"$name\"></a>" >> site/index.html
@@ -80,11 +80,13 @@ jobs:
 
       - name: Verify at least one image was downloaded
         run: |
-          count_site=$(find site/images -name '*.png' 2>/dev/null | wc -l)
-          count_outputs=$(find outputs -name '*.png' 2>/dev/null | wc -l)
-          total=$((count_site + count_outputs))
-          echo "Found $count_site image(s) in site/images/, $count_outputs in outputs/"
+          count_images=$(find site/images -name '*.png' 2>/dev/null | wc -l)
+          count_outputs_root=$(find outputs -name '*.png' 2>/dev/null | wc -l)
+          count_site_outputs=$(find site/outputs -name '*.png' 2>/dev/null | wc -l)
+          total=$((count_images + count_outputs_root + count_site_outputs))
+          echo "Found: site/images=$count_images, outputs=$count_outputs_root, site/outputs=$count_site_outputs"
           ls -la site/images/ 2>/dev/null || true
+          ls -la site/outputs/ 2>/dev/null || true
           ls -la outputs/ 2>/dev/null || true
           if [ "$total" -eq 0 ]; then
             echo "::error::No image was downloaded. Check the Download Bing image step."
@@ -95,8 +97,9 @@ jobs:
         run: |
           mkdir -p deploy/images
           cp site/index.html deploy/
-          # App may write to site/images (when BING_OUTPUT_DIR is set) or outputs/ (default)
+          # App may write to site/images, site/outputs, or outputs/ depending on BING_OUTPUT_DIR
           [ -d site/images ] && cp -n site/images/*.png deploy/images/ 2>/dev/null || true
+          [ -d site/outputs ] && cp -n site/outputs/*.png deploy/images/ 2>/dev/null || true
           [ -d outputs ] && cp -n outputs/*.png deploy/images/ 2>/dev/null || true
           echo "Contents of deploy/images:"
           ls -la deploy/images/
