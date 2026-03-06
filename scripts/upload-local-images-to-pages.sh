@@ -41,8 +41,15 @@ if ! git clone --single-branch --branch gh-pages --depth 1 "$REPO_URL" "$TMP" 2>
 fi
 
 echo "Copying images..."
-mkdir -p "$TMP/images"
+mkdir -p "$TMP/images" "$TMP/thumbs"
 cp -n "$LOCAL_IMAGES"/*.png "$TMP/images/" 2>/dev/null || true
+
+echo "Generating thumbnails (400px max)..."
+for f in "$TMP"/images/*.png; do
+  [[ -f "$f" ]] || continue
+  base=$(basename "$f" .png)
+  sips -Z 400 -s format jpeg "$f" --out "$TMP/thumbs/${base}.jpg" 2>/dev/null || true
+done
 
 echo "Generating gallery index..."
 cp "$REPO_ROOT/scripts/gallery-index-head.html" "$TMP/index.html"
@@ -50,7 +57,7 @@ for f in "$TMP"/images/*.png; do
   [[ -f "$f" ]] || continue
   name=$(basename "$f")
   base="${name%.*}"
-  echo "    <div class=\"card\"><a href=\"images/$name\" target=\"_blank\" title=\"$base\"><img src=\"images/$name\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> "$TMP/index.html"
+  echo "    <div class=\"card\"><a href=\"images/$name\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/$base.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> "$TMP/index.html"
 done
 cat "$REPO_ROOT/scripts/gallery-index-tail.html" >> "$TMP/index.html"
 
