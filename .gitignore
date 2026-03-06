@@ -17,3 +17,6 @@ outputs/
 # Env files if you add them later
 .env
 .env.local
+
+# Local maintainer notes (not for public repo)
+MAINTAINER.md

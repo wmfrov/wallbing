@@ -1,0 +1,16 @@
+  </div>
+  <div id="lightbox" onclick="this.classList.remove('show')"><img src="" alt=""></div>
+  <script>
+    document.querySelectorAll('.card a').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        var href = this.getAttribute('href');
+        if (href) {
+          document.getElementById('lightbox').querySelector('img').src = href;
+          document.getElementById('lightbox').classList.add('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

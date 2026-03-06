@@ -45,33 +45,14 @@ jobs:
 
       - name: Generate index.html
         run: |
-          cat > site/index.html << 'INDEX'
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Bing wallpapers</title>
-            <style>
-              body { font-family: system-ui, sans-serif; max-width: 1200px; margin: 0 auto; padding: 1rem; }
-              h1 { margin-bottom: 0.5rem; }
-              .meta { color: #666; margin-bottom: 1.5rem; }
-              .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
-              .grid a { display: block; }
-              .grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
-            </style>
-          </head>
-          <body>
-            <h1>Bing image of the day</h1>
-            <p class="meta">Collected by GitHub Actions. New image every 6 hours.</p>
-            <div class="grid">
-          INDEX
+          cp scripts/gallery-index-head.html site/index.html
           for f in site/images/*.png site/outputs/*.png; do
             [ -f "$f" ] || continue
             name=$(basename "$f")
-            echo "      <a href=\"images/$name\"><img src=\"images/$name\" alt=\"$name\"></a>" >> site/index.html
+            base="${name%.*}"
+            echo "    <div class=\"card\"><a href=\"images/$name\" target=\"_blank\" title=\"$base\"><img src=\"images/$name\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> site/index.html
           done
-          echo '    </div></body></html>' >> site/index.html
+          cat scripts/gallery-index-tail.html >> site/index.html
 
       - name: Verify at least one image was downloaded
         run: |
@@ -101,23 +82,30 @@ jobs:
 
       - name: Deploy to GitHub Pages (explicit git commit + push)
         run: |
-          # Stash deploy dir so checkout doesn't overwrite it
+          cp scripts/gallery-index-head.html scripts/gallery-index-tail.html /tmp/
           mv deploy /tmp/deploy_to_publish
           git fetch origin gh-pages 2>/dev/null || true
           if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
             git checkout gh-pages
-            git rm -rf . 2>/dev/null || true
           else
             git checkout --orphan gh-pages
             git rm -rf . 2>/dev/null || true
           fi
-          cp /tmp/deploy_to_publish/index.html .
-          cp -r /tmp/deploy_to_publish/images .
+          mkdir -p images
+          cp -n /tmp/deploy_to_publish/images/*.png images/ 2>/dev/null || true
+          cp /tmp/gallery-index-head.html index.html
+          for f in images/*.png; do
+            [ -f "$f" ] || continue
+            name=$(basename "$f")
+            base="${name%.*}"
+            echo "    <div class=\"card\"><a href=\"images/$name\" target=\"_blank\" title=\"$base\"><img src=\"images/$name\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> index.html
+          done
+          cat /tmp/gallery-index-tail.html >> index.html
           git add .
           echo "--- Files that will be committed ---"
           git status
           git diff --cached --stat
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update gallery: Bing image of the day"
+          git commit -m "Update gallery: Bing image of the day" || true
           git push origin gh-pages
