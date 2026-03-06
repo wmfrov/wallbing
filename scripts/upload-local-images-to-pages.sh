@@ -51,14 +51,14 @@ for f in "$TMP"/images/*.png; do
   sips -Z 400 -s format jpeg "$f" --out "$TMP/thumbs/${base}.jpg" 2>/dev/null || true
 done
 
-echo "Generating gallery index..."
+echo "Generating gallery index (newest first by file date)..."
 cp "$REPO_ROOT/scripts/gallery-index-head.html" "$TMP/index.html"
-for f in "$TMP"/images/*.png; do
+while IFS= read -r f; do
   [[ -f "$f" ]] || continue
   name=$(basename "$f")
   base="${name%.*}"
   echo "    <div class=\"card\"><a href=\"images/$name\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/$base.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> "$TMP/index.html"
-done
+done < <(ls -t "$TMP"/images/*.png 2>/dev/null)
 cat "$REPO_ROOT/scripts/gallery-index-tail.html" >> "$TMP/index.html"
 
 cd "$TMP"

@@ -99,7 +99,7 @@ jobs:
             convert "$f" -resize 400x400\> -quality 82 "thumbs/${base}.jpg"
           done
           cp /tmp/gallery-index-head.html index.html
-          for f in images/*.png; do
+          for f in $(ls -t images/*.png 2>/dev/null); do
             [ -f "$f" ] || continue
             name=$(basename "$f")
             base="${name%.*}"
