@@ -13,7 +13,7 @@ jobs:
   download-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write   # needed to push to gh-pages
       pages: write
       id-token: write
 
