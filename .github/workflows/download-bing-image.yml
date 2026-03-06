@@ -82,6 +82,7 @@ jobs:
       - name: Deploy to GitHub Pages (explicit git commit + push)
         run: |
           cp scripts/gallery-index-head.html scripts/gallery-index-tail.html /tmp/
+          rm -rf site
           mv deploy /tmp/deploy_to_publish
           git fetch origin gh-pages 2>/dev/null || true
           if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
