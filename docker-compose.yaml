@@ -1,0 +1,44 @@
+version: '3.8'
+
+# Two ways to run:
+
+# --- Option A: Run-once + host cron (recommended, minimal resources) ---
+# The container runs once and exits. Schedule it with cron on the host:
+#
+#   0 */6 * * * cd /Users/will.ziegler/projects/newbingapp && docker compose run --rm myapp
+#
+# No long-running container; no resource use between runs.
+
+# --- Option B: Long-running container with internal 6h loop ---
+# Use: docker compose --profile scheduled up -d
+# Container sleeps between runs; if there's no network, it logs and retries next interval (no crash).
+
+services:
+  myapp:
+    build: .
+    image: bing-image-app
+    container_name: bing_wallpaper_downloader
+    environment:
+      BING_OUTPUT_DIR: /app/outputs
+      BING_REQUEST_TIMEOUT: "30"
+    volumes:
+      - /Users/will.ziegler/Pictures/bingimages:/app/outputs:rw
+    # Default: run once and exit (for cron)
+    command: ["python", "app.py"]
+    restart: "no"
+
+  # Run with: docker compose --profile scheduled up -d bing_scheduled
+  bing_scheduled:
+    build: .
+    image: bing-image-app
+    container_name: bing_wallpaper_scheduled
+    profiles:
+      - scheduled
+    environment:
+      BING_OUTPUT_DIR: /app/outputs
+      BING_INTERVAL_SECONDS: "21600"
+      BING_REQUEST_TIMEOUT: "30"
+    volumes:
+      - /Users/will.ziegler/Pictures/bingimages:/app/outputs:rw
+    command: ["/app/entrypoint.sh"]
+    restart: unless-stopped
