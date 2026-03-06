@@ -24,14 +24,7 @@ jobs:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Checkout gh-pages (existing images)
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: site
-          fetch-depth: 0
-        continue-on-error: true
+          submodules: false
 
       - name: Ensure site directories exist
         run: mkdir -p site/images site/outputs
