@@ -43,10 +43,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Download Bing image
-        env:
-          BING_OUTPUT_DIR: site/images
-          BING_REQUEST_TIMEOUT: "30"
-        run: python app.py
+        run: |
+          export BING_OUTPUT_DIR=site/images
+          export BING_REQUEST_TIMEOUT=30
+          python app.py
 
       - name: Generate index.html
         run: |
@@ -80,19 +80,26 @@ jobs:
 
       - name: Verify at least one image was downloaded
         run: |
-          count=$(find site/images -name '*.png' 2>/dev/null | wc -l)
-          echo "Found $count image(s) in site/images/"
-          ls -la site/images/ || true
-          if [ "$count" -eq 0 ]; then
-            echo "::error::No image was downloaded. Check the Download Bing image step output."
+          count_site=$(find site/images -name '*.png' 2>/dev/null | wc -l)
+          count_outputs=$(find outputs -name '*.png' 2>/dev/null | wc -l)
+          total=$((count_site + count_outputs))
+          echo "Found $count_site image(s) in site/images/, $count_outputs in outputs/"
+          ls -la site/images/ 2>/dev/null || true
+          ls -la outputs/ 2>/dev/null || true
+          if [ "$total" -eq 0 ]; then
+            echo "::error::No image was downloaded. Check the Download Bing image step."
             exit 1
           fi
 
       - name: Prepare deploy directory (no .gitignore)
         run: |
-          mkdir -p deploy
+          mkdir -p deploy/images
           cp site/index.html deploy/
-          cp -r site/images deploy/
+          # App may write to site/images (when BING_OUTPUT_DIR is set) or outputs/ (default)
+          [ -d site/images ] && cp -n site/images/*.png deploy/images/ 2>/dev/null || true
+          [ -d outputs ] && cp -n outputs/*.png deploy/images/ 2>/dev/null || true
+          echo "Contents of deploy/images:"
+          ls -la deploy/images/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
