@@ -78,9 +78,25 @@ jobs:
           done
           echo '    </div></body></html>' >> site/index.html
 
+      - name: Verify at least one image was downloaded
+        run: |
+          count=$(find site/images -name '*.png' 2>/dev/null | wc -l)
+          echo "Found $count image(s) in site/images/"
+          ls -la site/images/ || true
+          if [ "$count" -eq 0 ]; then
+            echo "::error::No image was downloaded. Check the Download Bing image step output."
+            exit 1
+          fi
+
+      - name: Prepare deploy directory (no .gitignore)
+        run: |
+          mkdir -p deploy
+          cp site/index.html deploy/
+          cp -r site/images deploy/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          publish_dir: ./deploy
           force_orphan: true
