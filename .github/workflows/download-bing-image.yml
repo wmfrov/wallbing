@@ -52,7 +52,7 @@ jobs:
         run: |
           mkdir -p deploy/images deploy/thumbs
           sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
-          for f in site/images/*.png site/outputs/*.png 2>/dev/null; do
+          for f in site/images/*.png site/outputs/*.png; do
             [ -f "$f" ] || continue
             name=$(basename "$f")
             cp "$f" "deploy/images/$name"

@@ -112,5 +112,6 @@ if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
 else
   echo "Aborted. Changes are in the working tree (gh-pages)."
 fi
-[[ -n "$STASHED" ]] && git stash pop
+# Return to main before popping stash so stash (main's state) applies to main, not gh-pages
 git checkout main 2>/dev/null || git checkout master 2>/dev/null || true
+[[ -n "$STASHED" ]] && git stash pop
