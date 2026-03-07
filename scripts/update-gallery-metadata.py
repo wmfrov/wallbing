@@ -21,10 +21,19 @@ METADATA_FILENAME = "metadata.json"
 THUMBS_DIR = "thumbs"
 
 
+def clean_slug(slug: str) -> str:
+    """Strip legacy path prefix and file extension from metadata keys."""
+    if "/" in slug:
+        slug = slug.rsplit("/", 1)[-1]
+    if "." in slug:
+        slug = slug.rsplit(".", 1)[0]
+    return slug
+
+
 def slug_to_title(slug: str) -> str:
     if not slug:
         return slug
-    base = slug.rsplit(".", 1)[0] if "." in slug else slug
+    base = clean_slug(slug)
     base = re.sub(r"_EN-US[0-9]+", "", base)
     base = re.sub(r"_UHD$", "", base)
     spaced = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", base)
@@ -33,12 +42,12 @@ def slug_to_title(slug: str) -> str:
 
 
 def make_bing_url(slug: str) -> str:
-    base = slug.rsplit(".", 1)[0] if "." in slug else slug
+    base = clean_slug(slug)
     return f"https://www.bing.com/th?id=OHR.{base}.jpg"
 
 
 def thumb_name(slug: str) -> str:
-    base = slug.rsplit(".", 1)[0] if "." in slug else slug
+    base = clean_slug(slug)
     if base.endswith("_UHD"):
         base = base[:-4]
     return base + ".jpg"
@@ -54,9 +63,15 @@ def main() -> int:
 
     if os.path.isfile(metadata_path):
         with open(metadata_path, "r") as f:
-            meta = json.load(f)
+            raw = json.load(f)
     else:
-        meta = {}
+        raw = {}
+
+    meta = {}
+    for key, entry in raw.items():
+        cleaned = clean_slug(key)
+        if cleaned not in meta or entry.get("date", "") > meta[cleaned].get("date", ""):
+            meta[cleaned] = entry
 
     if len(sys.argv) >= 4:
         slug = sys.argv[2]
@@ -69,8 +84,7 @@ def main() -> int:
         }
 
     for slug in meta:
-        if "bing_url" not in meta[slug]:
-            meta[slug]["bing_url"] = make_bing_url(slug)
+        meta[slug]["bing_url"] = make_bing_url(slug)
         if "title" not in meta[slug]:
             meta[slug]["title"] = slug_to_title(slug)
 

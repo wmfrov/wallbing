@@ -123,6 +123,9 @@ jobs:
           while IFS=$'\t' read -r slug date_str title_str bing_url thumb; do
             [ -z "$slug" ] && continue
             title_str="${title_str:-$slug}"
+            if [ ! -f "$thumb" ]; then
+              thumb="${bing_url}"
+            fi
             echo "    <div class=\"card\"><a href=\"$bing_url\" title=\"$title_str\"><img src=\"$thumb\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> index.html
           done < /tmp/sorted_images.txt
           cat /tmp/gallery-index-tail.html >> index.html
