@@ -45,6 +45,12 @@ The repo includes a workflow that:
 
 Bing updates the image **once per day**; the workflow runs every 6 hours so it picks up the new image soon after it’s available.
 
+## Full archive (optional)
+
+To host **all** photos (beyond the ~300 MB recent gallery), use the **archive**: each new image is uploaded to an S3-compatible bucket (e.g. Cloudflare R2, Backblaze B2), and the site gets a "View full archive" page that lists them.
+
+**Setup:** In the repo **Settings → Secrets and variables → Actions**, add: `ARCHIVE_BUCKET`, `ARCHIVE_PUBLIC_URL_PREFIX`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and optionally `AWS_ENDPOINT_URL` (for R2). The workflow will then upload each new image and update `archive/archive.json` and `archive/index.html`. The main gallery links to **View full archive**.
+
 ## Seeding the gallery from local images
 
 To replace or seed the gh-pages gallery with a sample of your own local wallpapers (e.g. from `~/Pictures/bingimages`), up to ~300 MB, newest-first by file date:

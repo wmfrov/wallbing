@@ -55,6 +55,23 @@ def find_file_name(image_url: str):
     return output[4:] + '.png'
 
 
+def find_og_title(html: str):
+    '''
+    Extract og:title from the page HTML for use as the image title.
+    Returns None if not found. May strip a leading "Bing – " for cleaner display.
+    '''
+    chunk = generic_snip(html, 'property="og:title"', '/>')
+    if not chunk:
+        return None
+    chunk = generic_snip(chunk, 'content="', '"')
+    if not chunk:
+        return None
+    # Optional: strip Bing prefix for a shorter gallery title
+    if chunk.startswith("Bing – ") or chunk.startswith("Bing - "):
+        chunk = chunk[7:].strip()
+    return chunk.strip() if chunk else None
+
+
 def task():
     '''
     Fetch Bing homepage, find image URL, download image, save to OUTPUT_DIR.
@@ -104,6 +121,16 @@ def task():
     except OSError as e:
         print(f"Error: failed to write file: {e}", file=sys.stderr)
         return False
+
+    # Write optional title sidecar for gallery metadata (e.g. images/Photo.png.title)
+    title = find_og_title(r.text)
+    if title:
+        title_path = os.path.join(OUTPUT_DIR, file_name + ".title")
+        try:
+            with open(title_path, "w") as f:
+                f.write(title)
+        except OSError:
+            pass
 
     print("Saved:", file_path)
     return True

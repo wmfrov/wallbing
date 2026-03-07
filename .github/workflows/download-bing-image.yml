@@ -58,7 +58,11 @@ jobs:
             cp "$f" "deploy/images/$name"
             convert "$f" -resize 400x400\> -quality 82 "deploy/thumbs/${name}.jpg" || true
           done
-          cp scripts/gallery-index-head.html scripts/gallery-index-tail.html scripts/update-gallery-metadata.py /tmp/
+          for f in site/images/*.title site/outputs/*.title; do
+            [ -f "$f" ] || continue
+            cp "$f" "deploy/images/$(basename "$f")"
+          done
+          cp scripts/gallery-index-head.html scripts/gallery-index-tail.html scripts/update-gallery-metadata.py scripts/build-archive-page.py /tmp/
           echo "Thumbs created: $(ls deploy/thumbs 2>/dev/null | wc -l)"
 
       - name: Deploy to GitHub Pages
@@ -74,13 +78,18 @@ jobs:
           fi
           mkdir -p images thumbs
           find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.png' -exec cp -n {} images/ \;
+          find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.title' -exec cp -n {} images/ \;
           find /tmp/deploy_to_publish/thumbs -maxdepth 1 -type f -exec cp -n {} thumbs/ \;
           NEW_FILE=$(ls /tmp/deploy_to_publish/images/*.png 2>/dev/null | head -1)
           if [ -n "$NEW_FILE" ] && [ -f "images/$(basename "$NEW_FILE")" ]; then
             NAME=$(basename "$NEW_FILE")
             BYTES=$(stat -c%s "images/$NAME" 2>/dev/null || echo 0)
             DATE=$(date -u +%Y-%m-%d)
-            python3 /tmp/update-gallery-metadata.py . "images/$NAME" "$DATE" "$BYTES" > /tmp/sorted_images.txt
+            TITLE_ARG=""
+            if [ -f "images/${NAME}.title" ]; then
+              TITLE_ARG=$(cat "images/${NAME}.title")
+            fi
+            python3 /tmp/update-gallery-metadata.py . "images/$NAME" "$DATE" "$BYTES" "$TITLE_ARG" > /tmp/sorted_images.txt
           else
             python3 /tmp/update-gallery-metadata.py . > /tmp/sorted_images.txt
           fi
@@ -92,14 +101,42 @@ jobs:
             convert "$f" -resize 400x400\> -quality 82 "$thumb" || true
           done
           cp /tmp/gallery-index-head.html index.html
-          while IFS= read -r key; do
+          while IFS=$'\t' read -r key date_str title_str; do
             [ -z "$key" ] || [ ! -f "$key" ] && continue
             name=$(basename "$key")
             base="${name%.*}"
-            echo "    <div class=\"card\"><a href=\"$key\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/${name}.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> index.html
+            title_str="${title_str:-$base}"
+            echo "    <div class=\"card\"><a href=\"$key\" target=\"_blank\" title=\"$title_str\"><img src=\"thumbs/${name}.jpg\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> index.html
           done < /tmp/sorted_images.txt
           cat /tmp/gallery-index-tail.html >> index.html
+          if [ -n "${{ secrets.ARCHIVE_BUCKET }}" ] && [ -n "${{ secrets.ARCHIVE_PUBLIC_URL_PREFIX }}" ]; then
+            NEW_FILE=$(ls /tmp/deploy_to_publish/images/*.png 2>/dev/null | head -1)
+            if [ -n "$NEW_FILE" ]; then
+              NAME=$(basename "$NEW_FILE")
+              DATE=$(date -u +%Y-%m-%d)
+              TITLE=$(grep -F -m1 "images/$NAME" /tmp/sorted_images.txt | cut -f3-)
+              TITLE="${TITLE:-$NAME}"
+              sudo apt-get install -y -qq awscli
+              export AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}" AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+              ENDPOINT_ARG=""
+              [ -n "${{ secrets.AWS_ENDPOINT_URL }}" ] && ENDPOINT_ARG="--endpoint-url ${{ secrets.AWS_ENDPOINT_URL }}"
+              aws s3 cp "images/$NAME" "s3://${{ secrets.ARCHIVE_BUCKET }}/images/$NAME" $ENDPOINT_ARG
+              PREFIX="${{ secrets.ARCHIVE_PUBLIC_URL_PREFIX }}"
+              URL="${PREFIX%/}/images/$NAME"
+              export URL DATE TITLE NAME
+              python3 -c "
+import json, os
+p = 'archive/archive.json'
+entries = json.load(open(p)) if os.path.isfile(p) else []
+entries.append({'url': os.environ['URL'], 'date': os.environ['DATE'], 'title': os.environ['TITLE'], 'key': 'images/' + os.environ['NAME']})
+os.makedirs('archive', exist_ok=True)
+with open(p, 'w') as f: json.dump(entries, f, indent=2)
+"
+              python3 /tmp/build-archive-page.py .
+            fi
+          fi
           git add -f images/ thumbs/ index.html metadata.json
+          git add -f archive/ 2>/dev/null || true
           git add -u
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

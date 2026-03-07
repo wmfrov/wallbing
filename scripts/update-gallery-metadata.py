@@ -4,20 +4,33 @@ Update gallery metadata.json: add optional new image, prune to target size (FIFO
 output image paths newest-first for building index.html.
 
 Usage:
-  python update-gallery-metadata.py SITE_ROOT [IMAGE_PATH DATE BYTES]
-  e.g. python update-gallery-metadata.py . images/Photo.png 2025-03-06 3145728
+  python update-gallery-metadata.py SITE_ROOT [IMAGE_PATH DATE BYTES [TITLE]]
+  e.g. python update-gallery-metadata.py . images/Photo.png 2025-03-06 3145728 "Optional title"
 
-Reads/writes SITE_ROOT/metadata.json. Prunes by removing oldest-by-date until total <= TARGET_BYTES.
-Prints one image path per line (newest first) to stdout for index generation.
+Reads/writes SITE_ROOT/metadata.json. Optional title from 6th arg or images/<basename>.title file.
+Prints key, date, title (tab-separated) newest first.
 """
 import json
 import os
+import re
 import sys
 
 TARGET_BYTES = 300 * 1024 * 1024  # 300 MB
 METADATA_FILENAME = "metadata.json"
 IMAGES_DIR = "images"
 THUMBS_DIR = "thumbs"
+
+
+def slug_to_title(slug: str) -> str:
+    """Convert filename slug to human-readable title."""
+    if not slug:
+        return slug
+    base = slug.rsplit(".", 1)[0] if "." in slug else slug
+    base = re.sub(r"_EN-US[^_]*$", "", base)
+    base = re.sub(r"_UHD$", "", base)
+    spaced = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", base)
+    spaced = re.sub(r"(?<=[A-Z])(?=[A-Z][a-z])", " ", spaced)
+    return spaced.strip() if spaced else base
 
 
 def thumb_path(image_path: str) -> str:
@@ -51,7 +64,20 @@ def main() -> int:
         except ValueError:
             bytes_val = 0
         key = image_path if image_path.startswith("images/") else os.path.join("images", os.path.basename(image_path))
-        meta[key] = {"date": date_str, "bytes": bytes_val}
+        title = None
+        if len(sys.argv) >= 6 and sys.argv[5].strip():
+            title = sys.argv[5].strip()
+        if not title:
+            title_path = os.path.join(site_root, os.path.join(IMAGES_DIR, os.path.basename(key) + ".title"))
+            if os.path.isfile(title_path):
+                try:
+                    with open(title_path, "r") as f:
+                        title = f.read().strip()
+                except OSError:
+                    pass
+        if not title:
+            title = slug_to_title(os.path.basename(key))
+        meta[key] = {"date": date_str, "bytes": bytes_val, "title": title}
 
     # Prune: remove oldest by date until total <= TARGET_BYTES
     total = sum(e["bytes"] for e in meta.values())
@@ -74,12 +100,19 @@ def main() -> int:
         total -= entry["bytes"]
         del meta[key]
 
+    # Ensure all entries have title for output
+    for key in meta:
+        if "title" not in meta[key]:
+            meta[key]["title"] = slug_to_title(os.path.basename(key))
+
     with open(metadata_path, "w") as f:
         json.dump(meta, f, indent=2)
 
-    # Output image paths newest first (for index.html)
+    # Output key, date, title (tab-separated) newest first
     for key in sorted(meta.keys(), key=lambda k: (meta[k]["date"], k), reverse=True):
-        print(key)
+        date_str = meta[key]["date"]
+        title_str = meta[key].get("title") or slug_to_title(os.path.basename(key))
+        print(f"{key}\t{date_str}\t{title_str}")
     return 0
 
 
