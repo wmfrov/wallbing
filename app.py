@@ -43,7 +43,7 @@ def find_image_name(html: str):
     output = generic_snip(output, 'h', '_tmb')
     if not output:
         return None
-    return output + '_UHD.jpg'
+    return 'h' + output + '_UHD.jpg'
 
 
 def find_file_name(image_url: str):
