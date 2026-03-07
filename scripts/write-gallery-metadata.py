@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Read from stdin lines: bytes date_str name (space-separated).
-Write SITE_ROOT/metadata.json and print key, date, title (tab-separated, newest-first) to stdout.
+Read from stdin lines: bytes date_str status name (space-separated).
+  status = "hosted" or "archived"
+Write SITE_ROOT/metadata.json and print key\\tdate\\ttitle\\thref (newest-first) to stdout.
+Used by upload-local-images-to-pages.sh to build metadata from local selection.
 """
 import json
 import os
@@ -21,6 +23,12 @@ def slug_to_title(slug: str) -> str:
     return spaced.strip() if spaced else base
 
 
+def make_bing_url(filename: str) -> str:
+    """Reconstruct Bing CDN URL from local filename."""
+    base = filename.rsplit(".", 1)[0] if "." in filename else filename
+    return f"https://www.bing.com/th?id=OHR.{base}.jpg"
+
+
 def main():
     if len(sys.argv) < 2:
         sys.exit("Usage: write-gallery-metadata.py SITE_ROOT")
@@ -30,22 +38,36 @@ def main():
         line = line.strip()
         if not line:
             continue
-        parts = line.split(None, 2)
-        if len(parts) < 3:
+        parts = line.split(None, 3)
+        if len(parts) < 4:
             continue
         try:
             bytes_val = int(parts[0])
         except ValueError:
             continue
-        date_str, name = parts[1], parts[2]
+        date_str, status, name = parts[1], parts[2], parts[3]
         key = "images/" + name
+        is_archived = (status == "archived")
         title = slug_to_title(name)
-        meta[key] = {"date": date_str, "bytes": bytes_val, "title": title}
+        entry = {
+            "date": date_str,
+            "bytes": 0 if is_archived else bytes_val,
+            "title": title,
+            "archived": is_archived,
+        }
+        if is_archived:
+            entry["bing_url"] = make_bing_url(name)
+        meta[key] = entry
+
     meta_path = os.path.join(deploy, "metadata.json")
     with open(meta_path, "w") as f:
         json.dump(meta, f, indent=2)
-    for key in meta:
-        print(f"{key}\t{meta[key]['date']}\t{meta[key]['title']}")
+
+    for key in sorted(meta.keys(), key=lambda k: (meta[k]["date"], k), reverse=True):
+        entry = meta[key]
+        href = entry.get("bing_url", key) if entry.get("archived") else key
+        print(f"{key}\t{entry['date']}\t{entry['title']}\t{href}")
+
 
 if __name__ == "__main__":
     main()

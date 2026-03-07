@@ -72,7 +72,7 @@ def task():
     if not base:
         print("Error: could not derive filename from API response", file=sys.stderr)
         return False
-    file_name = base + "_UHD.png"
+    file_name = base + "_UHD.jpg"
 
     file_path = os.path.join(OUTPUT_DIR, file_name)
     print("Image URL:", image_url)
