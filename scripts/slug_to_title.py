@@ -13,7 +13,9 @@ def slug_to_title(slug: str) -> str:
     if not slug:
         return slug
     # Remove extension if present
-    base = slug.rsplit(".", 1)[0] if "." in slug else slug
+    base = slug
+    while "." in base and base.rsplit(".", 1)[1].lower() in ("jpg", "png", "jpeg"):
+        base = base.rsplit(".", 1)[0]
     # Strip locale and quality suffix: _EN-US1234567890_UHD or _UHD
     base = re.sub(r"_EN-US[0-9]+", "", base)
     base = re.sub(r"_UHD$", "", base)

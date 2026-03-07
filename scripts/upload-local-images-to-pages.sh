@@ -24,8 +24,10 @@ fi
 
 normalize_name() {
   local name="$1"
-  name="${name%.jpg}"
-  name="${name%.png}"
+  while [[ "$name" == *.jpg || "$name" == *.png ]]; do
+    name="${name%.jpg}"
+    name="${name%.png}"
+  done
   echo "${name}.jpg"
 }
 

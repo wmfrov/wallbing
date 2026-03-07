@@ -15,7 +15,9 @@ def slug_to_title(slug: str) -> str:
     """Convert filename slug to human-readable title."""
     if not slug:
         return slug
-    base = slug.rsplit(".", 1)[0] if "." in slug else slug
+    base = slug
+    while "." in base and base.rsplit(".", 1)[1].lower() in ("jpg", "png", "jpeg"):
+        base = base.rsplit(".", 1)[0]
     base = re.sub(r"_EN-US[0-9]+", "", base)
     base = re.sub(r"_UHD$", "", base)
     spaced = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", base)
@@ -25,7 +27,9 @@ def slug_to_title(slug: str) -> str:
 
 def make_bing_url(filename: str) -> str:
     """Reconstruct Bing CDN URL from local filename."""
-    base = filename.rsplit(".", 1)[0] if "." in filename else filename
+    base = filename
+    while base.endswith((".jpg", ".png")):
+        base = base.rsplit(".", 1)[0]
     return f"https://www.bing.com/th?id=OHR.{base}.jpg"
 
 
