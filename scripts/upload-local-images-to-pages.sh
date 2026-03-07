@@ -74,11 +74,12 @@ echo "$SELECTED" | python3 "$SCRIPT_DIR/write-gallery-metadata.py" "$DEPLOY" > "
 echo "Selected $(echo "$SELECTED" | grep -c . || true) images (~$(( total / 1024 / 1024 )) MB). Building index..."
 
 cp "$SCRIPT_DIR/gallery-index-head.html" "$DEPLOY/index.html"
-while IFS= read -r key; do
+while IFS=$'\t' read -r key date_str title_str; do
   [[ -z "$key" ]] || [[ ! -f "$DEPLOY/$key" ]] && continue
   name=$(basename "$key")
   base="${name%.*}"
-  echo "    <div class=\"card\"><a href=\"$key\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/${name}.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> "$DEPLOY/index.html"
+  title_str="${title_str:-$base}"
+  echo "    <div class=\"card\"><a href=\"$key\" target=\"_blank\" title=\"$title_str\"><img src=\"thumbs/${name}.jpg\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> "$DEPLOY/index.html"
 done < "$DEPLOY/sorted.txt"
 cat "$SCRIPT_DIR/gallery-index-tail.html" >> "$DEPLOY/index.html"
 

@@ -1,0 +1,14 @@
+[
+  {
+    "url": "u1",
+    "date": "d1",
+    "title": "t1",
+    "key": "k1"
+  },
+  {
+    "url": "https://example.com",
+    "date": "2025-03-06",
+    "title": "Test",
+    "key": "images/foo"
+  }
+]
