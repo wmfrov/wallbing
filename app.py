@@ -1,9 +1,10 @@
 '''
 Download the Bing image of the day and save to disk.
-Runs once and exits. Schedule via cron or a loop (see README).
+Uses HPImageArchive JSON API. Runs once and exits. Schedule via cron or a loop (see README).
 '''
 
 import os
+import re
 import sys
 import shutil
 from datetime import datetime, timezone
@@ -11,101 +12,72 @@ import requests
 
 OUTPUT_DIR = os.environ.get("BING_OUTPUT_DIR", "outputs")
 REQUEST_TIMEOUT = int(os.environ.get("BING_REQUEST_TIMEOUT", "30"))
-BING_URL = "https://www.bing.com"
+BING_BASE = "https://www.bing.com"
+HPIMAGEARCHIVE_URL = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
 
-
-def generic_snip(input_str, start_index_str, end_index_str):
-    '''
-    Trims a string between two substrings.
-    Returns the substring after start_index_str and before end_index_str.
-    '''
-    start_index = input_str.find(start_index_str)
-    if start_index == -1:
-        return ""
-    input_str = input_str[start_index + len(start_index_str):]
-    end_index = input_str.find(end_index_str)
-    if end_index == -1:
-        return input_str
-    return input_str[:end_index]
-
-
-def find_image_name(html: str):
-    '''
-    Extract the Bing image of the day URL from the page HTML.
-    Returns None if the expected pattern is not found.
-    '''
-    output = generic_snip(html, 'meta property="og:image"', '/>')
-    if not output:
-        return None
-    output = generic_snip(output, 'content', 'rf=')
-    if not output:
-        return None
-    output = generic_snip(output, 'h', '_tmb')
-    if not output:
-        return None
-    return 'h' + output + '_UHD.jpg'
-
-
-def find_file_name(image_url: str):
-    '''
-    Convert the image URL to a local filename.
-    '''
-    output = generic_snip(image_url, 'OHR.', '.jpg')
-    if not output:
-        return None
-    return output + '.png'
-
-
-def find_og_title(html: str):
-    '''
-    Extract og:title from the page HTML for use as the image title.
-    Returns None if not found. May strip a leading "Bing – " for cleaner display.
-    '''
-    chunk = generic_snip(html, 'property="og:title"', '/>')
-    if not chunk:
-        return None
-    chunk = generic_snip(chunk, 'content="', '"')
-    if not chunk:
-        return None
-    # Optional: strip Bing prefix for a shorter gallery title
-    if chunk.startswith("Bing – ") or chunk.startswith("Bing - "):
-        chunk = chunk[7:].strip()
-    return chunk.strip() if chunk else None
+# Match resolution suffix in API url path, e.g. _1920x1080.jpg or _1366x768.jpg
+RESOLUTION_PATTERN = re.compile(r"_\d+x\d+\.jpg", re.IGNORECASE)
 
 
 def task():
     '''
-    Fetch Bing homepage, find image URL, download image, save to OUTPUT_DIR.
-    Returns True on success, False on failure. Does not raise.
+    Fetch Bing image of the day from HPImageArchive API, download image, save to OUTPUT_DIR.
+    Writes .title and .date sidecars from API. Returns True on success, False on failure.
     '''
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # Fetch Bing page
     try:
-        r = requests.get(BING_URL, timeout=REQUEST_TIMEOUT)
+        r = requests.get(HPIMAGEARCHIVE_URL, timeout=REQUEST_TIMEOUT)
         r.raise_for_status()
     except requests.exceptions.Timeout:
-        print("Error: timed out requesting Bing HTML", file=sys.stderr)
+        print("Error: timed out requesting HPImageArchive API", file=sys.stderr)
         return False
     except requests.exceptions.RequestException as e:
-        print(f"Error: failed to fetch Bing page: {e}", file=sys.stderr)
+        print(f"Error: failed to fetch HPImageArchive API: {e}", file=sys.stderr)
         return False
 
-    image_url = find_image_name(r.text)
-    if not image_url:
-        print("Error: could not find image URL in Bing page", file=sys.stderr)
+    try:
+        data = r.json()
+    except ValueError as e:
+        print(f"Error: invalid JSON from API: {e}", file=sys.stderr)
         return False
 
-    file_name = find_file_name(image_url)
-    if not file_name:
-        print("Error: could not derive filename from image URL", file=sys.stderr)
+    images = data.get("images")
+    if not images or len(images) < 1:
+        print("Error: no images in HPImageArchive response", file=sys.stderr)
         return False
+
+    info = images[0]
+    url_path = info.get("url") or ""
+    urlbase = info.get("urlbase") or ""
+
+    if not url_path:
+        print("Error: missing url in API response", file=sys.stderr)
+        return False
+
+    # Build UHD image URL: replace resolution suffix with _UHD.jpg
+    url_path_uhd = RESOLUTION_PATTERN.sub("_UHD.jpg", url_path)
+    image_url = BING_BASE + url_path_uhd
+
+    # Derive local filename from urlbase (e.g. /th?id=OHR.Name_EN-US123 -> Name_EN-US123.png)
+    if "OHR." in urlbase:
+        base = urlbase.split("OHR.", 1)[-1].strip()
+    else:
+        # Fallback: strip resolution from url path and take id part
+        base = RESOLUTION_PATTERN.sub("", url_path)
+        if "id=OHR." in base:
+            base = base.split("OHR.", 1)[-1].split("&")[0]
+        else:
+            base = base.replace("/", "_").replace("?", "_")
+    if not base:
+        print("Error: could not derive filename from API response", file=sys.stderr)
+        return False
+    file_name = base + ".png" if not base.endswith(".png") else base
 
     file_path = os.path.join(OUTPUT_DIR, file_name)
     print("Image URL:", image_url)
     print("Saving to:", file_path)
 
-    # Download image
     try:
         response = requests.get(image_url, stream=True, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
@@ -123,8 +95,8 @@ def task():
         print(f"Error: failed to write file: {e}", file=sys.stderr)
         return False
 
-    # Write optional title sidecar for gallery metadata (e.g. images/Photo.png.title)
-    title = find_og_title(r.text)
+    # Title from API; fallback: skip .title file if missing
+    title = (info.get("title") or "").strip()
     if title:
         title_path = os.path.join(OUTPUT_DIR, file_name + ".title")
         try:
@@ -133,8 +105,12 @@ def task():
         except OSError:
             pass
 
-    # Write download date sidecar for gallery metadata (e.g. images/Photo.png.date)
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    # Date from API startdate (YYYYMMDD -> YYYY-MM-DD); fallback: today
+    startdate = info.get("startdate")
+    if startdate and len(startdate) >= 8:
+        date_str = f"{startdate[:4]}-{startdate[4:6]}-{startdate[6:8]}"
+    else:
+        date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     date_path = os.path.join(OUTPUT_DIR, file_name + ".date")
     try:
         with open(date_path, "w") as f:
