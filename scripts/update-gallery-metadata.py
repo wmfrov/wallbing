@@ -68,10 +68,16 @@ def main() -> int:
             "bing_url": make_bing_url(slug),
         }
 
+    for slug in meta:
+        if "bing_url" not in meta[slug]:
+            meta[slug]["bing_url"] = make_bing_url(slug)
+        if "title" not in meta[slug]:
+            meta[slug]["title"] = slug_to_title(slug)
+
     with open(metadata_path, "w") as f:
         json.dump(meta, f, indent=2)
 
-    for slug in sorted(meta.keys(), key=lambda k: (meta[k]["date"], k), reverse=True):
+    for slug in sorted(meta.keys(), key=lambda k: (meta[k].get("date", ""), k), reverse=True):
         entry = meta[slug]
         thumb = THUMBS_DIR + "/" + thumb_name(slug)
         print(f"{slug}\t{entry['date']}\t{entry['title']}\t{entry['bing_url']}\t{thumb}")
