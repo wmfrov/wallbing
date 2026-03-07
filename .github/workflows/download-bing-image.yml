@@ -124,14 +124,6 @@ jobs:
               PREFIX="${{ secrets.ARCHIVE_PUBLIC_URL_PREFIX }}"
               URL="${PREFIX%/}/images/$NAME"
               export URL DATE TITLE NAME
-              python3 -c "
-import json, os
-p = 'archive/archive.json'
-entries = json.load(open(p)) if os.path.isfile(p) else []
-entries.append({'url': os.environ['URL'], 'date': os.environ['DATE'], 'title': os.environ['TITLE'], 'key': 'images/' + os.environ['NAME']})
-os.makedirs('archive', exist_ok=True)
-with open(p, 'w') as f: json.dump(entries, f, indent=2)
-"
               python3 /tmp/build-archive-page.py .
             fi
           fi

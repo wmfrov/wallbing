@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Read archive/archive.json (list of {url, date, title, key}) and write archive/index.html.
+If env vars URL, DATE, TITLE, NAME are set, append one entry to archive.json first.
 Run from repo root (gh-pages). Creates archive/ if needed.
 """
 import json
@@ -9,6 +10,28 @@ import sys
 
 ARCHIVE_JSON = "archive/archive.json"
 ARCHIVE_HTML = "archive/index.html"
+
+
+def append_entry_from_env(root: str) -> None:
+    url = os.environ.get("URL")
+    if not url:
+        return
+    date_str = os.environ.get("DATE", "")
+    title = os.environ.get("TITLE", "")
+    name = os.environ.get("NAME", "")
+    key = "images/" + name if name else ""
+    json_path = os.path.join(root, ARCHIVE_JSON)
+    entries = []
+    if os.path.isfile(json_path):
+        with open(json_path, "r") as f:
+            entries = json.load(f)
+    if not isinstance(entries, list):
+        entries = []
+    entries.append({"url": url, "date": date_str, "title": title, "key": key})
+    os.makedirs(os.path.dirname(json_path), exist_ok=True)
+    with open(json_path, "w") as f:
+        json.dump(entries, f, indent=2)
+
 
 HEAD = """<!DOCTYPE html>
 <html lang="en">
@@ -52,6 +75,7 @@ TAIL = """
 
 def main():
     root = sys.argv[1] if len(sys.argv) > 1 else "."
+    append_entry_from_env(root)
     json_path = os.path.join(root, ARCHIVE_JSON)
     html_path = os.path.join(root, ARCHIVE_HTML)
     if not os.path.isfile(json_path):
