@@ -14,7 +14,7 @@ def slug_to_title(slug: str) -> str:
     if not slug:
         return slug
     base = slug.rsplit(".", 1)[0] if "." in slug else slug
-    base = re.sub(r"_EN-US[^_]*$", "", base)
+    base = re.sub(r"_EN-US[0-9]+", "", base)
     base = re.sub(r"_UHD$", "", base)
     spaced = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", base)
     spaced = re.sub(r"(?<=[A-Z])(?=[A-Z][a-z])", " ", spaced)

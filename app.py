@@ -6,6 +6,7 @@ Runs once and exits. Schedule via cron or a loop (see README).
 import os
 import sys
 import shutil
+from datetime import datetime, timezone
 import requests
 
 OUTPUT_DIR = os.environ.get("BING_OUTPUT_DIR", "outputs")
@@ -21,7 +22,7 @@ def generic_snip(input_str, start_index_str, end_index_str):
     start_index = input_str.find(start_index_str)
     if start_index == -1:
         return ""
-    input_str = input_str[start_index:]
+    input_str = input_str[start_index + len(start_index_str):]
     end_index = input_str.find(end_index_str)
     if end_index == -1:
         return input_str
@@ -52,7 +53,7 @@ def find_file_name(image_url: str):
     output = generic_snip(image_url, 'OHR.', '.jpg')
     if not output:
         return None
-    return output[4:] + '.png'
+    return output + '.png'
 
 
 def find_og_title(html: str):
@@ -131,6 +132,15 @@ def task():
                 f.write(title)
         except OSError:
             pass
+
+    # Write download date sidecar for gallery metadata (e.g. images/Photo.png.date)
+    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    date_path = os.path.join(OUTPUT_DIR, file_name + ".date")
+    try:
+        with open(date_path, "w") as f:
+            f.write(date_str)
+    except OSError:
+        pass
 
     print("Saved:", file_path)
     return True

@@ -62,6 +62,10 @@ jobs:
             [ -f "$f" ] || continue
             cp "$f" "deploy/images/$(basename "$f")"
           done
+          for f in site/images/*.date site/outputs/*.date; do
+            [ -f "$f" ] || continue
+            cp "$f" "deploy/images/$(basename "$f")"
+          done
           cp scripts/gallery-index-head.html scripts/gallery-index-tail.html scripts/update-gallery-metadata.py scripts/build-archive-page.py /tmp/
           echo "Thumbs created: $(ls deploy/thumbs 2>/dev/null | wc -l)"
 
@@ -79,12 +83,13 @@ jobs:
           mkdir -p images thumbs
           find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.png' -exec cp -n {} images/ \;
           find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.title' -exec cp -n {} images/ \;
+          find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.date' -exec cp -n {} images/ \;
           find /tmp/deploy_to_publish/thumbs -maxdepth 1 -type f -exec cp -n {} thumbs/ \;
           NEW_FILE=$(ls /tmp/deploy_to_publish/images/*.png 2>/dev/null | head -1)
           if [ -n "$NEW_FILE" ] && [ -f "images/$(basename "$NEW_FILE")" ]; then
             NAME=$(basename "$NEW_FILE")
             BYTES=$(stat -c%s "images/$NAME" 2>/dev/null || echo 0)
-            DATE=$(date -u +%Y-%m-%d)
+            DATE=$(cat "images/$NAME.date" 2>/dev/null || date -u +%Y-%m-%d)
             TITLE_ARG=""
             if [ -f "images/${NAME}.title" ]; then
               TITLE_ARG=$(cat "images/${NAME}.title")
@@ -113,7 +118,7 @@ jobs:
             NEW_FILE=$(ls /tmp/deploy_to_publish/images/*.png 2>/dev/null | head -1)
             if [ -n "$NEW_FILE" ]; then
               NAME=$(basename "$NEW_FILE")
-              DATE=$(date -u +%Y-%m-%d)
+              DATE=$(cat "images/$NAME.date" 2>/dev/null || date -u +%Y-%m-%d)
               TITLE=$(grep -F -m1 "images/$NAME" /tmp/sorted_images.txt | cut -f3-)
               TITLE="${TITLE:-$NAME}"
               sudo apt-get install -y -qq awscli

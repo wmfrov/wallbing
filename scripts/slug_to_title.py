@@ -15,7 +15,7 @@ def slug_to_title(slug: str) -> str:
     # Remove extension if present
     base = slug.rsplit(".", 1)[0] if "." in slug else slug
     # Strip locale and quality suffix: _EN-US1234567890_UHD or _UHD
-    base = re.sub(r"_EN-US[^_]*$", "", base)
+    base = re.sub(r"_EN-US[0-9]+", "", base)
     base = re.sub(r"_UHD$", "", base)
     # Insert space before capital letters (CamelCase -> Title Case)
     spaced = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", base)
