@@ -438,5 +438,11 @@
     "date": "2026-03-07",
     "bytes": 3628164,
     "title": "Brocken Sunrise"
+  },
+  "images/BrockenSunrise_EN-US8849518575_UHD.jpg": {
+    "date": "2026-03-07",
+    "bytes": 3628164,
+    "title": "Brocken Sunrise",
+    "archived": false
   }
 }
