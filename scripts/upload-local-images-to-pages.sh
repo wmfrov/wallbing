@@ -14,7 +14,7 @@ set -e
 TARGET_BYTES=$((860 * 1024 * 1024))
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 LOCAL_IMAGES="${1:-${LOCAL_IMAGES:-$HOME/Pictures/bingimages}}"
-DEPLOY="$REPO_ROOT/deploy_pages_upload"
+DEPLOY="/tmp/deploy_pages_upload"
 SCRIPT_DIR="$REPO_ROOT/scripts"
 
 if [[ ! -d "$LOCAL_IMAGES" ]]; then
@@ -98,6 +98,7 @@ cat "$SCRIPT_DIR/gallery-index-tail.html" >> "$DEPLOY/index.html"
 
 echo "Publishing to gh-pages..."
 cd "$REPO_ROOT"
+ORIGINAL_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 STASHED=
 if ! git diff --quiet || ! git diff --cached --quiet; then
   git stash push -u -m "upload-local-images-to-pages: temp stash"
@@ -125,5 +126,5 @@ if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
 else
   echo "Aborted. Changes are in the working tree (gh-pages)."
 fi
-git checkout main 2>/dev/null || git checkout master 2>/dev/null || true
+git checkout "$ORIGINAL_BRANCH" 2>/dev/null || git checkout main 2>/dev/null || git checkout master 2>/dev/null || true
 [[ -n "$STASHED" ]] && git stash pop
