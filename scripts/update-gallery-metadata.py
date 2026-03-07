@@ -64,19 +64,7 @@ def main() -> int:
         except ValueError:
             bytes_val = 0
         key = image_path if image_path.startswith("images/") else os.path.join("images", os.path.basename(image_path))
-        title = None
-        if len(sys.argv) >= 6 and sys.argv[5].strip():
-            title = sys.argv[5].strip()
-        if not title:
-            title_path = os.path.join(site_root, os.path.join(IMAGES_DIR, os.path.basename(key) + ".title"))
-            if os.path.isfile(title_path):
-                try:
-                    with open(title_path, "r") as f:
-                        title = f.read().strip()
-                except OSError:
-                    pass
-        if not title:
-            title = slug_to_title(os.path.basename(key))
+        title = slug_to_title(os.path.basename(key))
         meta[key] = {"date": date_str, "bytes": bytes_val, "title": title}
 
     # Prune: remove oldest by date until total <= TARGET_BYTES
@@ -100,10 +88,9 @@ def main() -> int:
         total -= entry["bytes"]
         del meta[key]
 
-    # Ensure all entries have title for output
+    # Always regenerate titles from filename so stale/wrong titles get fixed
     for key in meta:
-        if "title" not in meta[key]:
-            meta[key]["title"] = slug_to_title(os.path.basename(key))
+        meta[key]["title"] = slug_to_title(os.path.basename(key))
 
     with open(metadata_path, "w") as f:
         json.dump(meta, f, indent=2)

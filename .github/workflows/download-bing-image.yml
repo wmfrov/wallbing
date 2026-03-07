@@ -58,10 +58,6 @@ jobs:
             cp "$f" "deploy/images/$name"
             convert "$f" -resize 400x400\> -quality 82 "deploy/thumbs/${name}.jpg" || true
           done
-          for f in site/images/*.title site/outputs/*.title; do
-            [ -f "$f" ] || continue
-            cp "$f" "deploy/images/$(basename "$f")"
-          done
           for f in site/images/*.date site/outputs/*.date; do
             [ -f "$f" ] || continue
             cp "$f" "deploy/images/$(basename "$f")"
@@ -81,8 +77,15 @@ jobs:
             git rm -rf . 2>/dev/null || true
           fi
           mkdir -p images thumbs
+          # One-time cleanup: remove duplicate non-UHD files from a previous naming bug
+          for f in images/*.png; do
+            [ -f "$f" ] || continue
+            base=$(basename "$f" .png)
+            if [ -f "images/${base}_UHD.png" ]; then
+              rm -f "$f" "thumbs/$(basename "$f").jpg" "$f.date" "$f.title"
+            fi
+          done
           find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.png' -exec cp -n {} images/ \;
-          find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.title' -exec cp -n {} images/ \;
           find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.date' -exec cp -n {} images/ \;
           find /tmp/deploy_to_publish/thumbs -maxdepth 1 -type f -exec cp -n {} thumbs/ \;
           NEW_FILE=$(ls /tmp/deploy_to_publish/images/*.png 2>/dev/null | head -1)
@@ -90,11 +93,7 @@ jobs:
             NAME=$(basename "$NEW_FILE")
             BYTES=$(stat -c%s "images/$NAME" 2>/dev/null || echo 0)
             DATE=$(cat "images/$NAME.date" 2>/dev/null || date -u +%Y-%m-%d)
-            TITLE_ARG=""
-            if [ -f "images/${NAME}.title" ]; then
-              TITLE_ARG=$(cat "images/${NAME}.title")
-            fi
-            python3 /tmp/update-gallery-metadata.py . "images/$NAME" "$DATE" "$BYTES" "$TITLE_ARG" > /tmp/sorted_images.txt
+            python3 /tmp/update-gallery-metadata.py . "images/$NAME" "$DATE" "$BYTES" > /tmp/sorted_images.txt
           else
             python3 /tmp/update-gallery-metadata.py . > /tmp/sorted_images.txt
           fi

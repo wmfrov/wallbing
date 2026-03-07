@@ -72,7 +72,7 @@ def task():
     if not base:
         print("Error: could not derive filename from API response", file=sys.stderr)
         return False
-    file_name = base + ".png" if not base.endswith(".png") else base
+    file_name = base + "_UHD.png"
 
     file_path = os.path.join(OUTPUT_DIR, file_name)
     print("Image URL:", image_url)
@@ -94,16 +94,6 @@ def task():
     except OSError as e:
         print(f"Error: failed to write file: {e}", file=sys.stderr)
         return False
-
-    # Title from API; fallback: skip .title file if missing
-    title = (info.get("title") or "").strip()
-    if title:
-        title_path = os.path.join(OUTPUT_DIR, file_name + ".title")
-        try:
-            with open(title_path, "w") as f:
-                f.write(title)
-        except OSError:
-            pass
 
     # Date from API startdate (YYYYMMDD -> YYYY-MM-DD); fallback: today
     startdate = info.get("startdate")
