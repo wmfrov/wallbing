@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 """
-Update gallery metadata.json: add optional new image, prune to target size (FIFO by date),
-output image paths newest-first for building index.html.
+Update gallery metadata.json: add optional new image, archive oldest when over budget,
+output tab-separated lines for building index.html.
+
+When hosted images exceed TARGET_BYTES, the oldest are archived (full-res deleted,
+bing_url set) rather than removed. Archived entries stay in the gallery with thumbnails.
 
 Usage:
-  python update-gallery-metadata.py SITE_ROOT [IMAGE_PATH DATE BYTES [TITLE]]
-  e.g. python update-gallery-metadata.py . images/Photo.png 2025-03-06 3145728 "Optional title"
+  python update-gallery-metadata.py SITE_ROOT [IMAGE_PATH DATE BYTES]
 
-Reads/writes SITE_ROOT/metadata.json. Optional title from 6th arg or images/<basename>.title file.
-Prints key, date, title (tab-separated) newest first.
+Prints key\\tdate\\ttitle\\thref\\tthumb (tab-separated, newest first) to stdout.
 """
 import json
 import os
 import re
 import sys
 
-TARGET_BYTES = 300 * 1024 * 1024  # 300 MB
+TARGET_BYTES = 860 * 1024 * 1024  # ~860 MB for full-res images
 METADATA_FILENAME = "metadata.json"
 IMAGES_DIR = "images"
 THUMBS_DIR = "thumbs"
@@ -33,10 +34,18 @@ def slug_to_title(slug: str) -> str:
     return spaced.strip() if spaced else base
 
 
-def thumb_path(image_path: str) -> str:
-    """images/foo.png -> thumbs/foo.png.jpg"""
-    base = os.path.basename(image_path)
-    return os.path.join(THUMBS_DIR, base + ".jpg")
+def make_bing_url(filename: str) -> str:
+    """Reconstruct Bing CDN URL from local filename."""
+    base = filename.rsplit(".", 1)[0] if "." in filename else filename
+    return f"https://www.bing.com/th?id=OHR.{base}.jpg"
+
+
+def thumb_name(filename: str) -> str:
+    """Image filename -> clean thumbnail name: strip _UHD and extension, add .jpg."""
+    base = filename.rsplit(".", 1)[0] if "." in filename else filename
+    if base.endswith("_UHD"):
+        base = base[:-4]
+    return base + ".jpg"
 
 
 def main() -> int:
@@ -45,17 +54,13 @@ def main() -> int:
         return 1
     site_root = os.path.abspath(sys.argv[1])
     metadata_path = os.path.join(site_root, METADATA_FILENAME)
-    images_dir = os.path.join(site_root, IMAGES_DIR)
-    thumbs_dir = os.path.join(site_root, THUMBS_DIR)
 
-    # Load existing metadata
     if os.path.isfile(metadata_path):
         with open(metadata_path, "r") as f:
             meta = json.load(f)
     else:
         meta = {}
 
-    # Add new entry if provided
     if len(sys.argv) >= 5:
         image_path = sys.argv[2]
         date_str = sys.argv[3]
@@ -64,42 +69,57 @@ def main() -> int:
         except ValueError:
             bytes_val = 0
         key = image_path if image_path.startswith("images/") else os.path.join("images", os.path.basename(image_path))
-        title = slug_to_title(os.path.basename(key))
-        meta[key] = {"date": date_str, "bytes": bytes_val, "title": title}
+        meta[key] = {
+            "date": date_str,
+            "bytes": bytes_val,
+            "title": slug_to_title(os.path.basename(key)),
+            "archived": False,
+        }
 
-    # Prune: remove oldest by date until total <= TARGET_BYTES
-    total = sum(e["bytes"] for e in meta.values())
-    by_date_asc = sorted(meta.items(), key=lambda x: (x[1]["date"], x[0]))
-    for key, entry in by_date_asc:
-        if total <= TARGET_BYTES:
-            break
-        path = os.path.join(site_root, key)
-        thumb = os.path.join(site_root, thumb_path(key))
-        if os.path.isfile(path):
-            try:
-                os.remove(path)
-            except OSError:
-                pass
-        if os.path.isfile(thumb):
-            try:
-                os.remove(thumb)
-            except OSError:
-                pass
-        total -= entry["bytes"]
-        del meta[key]
-
-    # Always regenerate titles from filename so stale/wrong titles get fixed
     for key in meta:
-        meta[key]["title"] = slug_to_title(os.path.basename(key))
+        date_file = os.path.join(site_root, IMAGES_DIR, os.path.basename(key) + ".date")
+        if os.path.isfile(date_file):
+            try:
+                with open(date_file, "r") as f:
+                    sidecar_date = f.read().strip()
+                if sidecar_date:
+                    meta[key]["date"] = sidecar_date
+            except OSError:
+                pass
+
+    hosted_total = sum(e.get("bytes", 0) for e in meta.values() if not e.get("archived"))
+    hosted_by_date = sorted(
+        [(k, v) for k, v in meta.items() if not v.get("archived")],
+        key=lambda x: (x[1]["date"], x[0]),
+    )
+    for key, entry in hosted_by_date:
+        if hosted_total <= TARGET_BYTES:
+            break
+        img_path = os.path.join(site_root, key)
+        if os.path.isfile(img_path):
+            try:
+                os.remove(img_path)
+            except OSError:
+                pass
+        hosted_total -= entry.get("bytes", 0)
+        entry["archived"] = True
+        entry["bing_url"] = make_bing_url(os.path.basename(key))
+        entry["bytes"] = 0
+
+    for key, entry in meta.items():
+        entry["title"] = slug_to_title(os.path.basename(key))
+        if entry.get("archived") and "bing_url" not in entry:
+            entry["bing_url"] = make_bing_url(os.path.basename(key))
 
     with open(metadata_path, "w") as f:
         json.dump(meta, f, indent=2)
 
-    # Output key, date, title (tab-separated) newest first
+    # Output: key\tdate\ttitle\thref\tthumb (newest first)
     for key in sorted(meta.keys(), key=lambda k: (meta[k]["date"], k), reverse=True):
-        date_str = meta[key]["date"]
-        title_str = meta[key].get("title") or slug_to_title(os.path.basename(key))
-        print(f"{key}\t{date_str}\t{title_str}")
+        entry = meta[key]
+        href = entry.get("bing_url", key) if entry.get("archived") else key
+        thumb = THUMBS_DIR + "/" + thumb_name(os.path.basename(key))
+        print(f"{key}\t{entry['date']}\t{entry['title']}\t{href}\t{thumb}")
     return 0
 
 

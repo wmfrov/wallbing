@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# Seed or replace the gh-pages gallery with a sample of local images: up to ~300 MB
-# chosen newest-first by file mtime (full resolution). Uses a dummy date (2000-01-01)
-# when mtime isn't available. Builds metadata.json and index, then force-pushes to gh-pages.
+# Upload ALL local Bing images to gh-pages gallery.
+# Newest images (by mtime) are hosted full-res until ~860 MB budget is reached.
+# Remaining images are "archived": only thumbnails are hosted, full-res links to Bing CDN.
+# Expects all local files to already have .jpg extension (run fix-local-extensions.sh first).
 #
 # Usage: ./scripts/upload-local-images-to-pages.sh [local_images_dir]
 #
@@ -10,10 +11,10 @@
 
 set -e
 
-TARGET_BYTES=$((300 * 1024 * 1024))
+TARGET_BYTES=$((860 * 1024 * 1024))
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 LOCAL_IMAGES="${1:-${LOCAL_IMAGES:-$HOME/Pictures/bingimages}}"
-DEPLOY="$REPO_ROOT/deploy_pages_upload"
+DEPLOY="/tmp/deploy_pages_upload"
 SCRIPT_DIR="$REPO_ROOT/scripts"
 
 if [[ ! -d "$LOCAL_IMAGES" ]]; then
@@ -21,24 +22,15 @@ if [[ ! -d "$LOCAL_IMAGES" ]]; then
   exit 1
 fi
 
-# Collect image files (input: lines "bytes date_str name"); cap by total size
-accumulate() {
-  local total=0
-  while IFS= read -r line; do
-    [[ -z "$line" ]] && continue
-    read -r bytes date_str name <<< "$line"
-    if (( total + bytes > TARGET_BYTES )); then
-      break
-    fi
-    total=$(( total + bytes ))
-    echo "$line"
-  done
+thumb_name() {
+  local name="${1%.jpg}"
+  name="${name%_UHD}"
+  echo "${name}.jpg"
 }
 
-echo "Scanning $LOCAL_IMAGES (newest first, cap ~300 MB)..."
-# Output: bytes YYYY-MM-DD name (one line per file)
+echo "Scanning $LOCAL_IMAGES..."
 list_all() {
-  find "$LOCAL_IMAGES" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -print0 | \
+  find "$LOCAL_IMAGES" -maxdepth 1 -type f -iname "*.jpg" -print0 | \
   while IFS= read -r -d '' f; do
     name=$(basename "$f")
     [[ -z "$name" ]] && continue
@@ -53,39 +45,57 @@ list_all() {
   done
 }
 
-SELECTED=$(list_all | sort -t' ' -k2,2r -k3,3 | accumulate)
+ALL_IMAGES=$(list_all | sort -t' ' -k2,2r -k3,3)
+TOTAL_COUNT=$(echo "$ALL_IMAGES" | grep -c . || true)
+echo "Found $TOTAL_COUNT images."
 
+rm -rf "$DEPLOY"
 mkdir -p "$DEPLOY/images" "$DEPLOY/thumbs"
-total=0
+
+hosted_total=0
+hosted_count=0
+archived_count=0
+META_LINES=""
+
 while IFS= read -r line; do
   [[ -z "$line" ]] && continue
   read -r bytes date_str name <<< "$line"
   src="$LOCAL_IMAGES/$name"
   if [[ ! -f "$src" ]]; then continue; fi
-  cp "$src" "$DEPLOY/images/$name"
+
+  thumb=$(thumb_name "$name")
   if command -v convert &>/dev/null; then
-    convert "$src" -resize 400x400\> -quality 82 "$DEPLOY/thumbs/${name}.jpg"
+    convert "$src" -resize 400x400\> -quality 82 "$DEPLOY/thumbs/$thumb" 2>/dev/null || true
   fi
-  total=$(( total + bytes ))
-done <<< "$SELECTED"
 
-echo "$SELECTED" | python3 "$SCRIPT_DIR/write-gallery-metadata.py" "$DEPLOY" > "$DEPLOY/sorted.txt"
+  if (( hosted_total + bytes <= TARGET_BYTES )); then
+    cp "$src" "$DEPLOY/images/$name"
+    hosted_total=$(( hosted_total + bytes ))
+    hosted_count=$(( hosted_count + 1 ))
+    META_LINES+="$bytes $date_str hosted $name"$'\n'
+  else
+    archived_count=$(( archived_count + 1 ))
+    META_LINES+="0 $date_str archived $name"$'\n'
+  fi
+done <<< "$ALL_IMAGES"
 
-echo "Selected $(echo "$SELECTED" | grep -c . || true) images (~$(( total / 1024 / 1024 )) MB). Building index..."
+echo "$META_LINES" | python3 "$SCRIPT_DIR/write-gallery-metadata.py" "$DEPLOY" > "$DEPLOY/sorted.txt"
+
+echo "Hosted: $hosted_count (~$(( hosted_total / 1024 / 1024 )) MB), Archived: $archived_count (Bing CDN). Building index..."
 
 cp "$SCRIPT_DIR/gallery-index-head.html" "$DEPLOY/index.html"
-while IFS=$'\t' read -r key date_str title_str; do
-  [[ -z "$key" ]] || [[ ! -f "$DEPLOY/$key" ]] && continue
+while IFS=$'\t' read -r key date_str title_str href thumb; do
+  [[ -z "$key" ]] && continue
   name=$(basename "$key")
-  base="${name%.*}"
-  title_str="${title_str:-$base}"
-  echo "    <div class=\"card\"><a href=\"$key\" target=\"_blank\" title=\"$title_str\"><img src=\"thumbs/${name}.jpg\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> "$DEPLOY/index.html"
+  title_str="${title_str:-${name%.*}}"
+  thumb="${thumb:-thumbs/${name%.jpg}.jpg}"
+  echo "    <div class=\"card\"><a href=\"$href\" target=\"_blank\" title=\"$title_str\"><img src=\"$thumb\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> "$DEPLOY/index.html"
 done < "$DEPLOY/sorted.txt"
 cat "$SCRIPT_DIR/gallery-index-tail.html" >> "$DEPLOY/index.html"
 
 echo "Publishing to gh-pages..."
 cd "$REPO_ROOT"
-# Stash local changes so checkout gh-pages doesn't fail
+ORIGINAL_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 STASHED=
 if ! git diff --quiet || ! git diff --cached --quiet; then
   git stash push -u -m "upload-local-images-to-pages: temp stash"
@@ -107,12 +117,11 @@ git status
 echo "Commit and force-push? (y/N)"
 read -r confirm
 if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
-  git commit -m "Gallery: upload local sample (~300 MB, newest by date)"
+  git commit -m "Gallery: all $TOTAL_COUNT images (hosted: $hosted_count, archived: $archived_count)"
   git push origin gh-pages --force
   echo "Done. Gallery updated on gh-pages."
 else
   echo "Aborted. Changes are in the working tree (gh-pages)."
 fi
-# Return to main before popping stash so stash (main's state) applies to main, not gh-pages
-git checkout main 2>/dev/null || git checkout master 2>/dev/null || true
+git checkout "$ORIGINAL_BRANCH" 2>/dev/null || git checkout main 2>/dev/null || git checkout master 2>/dev/null || true
 [[ -n "$STASHED" ]] && git stash pop

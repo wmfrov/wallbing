@@ -3,12 +3,14 @@
   <script>
     document.querySelectorAll('.card a').forEach(function(a) {
       a.addEventListener('click', function(e) {
-        e.preventDefault();
         var href = this.getAttribute('href');
-        if (href) {
-          document.getElementById('lightbox').querySelector('img').src = href;
-          document.getElementById('lightbox').classList.add('show');
+        if (!href) return;
+        if (href.startsWith('http://') || href.startsWith('https://')) {
+          return; // external link (archived) — let browser navigate normally
         }
+        e.preventDefault();
+        document.getElementById('lightbox').querySelector('img').src = href;
+        document.getElementById('lightbox').classList.add('show');
       });
     });
   </script>
