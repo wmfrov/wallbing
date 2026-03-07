@@ -424,11 +424,6 @@
     "bytes": 3675164,
     "title": "Cappadocia Rocks_EN-US8162611189"
   },
-  "images/RainierWildflowers_EN-US8010104719_UHD.png": {
-    "date": "2024-07-12",
-    "bytes": 3652220,
-    "title": "Rainier Wildflowers_EN-US8010104719"
-  },
   "images/WaveDenmark_EN-US6550970747_UHD.png": {
     "date": "2026-03-07",
     "bytes": 3581322,
@@ -438,5 +433,10 @@
     "date": "2026-03-07",
     "bytes": 3628164,
     "title": "content="
+  },
+  "images/BrockenSunrise_EN-US8849518575.png": {
+    "date": "2026-03-07",
+    "bytes": 3628164,
+    "title": "A legendary sunrise"
   }
 }
