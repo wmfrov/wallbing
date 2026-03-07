@@ -33,8 +33,9 @@ The image is saved under `outputs/` (or set `BING_OUTPUT_DIR`).
 The repo includes a workflow that:
 
 1. Runs on a schedule (e.g. every 6 hours) and on manual “Run workflow”.
-2. Downloads the Bing image, builds a static gallery page, and pushes to the **gh-pages** branch.
-3. GitHub Pages serves that branch as a gallery.
+2. Downloads the Bing image (full resolution), builds a static gallery page, and pushes to the **gh-pages** branch.
+3. Keeps the gallery under ~300 MB by evicting the **oldest images by date** when over the cap (FIFO). Dates come from metadata (download date for new images; existing images use a dummy date if none was stored).
+4. GitHub Pages serves that branch as a gallery.
 
 **Setup:**
 
@@ -43,6 +44,17 @@ The repo includes a workflow that:
 3. Run the workflow once from the Actions tab (or wait for the schedule). The gallery will be at `https://<username>.github.io/<repo>/`.
 
 Bing updates the image **once per day**; the workflow runs every 6 hours so it picks up the new image soon after it’s available.
+
+## Seeding the gallery from local images
+
+To replace or seed the gh-pages gallery with a sample of your own local wallpapers (e.g. from `~/Pictures/bingimages`), up to ~300 MB, newest-first by file date:
+
+```bash
+chmod +x scripts/upload-local-images-to-pages.sh
+./scripts/upload-local-images-to-pages.sh [local_images_dir]
+```
+
+Default source is `LOCAL_IMAGES` or `~/Pictures/bingimages`. The script copies full-resolution images, creates thumbnails, writes `metadata.json` (using file mtime as date, or a dummy date when unavailable), builds the index, then prompts before force-pushing to **gh-pages**. Requires ImageMagick (`convert`) and Python 3.
 
 ## Syncing the gallery to your computer
 
@@ -53,7 +65,7 @@ chmod +x scripts/sync-wallpapers-from-pages.sh
 ./scripts/sync-wallpapers-from-pages.sh [destination_folder]
 ```
 
-With no argument, images are synced into `~/Pictures/bingimages`. Use that folder (or your chosen path) in **System Settings → Wallpaper** for rotation.
+With no argument, images are synced into `~/Pictures/bingimages`. The script copies all image types (e.g. `.png`, `.jpg`) from the gallery. Use that folder (or your chosen path) in **System Settings → Wallpaper** for rotation.
 
 ## Environment variables
 

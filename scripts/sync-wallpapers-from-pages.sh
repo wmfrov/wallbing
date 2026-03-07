@@ -27,8 +27,9 @@ fi
 
 echo "Copying images to $DEST ..."
 mkdir -p "$CACHE_DIR/images"
-cp -n "$CACHE_DIR"/images/*.png "$DEST/" 2>/dev/null || true
-
-COUNT=$(find "$DEST" -maxdepth 1 -name '*.png' 2>/dev/null | wc -l)
+for ext in png jpg jpeg; do
+  cp -n "$CACHE_DIR"/images/*."$ext" "$DEST/" 2>/dev/null || true
+done
+COUNT=$(find "$DEST" -maxdepth 1 -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' \) 2>/dev/null | wc -l)
 echo "Done. $COUNT image(s) in $DEST"
 echo "Use this folder for wallpaper rotation: $DEST"

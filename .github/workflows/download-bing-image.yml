@@ -1,19 +1,19 @@
 # Download Bing image of the day and deploy to GitHub Pages.
-# Runs on schedule (every 6 hours) and on manual trigger.
-# Enable GitHub Pages for this repo (Settings → Pages → Source: gh-pages branch).
+# Keeps full-resolution images; caps site at ~300MB and evicts oldest by date (FIFO).
+# Runs on schedule and on manual trigger.
 
 name: Download Bing image and deploy to Pages
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # Every 6 hours
-  workflow_dispatch:        # Manual "Run workflow" in Actions tab
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   download-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # needed to push to gh-pages
+      contents: write
       pages: write
       id-token: write
 
@@ -43,45 +43,25 @@ jobs:
           export BING_REQUEST_TIMEOUT=30
           python app.py
 
-      - name: Generate index.html
+      - name: Verify download
         run: |
-          cp scripts/gallery-index-head.html site/index.html
-          for f in site/images/*.png site/outputs/*.png; do
+          n=$(find site/images -name '*.png' 2>/dev/null | wc -l)
+          if [ "$n" -eq 0 ]; then echo "::error::No image downloaded"; exit 1; fi
+
+      - name: Prepare deploy (full-res + thumbs)
+        run: |
+          mkdir -p deploy/images deploy/thumbs
+          sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
+          for f in site/images/*.png site/outputs/*.png 2>/dev/null; do
             [ -f "$f" ] || continue
             name=$(basename "$f")
-            base="${name%.*}"
-            echo "    <div class=\"card\"><a href=\"images/$name\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/$base.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> site/index.html
+            cp "$f" "deploy/images/$name"
+            convert "$f" -resize 400x400\> -quality 82 "deploy/thumbs/${name}.jpg"
           done
-          cat scripts/gallery-index-tail.html >> site/index.html
+          cp scripts/gallery-index-head.html scripts/gallery-index-tail.html scripts/update-gallery-metadata.py /tmp/
 
-      - name: Verify at least one image was downloaded
+      - name: Deploy to GitHub Pages
         run: |
-          count_images=$(find site/images -name '*.png' 2>/dev/null | wc -l)
-          count_outputs_root=$(find outputs -name '*.png' 2>/dev/null | wc -l)
-          count_site_outputs=$(find site/outputs -name '*.png' 2>/dev/null | wc -l)
-          total=$((count_images + count_outputs_root + count_site_outputs))
-          echo "Found: site/images=$count_images, outputs=$count_outputs_root, site/outputs=$count_site_outputs"
-          ls -la site/images/ 2>/dev/null || true
-          ls -la site/outputs/ 2>/dev/null || true
-          ls -la outputs/ 2>/dev/null || true
-          if [ "$total" -eq 0 ]; then
-            echo "::error::No image was downloaded. Check the Download Bing image step."
-            exit 1
-          fi
-
-      - name: Prepare deploy directory (no .gitignore)
-        run: |
-          mkdir -p deploy/images
-          cp site/index.html deploy/
-          [ -d site/images ] && cp -n site/images/*.png deploy/images/ 2>/dev/null || true
-          [ -d site/outputs ] && cp -n site/outputs/*.png deploy/images/ 2>/dev/null || true
-          [ -d outputs ] && cp -n outputs/*.png deploy/images/ 2>/dev/null || true
-          echo "Contents of deploy/images:"
-          ls -la deploy/images/
-
-      - name: Deploy to GitHub Pages (explicit git commit + push)
-        run: |
-          cp scripts/gallery-index-head.html scripts/gallery-index-tail.html /tmp/
           rm -rf site
           mv deploy /tmp/deploy_to_publish
           git fetch origin gh-pages 2>/dev/null || true
@@ -93,24 +73,25 @@ jobs:
           fi
           mkdir -p images thumbs
           cp -n /tmp/deploy_to_publish/images/*.png images/ 2>/dev/null || true
-          sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
-          for f in images/*.png; do
-            [ -f "$f" ] || continue
-            base=$(basename "$f" .png)
-            convert "$f" -resize 400x400\> -quality 82 "thumbs/${base}.jpg"
-          done
+          cp -n /tmp/deploy_to_publish/thumbs/*.jpg thumbs/ 2>/dev/null || true
+          NEW_FILE=$(ls /tmp/deploy_to_publish/images/*.png 2>/dev/null | head -1)
+          if [ -n "$NEW_FILE" ] && [ -f "images/$(basename "$NEW_FILE")" ]; then
+            NAME=$(basename "$NEW_FILE")
+            BYTES=$(stat -c%s "images/$NAME" 2>/dev/null || echo 0)
+            DATE=$(date -u +%Y-%m-%d)
+            python3 /tmp/update-gallery-metadata.py . "images/$NAME" "$DATE" "$BYTES" > /tmp/sorted_images.txt
+          else
+            python3 /tmp/update-gallery-metadata.py . > /tmp/sorted_images.txt
+          fi
           cp /tmp/gallery-index-head.html index.html
-          for f in $(ls -t images/*.png 2>/dev/null); do
-            [ -f "$f" ] || continue
-            name=$(basename "$f")
+          while IFS= read -r key; do
+            [ -z "$key" ] || [ ! -f "$key" ] && continue
+            name=$(basename "$key")
             base="${name%.*}"
-            echo "    <div class=\"card\"><a href=\"images/$name\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/$base.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> index.html
-          done
+            echo "    <div class=\"card\"><a href=\"$key\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/${name}.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> index.html
+          done < /tmp/sorted_images.txt
           cat /tmp/gallery-index-tail.html >> index.html
           git add .
-          echo "--- Files that will be committed ---"
-          git status
-          git diff --cached --stat
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update gallery: Bing image of the day" || true

@@ -1,77 +1,108 @@
 #!/usr/bin/env bash
-# Upload your local Bing images to the gh-pages branch so the gallery shows a full trove.
-# Run once to seed the gallery, or whenever you want to add more local images.
+# Seed or replace the gh-pages gallery with a sample of local images: up to ~300 MB
+# chosen newest-first by file mtime (full resolution). Uses a dummy date (2000-01-01)
+# when mtime isn't available. Builds metadata.json and index, then force-pushes to gh-pages.
 #
-# Usage: ./scripts/upload-local-images-to-pages.sh
+# Usage: ./scripts/upload-local-images-to-pages.sh [local_images_dir]
 #
-# Copies from: LOCAL_IMAGES (default: ~/Pictures/bingimages)
-# Pushes to:   BING_PAGES_REPO, branch gh-pages
+# Default: LOCAL_IMAGES or ~/Pictures/bingimages
+# Requires: ImageMagick (convert), Python 3, git. Run from repo root.
 
 set -e
 
-REPO_URL="${BING_PAGES_REPO:-https://github.com/wmfrov/wallbing.git}"
-LOCAL_IMAGES="${LOCAL_IMAGES:-$HOME/Pictures/bingimages}"
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+TARGET_BYTES=$((300 * 1024 * 1024))
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+LOCAL_IMAGES="${1:-${LOCAL_IMAGES:-$HOME/Pictures/bingimages}}"
+DEPLOY="$REPO_ROOT/deploy_pages_upload"
+SCRIPT_DIR="$REPO_ROOT/scripts"
 
 if [[ ! -d "$LOCAL_IMAGES" ]]; then
-  echo "Error: Local images dir not found: $LOCAL_IMAGES"
-  echo "Set LOCAL_IMAGES or create that folder and add images."
+  echo "Error: directory not found: $LOCAL_IMAGES"
   exit 1
 fi
 
-COUNT=$(find "$LOCAL_IMAGES" -maxdepth 1 -name '*.png' 2>/dev/null | wc -l)
-if [[ "$COUNT" -eq 0 ]]; then
-  echo "Error: No .png files in $LOCAL_IMAGES"
-  exit 1
-fi
+# Collect image files (input: lines "bytes date_str name"); cap by total size
+accumulate() {
+  local total=0
+  while IFS= read -r line; do
+    [[ -z "$line" ]] && continue
+    read -r bytes date_str name <<< "$line"
+    if (( total + bytes > TARGET_BYTES )); then
+      break
+    fi
+    total=$(( total + bytes ))
+    echo "$line"
+  done
+}
 
-echo "Found $COUNT image(s) in $LOCAL_IMAGES"
-TMP=$(mktemp -d)
-trap "rm -rf $TMP" EXIT
+echo "Scanning $LOCAL_IMAGES (newest first, cap ~300 MB)..."
+# Output: bytes YYYY-MM-DD name (one line per file)
+list_all() {
+  find "$LOCAL_IMAGES" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -print0 | \
+  while IFS= read -r -d '' f; do
+    name=$(basename "$f")
+    [[ -z "$name" ]] && continue
+    bytes=$(stat -f%z "$f" 2>/dev/null || stat -c%s "$f" 2>/dev/null || echo 0)
+    mtime=$(stat -f%m "$f" 2>/dev/null || stat -c%Y "$f" 2>/dev/null || echo 0)
+    if [[ "$mtime" -gt 0 ]]; then
+      date_str=$(date -r "$mtime" +%Y-%m-%d 2>/dev/null || date -d "@$mtime" +%Y-%m-%d 2>/dev/null || echo "2000-01-01")
+    else
+      date_str="2000-01-01"
+    fi
+    echo "$bytes $date_str $name"
+  done
+}
 
-echo "Cloning gh-pages into temp dir..."
-if ! git clone --single-branch --branch gh-pages --depth 1 "$REPO_URL" "$TMP" 2>/dev/null; then
-  echo "gh-pages branch not found. Creating it from main..."
-  git clone --depth 1 "$REPO_URL" "$TMP"
-  cd "$TMP"
+SELECTED=$(list_all | sort -t' ' -k2,2r -k3,3 | accumulate)
+
+mkdir -p "$DEPLOY/images" "$DEPLOY/thumbs"
+total=0
+while IFS= read -r line; do
+  [[ -z "$line" ]] && continue
+  read -r bytes date_str name <<< "$line"
+  src="$LOCAL_IMAGES/$name"
+  if [[ ! -f "$src" ]]; then continue; fi
+  cp "$src" "$DEPLOY/images/$name"
+  if command -v convert &>/dev/null; then
+    convert "$src" -resize 400x400\> -quality 82 "$DEPLOY/thumbs/${name}.jpg"
+  fi
+  total=$(( total + bytes ))
+done <<< "$SELECTED"
+
+echo "$SELECTED" | python3 "$SCRIPT_DIR/write-gallery-metadata.py" "$DEPLOY" > "$DEPLOY/sorted.txt"
+
+echo "Selected $(echo "$SELECTED" | grep -c . || true) images (~$(( total / 1024 / 1024 )) MB). Building index..."
+
+cp "$SCRIPT_DIR/gallery-index-head.html" "$DEPLOY/index.html"
+while IFS= read -r key; do
+  [[ -z "$key" ]] || [[ ! -f "$DEPLOY/$key" ]] && continue
+  name=$(basename "$key")
+  base="${name%.*}"
+  echo "    <div class=\"card\"><a href=\"$key\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/${name}.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> "$DEPLOY/index.html"
+done < "$DEPLOY/sorted.txt"
+cat "$SCRIPT_DIR/gallery-index-tail.html" >> "$DEPLOY/index.html"
+
+echo "Publishing to gh-pages..."
+cd "$REPO_ROOT"
+git fetch origin
+if git show-ref --verify --quiet refs/remotes/origin/gh-pages 2>/dev/null; then
+  git checkout gh-pages
+  git pull origin gh-pages 2>/dev/null || true
+  git rm -rf . 2>/dev/null || true
+else
   git checkout --orphan gh-pages
   git rm -rf . 2>/dev/null || true
-  cd - >/dev/null
 fi
-
-echo "Copying images..."
-mkdir -p "$TMP/images" "$TMP/thumbs"
-cp -n "$LOCAL_IMAGES"/*.png "$TMP/images/" 2>/dev/null || true
-
-echo "Generating thumbnails (400px max)..."
-for f in "$TMP"/images/*.png; do
-  [[ -f "$f" ]] || continue
-  base=$(basename "$f" .png)
-  sips -Z 400 -s format jpeg "$f" --out "$TMP/thumbs/${base}.jpg" 2>/dev/null || true
-done
-
-echo "Generating gallery index (newest first by file date)..."
-cp "$REPO_ROOT/scripts/gallery-index-head.html" "$TMP/index.html"
-while IFS= read -r f; do
-  [[ -f "$f" ]] || continue
-  name=$(basename "$f")
-  base="${name%.*}"
-  echo "    <div class=\"card\"><a href=\"images/$name\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/$base.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> "$TMP/index.html"
-done < <(ls -t "$TMP"/images/*.png 2>/dev/null)
-cat "$REPO_ROOT/scripts/gallery-index-tail.html" >> "$TMP/index.html"
-
-cd "$TMP"
+cp -r "$DEPLOY"/* .
+rm -rf "$DEPLOY"
 git add .
 git status
-echo "Commit and push? (y/n)"
-read -r yn
-if [[ "$yn" != "y" && "$yn" != "Y" ]]; then
-  echo "Aborted."
-  exit 0
+echo "Commit and force-push? (y/N)"
+read -r confirm
+if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
+  git commit -m "Gallery: upload local sample (~300 MB, newest by date)"
+  git push origin gh-pages --force
+  echo "Done. Gallery updated on gh-pages."
+else
+  echo "Aborted. Changes are in the working tree (gh-pages)."
 fi
-git config user.name "github-actions[bot]"
-git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git commit -m "Add local Bing wallpaper trove"
-git push origin gh-pages
-echo "Done. Gallery updated at gh-pages."
