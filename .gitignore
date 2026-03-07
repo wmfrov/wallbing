@@ -8,6 +8,7 @@ env/
 
 # Local outputs (you may want to keep these out of the repo)
 outputs/
+deploy_pages_upload/
 
 # IDE / OS
 .idea/
