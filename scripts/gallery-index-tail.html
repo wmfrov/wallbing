@@ -5,9 +5,6 @@
       a.addEventListener('click', function(e) {
         var href = this.getAttribute('href');
         if (!href) return;
-        if (href.startsWith('http://') || href.startsWith('https://')) {
-          return; // external link (archived) — let browser navigate normally
-        }
         e.preventDefault();
         document.getElementById('lightbox').querySelector('img').src = href;
         document.getElementById('lightbox').classList.add('show');

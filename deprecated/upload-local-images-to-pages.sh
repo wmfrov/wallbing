@@ -7,7 +7,7 @@
 # Usage: ./scripts/upload-local-images-to-pages.sh [local_images_dir]
 #
 # Default: LOCAL_IMAGES or ~/Pictures/bingimages
-# Requires: ImageMagick (convert), Python 3, git. Run from repo root.
+# Requires: ImageMagick (convert) or macOS sips, Python 3, git. Run from repo root.
 
 set -e
 
@@ -64,8 +64,12 @@ while IFS= read -r line; do
   if [[ ! -f "$src" ]]; then continue; fi
 
   thumb=$(thumb_name "$name")
+  dest="$DEPLOY/thumbs/$thumb"
   if command -v convert &>/dev/null; then
-    convert "$src" -resize 400x400\> -quality 82 "$DEPLOY/thumbs/$thumb" 2>/dev/null || true
+    convert "$src" -resize 400x400\> -quality 82 "$dest" 2>/dev/null || true
+  elif command -v sips &>/dev/null; then
+    cp "$src" "$dest"
+    sips --resampleHeightWidthMax 400 --setProperty formatOptions 82 "$dest" &>/dev/null || true
   fi
 
   if (( hosted_total + bytes <= TARGET_BYTES )); then

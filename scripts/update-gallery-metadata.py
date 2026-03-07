@@ -1,29 +1,27 @@
 #!/usr/bin/env python3
 """
-Update gallery metadata.json: add optional new image, archive oldest when over budget,
-output tab-separated lines for building index.html.
-
-When hosted images exceed TARGET_BYTES, the oldest are archived (full-res deleted,
-bing_url set) rather than removed. Archived entries stay in the gallery with thumbnails.
+Update gallery metadata.json and output tab-separated lines for building index.html.
+All images link to Bing CDN for full-res viewing.
 
 Usage:
-  python update-gallery-metadata.py SITE_ROOT [IMAGE_PATH DATE BYTES]
+  python update-gallery-metadata.py SITE_ROOT [SLUG DATE TITLE]
 
-Prints key\\tdate\\ttitle\\thref\\tthumb (tab-separated, newest first) to stdout.
+  SLUG  = image slug, e.g. BrockenSunrise_EN-US8849518575_UHD
+  DATE  = YYYY-MM-DD
+  TITLE = human-readable title (optional; falls back to slug-derived title)
+
+Prints slug\\tdate\\ttitle\\tbing_url\\tthumb (tab-separated, newest first) to stdout.
 """
 import json
 import os
 import re
 import sys
 
-TARGET_BYTES = 860 * 1024 * 1024  # ~860 MB for full-res images
 METADATA_FILENAME = "metadata.json"
-IMAGES_DIR = "images"
 THUMBS_DIR = "thumbs"
 
 
 def slug_to_title(slug: str) -> str:
-    """Convert filename slug to human-readable title."""
     if not slug:
         return slug
     base = slug.rsplit(".", 1)[0] if "." in slug else slug
@@ -34,15 +32,13 @@ def slug_to_title(slug: str) -> str:
     return spaced.strip() if spaced else base
 
 
-def make_bing_url(filename: str) -> str:
-    """Reconstruct Bing CDN URL from local filename."""
-    base = filename.rsplit(".", 1)[0] if "." in filename else filename
+def make_bing_url(slug: str) -> str:
+    base = slug.rsplit(".", 1)[0] if "." in slug else slug
     return f"https://www.bing.com/th?id=OHR.{base}.jpg"
 
 
-def thumb_name(filename: str) -> str:
-    """Image filename -> clean thumbnail name: strip _UHD and extension, add .jpg."""
-    base = filename.rsplit(".", 1)[0] if "." in filename else filename
+def thumb_name(slug: str) -> str:
+    base = slug.rsplit(".", 1)[0] if "." in slug else slug
     if base.endswith("_UHD"):
         base = base[:-4]
     return base + ".jpg"
@@ -50,8 +46,9 @@ def thumb_name(filename: str) -> str:
 
 def main() -> int:
     if len(sys.argv) < 2:
-        print("Usage: update-gallery-metadata.py SITE_ROOT [IMAGE_PATH DATE BYTES]", file=sys.stderr)
+        print("Usage: update-gallery-metadata.py SITE_ROOT [SLUG DATE TITLE]", file=sys.stderr)
         return 1
+
     site_root = os.path.abspath(sys.argv[1])
     metadata_path = os.path.join(site_root, METADATA_FILENAME)
 
@@ -61,65 +58,24 @@ def main() -> int:
     else:
         meta = {}
 
-    if len(sys.argv) >= 5:
-        image_path = sys.argv[2]
+    if len(sys.argv) >= 4:
+        slug = sys.argv[2]
         date_str = sys.argv[3]
-        try:
-            bytes_val = int(sys.argv[4])
-        except ValueError:
-            bytes_val = 0
-        key = image_path if image_path.startswith("images/") else os.path.join("images", os.path.basename(image_path))
-        meta[key] = {
+        title = sys.argv[4] if len(sys.argv) >= 5 else slug_to_title(slug)
+        meta[slug] = {
             "date": date_str,
-            "bytes": bytes_val,
-            "title": slug_to_title(os.path.basename(key)),
-            "archived": False,
+            "title": title,
+            "bing_url": make_bing_url(slug),
         }
-
-    for key in meta:
-        date_file = os.path.join(site_root, IMAGES_DIR, os.path.basename(key) + ".date")
-        if os.path.isfile(date_file):
-            try:
-                with open(date_file, "r") as f:
-                    sidecar_date = f.read().strip()
-                if sidecar_date:
-                    meta[key]["date"] = sidecar_date
-            except OSError:
-                pass
-
-    hosted_total = sum(e.get("bytes", 0) for e in meta.values() if not e.get("archived"))
-    hosted_by_date = sorted(
-        [(k, v) for k, v in meta.items() if not v.get("archived")],
-        key=lambda x: (x[1]["date"], x[0]),
-    )
-    for key, entry in hosted_by_date:
-        if hosted_total <= TARGET_BYTES:
-            break
-        img_path = os.path.join(site_root, key)
-        if os.path.isfile(img_path):
-            try:
-                os.remove(img_path)
-            except OSError:
-                pass
-        hosted_total -= entry.get("bytes", 0)
-        entry["archived"] = True
-        entry["bing_url"] = make_bing_url(os.path.basename(key))
-        entry["bytes"] = 0
-
-    for key, entry in meta.items():
-        entry["title"] = slug_to_title(os.path.basename(key))
-        if entry.get("archived") and "bing_url" not in entry:
-            entry["bing_url"] = make_bing_url(os.path.basename(key))
 
     with open(metadata_path, "w") as f:
         json.dump(meta, f, indent=2)
 
-    # Output: key\tdate\ttitle\thref\tthumb (newest first)
-    for key in sorted(meta.keys(), key=lambda k: (meta[k]["date"], k), reverse=True):
-        entry = meta[key]
-        href = entry.get("bing_url", key) if entry.get("archived") else key
-        thumb = THUMBS_DIR + "/" + thumb_name(os.path.basename(key))
-        print(f"{key}\t{entry['date']}\t{entry['title']}\t{href}\t{thumb}")
+    for slug in sorted(meta.keys(), key=lambda k: (meta[k]["date"], k), reverse=True):
+        entry = meta[slug]
+        thumb = THUMBS_DIR + "/" + thumb_name(slug)
+        print(f"{slug}\t{entry['date']}\t{entry['title']}\t{entry['bing_url']}\t{thumb}")
+
     return 0
 
 
