@@ -84,6 +84,12 @@ cat "$SCRIPT_DIR/gallery-index-tail.html" >> "$DEPLOY/index.html"
 
 echo "Publishing to gh-pages..."
 cd "$REPO_ROOT"
+# Stash local changes so checkout gh-pages doesn't fail
+STASHED=
+if ! git diff --quiet || ! git diff --cached --quiet; then
+  git stash push -u -m "upload-local-images-to-pages: temp stash"
+  STASHED=1
+fi
 git fetch origin
 if git show-ref --verify --quiet refs/remotes/origin/gh-pages 2>/dev/null; then
   git checkout gh-pages
@@ -106,3 +112,5 @@ if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
 else
   echo "Aborted. Changes are in the working tree (gh-pages)."
 fi
+[[ -n "$STASHED" ]] && git stash pop
+git checkout main 2>/dev/null || git checkout master 2>/dev/null || true
