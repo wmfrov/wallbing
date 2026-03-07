@@ -24,7 +24,9 @@ fi
 
 normalize_name() {
   local name="$1"
-  echo "${name%.png}.jpg"
+  name="${name%.jpg}"
+  name="${name%.png}"
+  echo "${name}.jpg"
 }
 
 echo "Scanning $LOCAL_IMAGES..."
