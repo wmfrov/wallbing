@@ -2,7 +2,7 @@
 """
 Read from stdin lines: bytes date_str status name (space-separated).
   status = "hosted" or "archived"
-Write SITE_ROOT/metadata.json and print key\\tdate\\ttitle\\thref (newest-first) to stdout.
+Write SITE_ROOT/metadata.json and print key\\tdate\\ttitle\\thref\\tthumb (newest-first) to stdout.
 Used by upload-local-images-to-pages.sh to build metadata from local selection.
 """
 import json
@@ -10,14 +10,14 @@ import os
 import re
 import sys
 
+THUMBS_DIR = "thumbs"
+
 
 def slug_to_title(slug: str) -> str:
     """Convert filename slug to human-readable title."""
     if not slug:
         return slug
-    base = slug
-    while "." in base and base.rsplit(".", 1)[1].lower() in ("jpg", "png", "jpeg"):
-        base = base.rsplit(".", 1)[0]
+    base = slug.rsplit(".", 1)[0] if "." in slug else slug
     base = re.sub(r"_EN-US[0-9]+", "", base)
     base = re.sub(r"_UHD$", "", base)
     spaced = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", base)
@@ -27,10 +27,16 @@ def slug_to_title(slug: str) -> str:
 
 def make_bing_url(filename: str) -> str:
     """Reconstruct Bing CDN URL from local filename."""
-    base = filename
-    while base.endswith((".jpg", ".png")):
-        base = base.rsplit(".", 1)[0]
+    base = filename.rsplit(".", 1)[0] if "." in filename else filename
     return f"https://www.bing.com/th?id=OHR.{base}.jpg"
+
+
+def thumb_name(filename: str) -> str:
+    """Image filename -> clean thumbnail name: strip _UHD and extension, add .jpg."""
+    base = filename.rsplit(".", 1)[0] if "." in filename else filename
+    if base.endswith("_UHD"):
+        base = base[:-4]
+    return base + ".jpg"
 
 
 def main():
@@ -70,7 +76,8 @@ def main():
     for key in sorted(meta.keys(), key=lambda k: (meta[k]["date"], k), reverse=True):
         entry = meta[key]
         href = entry.get("bing_url", key) if entry.get("archived") else key
-        print(f"{key}\t{entry['date']}\t{entry['title']}\t{href}")
+        thumb = THUMBS_DIR + "/" + thumb_name(os.path.basename(key))
+        print(f"{key}\t{entry['date']}\t{entry['title']}\t{href}\t{thumb}")
 
 
 if __name__ == "__main__":

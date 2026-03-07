@@ -27,7 +27,7 @@ jobs:
           submodules: false
 
       - name: Ensure site directories exist
-        run: mkdir -p site/images site/outputs
+        run: mkdir -p site/images
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -45,20 +45,21 @@ jobs:
 
       - name: Verify download
         run: |
-          n=$(find site/images -name '*.jpg' -o -name '*.png' 2>/dev/null | wc -l)
+          n=$(find site/images -name '*.jpg' 2>/dev/null | wc -l)
           if [ "$n" -eq 0 ]; then echo "::error::No image downloaded"; exit 1; fi
 
       - name: Prepare deploy
         run: |
           mkdir -p deploy/images deploy/thumbs
           sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
-          for f in site/images/*.jpg site/images/*.png site/outputs/*.jpg site/outputs/*.png; do
+          thumb_name() { local b="${1%.jpg}"; b="${b%_UHD}"; echo "${b}.jpg"; }
+          for f in site/images/*.jpg; do
             [ -f "$f" ] || continue
             name=$(basename "$f")
             cp "$f" "deploy/images/$name"
-            convert "$f" -resize 400x400\> -quality 82 "deploy/thumbs/${name}.jpg" || true
+            convert "$f" -resize 400x400\> -quality 82 "deploy/thumbs/$(thumb_name "$name")" || true
           done
-          for f in site/images/*.date site/outputs/*.date; do
+          for f in site/images/*.date; do
             [ -f "$f" ] || continue
             cp "$f" "deploy/images/$(basename "$f")"
           done
@@ -77,10 +78,10 @@ jobs:
             git rm -rf . 2>/dev/null || true
           fi
           mkdir -p images thumbs
-          find /tmp/deploy_to_publish/images -maxdepth 1 \( -name '*.jpg' -o -name '*.png' \) -exec cp -n {} images/ \;
+          find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.jpg' -exec cp -n {} images/ \;
           find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.date' -exec cp -n {} images/ \;
           find /tmp/deploy_to_publish/thumbs -maxdepth 1 -type f -exec cp -n {} thumbs/ \;
-          NEW_FILE=$(ls /tmp/deploy_to_publish/images/*.jpg /tmp/deploy_to_publish/images/*.png 2>/dev/null | head -1)
+          NEW_FILE=$(ls /tmp/deploy_to_publish/images/*.jpg 2>/dev/null | head -1)
           if [ -n "$NEW_FILE" ] && [ -f "images/$(basename "$NEW_FILE")" ]; then
             NAME=$(basename "$NEW_FILE")
             BYTES=$(stat -c%s "images/$NAME" 2>/dev/null || echo 0)
@@ -89,20 +90,22 @@ jobs:
           else
             python3 /tmp/update-gallery-metadata.py . > /tmp/sorted_images.txt
           fi
-          for f in images/*.png images/*.jpg images/*.jpeg; do
+          thumb_name() { local b="${1%.jpg}"; b="${b%_UHD}"; echo "${b}.jpg"; }
+          for f in images/*.jpg; do
             [ -f "$f" ] || continue
             name=$(basename "$f")
-            thumb="thumbs/${name}.jpg"
+            thumb="thumbs/$(thumb_name "$name")"
             [ -f "$thumb" ] && continue
             convert "$f" -resize 400x400\> -quality 82 "$thumb" || true
           done
           cp /tmp/gallery-index-head.html index.html
-          while IFS=$'\t' read -r key date_str title_str href; do
+          while IFS=$'\t' read -r key date_str title_str href thumb; do
             [ -z "$key" ] && continue
             name=$(basename "$key")
             title_str="${title_str:-${name%.*}}"
             href="${href:-$key}"
-            echo "    <div class=\"card\"><a href=\"$href\" target=\"_blank\" title=\"$title_str\"><img src=\"thumbs/${name}.jpg\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> index.html
+            thumb="${thumb:-thumbs/${name%.jpg}.jpg}"
+            echo "    <div class=\"card\"><a href=\"$href\" target=\"_blank\" title=\"$title_str\"><img src=\"$thumb\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> index.html
           done < /tmp/sorted_images.txt
           cat /tmp/gallery-index-tail.html >> index.html
           git add -f images/ thumbs/ index.html metadata.json

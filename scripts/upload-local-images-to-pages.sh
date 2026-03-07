@@ -2,7 +2,7 @@
 # Upload ALL local Bing images to gh-pages gallery.
 # Newest images (by mtime) are hosted full-res until ~860 MB budget is reached.
 # Remaining images are "archived": only thumbnails are hosted, full-res links to Bing CDN.
-# All .png files are renamed to .jpg (they're actually JPEG data).
+# Expects all local files to already have .jpg extension (run fix-local-extensions.sh first).
 #
 # Usage: ./scripts/upload-local-images-to-pages.sh [local_images_dir]
 #
@@ -22,18 +22,15 @@ if [[ ! -d "$LOCAL_IMAGES" ]]; then
   exit 1
 fi
 
-normalize_name() {
-  local name="$1"
-  while [[ "$name" == *.jpg || "$name" == *.png ]]; do
-    name="${name%.jpg}"
-    name="${name%.png}"
-  done
+thumb_name() {
+  local name="${1%.jpg}"
+  name="${name%_UHD}"
   echo "${name}.jpg"
 }
 
 echo "Scanning $LOCAL_IMAGES..."
 list_all() {
-  find "$LOCAL_IMAGES" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -print0 | \
+  find "$LOCAL_IMAGES" -maxdepth 1 -type f -iname "*.jpg" -print0 | \
   while IFS= read -r -d '' f; do
     name=$(basename "$f")
     [[ -z "$name" ]] && continue
@@ -62,14 +59,13 @@ META_LINES=""
 
 while IFS= read -r line; do
   [[ -z "$line" ]] && continue
-  read -r bytes date_str orig_name <<< "$line"
-  src="$LOCAL_IMAGES/$orig_name"
+  read -r bytes date_str name <<< "$line"
+  src="$LOCAL_IMAGES/$name"
   if [[ ! -f "$src" ]]; then continue; fi
 
-  name=$(normalize_name "$orig_name")
-
+  thumb=$(thumb_name "$name")
   if command -v convert &>/dev/null; then
-    convert "$src" -resize 400x400\> -quality 82 "$DEPLOY/thumbs/${name}.jpg" 2>/dev/null || true
+    convert "$src" -resize 400x400\> -quality 82 "$DEPLOY/thumbs/$thumb" 2>/dev/null || true
   fi
 
   if (( hosted_total + bytes <= TARGET_BYTES )); then
@@ -88,11 +84,12 @@ echo "$META_LINES" | python3 "$SCRIPT_DIR/write-gallery-metadata.py" "$DEPLOY" >
 echo "Hosted: $hosted_count (~$(( hosted_total / 1024 / 1024 )) MB), Archived: $archived_count (Bing CDN). Building index..."
 
 cp "$SCRIPT_DIR/gallery-index-head.html" "$DEPLOY/index.html"
-while IFS=$'\t' read -r key date_str title_str href; do
+while IFS=$'\t' read -r key date_str title_str href thumb; do
   [[ -z "$key" ]] && continue
   name=$(basename "$key")
   title_str="${title_str:-${name%.*}}"
-  echo "    <div class=\"card\"><a href=\"$href\" target=\"_blank\" title=\"$title_str\"><img src=\"thumbs/${name}.jpg\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> "$DEPLOY/index.html"
+  thumb="${thumb:-thumbs/${name%.jpg}.jpg}"
+  echo "    <div class=\"card\"><a href=\"$href\" target=\"_blank\" title=\"$title_str\"><img src=\"$thumb\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> "$DEPLOY/index.html"
 done < "$DEPLOY/sorted.txt"
 cat "$SCRIPT_DIR/gallery-index-tail.html" >> "$DEPLOY/index.html"
 
