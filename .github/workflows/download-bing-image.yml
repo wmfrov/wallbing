@@ -56,9 +56,10 @@ jobs:
             [ -f "$f" ] || continue
             name=$(basename "$f")
             cp "$f" "deploy/images/$name"
-            convert "$f" -resize 400x400\> -quality 82 "deploy/thumbs/${name}.jpg"
+            convert "$f" -resize 400x400\> -quality 82 "deploy/thumbs/${name}.jpg" || true
           done
           cp scripts/gallery-index-head.html scripts/gallery-index-tail.html scripts/update-gallery-metadata.py /tmp/
+          echo "Thumbs created: $(ls deploy/thumbs 2>/dev/null | wc -l)"
 
       - name: Deploy to GitHub Pages
         run: |
@@ -72,8 +73,8 @@ jobs:
             git rm -rf . 2>/dev/null || true
           fi
           mkdir -p images thumbs
-          cp -n /tmp/deploy_to_publish/images/*.png images/ 2>/dev/null || true
-          cp -n /tmp/deploy_to_publish/thumbs/*.jpg thumbs/ 2>/dev/null || true
+          find /tmp/deploy_to_publish/images -maxdepth 1 -name '*.png' -exec cp -n {} images/ \;
+          find /tmp/deploy_to_publish/thumbs -maxdepth 1 -type f -exec cp -n {} thumbs/ \;
           NEW_FILE=$(ls /tmp/deploy_to_publish/images/*.png 2>/dev/null | head -1)
           if [ -n "$NEW_FILE" ] && [ -f "images/$(basename "$NEW_FILE")" ]; then
             NAME=$(basename "$NEW_FILE")
@@ -91,7 +92,8 @@ jobs:
             echo "    <div class=\"card\"><a href=\"$key\" target=\"_blank\" title=\"$base\"><img src=\"thumbs/${name}.jpg\" alt=\"$base\" loading=\"lazy\"><span>$base</span></a></div>" >> index.html
           done < /tmp/sorted_images.txt
           cat /tmp/gallery-index-tail.html >> index.html
-          git add .
+          git add -f images/ thumbs/ index.html metadata.json
+          git add -u
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update gallery: Bing image of the day" || true
