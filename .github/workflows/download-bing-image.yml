@@ -84,6 +84,13 @@ jobs:
           else
             python3 /tmp/update-gallery-metadata.py . > /tmp/sorted_images.txt
           fi
+          for f in images/*.png images/*.jpg images/*.jpeg; do
+            [ -f "$f" ] || continue
+            name=$(basename "$f")
+            thumb="thumbs/${name}.jpg"
+            [ -f "$thumb" ] && continue
+            convert "$f" -resize 400x400\> -quality 82 "$thumb" || true
+          done
           cp /tmp/gallery-index-head.html index.html
           while IFS= read -r key; do
             [ -z "$key" ] || [ ! -f "$key" ] && continue
