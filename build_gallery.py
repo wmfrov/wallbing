@@ -191,6 +191,9 @@ INDEX_HEAD = """\
     .filter-clear { padding: 0.35rem 0.75rem; border-radius: 20px; border: 1px solid transparent; background: none; color: var(--muted); font-family: inherit; font-size: 0.75rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
     .filter-clear.show { opacity: 1; pointer-events: auto; }
     .filter-clear:hover { color: var(--text); }
+    .header-link { color: inherit; text-decoration: none; }
+    .header-link:hover { text-decoration: underline; }
+    .filter-label { color: var(--muted); font-size: 0.75rem; font-weight: 500; margin-right: 0.25rem; }
     .grid { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
     .card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
@@ -217,9 +220,9 @@ INDEX_HEAD = """\
 </head>
 <body>
   <header class="header">
-    <h1>Bing image of the day</h1>
+    <h1><a href="/" class="header-link">Bing image of the day</a></h1>
     <p class="meta">New photo each day from Bing. Click any image to view full size.</p>
-    <div class="search-wrap"><input type="text" id="search" placeholder="Loading search\u2026" autocomplete="off" disabled></div>
+    <div class="search-wrap"><input type="text" id="search" placeholder="Loading search\u2026" autocomplete="off" disabled aria-label="Search images"></div>
   </header>
   <div class="filters" id="filters"></div>
   <div class="grid">
@@ -254,16 +257,30 @@ INDEX_TAIL = """\
       var activeFilters = {};
       var searchIndex = null;
       var debounceTimer = null;
+      var selectedColorHex = null;
+      var COLOR_THRESHOLD = 0.35;
 
       var subjects = ['landscape','mountain','ocean','lake','river','forest',
         'desert','cave','island','city','architecture','bridge','castle',
         'ruins','animal','bird','flower','garden','farm','snow','ice','aurora'];
 
       var filtersEl = document.getElementById('filters');
-      var clearBtn = document.createElement('button');
-      clearBtn.className = 'filter-clear';
-      clearBtn.textContent = 'Clear filters';
-      filtersEl.appendChild(clearBtn);
+      var colorLabel = document.createElement('label');
+      colorLabel.htmlFor = 'color-filter';
+      colorLabel.className = 'filter-label';
+      colorLabel.textContent = 'Color';
+      var colorInput = document.createElement('input');
+      colorInput.type = 'color';
+      colorInput.id = 'color-filter';
+      colorInput.setAttribute('aria-label', 'Filter by color');
+      colorInput.style.cssText = 'width:28px;height:28px;padding:2px;cursor:pointer;border-radius:6px;border:1px solid #333;background:var(--card);';
+      filtersEl.appendChild(colorLabel);
+      filtersEl.appendChild(colorInput);
+      colorInput.addEventListener('change', function() {
+        selectedColorHex = colorInput.value || null;
+        clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0 || selectedColorHex != null);
+        applyFilters();
+      });
       subjects.forEach(function(s) {
         var btn = document.createElement('button');
         btn.className = 'filter-pill';
@@ -272,13 +289,19 @@ INDEX_TAIL = """\
         btn.addEventListener('click', function() {
           if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
           else { activeFilters[s] = true; btn.classList.add('active'); }
-          clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0);
+          clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0 || selectedColorHex != null);
           applyFilters();
         });
         filtersEl.appendChild(btn);
       });
+      var clearBtn = document.createElement('button');
+      clearBtn.className = 'filter-clear';
+      clearBtn.textContent = 'Clear filters';
+      filtersEl.appendChild(clearBtn);
       clearBtn.addEventListener('click', function() {
         activeFilters = {};
+        selectedColorHex = null;
+        colorInput.value = '#000000';
         filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
         clearBtn.classList.remove('show');
         applyFilters();
@@ -301,6 +324,24 @@ INDEX_TAIL = """\
       function getRec(card) {
         if (!searchIndex) return null;
         return searchIndex.get(card.querySelector('a').getAttribute('data-slug')) || null;
+      }
+
+      function hexToRgbNorm(hex) {
+        var m = (hex || '').match(/^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
+        if (!m) return null;
+        return [
+          parseInt(m[1], 16) / 255,
+          parseInt(m[2], 16) / 255,
+          parseInt(m[3], 16) / 255
+        ];
+      }
+      function hexDistance(hex1, hex2) {
+        var a = hexToRgbNorm(hex1);
+        var b = hexToRgbNorm(hex2);
+        if (!a || !b) return 2;
+        var sum = 0;
+        for (var i = 0; i < 3; i++) { var d = a[i] - b[i]; sum += d * d; }
+        return Math.sqrt(sum);
       }
 
       function getQueryVariants(word) {
@@ -335,7 +376,19 @@ INDEX_TAIL = """\
             var subs = rec ? (rec.sub || '').split(',') : [];
             tagMatch = activeKeys.some(function(k) { return subs.indexOf(k) >= 0; });
           }
-          var show = textMatch && tagMatch;
+          var colorMatch = true;
+          if (selectedColorHex != null && selectedColorHex !== '') {
+            var cp = rec && rec.cp ? rec.cp : [];
+            colorMatch = false;
+            for (var i = 0; i < cp.length; i++) {
+              var palHex = cp[i] && cp[i].hex;
+              if (palHex && hexDistance(selectedColorHex, palHex) <= COLOR_THRESHOLD) {
+                colorMatch = true;
+                break;
+              }
+            }
+          }
+          var show = textMatch && tagMatch && colorMatch;
           card.style.display = show ? '' : 'none';
           if (show) visibleCards.push(card);
         });
