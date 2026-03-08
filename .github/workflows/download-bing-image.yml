@@ -1,6 +1,7 @@
-# Fetch latest Bing images and deploy thumbnail gallery to GitHub Pages.
-# All full-res links point to Bing CDN. No full-res images are hosted.
-# Fetches last 8 days (self-healing if a run is missed). Idempotent.
+# Fetch Bing image metadata and deploy a CDN-backed thumbnail gallery to GitHub Pages.
+# All images (thumbs + full-res) are served from Bing CDN. Nothing is hosted.
+# Uses npanuhin archive for historical backfill + Bing API for latest images.
+# Fully self-contained: no dependency on files from main branch.
 
 name: Update Bing wallpaper gallery
 
@@ -16,123 +17,211 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Install ImageMagick
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
-
-      - name: Fetch API and prepare new images
+      - name: Build and deploy gallery
         run: |
           python3 - <<'PYEOF'
-          import json, os, re, shutil, urllib.request, sys
+          import json, os, re, subprocess, sys, urllib.request, html
 
-          API_URL = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8&mkt=en-US"
+          NPANUHIN_URL = "https://bing.npanuhin.me/US-en.json"
+          BING_API_URL = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8&mkt=en-US"
           BING_BASE = "https://www.bing.com"
           RES_RE = re.compile(r"_\d+x\d+\.jpg", re.IGNORECASE)
+          DEPLOY_DIR = "/tmp/gh-pages-deploy"
+          REPO_URL = f"https://x-access-token:{os.environ['GITHUB_TOKEN']}@github.com/{os.environ['GITHUB_REPOSITORY']}.git"
 
-          os.makedirs("/tmp/new_images", exist_ok=True)
+          def slug_from_bing_url(bing_url):
+              """Extract slug from a Bing CDN URL like https://bing.com/th?id=OHR.Foo_EN-US123_UHD.jpg"""
+              if "OHR." not in bing_url:
+                  return None
+              raw = bing_url.split("OHR.", 1)[-1]
+              raw = re.sub(r"\.(jpg|png)$", "", raw, flags=re.IGNORECASE)
+              return raw
 
-          with urllib.request.urlopen(API_URL, timeout=30) as r:
-              data = json.loads(r.read())
+          def thumb_url_from_bing_url(bing_url):
+              return bing_url.replace("_UHD.jpg", "_400x240.jpg")
 
-          results = []
-          for img in data.get("images", []):
-              urlbase = img.get("urlbase", "")
-              if "OHR." not in urlbase:
+          # ── 1. Fetch npanuhin archive ──────────────────────────────────
+          print("Fetching npanuhin archive...")
+          with urllib.request.urlopen(NPANUHIN_URL, timeout=60) as r:
+              npanuhin_data = json.loads(r.read())
+          print(f"  Got {len(npanuhin_data)} total entries from npanuhin")
+
+          entries = {}
+          for item in npanuhin_data:
+              bing_url = item.get("bing_url")
+              if not bing_url:
                   continue
-              slug = urlbase.split("OHR.", 1)[-1].strip()
-              url_path = img.get("url", "")
-              uhd_url = BING_BASE + RES_RE.sub("_UHD.jpg", url_path)
+              slug = slug_from_bing_url(bing_url)
+              if not slug:
+                  continue
+              title = item.get("title", "")
+              copyright_text = item.get("copyright", "")
+              if copyright_text and not title:
+                  title = copyright_text.split("(")[0].strip()
+              entries[slug] = {
+                  "date": item.get("date", ""),
+                  "title": title,
+                  "bing_url": bing_url,
+              }
+          print(f"  Filtered to {len(entries)} entries with bing_url")
 
-              startdate = img.get("startdate", "")
-              if startdate and len(startdate) >= 8:
-                  date_str = f"{startdate[:4]}-{startdate[4:6]}-{startdate[6:8]}"
-              else:
+          # ── 2. Fetch Bing API (latest 8 days) ─────────────────────────
+          print("Fetching Bing API (n=8)...")
+          try:
+              with urllib.request.urlopen(BING_API_URL, timeout=30) as r:
+                  api_data = json.loads(r.read())
+              api_count = 0
+              for img in api_data.get("images", []):
+                  urlbase = img.get("urlbase", "")
+                  if "OHR." not in urlbase:
+                      continue
+                  slug_base = urlbase.split("OHR.", 1)[-1].strip()
+                  url_path = img.get("url", "")
+                  uhd_url = BING_BASE + RES_RE.sub("_UHD.jpg", url_path)
+                  slug = slug_from_bing_url(uhd_url)
+                  if not slug:
+                      continue
+                  startdate = img.get("startdate", "")
                   date_str = ""
+                  if startdate and len(startdate) >= 8:
+                      date_str = f"{startdate[:4]}-{startdate[4:6]}-{startdate[6:8]}"
+                  copyright_text = img.get("copyright", "")
+                  title = copyright_text.split("(")[0].strip() if copyright_text else ""
+                  entries[slug] = {
+                      "date": date_str,
+                      "title": title,
+                      "bing_url": uhd_url,
+                  }
+                  api_count += 1
+              print(f"  Merged {api_count} entries from Bing API")
+          except Exception as e:
+              print(f"  Warning: Bing API fetch failed ({e}), continuing with npanuhin data only")
 
-              copyright_text = img.get("copyright", "")
-              title = copyright_text.split("(")[0].strip() if copyright_text else ""
+          print(f"Total gallery entries: {len(entries)}")
 
-              dest = f"/tmp/new_images/{slug}_UHD.jpg"
-              try:
-                  urllib.request.urlretrieve(uhd_url, dest)
-              except Exception as e:
-                  print(f"  Error downloading {slug}: {e}", file=sys.stderr)
-                  continue
+          # ── 3. Clone gh-pages ──────────────────────────────────────────
+          os.makedirs(DEPLOY_DIR, exist_ok=True)
+          clone_result = subprocess.run(
+              ["git", "clone", "--depth", "1", "--branch", "gh-pages", REPO_URL, DEPLOY_DIR],
+              capture_output=True, text=True
+          )
+          if clone_result.returncode != 0:
+              print("  gh-pages branch not found, will create orphan")
+              subprocess.run(["git", "init", DEPLOY_DIR], check=True, capture_output=True)
+              subprocess.run(["git", "-C", DEPLOY_DIR, "checkout", "--orphan", "gh-pages"],
+                             check=True, capture_output=True)
 
-              results.append({"slug": slug, "date": date_str, "title": title, "file": dest})
-              print(f"  Fetched: {slug}")
+          # ── 4. Write metadata.json ─────────────────────────────────────
+          metadata_path = os.path.join(DEPLOY_DIR, "metadata.json")
+          with open(metadata_path, "w") as f:
+              json.dump(entries, f, indent=2)
+          print(f"Wrote metadata.json ({len(entries)} entries)")
 
-          with open("/tmp/new_images/results.json", "w") as f:
-              json.dump(results, f)
-          print(f"Fetched {len(results)} images from API")
+          # ── 5. Build index.html ────────────────────────────────────────
+          sorted_slugs = sorted(entries.keys(),
+                                key=lambda k: (entries[k]["date"], k), reverse=True)
+
+          head = '''<!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Bing wallpapers</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;600&display=swap" rel="stylesheet">
+            <style>
+              :root { --bg: #0f0f12; --card: #1a1a20; --text: #e8e6e3; --muted: #8b8685; --accent: #7c9cbf; }
+              * { box-sizing: border-box; }
+              body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+              .header { padding: 2.5rem 1.5rem 1.5rem; max-width: 1400px; margin: 0 auto; }
+              h1 { font-weight: 600; font-size: clamp(1.75rem, 4vw, 2.25rem); letter-spacing: -0.02em; margin: 0 0 0.35rem; }
+              .meta { color: var(--muted); font-weight: 300; font-size: 0.95rem; }
+              .grid { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+              .card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+              .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
+              .card a { display: block; text-decoration: none; color: inherit; }
+              .card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+              .card-title { display: block; padding: 0.75rem 1rem 0.15rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
+              .card-date { display: block; padding: 0 1rem 0.75rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); opacity: 0.9; }
+              #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 100; align-items: center; justify-content: center; padding: 2rem; cursor: pointer; }
+              #lightbox.show { display: flex; }
+              #lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; }
+            </style>
+          </head>
+          <body>
+            <header class="header">
+              <h1>Bing image of the day</h1>
+              <p class="meta">New photo each day from Bing. Click any image to view full size.</p>
+            </header>
+            <div class="grid">
+          '''
+
+          tail = '''  </div>
+            <div id="lightbox" onclick="this.classList.remove('show')"><img src="" alt=""></div>
+            <script>
+              document.querySelectorAll('.card a').forEach(function(a) {
+                a.addEventListener('click', function(e) {
+                  var href = this.getAttribute('href');
+                  if (!href) return;
+                  e.preventDefault();
+                  document.getElementById('lightbox').querySelector('img').src = href;
+                  document.getElementById('lightbox').classList.add('show');
+                });
+              });
+            </script>
+          </body>
+          </html>
+          '''
+
+          import textwrap
+          head = textwrap.dedent(head).lstrip("\n")
+          tail = textwrap.dedent(tail).lstrip("\n")
+
+          index_path = os.path.join(DEPLOY_DIR, "index.html")
+          with open(index_path, "w") as f:
+              f.write(head)
+              for slug in sorted_slugs:
+                  entry = entries[slug]
+                  bing_url = entry["bing_url"]
+                  thumb = thumb_url_from_bing_url(bing_url)
+                  title = html.escape(entry.get("title", slug))
+                  date_str = entry.get("date", "")
+                  f.write(f'    <div class="card"><a href="{bing_url}" title="{title}">'
+                          f'<img src="{thumb}" alt="{title}" loading="lazy">'
+                          f'<span class="card-title">{title}</span>'
+                          f'<span class="card-date">{date_str}</span>'
+                          f'</a></div>\n')
+              f.write(tail)
+          print(f"Wrote index.html ({len(sorted_slugs)} cards)")
+
+          # ── 6. Remove old thumbs directory if present ──────────────────
+          thumbs_dir = os.path.join(DEPLOY_DIR, "thumbs")
+          if os.path.isdir(thumbs_dir):
+              import shutil
+              shutil.rmtree(thumbs_dir)
+              print("Removed old thumbs/ directory")
+
+          # ── 7. Commit and push ─────────────────────────────────────────
+          git = lambda *args: subprocess.run(["git", "-C", DEPLOY_DIR] + list(args),
+                                             check=True, capture_output=True, text=True)
+          git("config", "user.name", "github-actions[bot]")
+          git("config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com")
+          git("add", "-A")
+
+          diff = subprocess.run(["git", "-C", DEPLOY_DIR, "diff", "--cached", "--stat"],
+                                capture_output=True, text=True)
+          if diff.stdout.strip():
+              git("commit", "-m", f"Update gallery: {len(entries)} images")
+              git("push", "origin", "gh-pages", "--force")
+              print("Pushed to gh-pages")
+          else:
+              print("No changes to commit")
           PYEOF
-
-      - name: Deploy to GitHub Pages
-        run: |
-          cp scripts/gallery-index-head.html /tmp/gallery-index-head.html
-          cp scripts/gallery-index-tail.html /tmp/gallery-index-tail.html
-          cp scripts/update-gallery-metadata.py /tmp/update-gallery-metadata.py
-
-          git fetch origin gh-pages 2>/dev/null || true
-          if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
-            git checkout gh-pages
-          else
-            git checkout --orphan gh-pages
-            git rm -rf . 2>/dev/null || true
-          fi
-
-          mkdir -p thumbs
-
-          thumb_name() { local b="${1%.jpg}"; b="${b%_UHD}"; echo "${b}.jpg"; }
-
-          RESULTS=$(cat /tmp/new_images/results.json)
-          COUNT=$(echo "$RESULTS" | python3 -c "import json,sys; print(len(json.load(sys.stdin)))")
-
-          for i in $(seq 0 $(( COUNT - 1 ))); do
-            SLUG=$(echo "$RESULTS" | python3 -c "import json,sys; print(json.load(sys.stdin)[$i]['slug'])")
-            DATE=$(echo "$RESULTS" | python3 -c "import json,sys; print(json.load(sys.stdin)[$i]['date'])")
-            TITLE=$(echo "$RESULTS" | python3 -c "import json,sys; print(json.load(sys.stdin)[$i]['title'])")
-            FILE=$(echo "$RESULTS" | python3 -c "import json,sys; print(json.load(sys.stdin)[$i]['file'])")
-
-            THUMB=$(thumb_name "${SLUG}_UHD")
-            if [ ! -f "thumbs/${THUMB}" ]; then
-              convert "$FILE" -resize 400x400\> -quality 82 "thumbs/${THUMB}" || true
-              echo "  Thumb: ${THUMB}"
-            fi
-
-            python3 /tmp/update-gallery-metadata.py . "${SLUG}_UHD" "$DATE" "$TITLE" > /dev/null
-          done
-
-          python3 /tmp/update-gallery-metadata.py . > /tmp/sorted_images.txt
-
-          cp /tmp/gallery-index-head.html index.html
-          while IFS=$'\t' read -r slug date_str title_str bing_url thumb; do
-            [ -z "$slug" ] && continue
-            title_str="${title_str:-$slug}"
-            if [ ! -f "$thumb" ]; then
-              thumb="${bing_url}"
-            fi
-            echo "    <div class=\"card\"><a href=\"$bing_url\" title=\"$title_str\"><img src=\"$thumb\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> index.html
-          done < /tmp/sorted_images.txt
-          cat /tmp/gallery-index-tail.html >> index.html
-
-          git add -f thumbs/ index.html metadata.json
-          git add -u
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update gallery: $(date -u +%Y-%m-%d)" || true
-          git push origin gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
