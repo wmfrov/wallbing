@@ -14,13 +14,7 @@ A browsable gallery of every Bing image of the day, updated automatically and ho
 
 All images are served from Bing's CDN. Nothing is hosted in this repo.
 
-## Local wallpaper fetcher
-
-`fetch_weekly.py` downloads the latest Bing UHD images to `~/Pictures/bingimages` for use as macOS desktop wallpapers. Schedule it with the included launchd plist for automatic weekly updates.
-
-```bash
-python3 fetch_weekly.py
-```
+For downloading Bing wallpapers locally, see [wallbing-fetcher](https://github.com/wmfrov/wallbing-fetcher).
 
 ## Setup
 
