@@ -215,14 +215,6 @@ INDEX_HEAD = """\
     .search-wrap input:focus { border-color: #555; }
     .filters { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
     .filters-row { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
-    .color-filter-row { display: flex; align-items: center; gap: 0.75rem; width: 100%; flex-wrap: wrap; }
-    .color-filter-row input[type="range"] { flex: 1; min-width: 120px; height: 24px; -webkit-appearance: none; appearance: none; background: transparent; }
-    .color-filter-row input[type="range"]::-webkit-slider-runnable-track { height: 10px; border-radius: 5px; background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); }
-    .color-filter-row input[type="range"]::-moz-range-track { height: 10px; border-radius: 5px; background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); }
-    .color-filter-row input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--text); border: 2px solid var(--card); margin-top: -4px; cursor: pointer; }
-    .color-filter-row input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: var(--text); border: 2px solid var(--card); cursor: pointer; }
-    .color-filter-row input[type="range"]:disabled { opacity: 0.5; pointer-events: none; }
-    .color-filter-row label { display: flex; align-items: center; gap: 0.4rem; color: var(--muted); font-size: 0.85rem; font-weight: 500; cursor: pointer; user-select: none; }
     .filter-pill { padding: 0.35rem 0.75rem; border-radius: 20px; border: 1px solid #333; background: transparent; color: var(--muted); font-family: inherit; font-size: 0.75rem; font-weight: 500; cursor: pointer; transition: all 0.2s; text-transform: capitalize; }
     .filter-pill:hover { border-color: #555; color: var(--text); }
     .filter-pill.active { background: rgba(255,255,255,0.12); border-color: #666; color: var(--text); }
@@ -294,9 +286,6 @@ INDEX_TAIL = """\
       var activeFilters = {};
       var searchIndex = null;
       var debounceTimer = null;
-      var colorFilterEnabled = false;
-      var selectedHue = 0;
-      var HUE_THRESHOLD = 35;
 
       var subjects = ['landscape','mountain','ocean','lake','river','forest',
         'desert','cave','island','city','architecture','bridge','castle',
@@ -313,7 +302,7 @@ INDEX_TAIL = """\
         btn.addEventListener('click', function() {
           if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
           else { activeFilters[s] = true; btn.classList.add('active'); }
-          clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0 || colorFilterEnabled);
+          clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0);
           applyFilters();
         });
         pillsRow.appendChild(btn);
@@ -324,53 +313,11 @@ INDEX_TAIL = """\
       pillsRow.appendChild(clearBtn);
       clearBtn.addEventListener('click', function() {
         activeFilters = {};
-        colorFilterEnabled = false;
-        colorCheckbox.checked = false;
-        hueRange.disabled = true;
-        hueRange.value = 0;
-        selectedHue = 0;
         pillsRow.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
         clearBtn.classList.remove('show');
         applyFilters();
       });
       filtersEl.appendChild(pillsRow);
-
-      var colorRow = document.createElement('div');
-      colorRow.className = 'color-filter-row';
-      var colorCheckbox = document.createElement('input');
-      colorCheckbox.type = 'checkbox';
-      colorCheckbox.id = 'color-filter-checkbox';
-      colorCheckbox.setAttribute('aria-label', 'Filter by color');
-      var colorLabel = document.createElement('label');
-      colorLabel.htmlFor = 'color-filter-checkbox';
-      colorLabel.textContent = 'Filter by color';
-      colorRow.appendChild(colorCheckbox);
-      colorRow.appendChild(colorLabel);
-      var hueRange = document.createElement('input');
-      hueRange.type = 'range';
-      hueRange.min = 0;
-      hueRange.max = 360;
-      hueRange.value = 0;
-      hueRange.id = 'hue-range';
-      hueRange.setAttribute('aria-label', 'Select hue');
-      hueRange.disabled = true;
-      colorRow.appendChild(hueRange);
-      colorCheckbox.addEventListener('change', function() {
-        colorFilterEnabled = colorCheckbox.checked;
-        hueRange.disabled = !colorFilterEnabled;
-        selectedHue = parseInt(hueRange.value, 10);
-        clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0 || colorFilterEnabled);
-        applyFilters();
-      });
-      hueRange.addEventListener('input', function() {
-        selectedHue = parseInt(hueRange.value, 10);
-        applyFilters();
-      });
-      hueRange.addEventListener('change', function() {
-        selectedHue = parseInt(hueRange.value, 10);
-        applyFilters();
-      });
-      filtersEl.appendChild(colorRow);
 
       fetch('search.json')
         .then(function(r) { return r.json(); })
@@ -390,30 +337,6 @@ INDEX_TAIL = """\
       function getRec(card) {
         if (!searchIndex) return null;
         return searchIndex.get(card.querySelector('a').getAttribute('data-slug')) || null;
-      }
-
-      function hexToHue(hex) {
-        var m = (hex || '').match(/^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
-        if (!m) return null;
-        var r = parseInt(m[1], 16) / 255;
-        var g = parseInt(m[2], 16) / 255;
-        var b = parseInt(m[3], 16) / 255;
-        var max = Math.max(r, g, b);
-        var min = Math.min(r, g, b);
-        var l = (max + min) / 2;
-        if (max === min) return null;
-        var d = max - min;
-        var s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        if (s <= 0) return null;
-        var h;
-        if (max === r) h = ((g - b) / d + (g < b ? 6 : 0)) / 6;
-        else if (max === g) h = ((b - r) / d + 2) / 6;
-        else h = ((r - g) / d + 4) / 6;
-        return Math.round(h * 360) % 360;
-      }
-      function hueAngleDiff(h1, h2) {
-        var d = Math.abs(h1 - h2);
-        return d <= 180 ? d : 360 - d;
       }
 
       function getQueryVariants(word) {
@@ -448,22 +371,7 @@ INDEX_TAIL = """\
             var subs = rec ? (rec.sub || '').split(',') : [];
             tagMatch = activeKeys.some(function(k) { return subs.indexOf(k) >= 0; });
           }
-          var colorMatch = true;
-          if (colorFilterEnabled && selectedHue != null && searchIndex) {
-            var cp = rec && rec.cp ? rec.cp : [];
-            colorMatch = false;
-            for (var i = 0; i < cp.length; i++) {
-              var palHex = cp[i] && cp[i].hex;
-              if (!palHex) continue;
-              var palHue = hexToHue(palHex);
-              if (palHue == null) continue;
-              if (hueAngleDiff(selectedHue, palHue) <= HUE_THRESHOLD) {
-                colorMatch = true;
-                break;
-              }
-            }
-          }
-          var show = textMatch && tagMatch && colorMatch;
+          var show = textMatch && tagMatch;
           card.style.display = show ? '' : 'none';
           if (show) visibleCards.push(card);
         });
