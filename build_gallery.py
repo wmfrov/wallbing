@@ -46,8 +46,10 @@ def slug_from_bing_url(bing_url):
     return raw
 
 
+THUMB_RE = re.compile(r"(_UHD\.jpg|_\d+x\d+\.jpg)", re.IGNORECASE)
+
 def thumb_url(bing_url):
-    return bing_url.replace("_UHD.jpg", "_400x240.jpg")
+    return THUMB_RE.sub("_400x240.jpg", bing_url)
 
 
 def base_name(slug):
