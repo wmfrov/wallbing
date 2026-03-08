@@ -1,6 +1,3 @@
-# Build and deploy a CDN-backed Bing image gallery to GitHub Pages.
-# Runs build_gallery.py from the repo; all images served from Bing CDN.
-
 name: Update Bing wallpaper gallery
 
 on:
