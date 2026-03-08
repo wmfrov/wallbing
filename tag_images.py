@@ -92,14 +92,19 @@ SSL_CTX = _ssl_ctx()
 
 
 def load_metadata_from_ghpages():
-    result = subprocess.run(
-        ["git", "show", "gh-pages:metadata.json"],
+    subprocess.run(
+        ["git", "fetch", "origin", "gh-pages"],
         capture_output=True, text=True, cwd=SCRIPT_DIR,
     )
-    if result.returncode != 0:
-        print("ERROR: could not read metadata.json from gh-pages", file=sys.stderr)
-        sys.exit(1)
-    return json.loads(result.stdout)
+    for ref in ("origin/gh-pages", "gh-pages"):
+        result = subprocess.run(
+            ["git", "show", f"{ref}:metadata.json"],
+            capture_output=True, text=True, cwd=SCRIPT_DIR,
+        )
+        if result.returncode == 0:
+            return json.loads(result.stdout)
+    print("ERROR: could not read metadata.json from gh-pages", file=sys.stderr)
+    sys.exit(1)
 
 
 def load_progress():
