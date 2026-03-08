@@ -23,6 +23,7 @@ import urllib.request
 BING_API_URL = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8&mkt=en-US"
 BING_BASE = "https://www.bing.com"
 RES_RE = re.compile(r"_\d+x\d+\.jpg", re.IGNORECASE)
+LOCALE_RE = re.compile(r"_[A-Z]{2}-[A-Z]{2}\d+|_ROW\d+")
 DEPLOY_DIR = "/tmp/gh-pages-deploy"
 
 
@@ -43,6 +44,8 @@ def slug_from_bing_url(bing_url):
         return None
     raw = bing_url.split("OHR.", 1)[-1]
     raw = re.split(r"\.(jpg|png)", raw, flags=re.IGNORECASE)[0]
+    if not LOCALE_RE.search(raw):
+        return None
     return raw
 
 
@@ -90,6 +93,15 @@ def load_metadata():
         return entries
     print("No existing metadata.json, starting fresh")
     return {}
+
+
+def purge_invalid(entries):
+    """Remove entries whose slug lacks a valid locale pattern."""
+    invalid = [s for s in entries if not LOCALE_RE.search(s)]
+    for s in invalid:
+        del entries[s]
+    if invalid:
+        print(f"  Purged {len(invalid)} entries with invalid slugs")
 
 
 def save_metadata(entries):
@@ -284,6 +296,7 @@ def commit_and_push(entries):
 def main():
     clone_gh_pages()
     entries = load_metadata()
+    purge_invalid(entries)
 
     if os.environ.get("BACKFILL_NPANUHIN") == "true":
         backfill_npanuhin(entries)
