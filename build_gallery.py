@@ -9,7 +9,6 @@ entries from the Bing API.
 Expected env vars:
   GITHUB_TOKEN          - GitHub token for pushing to gh-pages
   GITHUB_REPOSITORY     - owner/repo (set automatically by GitHub Actions)
-  BACKFILL_NPANUHIN     - "true" to run a one-time backfill from npanuhin archive
 """
 from collections import defaultdict
 import html
@@ -17,7 +16,6 @@ import json
 import os
 import re
 import subprocess
-import sys
 import urllib.request
 
 BING_API_URL = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8&mkt=en-US"
@@ -112,32 +110,6 @@ def save_metadata(entries):
 
 
 # ── Data sources ──────────────────────────────────────────────────────────
-
-def backfill_npanuhin(entries):
-    url = "https://bing.npanuhin.me/US-en.json"
-    print("Backfill: fetching npanuhin archive...")
-    data = fetch_json(url)
-    print(f"  Got {len(data)} total entries from npanuhin")
-    count = 0
-    for item in data:
-        bing_url = item.get("bing_url")
-        if not bing_url:
-            continue
-        bing_url = bing_url.split("&")[0]
-        slug = slug_from_bing_url(bing_url)
-        if not slug:
-            continue
-        title = item.get("title", "")
-        copyright_text = item.get("copyright", "")
-        if copyright_text and not title:
-            title = copyright_text.split("(")[0].strip()
-        new_entry = {"date": item.get("date", ""), "title": title, "bing_url": bing_url}
-        existing = entries.get(slug)
-        if not existing or (existing.get("title") or "").replace("_", " ") == slug.replace("_", " "):
-            entries[slug] = new_entry
-            count += 1
-    print(f"  Backfilled {count} entries from npanuhin")
-
 
 def merge_bing_api(entries):
     print("Fetching Bing API (n=8)...")
@@ -297,10 +269,6 @@ def main():
     clone_gh_pages()
     entries = load_metadata()
     purge_invalid(entries)
-
-    if os.environ.get("BACKFILL_NPANUHIN") == "true":
-        backfill_npanuhin(entries)
-
     merge_bing_api(entries)
     dedup(entries)
     print(f"Total gallery entries: {len(entries)}")

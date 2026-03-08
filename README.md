@@ -21,10 +21,6 @@ A GitHub Actions workflow runs daily, fetches the latest images from the Bing AP
 
 The gallery will be at `https://<username>.github.io/<repo>/`.
 
-### Backfill from npanuhin archive
-
-To populate historical images (Dec 2023 onward), trigger the workflow manually with the **backfill_npanuhin** checkbox enabled. This fetches the [npanuhin Bing archive](https://github.com/npanuhin/bing-wallpaper) and merges ~800 entries into `metadata.json`. Only needs to be run once.
-
 ## Local wallpaper fetcher
 
 `fetch_weekly.py` downloads the latest 8 Bing UHD images to `~/Pictures/bingimages` and maintains a local `images.txt` manifest (gitignored) to avoid re-downloading. Requires the `requests` package (`pip install requests`).
