@@ -8,8 +8,9 @@
 
   <key>ProgramArguments</key>
   <array>
-    <string>/usr/local/bin/python3</string>
-    <string>/Users/will.ziegler/projects/newbingapp/fetch_weekly.py</string>
+    <string>/bin/bash</string>
+    <string>-c</string>
+    <string>cd "$HOME/projects/wallbing" &amp;&amp; python3 fetch_weekly.py</string>
   </array>
 
   <!-- Run every Monday at 9:00 AM -->

@@ -1,13 +1,17 @@
-# Fetch latest Bing images and deploy thumbnail gallery to GitHub Pages.
-# All full-res links point to Bing CDN. No full-res images are hosted.
-# Fetches last 8 days (self-healing if a run is missed). Idempotent.
+# Build and deploy a CDN-backed Bing image gallery to GitHub Pages.
+# Runs build_gallery.py from the repo; all images served from Bing CDN.
 
 name: Update Bing wallpaper gallery
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '30 15 * * *'
   workflow_dispatch:
+    inputs:
+      backfill_npanuhin:
+        description: 'One-time backfill from npanuhin archive (run once, then never again)'
+        type: boolean
+        default: false
 
 jobs:
   update-gallery:
@@ -16,123 +20,13 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Install ImageMagick
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
-
-      - name: Fetch API and prepare new images
-        run: |
-          python3 - <<'PYEOF'
-          import json, os, re, shutil, urllib.request, sys
-
-          API_URL = "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8&mkt=en-US"
-          BING_BASE = "https://www.bing.com"
-          RES_RE = re.compile(r"_\d+x\d+\.jpg", re.IGNORECASE)
-
-          os.makedirs("/tmp/new_images", exist_ok=True)
-
-          with urllib.request.urlopen(API_URL, timeout=30) as r:
-              data = json.loads(r.read())
-
-          results = []
-          for img in data.get("images", []):
-              urlbase = img.get("urlbase", "")
-              if "OHR." not in urlbase:
-                  continue
-              slug = urlbase.split("OHR.", 1)[-1].strip()
-              url_path = img.get("url", "")
-              uhd_url = BING_BASE + RES_RE.sub("_UHD.jpg", url_path)
-
-              startdate = img.get("startdate", "")
-              if startdate and len(startdate) >= 8:
-                  date_str = f"{startdate[:4]}-{startdate[4:6]}-{startdate[6:8]}"
-              else:
-                  date_str = ""
-
-              copyright_text = img.get("copyright", "")
-              title = copyright_text.split("(")[0].strip() if copyright_text else ""
-
-              dest = f"/tmp/new_images/{slug}_UHD.jpg"
-              try:
-                  urllib.request.urlretrieve(uhd_url, dest)
-              except Exception as e:
-                  print(f"  Error downloading {slug}: {e}", file=sys.stderr)
-                  continue
-
-              results.append({"slug": slug, "date": date_str, "title": title, "file": dest})
-              print(f"  Fetched: {slug}")
-
-          with open("/tmp/new_images/results.json", "w") as f:
-              json.dump(results, f)
-          print(f"Fetched {len(results)} images from API")
-          PYEOF
-
-      - name: Deploy to GitHub Pages
-        run: |
-          cp scripts/gallery-index-head.html /tmp/gallery-index-head.html
-          cp scripts/gallery-index-tail.html /tmp/gallery-index-tail.html
-          cp scripts/update-gallery-metadata.py /tmp/update-gallery-metadata.py
-
-          git fetch origin gh-pages 2>/dev/null || true
-          if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
-            git checkout gh-pages
-          else
-            git checkout --orphan gh-pages
-            git rm -rf . 2>/dev/null || true
-          fi
-
-          mkdir -p thumbs
-
-          thumb_name() { local b="${1%.jpg}"; b="${b%_UHD}"; echo "${b}.jpg"; }
-
-          RESULTS=$(cat /tmp/new_images/results.json)
-          COUNT=$(echo "$RESULTS" | python3 -c "import json,sys; print(len(json.load(sys.stdin)))")
-
-          for i in $(seq 0 $(( COUNT - 1 ))); do
-            SLUG=$(echo "$RESULTS" | python3 -c "import json,sys; print(json.load(sys.stdin)[$i]['slug'])")
-            DATE=$(echo "$RESULTS" | python3 -c "import json,sys; print(json.load(sys.stdin)[$i]['date'])")
-            TITLE=$(echo "$RESULTS" | python3 -c "import json,sys; print(json.load(sys.stdin)[$i]['title'])")
-            FILE=$(echo "$RESULTS" | python3 -c "import json,sys; print(json.load(sys.stdin)[$i]['file'])")
-
-            THUMB=$(thumb_name "${SLUG}_UHD")
-            if [ ! -f "thumbs/${THUMB}" ]; then
-              convert "$FILE" -resize 400x400\> -quality 82 "thumbs/${THUMB}" || true
-              echo "  Thumb: ${THUMB}"
-            fi
-
-            python3 /tmp/update-gallery-metadata.py . "${SLUG}_UHD" "$DATE" "$TITLE" > /dev/null
-          done
-
-          python3 /tmp/update-gallery-metadata.py . > /tmp/sorted_images.txt
-
-          cp /tmp/gallery-index-head.html index.html
-          while IFS=$'\t' read -r slug date_str title_str bing_url thumb; do
-            [ -z "$slug" ] && continue
-            title_str="${title_str:-$slug}"
-            if [ ! -f "$thumb" ]; then
-              thumb="${bing_url}"
-            fi
-            echo "    <div class=\"card\"><a href=\"$bing_url\" title=\"$title_str\"><img src=\"$thumb\" alt=\"$title_str\" loading=\"lazy\"><span class=\"card-title\">$title_str</span><span class=\"card-date\">${date_str:-}</span></a></div>" >> index.html
-          done < /tmp/sorted_images.txt
-          cat /tmp/gallery-index-tail.html >> index.html
-
-          git add -f thumbs/ index.html metadata.json
-          git add -u
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update gallery: $(date -u +%Y-%m-%d)" || true
-          git push origin gh-pages
+      - run: python3 build_gallery.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BACKFILL_NPANUHIN: ${{ inputs.backfill_npanuhin }}
