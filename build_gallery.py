@@ -213,13 +213,19 @@ INDEX_HEAD = """\
     .lb-download:hover { background: rgba(255,255,255,0.22); }
     .lb-close { position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s; }
     .lb-close:hover { color: #fff; }
+    .lb-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+    .lb-desc { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; max-width: 600px; line-height: 1.5; text-align: center; }
+    .lb-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; justify-content: center; }
+    .lb-tag { font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(255,255,255,0.1); color: var(--muted); text-transform: capitalize; }
+    .lb-colors { display: flex; gap: 0.4rem; margin-top: 0.5rem; justify-content: center; }
+    .lb-color { width: 20px; height: 20px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); }
   </style>
 </head>
 <body>
   <header class="header">
     <h1>Bing image of the day</h1>
     <p class="meta">New photo each day from Bing. Click any image to view full size.</p>
-    <div class="search-wrap"><input type="text" id="search" placeholder="Search images\u2026" autocomplete="off"></div>
+    <div class="search-wrap"><input type="text" id="search" placeholder="Loading search\u2026" autocomplete="off" disabled></div>
   </header>
   <div class="filters" id="filters"></div>
   <div class="grid">
@@ -237,6 +243,10 @@ INDEX_TAIL = """\
     <div class="lb-info">
       <div class="lb-title"></div>
       <div class="lb-date"></div>
+      <div class="lb-meta"></div>
+      <div class="lb-desc"></div>
+      <div class="lb-tags"></div>
+      <div class="lb-colors"></div>
       <a class="lb-download" href="#" download target="_blank">&#x2193; Download UHD</a>
     </div>
   </div>
@@ -246,11 +256,18 @@ INDEX_TAIL = """\
       var lbImg = lb.querySelector('img');
       var lbTitle = lb.querySelector('.lb-title');
       var lbDate = lb.querySelector('.lb-date');
+      var lbMeta = lb.querySelector('.lb-meta');
+      var lbDesc = lb.querySelector('.lb-desc');
+      var lbTags = lb.querySelector('.lb-tags');
+      var lbColors = lb.querySelector('.lb-colors');
       var lbDl = lb.querySelector('.lb-download');
+      var searchInput = document.getElementById('search');
       var cards = Array.from(document.querySelectorAll('.card'));
       var visibleCards = cards.slice();
       var currentIdx = -1;
       var activeFilters = {};
+      var searchIndex = null;
+      var debounceTimer = null;
 
       var subjects = ['landscape','mountain','ocean','lake','river','forest',
         'desert','cave','island','city','architecture','bridge','castle',
@@ -281,20 +298,45 @@ INDEX_TAIL = """\
         applyFilters();
       });
 
+      fetch('search.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          searchIndex = new Map();
+          data.forEach(function(rec) { searchIndex.set(rec.s, rec); });
+          searchInput.disabled = false;
+          searchInput.placeholder = 'Search images\\u2026';
+        })
+        .catch(function() {
+          console.warn('Failed to load search.json, falling back to title search');
+          searchInput.disabled = false;
+          searchInput.placeholder = 'Search by title\\u2026';
+        });
+
+      function getRec(card) {
+        if (!searchIndex) return null;
+        return searchIndex.get(card.querySelector('a').getAttribute('data-slug')) || null;
+      }
+
       function applyFilters() {
-        var q = (document.getElementById('search').value || '').toLowerCase();
+        var q = (searchInput.value || '').trim().toLowerCase();
         var activeKeys = Object.keys(activeFilters);
+        var terms = q ? q.split(/\\s+/) : [];
+        var regexes = terms.map(function(t) {
+          return new RegExp('\\\\b' + t.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '\\\\b', 'i');
+        });
         visibleCards = [];
         cards.forEach(function(card) {
           var a = card.querySelector('a');
-          var title = (a.getAttribute('data-title') || '').toLowerCase();
-          var date = (a.getAttribute('data-date') || '').toLowerCase();
-          var desc = (a.getAttribute('data-desc') || '').toLowerCase();
-          var textMatch = !q || title.indexOf(q) >= 0 || date.indexOf(q) >= 0 || desc.indexOf(q) >= 0;
+          var rec = getRec(card);
+          var textMatch = true;
+          if (regexes.length > 0) {
+            var s = rec ? rec.q : (a.getAttribute('data-title') || '') + ' ' + (a.getAttribute('data-date') || '');
+            textMatch = regexes.every(function(rx) { return rx.test(s); });
+          }
           var tagMatch = true;
           if (activeKeys.length > 0) {
-            var cardSubjects = (a.getAttribute('data-subjects') || '').split(',');
-            tagMatch = activeKeys.some(function(k) { return cardSubjects.indexOf(k) >= 0; });
+            var subs = rec ? (rec.sub || '').split(',') : [];
+            tagMatch = activeKeys.some(function(k) { return subs.indexOf(k) >= 0; });
           }
           var show = textMatch && tagMatch;
           card.style.display = show ? '' : 'none';
@@ -306,10 +348,40 @@ INDEX_TAIL = """\
         var card = visibleCards[idx];
         if (!card) return;
         var a = card.querySelector('a');
+        var rec = getRec(card);
         lbImg.src = a.getAttribute('href');
         lbTitle.textContent = a.getAttribute('data-title') || '';
         lbDate.textContent = a.getAttribute('data-date') || '';
         lbDl.href = a.getAttribute('href');
+        if (rec) {
+          var parts = [];
+          if (rec.co) parts.push(rec.co);
+          if (rec.sea) parts.push(rec.sea);
+          if (rec.mood) parts.push(rec.mood);
+          lbMeta.textContent = parts.join(' \\u00b7 ');
+          lbDesc.textContent = rec.ai || '';
+          lbTags.innerHTML = '';
+          (rec.sub || '').split(',').forEach(function(s) {
+            if (!s) return;
+            var pill = document.createElement('span');
+            pill.className = 'lb-tag';
+            pill.textContent = s;
+            lbTags.appendChild(pill);
+          });
+          lbColors.innerHTML = '';
+          (rec.cp || []).forEach(function(c) {
+            var dot = document.createElement('span');
+            dot.className = 'lb-color';
+            dot.style.backgroundColor = c.hex;
+            dot.title = c.name + ' (' + Math.round(c.w * 100) + '%)';
+            lbColors.appendChild(dot);
+          });
+        } else {
+          lbMeta.textContent = '';
+          lbDesc.textContent = '';
+          lbTags.innerHTML = '';
+          lbColors.innerHTML = '';
+        }
         currentIdx = idx;
         lb.classList.add('show');
         document.body.style.overflow = 'hidden';
@@ -348,7 +420,10 @@ INDEX_TAIL = """\
         else if (e.key === 'ArrowRight') navigate(1);
       });
 
-      document.getElementById('search').addEventListener('input', applyFilters);
+      searchInput.addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(applyFilters, 200);
+      });
     })();
   </script>
 </body>
@@ -371,15 +446,12 @@ def build_index(entries):
             date_str = entry.get("date", "")
             tags = entry.get("tags", {})
             subjects = tags.get("subject", [])
-            ai_desc = html.escape(tags.get("ai_description") or "")
-            subjects_attr = ",".join(subjects)
             tag_pills = "".join(
                 f'<span class="card-tag">{html.escape(s)}</span>' for s in subjects
             )
             f.write(
-                f'    <div class="card"><a href="{bing_url}" title="{title}" '
-                f'data-title="{title}" data-date="{date_str}" '
-                f'data-subjects="{subjects_attr}" data-desc="{ai_desc}">'
+                f'    <div class="card"><a href="{bing_url}" '
+                f'data-slug="{slug}" data-title="{title}" data-date="{date_str}">'
                 f'<img src="{thumb}" alt="{title}" loading="lazy" '
                 f'onerror="this.closest(\'.card\').style.display=\'none\'">'
                 f'<span class="card-title">{title}</span>'
@@ -389,6 +461,46 @@ def build_index(entries):
             )
         f.write(INDEX_TAIL)
     print(f"Wrote index.html ({len(sorted_slugs)} cards)")
+
+
+def build_search_index(entries):
+    """Build search.json with pre-concatenated search strings."""
+    sorted_slugs = sorted(
+        entries.keys(), key=lambda k: (entries[k]["date"], k), reverse=True
+    )
+    index = []
+    for slug in sorted_slugs:
+        entry = entries[slug]
+        tags = entry.get("tags", {})
+        parts = [
+            entry.get("title") or slug,
+            " ".join(tags.get("subject", [])),
+            tags.get("country") or "",
+            tags.get("mood") or "",
+            tags.get("season") or "",
+        ]
+        if tags.get("keywords"):
+            parts.append(" ".join(tags["keywords"]))
+        if tags.get("search_text"):
+            parts.append(tags["search_text"])
+        if not tags.get("search_text") and tags.get("ai_description"):
+            parts.append(tags["ai_description"])
+        q = " ".join(p for p in parts if p).lower()
+        index.append({
+            "s": slug,
+            "q": q,
+            "ai": tags.get("ai_description") or "",
+            "co": tags.get("country") or "",
+            "sub": ",".join(tags.get("subject", [])),
+            "sea": tags.get("season") or "",
+            "mood": tags.get("mood") or "",
+            "cp": tags.get("color_palette", []),
+        })
+    path = os.path.join(DEPLOY_DIR, "search.json")
+    with open(path, "w") as f:
+        json.dump(index, f, separators=(",", ":"))
+    size_kb = os.path.getsize(path) / 1024
+    print(f"Wrote search.json ({len(index)} entries, {size_kb:.0f} KB)")
 
 
 # ── Git commit + push ─────────────────────────────────────────────────────
@@ -429,6 +541,7 @@ def main():
 
     save_metadata(entries)
     build_index(entries)
+    build_search_index(entries)
     commit_and_push(entries)
 
 

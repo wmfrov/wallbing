@@ -22,6 +22,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - run: pip install Pillow
+
       - run: python3 tag_images.py --push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
