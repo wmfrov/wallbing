@@ -107,7 +107,7 @@ jobs:
                       "bing_url": bing_url,
                   }
                   existing = entries.get(slug)
-                  if not existing or existing.get("title", "").replace("_", " ") == slug.replace("_", " "):
+                  if not existing or (existing.get("title") or "").replace("_", " ") == slug.replace("_", " "):
                       entries[slug] = new_entry
                       np_count += 1
               print(f"  Backfilled {np_count} entries from npanuhin")
