@@ -42,6 +42,10 @@ The plist assumes the repo is cloned at `~/projects/wallbing`. Edit the path ins
 
 Use `~/Pictures/bingimages` as the wallpaper folder in **System Settings > Wallpaper** for automatic rotation.
 
+## Image disclaimer
+
+All images displayed in the gallery and downloaded by the local fetcher are the property of Microsoft/Bing and their respective photographers. They are provided by Bing for personal, non-commercial use as wallpapers. This project does not host or redistribute any images -- it links to them on Bing's CDN.
+
 ## License
 
-Use and modify as you like.
+[MIT License](LICENSE)
