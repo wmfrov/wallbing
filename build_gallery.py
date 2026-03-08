@@ -303,12 +303,23 @@ INDEX_TAIL = """\
         return searchIndex.get(card.querySelector('a').getAttribute('data-slug')) || null;
       }
 
+      function getQueryVariants(word) {
+        var variants = [word];
+        if (word.length > 4 && word.slice(-2) === 'es') variants.push(word.slice(0, -2));
+        else if (word.length > 3 && word.slice(-1) === 's' && word.slice(-2) !== 'ss' && word.slice(-2) !== 'us') variants.push(word.slice(0, -1));
+        if (word.slice(-1) !== 's') variants.push(word + 's');
+        var seen = {};
+        return variants.filter(function(v) { if (seen[v]) return false; seen[v] = true; return true; });
+      }
+
       function applyFilters() {
         var q = (searchInput.value || '').trim().toLowerCase();
         var activeKeys = Object.keys(activeFilters);
         var terms = q ? q.split(/\\s+/) : [];
         var regexes = terms.map(function(t) {
-          return new RegExp('\\\\b' + t.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '\\\\b', 'i');
+          var variants = getQueryVariants(t);
+          var escaped = variants.map(function(v) { return v.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&'); });
+          return new RegExp('\\\\b(' + escaped.join('|') + ')\\\\b', 'i');
         });
         visibleCards = [];
         cards.forEach(function(card) {
@@ -434,6 +445,8 @@ def build_search_index(entries):
             tags.get("country") or "",
             tags.get("mood") or "",
             tags.get("season") or "",
+            tags.get("region") or "",
+            tags.get("time_of_day") or "",
         ]
         if tags.get("keywords"):
             parts.append(" ".join(tags["keywords"]))
@@ -441,6 +454,9 @@ def build_search_index(entries):
             parts.append(tags["search_text"])
         if not tags.get("search_text") and tags.get("ai_description"):
             parts.append(tags["ai_description"])
+        palette = tags.get("color_palette") or []
+        if palette:
+            parts.append(" ".join(c.get("name") or "" for c in palette if isinstance(c, dict)))
         q = " ".join(p for p in parts if p).lower()
         index.append({
             "s": slug,
