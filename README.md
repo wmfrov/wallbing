@@ -1,50 +1,37 @@
 # wallbing
 
-A daily Bing image-of-the-day gallery on GitHub Pages, plus a local wallpaper fetcher for macOS.
+A browsable gallery of every Bing image of the day, updated automatically and hosted on GitHub Pages.
 
-## Gallery (GitHub Actions + Pages)
+**[View the gallery](https://wmfrov.github.io/wallbing/)**
 
-A GitHub Actions workflow runs daily, fetches the latest images from the Bing API, and publishes a static gallery to the `gh-pages` branch. All images are served directly from Bing's CDN -- nothing is downloaded or hosted in the repo.
+## Gallery
 
-**How it works:**
+1,755+ wallpapers from February 2021 to today, with a new image added daily. Every image is analyzed by AI to enable:
 
-1. The workflow checks out the repo and runs `build_gallery.py`.
-2. The script clones `gh-pages`, loads the existing `metadata.json` (the cumulative list of all known images), and fetches the latest 8 entries from the Bing API.
-3. It rebuilds `index.html` with thumbnail cards (`_400x240.jpg` CDN URLs) and a lightbox for full-resolution viewing (`_UHD.jpg` CDN URLs).
-4. It commits and pushes back to `gh-pages`.
+- **Filter by subject** -- landscape, animal, architecture, ocean, snow, aurora, and more
+- **Freeform search** -- search for "coral reef", "red bridge", or "snowy village" and find matches even when those words aren't in the original title
+- **Full-res viewing** -- click any image for a UHD lightbox with download
 
-**Setup:**
-
-1. Push the repo to GitHub.
-2. In the repo: **Settings > Pages > Source** > **Deploy from a branch** > branch **gh-pages**.
-3. Run the workflow once from the **Actions** tab, or wait for the daily schedule.
-
-The gallery will be at `https://<username>.github.io/<repo>/`.
+All images are served from Bing's CDN. Nothing is hosted in this repo.
 
 ## Local wallpaper fetcher
 
-`fetch_weekly.py` downloads the latest 8 Bing UHD images to `~/Pictures/bingimages` and maintains a local `images.txt` manifest (gitignored) to avoid re-downloading. Requires the `requests` package (`pip install requests`).
-
-Run manually:
+`fetch_weekly.py` downloads the latest Bing UHD images to `~/Pictures/bingimages` for use as macOS desktop wallpapers. Schedule it with the included launchd plist for automatic weekly updates.
 
 ```bash
 python3 fetch_weekly.py
 ```
 
-Or schedule via launchd (runs every Monday at 9 AM):
+## Setup
 
-```bash
-cp com.wallbing.weekly.plist ~/Library/LaunchAgents/
-launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.wallbing.weekly.plist
-```
-
-The plist assumes the repo is cloned at `~/projects/wallbing`. Edit the path inside the plist if yours is different.
-
-Use `~/Pictures/bingimages` as the wallpaper folder in **System Settings > Wallpaper** for automatic rotation.
+1. Push the repo to GitHub.
+2. **Settings > Pages > Source** > branch `gh-pages`.
+3. Add an `OPENAI_API_KEY` repository secret for automatic image tagging.
+4. Run the workflow from the **Actions** tab, or wait for the daily schedule.
 
 ## Image disclaimer
 
-All images displayed in the gallery and downloaded by the local fetcher are the property of Microsoft/Bing and their respective photographers. They are provided by Bing for personal, non-commercial use as wallpapers. This project does not host or redistribute any images -- it links to them on Bing's CDN.
+All images are the property of Microsoft/Bing and their respective photographers, provided for personal non-commercial use. This project links to them on Bing's CDN and does not host or redistribute any images.
 
 ## License
 
