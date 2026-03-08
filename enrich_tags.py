@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
-Tag gallery images using GPT-4o-mini vision analysis + programmatic color extraction.
+Enrich gallery image tags with improved GPT-4o-mini analysis + programmatic color extraction.
 
-Reads metadata.json from gh-pages, sends untagged thumbnails to the OpenAI
-API, extracts color palettes via Pillow, and writes structured tags back.
-
-Progress is cached in tags_progress.json so runs can be resumed.
+One-time backfill script that regenerates all tag fields from scratch using an
+enhanced prompt with API description context, and adds programmatic color palettes.
 
 Usage:
   export OPENAI_API_KEY=sk-...
-  python3 tag_images.py           # writes metadata locally
-  python3 tag_images.py --push    # also pushes updated gh-pages
+  python3 enrich_tags.py --test 50      # process 50 images for review
+  python3 enrich_tags.py                # process all, write local output
+  python3 enrich_tags.py --push         # process all, push to gh-pages
 
 Env vars:
   OPENAI_API_KEY       - required
@@ -29,7 +28,7 @@ import ssl
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROGRESS_FILE = os.path.join(SCRIPT_DIR, "tags_progress.json")
+PROGRESS_FILE = os.path.join(SCRIPT_DIR, "enrich_progress.json")
 THUMB_CACHE = "/tmp/wallbing-thumbs"
 THUMB_RE = re.compile(r"(_UHD\.jpg|_\d+x\d+\.jpg)", re.IGNORECASE)
 
@@ -61,7 +60,8 @@ species, landmarks, geological formations, architectural styles, weather \
 phenomena. Mention spatial layout (foreground, background), distinctive \
 textures or patterns, and any text or signs visible.
 - "keywords": array of 10-20 specific, searchable terms. Include:
-  * Specific species and common names (both scientific-sounding and colloquial)
+  * Specific species and common names (both scientific-sounding and colloquial, \
+e.g. "Eurasian lynx", "lynx", "wild cat")
   * Landmark and place names
   * Quantities and groupings ("two", "pair", "flock", "solo")
   * Materials and textures ("cobblestone", "stained glass", "terraced")
@@ -135,6 +135,9 @@ def thumb_url(bing_url):
     return THUMB_RE.sub("_400x240.jpg", bing_url)
 
 
+# ── Thumbnail cache ──────────────────────────────────────────────────────
+
+
 def download_thumbnail(bing_url, slug):
     os.makedirs(THUMB_CACHE, exist_ok=True)
     path = os.path.join(THUMB_CACHE, f"{slug}.jpg")
@@ -142,15 +145,15 @@ def download_thumbnail(bing_url, slug):
         with open(path, "rb") as f:
             return f.read()
     url = thumb_url(bing_url)
-    req = urllib.request.Request(url, headers={"User-Agent": "wallbing-tag/1.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": "wallbing-enrich/1.0"})
     try:
         data = urllib.request.urlopen(req, timeout=15, context=SSL_CTX).read()
         if len(data) > 1024:
             with open(path, "wb") as f:
                 f.write(data)
             return data
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"    Thumbnail download failed for {slug}: {e}")
     return None
 
 
@@ -158,7 +161,7 @@ def download_thumbnail(bing_url, slug):
 
 
 def call_openai(api_key, image_url, title, api_description=None):
-    user_content = [
+    user_parts = [
         {
             "type": "image_url",
             "image_url": {"url": image_url, "detail": "low"},
@@ -169,7 +172,7 @@ def call_openai(api_key, image_url, title, api_description=None):
         },
     ]
     if api_description:
-        user_content.append({
+        user_parts.append({
             "type": "text",
             "text": f"Background description: {api_description}",
         })
@@ -178,7 +181,7 @@ def call_openai(api_key, image_url, title, api_description=None):
         "model": MODEL,
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_content},
+            {"role": "user", "content": user_parts},
         ],
         "response_format": {"type": "json_object"},
         "max_tokens": 800,
@@ -216,7 +219,6 @@ def call_openai(api_key, image_url, title, api_description=None):
 
 
 def validate_tags(raw):
-    """Ensure the response has the expected shape; return cleaned dict or None."""
     if not isinstance(raw, dict):
         return None
     tags = {}
@@ -237,8 +239,7 @@ def validate_tags(raw):
 
 
 def push_to_ghpages(metadata):
-    """Checkout gh-pages worktree, write metadata + rebuild HTML, commit, push."""
-    deploy = "/tmp/gh-pages-tag-deploy"
+    deploy = "/tmp/gh-pages-enrich-deploy"
 
     token = os.environ.get("GITHUB_TOKEN", "")
     repo = os.environ.get("GITHUB_REPOSITORY", "")
@@ -275,8 +276,8 @@ def push_to_ghpages(metadata):
         capture_output=True, text=True,
     )
     if diff.stdout.strip():
-        tagged = sum(1 for e in metadata.values() if "tags" in e)
-        git("commit", "-m", f"Tag images: {tagged}/{len(metadata)} tagged")
+        enriched = sum(1 for e in metadata.values() if e.get("tags", {}).get("keywords"))
+        git("commit", "-m", f"Enrich tags: {enriched}/{len(metadata)} enriched")
         git("push", "origin", "gh-pages", "--force")
         print("Pushed to gh-pages")
     else:
@@ -289,29 +290,37 @@ def push_to_ghpages(metadata):
 def main():
     api_key = os.environ.get("OPENAI_API_KEY", "")
     if not api_key:
-        print("OPENAI_API_KEY not set, skipping tagging")
-        return
+        print("OPENAI_API_KEY not set")
+        sys.exit(1)
 
     do_push = "--push" in sys.argv
+    test_limit = None
+    for i, arg in enumerate(sys.argv):
+        if arg == "--test" and i + 1 < len(sys.argv):
+            test_limit = int(sys.argv[i + 1])
 
     print("Loading metadata from gh-pages...")
     metadata = load_metadata_from_ghpages()
     print(f"  {len(metadata)} entries")
 
     progress = load_progress()
-    print(f"  {len(progress)} entries already tagged in progress cache")
+    print(f"  {len(progress)} entries already enriched in progress cache")
 
-    for slug, tags in progress.items():
+    for slug, cached_tags in progress.items():
         if slug in metadata:
-            metadata[slug]["tags"] = tags
+            metadata[slug]["tags"] = cached_tags
 
-    to_tag = []
+    to_process = []
     for slug, entry in metadata.items():
-        if "tags" not in entry:
-            to_tag.append((slug, entry))
+        tags = entry.get("tags", {})
+        if not tags.get("keywords"):
+            to_process.append((slug, entry))
 
-    print(f"  {len(to_tag)} entries need tagging")
-    if not to_tag:
+    if test_limit:
+        to_process = to_process[:test_limit]
+
+    print(f"  {len(to_process)} entries to enrich")
+    if not to_process:
         print("Nothing to do.")
         if do_push:
             push_to_ghpages(metadata)
@@ -319,16 +328,33 @@ def main():
 
     from color_extract import extract_palette
 
-    print("Downloading thumbnails and extracting colors...")
-    color_palettes = {}
-    for slug, entry in to_tag:
-        thumb_data = download_thumbnail(entry["bing_url"], slug)
-        if thumb_data:
+    print("Downloading thumbnails...")
+    thumb_data = {}
+    with ThreadPoolExecutor(max_workers=20) as pool:
+        futures = {
+            pool.submit(download_thumbnail, entry["bing_url"], slug): slug
+            for slug, entry in to_process
+        }
+        for fut in as_completed(futures):
+            slug = futures[fut]
             try:
-                color_palettes[slug] = extract_palette(thumb_data)
-            except Exception:
-                pass
+                data = fut.result()
+                if data:
+                    thumb_data[slug] = data
+            except Exception as e:
+                print(f"  Thumbnail error {slug}: {e}")
+    print(f"  {len(thumb_data)} thumbnails ready")
 
+    print("Extracting colors...")
+    color_palettes = {}
+    for slug, data in thumb_data.items():
+        try:
+            color_palettes[slug] = extract_palette(data)
+        except Exception as e:
+            print(f"  Color error {slug}: {e}")
+    print(f"  {len(color_palettes)} palettes extracted")
+
+    print("Tagging with GPT-4o-mini...")
     completed = 0
     failed = 0
 
@@ -340,7 +366,7 @@ def main():
         return slug, call_openai(api_key, thumb, title, api_desc)
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-        futures = {pool.submit(_tag_one, item): item for item in to_tag}
+        futures = {pool.submit(_tag_one, item): item for item in to_process}
         for fut in as_completed(futures):
             slug, entry = futures[fut]
             try:
@@ -361,18 +387,18 @@ def main():
             total_done = completed + failed
             if total_done % SAVE_EVERY == 0:
                 save_progress(progress)
-                print(f"  Progress: {total_done}/{len(to_tag)} "
+                print(f"  Progress: {total_done}/{len(to_process)} "
                       f"({completed} ok, {failed} failed)")
 
     save_progress(progress)
-    tagged_total = sum(1 for e in metadata.values() if "tags" in e)
-    print(f"\nDone: {completed} newly tagged, {failed} failed")
-    print(f"Total tagged: {tagged_total}/{len(metadata)}")
+    enriched_total = sum(1 for e in metadata.values() if e.get("tags", {}).get("keywords"))
+    print(f"\nDone: {completed} newly enriched, {failed} failed")
+    print(f"Total enriched: {enriched_total}/{len(metadata)}")
 
     if do_push:
         push_to_ghpages(metadata)
     else:
-        out = os.path.join(SCRIPT_DIR, "metadata_tagged.json")
+        out = os.path.join(SCRIPT_DIR, "metadata_enriched.json")
         with open(out, "w") as f:
             json.dump(metadata, f, indent=2)
         print(f"Wrote {out}")
