@@ -213,12 +213,6 @@ INDEX_HEAD = """\
     .lb-download:hover { background: rgba(255,255,255,0.22); }
     .lb-close { position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s; }
     .lb-close:hover { color: #fff; }
-    .lb-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
-    .lb-desc { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; max-width: 600px; line-height: 1.5; text-align: center; }
-    .lb-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; justify-content: center; }
-    .lb-tag { font-size: 0.65rem; padding: 0.2rem 0.5rem; border-radius: 10px; background: rgba(255,255,255,0.1); color: var(--muted); text-transform: capitalize; }
-    .lb-colors { display: flex; gap: 0.4rem; margin-top: 0.5rem; justify-content: center; }
-    .lb-color { width: 20px; height: 20px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); }
   </style>
 </head>
 <body>
@@ -243,10 +237,6 @@ INDEX_TAIL = """\
     <div class="lb-info">
       <div class="lb-title"></div>
       <div class="lb-date"></div>
-      <div class="lb-meta"></div>
-      <div class="lb-desc"></div>
-      <div class="lb-tags"></div>
-      <div class="lb-colors"></div>
       <a class="lb-download" href="#" download target="_blank">&#x2193; Download UHD</a>
     </div>
   </div>
@@ -256,10 +246,6 @@ INDEX_TAIL = """\
       var lbImg = lb.querySelector('img');
       var lbTitle = lb.querySelector('.lb-title');
       var lbDate = lb.querySelector('.lb-date');
-      var lbMeta = lb.querySelector('.lb-meta');
-      var lbDesc = lb.querySelector('.lb-desc');
-      var lbTags = lb.querySelector('.lb-tags');
-      var lbColors = lb.querySelector('.lb-colors');
       var lbDl = lb.querySelector('.lb-download');
       var searchInput = document.getElementById('search');
       var cards = Array.from(document.querySelectorAll('.card'));
@@ -348,40 +334,10 @@ INDEX_TAIL = """\
         var card = visibleCards[idx];
         if (!card) return;
         var a = card.querySelector('a');
-        var rec = getRec(card);
         lbImg.src = a.getAttribute('href');
         lbTitle.textContent = a.getAttribute('data-title') || '';
         lbDate.textContent = a.getAttribute('data-date') || '';
         lbDl.href = a.getAttribute('href');
-        if (rec) {
-          var parts = [];
-          if (rec.co) parts.push(rec.co);
-          if (rec.sea) parts.push(rec.sea);
-          if (rec.mood) parts.push(rec.mood);
-          lbMeta.textContent = parts.join(' \\u00b7 ');
-          lbDesc.textContent = rec.ai || '';
-          lbTags.innerHTML = '';
-          (rec.sub || '').split(',').forEach(function(s) {
-            if (!s) return;
-            var pill = document.createElement('span');
-            pill.className = 'lb-tag';
-            pill.textContent = s;
-            lbTags.appendChild(pill);
-          });
-          lbColors.innerHTML = '';
-          (rec.cp || []).forEach(function(c) {
-            var dot = document.createElement('span');
-            dot.className = 'lb-color';
-            dot.style.backgroundColor = c.hex;
-            dot.title = c.name + ' (' + Math.round(c.w * 100) + '%)';
-            lbColors.appendChild(dot);
-          });
-        } else {
-          lbMeta.textContent = '';
-          lbDesc.textContent = '';
-          lbTags.innerHTML = '';
-          lbColors.innerHTML = '';
-        }
         currentIdx = idx;
         lb.classList.add('show');
         document.body.style.overflow = 'hidden';
