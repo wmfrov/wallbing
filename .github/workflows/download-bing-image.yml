@@ -205,7 +205,7 @@ jobs:
                   entry = entries[slug]
                   bing_url = entry["bing_url"]
                   thumb = thumb_url_from_bing_url(bing_url)
-                  title = html.escape(entry.get("title", slug))
+                  title = html.escape(entry.get("title") or slug)
                   date_str = entry.get("date", "")
                   f.write(f'    <div class="card"><a href="{bing_url}" title="{title}">'
                           f'<img src="{thumb}" alt="{title}" loading="lazy">'
