@@ -130,7 +130,10 @@ def merge_bing_api(entries):
             date_str = f"{startdate[:4]}-{startdate[4:6]}-{startdate[6:8]}"
         copyright_text = img.get("copyright", "")
         title = copyright_text.split("(")[0].strip() if copyright_text else ""
-        entries[slug] = {"date": date_str, "title": title, "bing_url": uhd_url}
+        if slug in entries:
+            entries[slug].update({"date": date_str, "title": title, "bing_url": uhd_url})
+        else:
+            entries[slug] = {"date": date_str, "title": title, "bing_url": uhd_url}
         count += 1
     print(f"  Merged {count} entries from Bing API")
 
@@ -181,13 +184,22 @@ INDEX_HEAD = """\
     .search-wrap input { width: 100%; max-width: 400px; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #333; background: var(--card); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
     .search-wrap input::placeholder { color: var(--muted); }
     .search-wrap input:focus { border-color: #555; }
+    .filters { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+    .filter-pill { padding: 0.35rem 0.75rem; border-radius: 20px; border: 1px solid #333; background: transparent; color: var(--muted); font-family: inherit; font-size: 0.75rem; font-weight: 500; cursor: pointer; transition: all 0.2s; text-transform: capitalize; }
+    .filter-pill:hover { border-color: #555; color: var(--text); }
+    .filter-pill.active { background: rgba(255,255,255,0.12); border-color: #666; color: var(--text); }
+    .filter-clear { padding: 0.35rem 0.75rem; border-radius: 20px; border: 1px solid transparent; background: none; color: var(--muted); font-family: inherit; font-size: 0.75rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+    .filter-clear.show { opacity: 1; pointer-events: auto; }
+    .filter-clear:hover { color: var(--text); }
     .grid { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
     .card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
     .card a { display: block; text-decoration: none; color: inherit; }
     .card img { width: 100%; height: 200px; object-fit: cover; display: block; }
     .card-title { display: block; padding: 0.75rem 1rem 0.15rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
-    .card-date { display: block; padding: 0 1rem 0.75rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); opacity: 0.9; }
+    .card-date { display: block; padding: 0 1rem 0.15rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); opacity: 0.9; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; padding: 0 1rem 0.75rem; }
+    .card-tag { font-size: 0.6rem; padding: 0.15rem 0.45rem; border-radius: 10px; background: rgba(255,255,255,0.07); color: var(--muted); text-transform: capitalize; }
     #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 100; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
     #lightbox.show { display: flex; }
     .lb-main { display: flex; align-items: center; gap: 1rem; max-width: 100%; max-height: calc(100vh - 8rem); }
@@ -207,8 +219,9 @@ INDEX_HEAD = """\
   <header class="header">
     <h1>Bing image of the day</h1>
     <p class="meta">New photo each day from Bing. Click any image to view full size.</p>
-    <div class="search-wrap"><input type="text" id="search" placeholder="Search by title or date\u2026" autocomplete="off"></div>
+    <div class="search-wrap"><input type="text" id="search" placeholder="Search images\u2026" autocomplete="off"></div>
   </header>
+  <div class="filters" id="filters"></div>
   <div class="grid">
 """
 
@@ -237,6 +250,57 @@ INDEX_TAIL = """\
       var cards = Array.from(document.querySelectorAll('.card'));
       var visibleCards = cards.slice();
       var currentIdx = -1;
+      var activeFilters = {};
+
+      var subjects = ['landscape','mountain','ocean','lake','river','forest',
+        'desert','cave','island','city','architecture','bridge','castle',
+        'ruins','animal','bird','flower','garden','farm','snow','ice','aurora'];
+
+      var filtersEl = document.getElementById('filters');
+      var clearBtn = document.createElement('button');
+      clearBtn.className = 'filter-clear';
+      clearBtn.textContent = 'Clear filters';
+      filtersEl.appendChild(clearBtn);
+      subjects.forEach(function(s) {
+        var btn = document.createElement('button');
+        btn.className = 'filter-pill';
+        btn.textContent = s;
+        btn.setAttribute('data-subject', s);
+        btn.addEventListener('click', function() {
+          if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
+          else { activeFilters[s] = true; btn.classList.add('active'); }
+          clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0);
+          applyFilters();
+        });
+        filtersEl.appendChild(btn);
+      });
+      clearBtn.addEventListener('click', function() {
+        activeFilters = {};
+        filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
+        clearBtn.classList.remove('show');
+        applyFilters();
+      });
+
+      function applyFilters() {
+        var q = (document.getElementById('search').value || '').toLowerCase();
+        var activeKeys = Object.keys(activeFilters);
+        visibleCards = [];
+        cards.forEach(function(card) {
+          var a = card.querySelector('a');
+          var title = (a.getAttribute('data-title') || '').toLowerCase();
+          var date = (a.getAttribute('data-date') || '').toLowerCase();
+          var desc = (a.getAttribute('data-desc') || '').toLowerCase();
+          var textMatch = !q || title.indexOf(q) >= 0 || date.indexOf(q) >= 0 || desc.indexOf(q) >= 0;
+          var tagMatch = true;
+          if (activeKeys.length > 0) {
+            var cardSubjects = (a.getAttribute('data-subjects') || '').split(',');
+            tagMatch = activeKeys.some(function(k) { return cardSubjects.indexOf(k) >= 0; });
+          }
+          var show = textMatch && tagMatch;
+          card.style.display = show ? '' : 'none';
+          if (show) visibleCards.push(card);
+        });
+      }
 
       function openLightbox(idx) {
         var card = visibleCards[idx];
@@ -275,10 +339,7 @@ INDEX_TAIL = """\
       lb.querySelector('.lb-close').addEventListener('click', closeLightbox);
       document.getElementById('lb-prev').addEventListener('click', function(e) { e.stopPropagation(); navigate(-1); });
       document.getElementById('lb-next').addEventListener('click', function(e) { e.stopPropagation(); navigate(1); });
-
-      lb.addEventListener('click', function(e) {
-        if (e.target === lb) closeLightbox();
-      });
+      lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
 
       document.addEventListener('keydown', function(e) {
         if (!lb.classList.contains('show')) return;
@@ -287,18 +348,7 @@ INDEX_TAIL = """\
         else if (e.key === 'ArrowRight') navigate(1);
       });
 
-      document.getElementById('search').addEventListener('input', function() {
-        var q = this.value.toLowerCase();
-        visibleCards = [];
-        cards.forEach(function(card) {
-          var a = card.querySelector('a');
-          var title = (a.getAttribute('data-title') || '').toLowerCase();
-          var date = (a.getAttribute('data-date') || '').toLowerCase();
-          var match = !q || title.indexOf(q) >= 0 || date.indexOf(q) >= 0;
-          card.style.display = match ? '' : 'none';
-          if (match) visibleCards.push(card);
-        });
-      });
+      document.getElementById('search').addEventListener('input', applyFilters);
     })();
   </script>
 </body>
@@ -319,11 +369,22 @@ def build_index(entries):
             thumb = thumb_url(bing_url)
             title = html.escape(entry.get("title") or slug)
             date_str = entry.get("date", "")
+            tags = entry.get("tags", {})
+            subjects = tags.get("subject", [])
+            ai_desc = html.escape(tags.get("ai_description") or "")
+            subjects_attr = ",".join(subjects)
+            tag_pills = "".join(
+                f'<span class="card-tag">{html.escape(s)}</span>' for s in subjects
+            )
             f.write(
-                f'    <div class="card"><a href="{bing_url}" title="{title}" data-title="{title}" data-date="{date_str}">'
-                f'<img src="{thumb}" alt="{title}" loading="lazy" onerror="this.closest(\'.card\').style.display=\'none\'">'
+                f'    <div class="card"><a href="{bing_url}" title="{title}" '
+                f'data-title="{title}" data-date="{date_str}" '
+                f'data-subjects="{subjects_attr}" data-desc="{ai_desc}">'
+                f'<img src="{thumb}" alt="{title}" loading="lazy" '
+                f'onerror="this.closest(\'.card\').style.display=\'none\'">'
                 f'<span class="card-title">{title}</span>'
                 f'<span class="card-date">{date_str}</span>'
+                f'<div class="card-tags">{tag_pills}</div>'
                 f"</a></div>\n"
             )
         f.write(INDEX_TAIL)
