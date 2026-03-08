@@ -1,23 +1,10 @@
-# Python
 __pycache__/
 *.py[cod]
-*.egg-info/
 .venv/
 venv/
-env/
-
-# Local outputs (you may want to keep these out of the repo)
-outputs/
-deploy_pages_upload/
-
-# IDE / OS
 .idea/
 .DS_Store
 *.swp
-
-# Env files if you add them later
 .env
 .env.local
-
-# Local maintainer notes (not for public repo)
-MAINTAINER.md
+images.txt
