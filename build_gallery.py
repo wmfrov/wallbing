@@ -171,12 +171,16 @@ INDEX_HEAD = """\
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;600&display=swap" rel="stylesheet">
   <style>
-    :root { --bg: #0f0f12; --card: #1a1a20; --text: #e8e6e3; --muted: #8b8685; --accent: #7c9cbf; }
+    :root { --bg: #0f0f12; --card: #1a1a20; --text: #e8e6e3; --muted: #8b8685; }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: 'Outfit', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
     .header { padding: 2.5rem 1.5rem 1.5rem; max-width: 1400px; margin: 0 auto; }
     h1 { font-weight: 600; font-size: clamp(1.75rem, 4vw, 2.25rem); letter-spacing: -0.02em; margin: 0 0 0.35rem; }
     .meta { color: var(--muted); font-weight: 300; font-size: 0.95rem; }
+    .search-wrap { margin-top: 1rem; }
+    .search-wrap input { width: 100%; max-width: 400px; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #333; background: var(--card); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
+    .search-wrap input::placeholder { color: var(--muted); }
+    .search-wrap input:focus { border-color: #555; }
     .grid { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
     .card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
@@ -184,32 +188,118 @@ INDEX_HEAD = """\
     .card img { width: 100%; height: 200px; object-fit: cover; display: block; }
     .card-title { display: block; padding: 0.75rem 1rem 0.15rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
     .card-date { display: block; padding: 0 1rem 0.75rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); opacity: 0.9; }
-    #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 100; align-items: center; justify-content: center; padding: 2rem; cursor: pointer; }
+    #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 100; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
     #lightbox.show { display: flex; }
-    #lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 8px; }
+    .lb-main { display: flex; align-items: center; gap: 1rem; max-width: 100%; max-height: calc(100vh - 8rem); }
+    .lb-nav { background: none; border: none; color: rgba(255,255,255,0.7); font-size: 2.5rem; cursor: pointer; padding: 0.5rem; line-height: 1; user-select: none; transition: color 0.2s; flex-shrink: 0; }
+    .lb-nav:hover { color: #fff; }
+    #lightbox img { max-width: calc(100vw - 10rem); max-height: calc(100vh - 10rem); object-fit: contain; border-radius: 8px; }
+    .lb-info { text-align: center; margin-top: 1rem; }
+    .lb-title { font-size: 1rem; font-weight: 500; }
+    .lb-date { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
+    .lb-download { display: inline-block; margin-top: 0.5rem; padding: 0.4rem 1rem; border-radius: 6px; background: rgba(255,255,255,0.12); color: var(--text); text-decoration: none; font-size: 0.8rem; font-weight: 500; transition: background 0.2s; }
+    .lb-download:hover { background: rgba(255,255,255,0.22); }
+    .lb-close { position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s; }
+    .lb-close:hover { color: #fff; }
   </style>
 </head>
 <body>
   <header class="header">
     <h1>Bing image of the day</h1>
     <p class="meta">New photo each day from Bing. Click any image to view full size.</p>
+    <div class="search-wrap"><input type="text" id="search" placeholder="Search by title or date\u2026" autocomplete="off"></div>
   </header>
   <div class="grid">
 """
 
 INDEX_TAIL = """\
   </div>
-  <div id="lightbox" onclick="this.classList.remove('show')"><img src="" alt=""></div>
+  <div id="lightbox">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <div class="lb-main">
+      <button class="lb-nav" id="lb-prev" aria-label="Previous">&#8249;</button>
+      <img src="" alt="">
+      <button class="lb-nav" id="lb-next" aria-label="Next">&#8250;</button>
+    </div>
+    <div class="lb-info">
+      <div class="lb-title"></div>
+      <div class="lb-date"></div>
+      <a class="lb-download" href="#" download target="_blank">&#x2193; Download UHD</a>
+    </div>
+  </div>
   <script>
-    document.querySelectorAll('.card a').forEach(function(a) {
-      a.addEventListener('click', function(e) {
-        var href = this.getAttribute('href');
-        if (!href) return;
-        e.preventDefault();
-        document.getElementById('lightbox').querySelector('img').src = href;
-        document.getElementById('lightbox').classList.add('show');
+    (function() {
+      var lb = document.getElementById('lightbox');
+      var lbImg = lb.querySelector('img');
+      var lbTitle = lb.querySelector('.lb-title');
+      var lbDate = lb.querySelector('.lb-date');
+      var lbDl = lb.querySelector('.lb-download');
+      var cards = Array.from(document.querySelectorAll('.card'));
+      var visibleCards = cards.slice();
+      var currentIdx = -1;
+
+      function openLightbox(idx) {
+        var card = visibleCards[idx];
+        if (!card) return;
+        var a = card.querySelector('a');
+        lbImg.src = a.getAttribute('href');
+        lbTitle.textContent = a.getAttribute('data-title') || '';
+        lbDate.textContent = a.getAttribute('data-date') || '';
+        lbDl.href = a.getAttribute('href');
+        currentIdx = idx;
+        lb.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lb.classList.remove('show');
+        lbImg.src = '';
+        document.body.style.overflow = '';
+        currentIdx = -1;
+      }
+
+      function navigate(delta) {
+        if (currentIdx < 0 || visibleCards.length === 0) return;
+        var next = (currentIdx + delta + visibleCards.length) % visibleCards.length;
+        openLightbox(next);
+      }
+
+      cards.forEach(function(card) {
+        card.querySelector('a').addEventListener('click', function(e) {
+          e.preventDefault();
+          var idx = visibleCards.indexOf(card);
+          if (idx >= 0) openLightbox(idx);
+        });
       });
-    });
+
+      lb.querySelector('.lb-close').addEventListener('click', closeLightbox);
+      document.getElementById('lb-prev').addEventListener('click', function(e) { e.stopPropagation(); navigate(-1); });
+      document.getElementById('lb-next').addEventListener('click', function(e) { e.stopPropagation(); navigate(1); });
+
+      lb.addEventListener('click', function(e) {
+        if (e.target === lb) closeLightbox();
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('show')) return;
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') navigate(-1);
+        else if (e.key === 'ArrowRight') navigate(1);
+      });
+
+      document.getElementById('search').addEventListener('input', function() {
+        var q = this.value.toLowerCase();
+        visibleCards = [];
+        cards.forEach(function(card) {
+          var a = card.querySelector('a');
+          var title = (a.getAttribute('data-title') || '').toLowerCase();
+          var date = (a.getAttribute('data-date') || '').toLowerCase();
+          var match = !q || title.indexOf(q) >= 0 || date.indexOf(q) >= 0;
+          card.style.display = match ? '' : 'none';
+          if (match) visibleCards.push(card);
+        });
+      });
+    })();
   </script>
 </body>
 </html>
@@ -230,8 +320,8 @@ def build_index(entries):
             title = html.escape(entry.get("title") or slug)
             date_str = entry.get("date", "")
             f.write(
-                f'    <div class="card"><a href="{bing_url}" title="{title}">'
-                f'<img src="{thumb}" alt="{title}" loading="lazy">'
+                f'    <div class="card"><a href="{bing_url}" title="{title}" data-title="{title}" data-date="{date_str}">'
+                f'<img src="{thumb}" alt="{title}" loading="lazy" onerror="this.closest(\'.card\').style.display=\'none\'">'
                 f'<span class="card-title">{title}</span>'
                 f'<span class="card-date">{date_str}</span>'
                 f"</a></div>\n"
@@ -269,7 +359,10 @@ def main():
     clone_gh_pages()
     entries = load_metadata()
     purge_invalid(entries)
-    merge_bing_api(entries)
+    try:
+        merge_bing_api(entries)
+    except Exception as exc:
+        print(f"Warning: Bing API fetch failed ({exc}), continuing with existing data")
     dedup(entries)
     print(f"Total gallery entries: {len(entries)}")
 
