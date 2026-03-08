@@ -7,11 +7,6 @@ on:
   schedule:
     - cron: '30 15 * * *'
   workflow_dispatch:
-    inputs:
-      backfill_npanuhin:
-        description: 'One-time backfill from npanuhin archive (run once, then never again)'
-        type: boolean
-        default: false
 
 jobs:
   update-gallery:
@@ -29,4 +24,3 @@ jobs:
       - run: python3 build_gallery.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BACKFILL_NPANUHIN: ${{ inputs.backfill_npanuhin }}
