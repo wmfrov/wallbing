@@ -39,7 +39,8 @@ def seed_manifest(known_urls):
         if not name.lower().endswith(".jpg"):
             continue
         base = name.rsplit(".", 1)[0]
-        url = f"{BING_BASE}/th?id=OHR.{base}.jpg"
+        slug = re.sub(r"_UHD$", "", base)
+        url = cdn_url_from_slug(slug)
         seeded.add(url)
     if seeded:
         with open(MANIFEST_PATH, "w") as f:
