@@ -11,6 +11,7 @@ Expected env vars:
   GITHUB_REPOSITORY     - owner/repo (set automatically by GitHub Actions)
   BACKFILL_NPANUHIN     - "true" to run a one-time backfill from npanuhin archive
 """
+from collections import defaultdict
 import html
 import json
 import os
@@ -47,6 +48,11 @@ def slug_from_bing_url(bing_url):
 
 def thumb_url(bing_url):
     return bing_url.replace("_UHD.jpg", "_400x240.jpg")
+
+
+def base_name(slug):
+    """Strip the locale+ID suffix to get the image name, e.g. 'MayotteCoral'."""
+    return re.sub(r"_EN-[A-Z]{2}\d+.*", "", slug)
 
 
 # ── Clone or init gh-pages ────────────────────────────────────────────────
@@ -141,6 +147,29 @@ def merge_bing_api(entries):
         entries[slug] = {"date": date_str, "title": title, "bing_url": uhd_url}
         count += 1
     print(f"  Merged {count} entries from Bing API")
+
+
+def dedup(entries):
+    """Remove duplicate entries that share the same date and base image name.
+
+    Bing occasionally re-publishes the same photo with a different CDN ID.
+    Keep the entry whose slug comes first alphabetically (stable, deterministic).
+    """
+    groups = defaultdict(list)
+    for slug, entry in entries.items():
+        key = (entry.get("date", ""), base_name(slug))
+        groups[key].append(slug)
+
+    removed = 0
+    for (date, bname), slugs in groups.items():
+        if len(slugs) <= 1:
+            continue
+        slugs.sort()
+        for dup in slugs[1:]:
+            del entries[dup]
+            removed += 1
+    if removed:
+        print(f"  Removed {removed} duplicate entries")
 
 
 # ── HTML generation ───────────────────────────────────────────────────────
@@ -258,6 +287,7 @@ def main():
         backfill_npanuhin(entries)
 
     merge_bing_api(entries)
+    dedup(entries)
     print(f"Total gallery entries: {len(entries)}")
 
     save_metadata(entries)
