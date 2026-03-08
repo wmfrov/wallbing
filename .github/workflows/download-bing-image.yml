@@ -47,7 +47,7 @@ jobs:
               if "OHR." not in bing_url:
                   return None
               raw = bing_url.split("OHR.", 1)[-1]
-              raw = re.sub(r"\.(jpg|png)$", "", raw, flags=re.IGNORECASE)
+              raw = re.split(r"\.(jpg|png)", raw, flags=re.IGNORECASE)[0]
               return raw
 
           def thumb_url_from_bing_url(bing_url):
@@ -75,7 +75,14 @@ jobs:
               entries = {}
               print("No existing metadata.json, starting fresh")
 
-          # ── 2b. One-time npanuhin backfill (only when manually triggered) ──
+          # ── 2b. Clean up any malformed slugs from prior runs ─────────
+          bad_keys = [k for k in entries if "&" in k or k.endswith(".jpg") or k.endswith(".png")]
+          for k in bad_keys:
+              del entries[k]
+          if bad_keys:
+              print(f"Removed {len(bad_keys)} malformed slug keys")
+
+          # ── 2c. One-time npanuhin backfill (only when manually triggered) ──
           if os.environ.get("BACKFILL_NPANUHIN") == "true":
               NPANUHIN_URL = "https://bing.npanuhin.me/US-en.json"
               print("Backfill: fetching npanuhin archive...")
@@ -86,6 +93,7 @@ jobs:
                   bing_url = item.get("bing_url")
                   if not bing_url:
                       continue
+                  bing_url = bing_url.split("&")[0]
                   slug = slug_from_bing_url(bing_url)
                   if not slug:
                       continue
