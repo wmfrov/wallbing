@@ -161,6 +161,35 @@ def dedup(entries):
         print(f"  Removed {removed} duplicate entries")
 
 
+def merge_enriched_metadata(entries):
+    """If metadata_enriched.json exists locally, merge its tags into entries.
+
+    This makes color palettes and other enriched tags available to the built
+    gallery (index.html + search.json) when building locally or in CI with the
+    file present. Enriched tags overwrite or supplement existing entry tags.
+    """
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(script_dir, "metadata_enriched.json")
+    if not os.path.isfile(path):
+        return
+    with open(path) as f:
+        enriched = json.load(f)
+    merged = 0
+    for slug in entries:
+        if slug not in enriched or not isinstance(enriched[slug], dict):
+            continue
+        etags = enriched[slug].get("tags")
+        if not etags or not isinstance(etags, dict):
+            continue
+        if "tags" not in entries[slug]:
+            entries[slug]["tags"] = {}
+        for k, v in etags.items():
+            entries[slug]["tags"][k] = v
+        merged += 1
+    if merged:
+        print(f"  Merged enriched metadata from metadata_enriched.json ({merged} entries)")
+
+
 # ── HTML generation ───────────────────────────────────────────────────────
 
 INDEX_HEAD = """\
@@ -608,6 +637,7 @@ def main():
     except Exception as exc:
         print(f"Warning: Bing API fetch failed ({exc}), continuing with existing data")
     dedup(entries)
+    merge_enriched_metadata(entries)
     print(f"Total gallery entries: {len(entries)}")
 
     save_metadata(entries)

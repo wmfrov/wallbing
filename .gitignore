@@ -11,5 +11,4 @@ images.txt
 tags_progress.json
 enrich_progress.json
 metadata_tagged.json
-metadata_enriched.json
 metadata_import.json
