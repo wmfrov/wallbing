@@ -122719,6 +122719,65 @@
   "NappingSeal_EN-US6764325041_UHD": {
     "date": "2026-03-09",
     "title": "Gray seal sleeping on the beach, Orkney Islands, Scotland",
-    "bing_url": "https://www.bing.com/th?id=OHR.NappingSeal_EN-US6764325041_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.NappingSeal_EN-US6764325041_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Scotland",
+      "region": "Northern Europe",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a gray seal resting on a beach covered with seaweed. The seal has a mottled gray and white fur pattern, and its eyes are closed, indicating it is peacefully sleeping. Surrounding the seal are various strands of kelp and other marine vegetation, creating a natural habitat setting. The background is blurred, focusing attention on the seal, which is positioned in the foreground, showcasing its rounded body and flippers.",
+      "search_text": "Explore images of gray seals, a marine animal often found resting on beaches like those in the Orkney Islands, Scotland. This serene wildlife scene captures the beauty of coastal habitats, featuring a seal sleeping among seaweed and kelp. Ideal for nature lovers and wildlife photography enthusiasts, this image showcases the unique patterns of the seal's fur and its peaceful demeanor in a natural setting.",
+      "keywords": [
+        "gray seal",
+        "seal",
+        "marine animal",
+        "beach",
+        "Orkney Islands",
+        "Scotland",
+        "seaweed",
+        "kelp",
+        "animal",
+        "sleeping",
+        "wildlife",
+        "mottled fur",
+        "serene",
+        "coastal",
+        "marine habitat",
+        "nature",
+        "wildlife photography",
+        "sea life"
+      ],
+      "color_palette": [
+        {
+          "hex": "#948672",
+          "name": "gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#4B3B2A",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#B7B5B0",
+          "name": "dark gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#BDC2C7",
+          "name": "silver",
+          "w": 0.21
+        },
+        {
+          "hex": "#CFCBC2",
+          "name": "silver",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
