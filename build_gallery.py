@@ -403,18 +403,14 @@ INDEX_TAIL = """\
           parts.push(Object.keys(b.country_counts).length + ' countries');
         }
         if (b.season_counts) {
-          var topSea = Object.keys(b.season_counts).sort(function(a,b) {
-            return b.season_counts[b] - b.season_counts[a];
-          });
-          // sort properly
           var seaEntries = Object.keys(b.season_counts).map(function(k) { return [k, b.season_counts[k]]; });
-          seaEntries.sort(function(a,b) { return b[1]-a[1]; });
+          seaEntries.sort(function(x, y) { return y[1] - x[1]; });
           if (seaEntries[0]) parts.push('mostly ' + seaEntries[0][0]);
         }
         if (b.mood_counts) {
           var moodEntries = Object.keys(b.mood_counts).map(function(k) { return [k, b.mood_counts[k]]; });
-          moodEntries.sort(function(a,b) { return b[1]-a[1]; });
-          var topMoods = moodEntries.slice(0,2).map(function(e) { return e[0]; });
+          moodEntries.sort(function(x, y) { return y[1] - x[1]; });
+          var topMoods = moodEntries.slice(0, 2).map(function(e) { return e[0]; });
           if (topMoods.length) parts.push(topMoods.join(', '));
         }
         statsEl.textContent = parts.join(' \u00b7 ');
