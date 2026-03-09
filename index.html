@@ -14,12 +14,20 @@
     .header { padding: 2.5rem 1.5rem 1.5rem; max-width: 1400px; margin: 0 auto; }
     h1 { font-weight: 600; font-size: clamp(1.75rem, 4vw, 2.25rem); letter-spacing: -0.02em; margin: 0 0 0.35rem; }
     .meta { color: var(--muted); font-weight: 300; font-size: 0.95rem; }
-    .search-wrap { margin-top: 1rem; display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+    .search-wrap { margin-top: 1rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
     .search-wrap input { width: 100%; max-width: 380px; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #333; background: var(--card); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
     .search-wrap input::placeholder { color: var(--muted); }
     .search-wrap input:focus { border-color: #555; }
+    .filter-toggle { padding: 0.55rem 0.9rem; border-radius: 8px; border: 1px solid #333; background: var(--card); color: var(--muted); font-family: inherit; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.45rem; white-space: nowrap; }
+    .filter-toggle:hover { border-color: #555; color: var(--text); }
+    .filter-toggle.has-active { border-color: #666; color: var(--text); }
+    .filter-count { font-size: 0.7rem; background: rgba(255,255,255,0.18); border-radius: 10px; padding: 0.05rem 0.4rem; display: none; }
+    .filter-toggle.has-active .filter-count { display: inline; }
+    .toggle-arrow { display: inline-block; transition: transform 0.2s; font-style: normal; line-height: 1; }
+    .filter-toggle.open .toggle-arrow { transform: rotate(180deg); }
     .stats-bar { color: var(--muted); font-size: 0.8rem; font-weight: 300; line-height: 1.4; }
-    .filters { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .filters { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; overflow: hidden; max-height: 0; transition: max-height 0.3s ease, padding-bottom 0.3s ease; }
+    .filters.open { max-height: 2000px; padding-bottom: 1.25rem; }
     .filter-group { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
     .filter-label { font-size: 0.68rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; min-width: 7rem; flex-shrink: 0; }
     .filter-pill { padding: 0.3rem 0.7rem; border-radius: 20px; border: 1px solid #333; background: transparent; color: var(--muted); font-family: inherit; font-size: 0.75rem; font-weight: 500; cursor: pointer; transition: all 0.2s; text-transform: capitalize; display: inline-flex; align-items: center; gap: 0.3rem; }
@@ -61,6 +69,9 @@
     <p class="meta">New photo each day from Bing. Click any image to view full size.</p>
     <div class="search-wrap">
       <input type="text" id="search" placeholder="Loading search…" autocomplete="off" disabled>
+      <button class="filter-toggle" id="filter-toggle" aria-expanded="false">
+        Filters <span class="filter-count" id="filter-count"></span><i class="toggle-arrow">&#8964;</i>
+      </button>
       <span class="stats-bar" id="stats-bar"></span>
     </div>
   </header>
@@ -1909,16 +1920,26 @@
       var seasonOrder = ['spring','summer','autumn','winter'];
 
       var filtersEl = document.getElementById('filters');
+      var filterToggle = document.getElementById('filter-toggle');
+      var filterCountEl = document.getElementById('filter-count');
       var clearBtn = document.createElement('button');
       clearBtn.className = 'filter-clear';
       clearBtn.textContent = 'Clear filters';
       filtersEl.appendChild(clearBtn);
 
+      filterToggle.addEventListener('click', function() {
+        var open = filtersEl.classList.toggle('open');
+        filterToggle.classList.toggle('open', open);
+        filterToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
       function updateClearBtn() {
-        var any = Object.keys(activeFilters).some(function(c) {
-          return Object.keys(activeFilters[c]).length > 0;
-        });
-        clearBtn.classList.toggle('show', any);
+        var total = Object.keys(activeFilters).reduce(function(sum, c) {
+          return sum + Object.keys(activeFilters[c]).length;
+        }, 0);
+        clearBtn.classList.toggle('show', total > 0);
+        filterToggle.classList.toggle('has-active', total > 0);
+        if (filterCountEl) filterCountEl.textContent = total > 0 ? total : '';
       }
 
       clearBtn.addEventListener('click', function() {
