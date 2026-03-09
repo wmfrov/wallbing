@@ -1844,7 +1844,9 @@
 
       var subjects = ['landscape','mountain','ocean','lake','river','forest',
         'desert','cave','island','city','architecture','bridge','castle',
-        'ruins','animal','bird','flower','garden','farm','snow','ice','aurora'];
+        'ruins','animal','bird','flower','garden','farm','snow','ice','aurora',
+        'two_animals'];
+      var subjectLabels = {'two_animals':'Two animals'};
 
       var filtersEl = document.getElementById('filters');
       var clearBtn = document.createElement('button');
@@ -1857,7 +1859,8 @@
         subjects.forEach(function(s) {
           var btn = document.createElement('button');
           btn.className = 'filter-pill';
-          btn.textContent = s + (counts[s] ? ' (' + counts[s] + ')' : '');
+          var label = subjectLabels[s] || s;
+          btn.textContent = label + (counts[s] ? ' (' + counts[s] + ')' : '');
           btn.setAttribute('data-subject', s);
           btn.addEventListener('click', function() {
             if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
