@@ -1839,6 +1839,7 @@
       var currentIdx = -1;
       var activeFilters = {};
       var searchIndex = null;
+      var browseIndex = null;
       var debounceTimer = null;
 
       var subjects = ['landscape','mountain','ocean','lake','river','forest',
@@ -1850,39 +1851,73 @@
       clearBtn.className = 'filter-clear';
       clearBtn.textContent = 'Clear filters';
       filtersEl.appendChild(clearBtn);
-      subjects.forEach(function(s) {
-        var btn = document.createElement('button');
-        btn.className = 'filter-pill';
-        btn.textContent = s;
-        btn.setAttribute('data-subject', s);
-        btn.addEventListener('click', function() {
-          if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
-          else { activeFilters[s] = true; btn.classList.add('active'); }
-          clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0);
+
+      function buildPills(counts) {
+        counts = counts || {};
+        subjects.forEach(function(s) {
+          var btn = document.createElement('button');
+          btn.className = 'filter-pill';
+          btn.textContent = s + (counts[s] ? ' (' + counts[s] + ')' : '');
+          btn.setAttribute('data-subject', s);
+          btn.addEventListener('click', function() {
+            if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
+            else { activeFilters[s] = true; btn.classList.add('active'); }
+            clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0);
+            applyFilters();
+          });
+          filtersEl.appendChild(btn);
+        });
+        clearBtn.addEventListener('click', function() {
+          activeFilters = {};
+          filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
+          clearBtn.classList.remove('show');
           applyFilters();
         });
-        filtersEl.appendChild(btn);
-      });
-      clearBtn.addEventListener('click', function() {
-        activeFilters = {};
-        filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
-        clearBtn.classList.remove('show');
-        applyFilters();
-      });
+      }
 
-      fetch('search.json')
-        .then(function(r) { return r.json(); })
-        .then(function(data) {
-          searchIndex = new Map();
-          data.forEach(function(rec) { searchIndex.set(rec.s, rec); });
+      function initFromUrl() {
+        var params = new URLSearchParams(location.search);
+        var subjectParam = params.get('subject');
+        if (subjectParam && subjects.indexOf(subjectParam) >= 0) {
+          activeFilters[subjectParam] = true;
+          var pill = filtersEl.querySelector('[data-subject="' + subjectParam + '"]');
+          if (pill) pill.classList.add('active');
+          clearBtn.classList.add('show');
+        }
+        applyFilters();
+      }
+
+      Promise.all([
+        fetch('search.json').then(function(r) { return r.json(); }),
+        fetch('browse.json').then(function(r) { return r.json(); })
+      ]).then(function(results) {
+        var searchData = results[0];
+        var browseData = results[1];
+        searchIndex = new Map();
+        searchData.forEach(function(rec) { searchIndex.set(rec.s, rec); });
+        browseIndex = browseData;
+        searchInput.disabled = false;
+        searchInput.placeholder = 'Refine by keyword\u2026';
+        buildPills(browseIndex.subject_counts);
+        initFromUrl();
+      }).catch(function(err) {
+        console.warn('Failed to load search.json or browse.json', err);
+        searchIndex = new Map();
+        browseIndex = null;
+        Promise.all([
+          fetch('search.json').then(function(r) { return r.json(); }).then(function(data) {
+            data.forEach(function(rec) { searchIndex.set(rec.s, rec); });
+          }).catch(function() {}),
+          fetch('browse.json').then(function(r) { return r.json(); }).then(function(data) {
+            browseIndex = data;
+          }).catch(function() {})
+        ]).then(function() {
           searchInput.disabled = false;
-          searchInput.placeholder = 'Search images\u2026';
-        })
-        .catch(function() {
-          console.warn('Failed to load search.json, falling back to title search');
-          searchInput.disabled = false;
-          searchInput.placeholder = 'Search by title\u2026';
+          searchInput.placeholder = browseIndex ? 'Refine by keyword\u2026' : 'Search by title\u2026';
+          buildPills(browseIndex && browseIndex.subject_counts);
+          initFromUrl();
         });
+      });
 
       function getRec(card) {
         if (!searchIndex) return null;
@@ -1896,9 +1931,18 @@
         var regexes = terms.map(function(t) {
           return new RegExp('\\b' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
         });
+        var slugSet = null;
+        if (activeKeys.length > 0 && browseIndex && browseIndex.subject) {
+          slugSet = new Set();
+          activeKeys.forEach(function(k) {
+            var arr = browseIndex.subject[k];
+            if (arr) arr.forEach(function(slug) { slugSet.add(slug); });
+          });
+        }
         visibleCards = [];
         cards.forEach(function(card) {
           var a = card.querySelector('a');
+          var slug = a.getAttribute('data-slug');
           var rec = getRec(card);
           var textMatch = true;
           if (regexes.length > 0) {
@@ -1907,8 +1951,12 @@
           }
           var tagMatch = true;
           if (activeKeys.length > 0) {
-            var subs = rec ? (rec.sub || '').split(',') : [];
-            tagMatch = activeKeys.some(function(k) { return subs.indexOf(k) >= 0; });
+            if (slugSet !== null) {
+              tagMatch = slugSet.has(slug);
+            } else {
+              var subs = rec ? (rec.sub || '').split(',') : [];
+              tagMatch = activeKeys.some(function(k) { return subs.indexOf(k) >= 0; });
+            }
           }
           var show = textMatch && tagMatch;
           card.style.display = show ? '' : 'none';
