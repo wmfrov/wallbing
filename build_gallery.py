@@ -299,8 +299,8 @@ INDEX_HEAD = """\
     .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
     .card a { display: block; text-decoration: none; color: inherit; }
     .card img { width: 100%; height: 200px; object-fit: cover; display: block; }
-    .card-colors { display: flex; height: 5px; transition: height 0.25s ease; overflow: hidden; }
-    .card:hover .card-colors { height: 22px; }
+    .card-colors { display: flex; height: 5px; transform-origin: top; transition: transform 0.25s ease; }
+    .card:hover .card-colors { transform: scaleY(4.4); }
     .card-color { transition: flex 0.25s; }
     .card-title { display: block; padding: 0.75rem 1rem 0.15rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
     .card-date { display: block; padding: 0 1rem 0.15rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); opacity: 0.9; }
@@ -330,9 +330,9 @@ INDEX_HEAD = """\
     .timeline-wrap { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 0.75rem; }
     .timeline { display: flex; flex-wrap: wrap; gap: 3px; align-items: flex-end; }
     .timeline-year { font-size: 0.65rem; color: #444; font-weight: 600; letter-spacing: 0.05em; align-self: center; margin: 0 4px 0 2px; }
-    .timeline-cell { width: 13px; height: 28px; border: none; border-radius: 3px; cursor: pointer; padding: 0; transition: height 0.15s, opacity 0.15s; opacity: 0.75; }
-    .timeline-cell:hover { height: 40px; opacity: 1; }
-    .timeline-cell.active { height: 40px; opacity: 1; outline: 2px solid rgba(255,255,255,0.6); outline-offset: 1px; }
+    .timeline-cell { width: 13px; height: 28px; border: none; border-radius: 3px; cursor: pointer; padding: 0; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
+    .timeline-cell:hover { transform: scaleY(1.43); opacity: 1; }
+    .timeline-cell.active { transform: scaleY(1.43); opacity: 1; outline: 2px solid rgba(255,255,255,0.6); outline-offset: 1px; }
   </style>
 </head>
 <body>
