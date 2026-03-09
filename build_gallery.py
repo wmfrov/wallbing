@@ -13,6 +13,7 @@ Expected env vars:
 from collections import defaultdict
 import html
 import json
+import math as _math
 import os
 import re
 import subprocess
@@ -161,6 +162,96 @@ def dedup(entries):
         print(f"  Removed {removed} duplicate entries")
 
 
+COLOR_FAMILY_MAP = {
+    name: fam for fam, names in [
+        ('red',    ['red','dark red','crimson','firebrick','tomato','coral','indian red',
+                    'light coral','dark salmon','salmon','light salmon','orange red','maroon']),
+        ('orange', ['dark orange','orange']),
+        ('yellow', ['gold','golden rod','pale golden rod','yellow','dark golden rod',
+                    'dark khaki','khaki','olive']),
+        ('green',  ['dark olive green','olive drab','dark green','green','forest green',
+                    'lime green','light green','pale green','dark sea green',
+                    'medium spring green','spring green','sea green','medium aqua marine',
+                    'medium sea green','light sea green','lawn green','chartreuse',
+                    'green yellow','lime','yellow green']),
+        ('teal',   ['teal','dark cyan','dark turquoise','turquoise','medium turquoise',
+                    'pale turquoise','aqua marine','cyan','light cyan']),
+        ('blue',   ['powder blue','cadet blue','steel blue','corn flower blue','deep sky blue',
+                    'dodger blue','light blue','sky blue','light sky blue','midnight blue',
+                    'navy','dark blue','medium blue','blue','royal blue','light steel blue']),
+        ('purple', ['blue violet','indigo','dark slate blue','slate blue','medium slate blue',
+                    'medium purple','dark magenta','dark violet','dark orchid','medium orchid',
+                    'purple','thistle','plum','violet','magenta','orchid',
+                    'medium violet red','pale violet red','deep pink','hot pink',
+                    'light pink','pink']),
+        ('brown',  ['saddle brown','sienna','chocolate','peru','sandy brown','burly wood',
+                    'tan','rosy brown','brown']),
+        ('gray',   ['dark slate gray','slate gray','light slate gray','dim gray','gray',
+                    'dark gray','silver','light gray','gainsboro','white smoke']),
+        ('white',  ['white','snow','ivory','azure','honeydew','ghost white','floral white',
+                    'alice blue','mint cream','linen','old lace','antique white','beige',
+                    'blanched almond','misty rose','lavender blush']),
+    ] for name in names
+}
+
+
+def _hex_to_hsl(hex_str):
+    r, g, b = int(hex_str[1:3],16)/255, int(hex_str[3:5],16)/255, int(hex_str[5:7],16)/255
+    mx, mn = max(r,g,b), min(r,g,b)
+    l = (mx+mn)/2
+    if mx == mn:
+        return 0.0, 0.0, l
+    d = mx - mn
+    s = d/(2-mx-mn) if l > 0.5 else d/(mx+mn)
+    if mx == r:   hue = (g-b)/d + (6 if g<b else 0)
+    elif mx == g: hue = (b-r)/d + 2
+    else:         hue = (r-g)/d + 4
+    return hue/6*360, s, l
+
+
+def compute_palette_mood(palette):
+    """Returns (tone, vibrancy) where tone in {warm,cool,neutral}, vibrancy in {vibrant,muted}."""
+    if not palette:
+        return None, None
+    total_w = sum(c['w'] for c in palette)
+    mean_s = sum(c['w'] * _hex_to_hsl(c['hex'])[1] for c in palette) / total_w
+    vibrancy = 'vibrant' if mean_s > 0.25 else 'muted'
+    chrom = [(c, _hex_to_hsl(c['hex'])) for c in palette if _hex_to_hsl(c['hex'])[1] >= 0.15]
+    if not chrom:
+        return 'neutral', vibrancy
+    tw = sum(c['w'] for c, _ in chrom)
+    sin_s = sum(c['w'] * _math.sin(_math.radians(hsl[0])) for c, hsl in chrom) / tw
+    cos_s = sum(c['w'] * _math.cos(_math.radians(hsl[0])) for c, hsl in chrom) / tw
+    mean_h = _math.degrees(_math.atan2(sin_s, cos_s)) % 360
+    tone = 'warm' if (mean_h <= 70 or mean_h >= 290) else 'cool'
+    return tone, vibrancy
+
+
+def build_color_timeline(entries):
+    months = defaultdict(lambda: {'hex_weights': defaultdict(float),
+                                   'family_scores': defaultdict(float), 'count': 0})
+    for slug, entry in entries.items():
+        date = entry.get('date', '')
+        if not date or len(date) < 7:
+            continue
+        month = date[:7]
+        months[month]['count'] += 1
+        for c in entry.get('tags', {}).get('color_palette', []):
+            months[month]['hex_weights'][c['hex']] += c['w']
+            fam = COLOR_FAMILY_MAP.get(c['name'], 'gray')
+            months[month]['family_scores'][fam] += c['w']
+    timeline = {}
+    for month in sorted(months):
+        m = months[month]
+        sig_hex = max(m['hex_weights'], key=m['hex_weights'].get) if m['hex_weights'] else '#808080'
+        top_fams = sorted(m['family_scores'], key=m['family_scores'].get, reverse=True)[:3]
+        timeline[month] = {'hex': sig_hex, 'families': top_fams, 'count': m['count']}
+    path = os.path.join(DEPLOY_DIR, 'color_timeline.json')
+    with open(path, 'w') as f:
+        json.dump(timeline, f, separators=(',', ':'))
+    print(f"Wrote color_timeline.json ({len(timeline)} months)")
+
+
 # ── HTML generation ───────────────────────────────────────────────────────
 
 INDEX_HEAD = """\
@@ -208,8 +299,9 @@ INDEX_HEAD = """\
     .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
     .card a { display: block; text-decoration: none; color: inherit; }
     .card img { width: 100%; height: 200px; object-fit: cover; display: block; }
-    .card-colors { display: flex; height: 5px; }
-    .card-color { flex: 1; }
+    .card-colors { display: flex; height: 5px; transition: height 0.25s ease; overflow: hidden; }
+    .card:hover .card-colors { height: 22px; }
+    .card-color { transition: flex 0.25s; }
     .card-title { display: block; padding: 0.75rem 1rem 0.15rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
     .card-date { display: block; padding: 0 1rem 0.15rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); opacity: 0.9; }
     .card-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; padding: 0 1rem 0.75rem; }
@@ -227,6 +319,20 @@ INDEX_HEAD = """\
     .lb-download:hover { background: rgba(255,255,255,0.22); }
     .lb-close { position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 2rem; cursor: pointer; line-height: 1; transition: color 0.2s; }
     .lb-close:hover { color: #fff; }
+    .lb-palette { display: flex; gap: 6px; margin-top: 0.75rem; justify-content: center; }
+    .lb-palette-swatch { width: 36px; height: 36px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; transition: border-color 0.15s, transform 0.15s; flex-shrink: 0; }
+    .lb-palette-swatch:hover { transform: scale(1.1); border-color: rgba(255,255,255,0.5); }
+    .similarity-banner { display: none; max-width: 1400px; margin: 0 auto; padding: 0.5rem 1.5rem; font-size: 0.8rem; color: var(--muted); align-items: center; gap: 0.75rem; }
+    .similarity-banner.show { display: flex; }
+    .similarity-banner-swatch { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+    .similarity-clear { background: none; border: 1px solid #444; border-radius: 12px; color: var(--muted); font-family: inherit; font-size: 0.75rem; padding: 0.2rem 0.6rem; cursor: pointer; }
+    .similarity-clear:hover { color: var(--text); }
+    .timeline-wrap { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 0.75rem; }
+    .timeline { display: flex; flex-wrap: wrap; gap: 3px; align-items: flex-end; }
+    .timeline-year { font-size: 0.65rem; color: #444; font-weight: 600; letter-spacing: 0.05em; align-self: center; margin: 0 4px 0 2px; }
+    .timeline-cell { width: 13px; height: 28px; border: none; border-radius: 3px; cursor: pointer; padding: 0; transition: height 0.15s, opacity 0.15s; opacity: 0.75; }
+    .timeline-cell:hover { height: 40px; opacity: 1; }
+    .timeline-cell.active { height: 40px; opacity: 1; outline: 2px solid rgba(255,255,255,0.6); outline-offset: 1px; }
   </style>
 </head>
 <body>
@@ -242,6 +348,11 @@ INDEX_HEAD = """\
     </div>
   </header>
   <div class="filters" id="filters"></div>
+  <div class="similarity-banner" id="similarity-banner">
+    <span class="similarity-banner-swatch" id="similarity-swatch"></span>
+    <span id="similarity-label">Showing images with similar colors</span>
+    <button class="similarity-clear" id="similarity-clear">Clear</button>
+  </div>
   <div class="grid">
 """
 
@@ -258,6 +369,7 @@ INDEX_TAIL = """\
       <div class="lb-title"></div>
       <div class="lb-date"></div>
       <a class="lb-download" href="#" download target="_blank">&#x2193; Download UHD</a>
+      <div class="lb-palette" id="lb-palette"></div>
     </div>
   </div>
   <script>
@@ -277,7 +389,7 @@ INDEX_TAIL = """\
       var debounceTimer = null;
 
       // Multi-dimensional filter state: AND across dimensions, OR within
-      var activeFilters = { subject:{}, mood:{}, season:{}, tod:{}, country:{}, color:{} };
+      var activeFilters = { subject:{}, mood:{}, season:{}, tod:{}, country:{}, color:{}, tone:{}, vibrancy:{}, month:{} };
 
       // Color family definitions (names drawn from color_extract.py CSS_COLORS vocab)
       var colorFamilies = [
@@ -358,6 +470,7 @@ INDEX_TAIL = """\
       clearBtn.addEventListener('click', function() {
         Object.keys(activeFilters).forEach(function(c) { activeFilters[c] = {}; });
         filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelectorAll('.timeline-cell').forEach(function(b) { b.classList.remove('active'); });
         updateClearBtn();
         applyFilters();
       });
@@ -474,12 +587,23 @@ INDEX_TAIL = """\
           }), 'country', activeFilters.country);
         }
 
+        if (b.tone_counts) {
+          var toneOrder = ['warm','cool','neutral'];
+          buildFilterGroup('Tone', toneOrder.filter(function(t){return b.tone_counts[t];}).map(function(t){
+            return {value:t, label:t+' ('+b.tone_counts[t]+')'};
+          }), 'tone', activeFilters.tone);
+        }
+        if (b.vibrancy_counts) {
+          buildFilterGroup('Vibrancy', ['vibrant','muted'].filter(function(v){return b.vibrancy_counts[v];}).map(function(v){
+            return {value:v, label:v+' ('+b.vibrancy_counts[v]+')'};
+          }), 'vibrancy', activeFilters.vibrancy);
+        }
         buildColorGroup();
       }
 
       function initFromUrl() {
         var params = new URLSearchParams(location.search);
-        var dims = ['subject','mood','season','tod','country','color'];
+        var dims = ['subject','mood','season','tod','country','color','tone','vibrancy'];
         dims.forEach(function(dim) {
           var val = params.get(dim);
           if (val && activeFilters[dim] !== undefined) {
@@ -494,7 +618,8 @@ INDEX_TAIL = """\
 
       Promise.all([
         fetch('search.json').then(function(r) { return r.json(); }),
-        fetch('browse.json').then(function(r) { return r.json(); })
+        fetch('browse.json').then(function(r) { return r.json(); }),
+        fetch('color_timeline.json').then(function(r) { return r.json(); }).catch(function() { return null; })
       ]).then(function(results) {
         searchIndex = new Map();
         results[0].forEach(function(rec) { searchIndex.set(rec.s, rec); });
@@ -503,6 +628,7 @@ INDEX_TAIL = """\
         searchInput.placeholder = 'Refine by keyword\\u2026';
         buildStats(browseIndex);
         buildAllFilters(browseIndex);
+        if (results[2]) buildTimeline(results[2]);
         initFromUrl();
       }).catch(function() {
         searchInput.disabled = false;
@@ -525,11 +651,14 @@ INDEX_TAIL = """\
         // Build a slug Set for each active non-color dimension
         var slugSets = {};
         var dimIndex = {
-          subject: browseIndex && browseIndex.subject,
-          mood:    browseIndex && browseIndex.mood,
-          season:  browseIndex && browseIndex.season,
-          tod:     browseIndex && browseIndex.tod,
-          country: browseIndex && browseIndex.country
+          subject:  browseIndex && browseIndex.subject,
+          mood:     browseIndex && browseIndex.mood,
+          season:   browseIndex && browseIndex.season,
+          tod:      browseIndex && browseIndex.tod,
+          country:  browseIndex && browseIndex.country,
+          tone:     browseIndex && browseIndex.tone,
+          vibrancy: browseIndex && browseIndex.vibrancy,
+          month:    browseIndex && browseIndex.month
         };
         Object.keys(dimIndex).forEach(function(dim) {
           var keys = Object.keys(activeFilters[dim]);
@@ -584,6 +713,23 @@ INDEX_TAIL = """\
         lbTitle.textContent = a.getAttribute('data-title') || '';
         lbDate.textContent = a.getAttribute('data-date') || '';
         lbDl.href = a.getAttribute('href');
+        var paletteEl = document.getElementById('lb-palette');
+        paletteEl.innerHTML = '';
+        var rec = getRec(card);
+        if (rec && rec.cp) {
+          rec.cp.forEach(function(c) {
+            var sw = document.createElement('div');
+            sw.className = 'lb-palette-swatch';
+            sw.style.background = c.hex;
+            sw.title = c.name + ' (' + Math.round(c.w*100) + '%)';
+            sw.addEventListener('click', function(e) {
+              e.stopPropagation();
+              closeLightbox();
+              showSimilar(c.hex, c.name);
+            });
+            paletteEl.appendChild(sw);
+          });
+        }
         currentIdx = idx;
         lb.classList.add('show');
         document.body.style.overflow = 'hidden';
@@ -625,6 +771,88 @@ INDEX_TAIL = """\
         clearTimeout(debounceTimer);
         debounceTimer = setTimeout(applyFilters, 200);
       });
+
+      function buildTimeline(timelineData) {
+        var months = Object.keys(timelineData).sort();
+        var wrap = document.createElement('div');
+        wrap.className = 'timeline-wrap';
+        var inner = document.createElement('div');
+        inner.className = 'timeline';
+        var curYear = null;
+        months.forEach(function(m) {
+          var d = timelineData[m];
+          var year = m.slice(0,4);
+          if (year !== curYear) {
+            var yl = document.createElement('span');
+            yl.className = 'timeline-year';
+            yl.textContent = year;
+            inner.appendChild(yl);
+            curYear = year;
+          }
+          var cell = document.createElement('button');
+          cell.className = 'timeline-cell';
+          cell.style.background = d.hex;
+          cell.title = m + ' \\u00b7 ' + d.count + ' photos \\u00b7 ' + d.families.join(', ');
+          cell.setAttribute('data-month', m);
+          if (activeFilters.month[m]) cell.classList.add('active');
+          cell.addEventListener('click', function() {
+            if (activeFilters.month[m]) { delete activeFilters.month[m]; cell.classList.remove('active'); }
+            else { activeFilters.month[m] = true; cell.classList.add('active'); }
+            updateClearBtn();
+            applyFilters();
+          });
+          inner.appendChild(cell);
+        });
+        wrap.appendChild(inner);
+        document.querySelector('.filters').before(wrap);
+      }
+
+      function hexToRgb(hex) {
+        return [parseInt(hex.slice(1,3),16), parseInt(hex.slice(3,5),16), parseInt(hex.slice(5,7),16)];
+      }
+      function rgbDist(a, b) {
+        return Math.sqrt((a[0]-b[0])*(a[0]-b[0]) + (a[1]-b[1])*(a[1]-b[1]) + (a[2]-b[2])*(a[2]-b[2]));
+      }
+      var MAX_RGB_DIST = Math.sqrt(3 * 255 * 255);
+      function similarityScore(queryHex, candidatePalette) {
+        var qRgb = hexToRgb(queryHex);
+        var score = 0;
+        candidatePalette.forEach(function(c) {
+          var d = rgbDist(qRgb, hexToRgb(c.hex));
+          score += c.w * Math.max(0, 1 - d / MAX_RGB_DIST);
+        });
+        return score;
+      }
+      function showSimilar(queryHex, colorName) {
+        if (!searchIndex) return;
+        var scored = [];
+        searchIndex.forEach(function(rec) {
+          if (!rec.cp || !rec.cp.length) return;
+          scored.push([rec.s, similarityScore(queryHex, rec.cp)]);
+        });
+        scored.sort(function(a,b) { return b[1]-a[1]; });
+        var top = new Set(scored.slice(0, 60).map(function(x) { return x[0]; }));
+        var slugToCard = {};
+        cards.forEach(function(c) { slugToCard[c.querySelector('a').getAttribute('data-slug')] = c; });
+        var grid = document.querySelector('.grid');
+        scored.slice(0, 60).forEach(function(pair) {
+          var card = slugToCard[pair[0]];
+          if (card) { card.style.display = ''; grid.appendChild(card); }
+        });
+        cards.forEach(function(c) {
+          if (!top.has(c.querySelector('a').getAttribute('data-slug'))) c.style.display = 'none';
+        });
+        visibleCards = scored.slice(0,60).map(function(p) { return slugToCard[p[0]]; }).filter(Boolean);
+        var banner = document.getElementById('similarity-banner');
+        document.getElementById('similarity-swatch').style.background = queryHex;
+        document.getElementById('similarity-label').textContent =
+          'Showing images similar in color to ' + colorName;
+        banner.classList.add('show');
+      }
+      document.getElementById('similarity-clear').addEventListener('click', function() {
+        document.getElementById('similarity-banner').classList.remove('show');
+        applyFilters();
+      });
     })();
   </script>
 </body>
@@ -654,7 +882,7 @@ def build_index(entries):
             color_strip = ""
             if colors:
                 swatches = "".join(
-                    f'<span class="card-color" style="background:{c["hex"]}"'
+                    f'<span class="card-color" style="background:{c["hex"]};flex:{c["w"]}"'
                     f' title="{html.escape(c.get("name",""))}"></span>'
                     for c in colors[:5]
                 )
@@ -697,6 +925,7 @@ def build_search_index(entries):
         if not tags.get("search_text") and tags.get("ai_description"):
             parts.append(tags["ai_description"])
         q = " ".join(p for p in parts if p).lower()
+        tone, vibrancy = compute_palette_mood(tags.get("color_palette", []))
         index.append({
             "s": slug,
             "q": q,
@@ -707,6 +936,8 @@ def build_search_index(entries):
             "mood": tags.get("mood") or "",
             "tod": tags.get("time_of_day") or "",
             "cp": tags.get("color_palette", []),
+            "tone": tone or "",
+            "vib": vibrancy or "",
         })
     path = os.path.join(DEPLOY_DIR, "search.json")
     with open(path, "w") as f:
@@ -725,6 +956,9 @@ def build_browse_index(entries):
     by_mood = defaultdict(list)
     by_country = defaultdict(list)
     by_tod = defaultdict(list)
+    by_tone = defaultdict(list)
+    by_vibrancy = defaultdict(list)
+    by_month = defaultdict(list)
     for slug in sorted_slugs:
         entry = entries[slug]
         tags = entry.get("tags", {})
@@ -742,6 +976,14 @@ def build_browse_index(entries):
         tod = tags.get("time_of_day")
         if tod and tod != "null":
             by_tod[tod].append(slug)
+        tone, vibrancy = compute_palette_mood(tags.get("color_palette", []))
+        if tone:
+            by_tone[tone].append(slug)
+        if vibrancy:
+            by_vibrancy[vibrancy].append(slug)
+        month = entry.get("date", "")[:7]
+        if month:
+            by_month[month].append(slug)
 
     # Derive "two_animals" from existing tags: animal/bird + "two"/"pair" in keywords or search text
     two_animals_set = set(by_subject.get("two_animals", []))
@@ -788,6 +1030,14 @@ def build_browse_index(entries):
     if by_tod:
         browse["tod"] = dict(by_tod)
         browse["tod_counts"] = {k: len(v) for k, v in by_tod.items()}
+    if by_tone:
+        browse["tone"] = dict(by_tone)
+        browse["tone_counts"] = {k: len(v) for k, v in by_tone.items()}
+    if by_vibrancy:
+        browse["vibrancy"] = dict(by_vibrancy)
+        browse["vibrancy_counts"] = {k: len(v) for k, v in by_vibrancy.items()}
+    if by_month:
+        browse["month"] = dict(by_month)
     path = os.path.join(DEPLOY_DIR, "browse.json")
     with open(path, "w") as f:
         json.dump(browse, f, separators=(",", ":"))
@@ -835,6 +1085,7 @@ def main():
     build_index(entries)
     build_search_index(entries)
     build_browse_index(entries)
+    build_color_timeline(entries)
     commit_and_push(entries)
 
 
