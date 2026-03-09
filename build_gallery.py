@@ -253,6 +253,7 @@ INDEX_TAIL = """\
       var currentIdx = -1;
       var activeFilters = {};
       var searchIndex = null;
+      var browseIndex = null;
       var debounceTimer = null;
 
       var subjects = ['landscape','mountain','ocean','lake','river','forest',
@@ -264,39 +265,73 @@ INDEX_TAIL = """\
       clearBtn.className = 'filter-clear';
       clearBtn.textContent = 'Clear filters';
       filtersEl.appendChild(clearBtn);
-      subjects.forEach(function(s) {
-        var btn = document.createElement('button');
-        btn.className = 'filter-pill';
-        btn.textContent = s;
-        btn.setAttribute('data-subject', s);
-        btn.addEventListener('click', function() {
-          if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
-          else { activeFilters[s] = true; btn.classList.add('active'); }
-          clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0);
+
+      function buildPills(counts) {
+        counts = counts || {};
+        subjects.forEach(function(s) {
+          var btn = document.createElement('button');
+          btn.className = 'filter-pill';
+          btn.textContent = s + (counts[s] ? ' (' + counts[s] + ')' : '');
+          btn.setAttribute('data-subject', s);
+          btn.addEventListener('click', function() {
+            if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
+            else { activeFilters[s] = true; btn.classList.add('active'); }
+            clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0);
+            applyFilters();
+          });
+          filtersEl.appendChild(btn);
+        });
+        clearBtn.addEventListener('click', function() {
+          activeFilters = {};
+          filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
+          clearBtn.classList.remove('show');
           applyFilters();
         });
-        filtersEl.appendChild(btn);
-      });
-      clearBtn.addEventListener('click', function() {
-        activeFilters = {};
-        filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
-        clearBtn.classList.remove('show');
-        applyFilters();
-      });
+      }
 
-      fetch('search.json')
-        .then(function(r) { return r.json(); })
-        .then(function(data) {
-          searchIndex = new Map();
-          data.forEach(function(rec) { searchIndex.set(rec.s, rec); });
+      function initFromUrl() {
+        var params = new URLSearchParams(location.search);
+        var subjectParam = params.get('subject');
+        if (subjectParam && subjects.indexOf(subjectParam) >= 0) {
+          activeFilters[subjectParam] = true;
+          var pill = filtersEl.querySelector('[data-subject="' + subjectParam + '"]');
+          if (pill) pill.classList.add('active');
+          clearBtn.classList.add('show');
+        }
+        applyFilters();
+      }
+
+      Promise.all([
+        fetch('search.json').then(function(r) { return r.json(); }),
+        fetch('browse.json').then(function(r) { return r.json(); })
+      ]).then(function(results) {
+        var searchData = results[0];
+        var browseData = results[1];
+        searchIndex = new Map();
+        searchData.forEach(function(rec) { searchIndex.set(rec.s, rec); });
+        browseIndex = browseData;
+        searchInput.disabled = false;
+        searchInput.placeholder = 'Refine by keyword\\u2026';
+        buildPills(browseIndex.subject_counts);
+        initFromUrl();
+      }).catch(function(err) {
+        console.warn('Failed to load search.json or browse.json', err);
+        searchIndex = new Map();
+        browseIndex = null;
+        Promise.all([
+          fetch('search.json').then(function(r) { return r.json(); }).then(function(data) {
+            data.forEach(function(rec) { searchIndex.set(rec.s, rec); });
+          }).catch(function() {}),
+          fetch('browse.json').then(function(r) { return r.json(); }).then(function(data) {
+            browseIndex = data;
+          }).catch(function() {})
+        ]).then(function() {
           searchInput.disabled = false;
-          searchInput.placeholder = 'Search images\\u2026';
-        })
-        .catch(function() {
-          console.warn('Failed to load search.json, falling back to title search');
-          searchInput.disabled = false;
-          searchInput.placeholder = 'Search by title\\u2026';
+          searchInput.placeholder = browseIndex ? 'Refine by keyword\\u2026' : 'Search by title\\u2026';
+          buildPills(browseIndex && browseIndex.subject_counts);
+          initFromUrl();
         });
+      });
 
       function getRec(card) {
         if (!searchIndex) return null;
@@ -310,9 +345,18 @@ INDEX_TAIL = """\
         var regexes = terms.map(function(t) {
           return new RegExp('\\\\b' + t.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '\\\\b', 'i');
         });
+        var slugSet = null;
+        if (activeKeys.length > 0 && browseIndex && browseIndex.subject) {
+          slugSet = new Set();
+          activeKeys.forEach(function(k) {
+            var arr = browseIndex.subject[k];
+            if (arr) arr.forEach(function(slug) { slugSet.add(slug); });
+          });
+        }
         visibleCards = [];
         cards.forEach(function(card) {
           var a = card.querySelector('a');
+          var slug = a.getAttribute('data-slug');
           var rec = getRec(card);
           var textMatch = true;
           if (regexes.length > 0) {
@@ -321,8 +365,12 @@ INDEX_TAIL = """\
           }
           var tagMatch = true;
           if (activeKeys.length > 0) {
-            var subs = rec ? (rec.sub || '').split(',') : [];
-            tagMatch = activeKeys.some(function(k) { return subs.indexOf(k) >= 0; });
+            if (slugSet !== null) {
+              tagMatch = slugSet.has(slug);
+            } else {
+              var subs = rec ? (rec.sub || '').split(',') : [];
+              tagMatch = activeKeys.some(function(k) { return subs.indexOf(k) >= 0; });
+            }
           }
           var show = textMatch && tagMatch;
           card.style.display = show ? '' : 'none';
@@ -459,6 +507,49 @@ def build_search_index(entries):
     print(f"Wrote search.json ({len(index)} entries, {size_kb:.0f} KB)")
 
 
+def build_browse_index(entries):
+    """Build browse.json: category -> list of slugs (same order as gallery) and counts."""
+    sorted_slugs = sorted(
+        entries.keys(), key=lambda k: (entries[k]["date"], k), reverse=True
+    )
+    by_subject = defaultdict(list)
+    by_season = defaultdict(list)
+    by_mood = defaultdict(list)
+    by_country = defaultdict(list)
+    for slug in sorted_slugs:
+        entry = entries[slug]
+        tags = entry.get("tags", {})
+        for s in tags.get("subject", []):
+            by_subject[s].append(slug)
+        sea = tags.get("season")
+        if sea:
+            by_season[sea].append(slug)
+        mood = tags.get("mood")
+        if mood:
+            by_mood[mood].append(slug)
+        co = tags.get("country")
+        if co:
+            by_country[co].append(slug)
+    browse = {
+        "subject": dict(by_subject),
+        "subject_counts": {s: len(slugs) for s, slugs in by_subject.items()},
+    }
+    if by_season:
+        browse["season"] = dict(by_season)
+        browse["season_counts"] = {k: len(v) for k, v in by_season.items()}
+    if by_mood:
+        browse["mood"] = dict(by_mood)
+        browse["mood_counts"] = {k: len(v) for k, v in by_mood.items()}
+    if by_country:
+        browse["country"] = dict(by_country)
+        browse["country_counts"] = {k: len(v) for k, v in by_country.items()}
+    path = os.path.join(DEPLOY_DIR, "browse.json")
+    with open(path, "w") as f:
+        json.dump(browse, f, separators=(",", ":"))
+    size_kb = os.path.getsize(path) / 1024
+    print(f"Wrote browse.json ({size_kb:.0f} KB)")
+
+
 # ── Git commit + push ─────────────────────────────────────────────────────
 
 def commit_and_push(entries):
@@ -498,6 +589,7 @@ def main():
     save_metadata(entries)
     build_index(entries)
     build_search_index(entries)
+    build_browse_index(entries)
     commit_and_push(entries)
 
 
