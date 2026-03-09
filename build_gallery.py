@@ -180,15 +180,27 @@ INDEX_HEAD = """\
     .header { padding: 2.5rem 1.5rem 1.5rem; max-width: 1400px; margin: 0 auto; }
     h1 { font-weight: 600; font-size: clamp(1.75rem, 4vw, 2.25rem); letter-spacing: -0.02em; margin: 0 0 0.35rem; }
     .meta { color: var(--muted); font-weight: 300; font-size: 0.95rem; }
-    .search-wrap { margin-top: 1rem; }
-    .search-wrap input { width: 100%; max-width: 400px; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #333; background: var(--card); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
+    .search-wrap { margin-top: 1rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .search-wrap input { width: 100%; max-width: 380px; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #333; background: var(--card); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
     .search-wrap input::placeholder { color: var(--muted); }
     .search-wrap input:focus { border-color: #555; }
-    .filters { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
-    .filter-pill { padding: 0.35rem 0.75rem; border-radius: 20px; border: 1px solid #333; background: transparent; color: var(--muted); font-family: inherit; font-size: 0.75rem; font-weight: 500; cursor: pointer; transition: all 0.2s; text-transform: capitalize; }
+    .filter-toggle { padding: 0.55rem 0.9rem; border-radius: 8px; border: 1px solid #333; background: var(--card); color: var(--muted); font-family: inherit; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.45rem; white-space: nowrap; }
+    .filter-toggle:hover { border-color: #555; color: var(--text); }
+    .filter-toggle.has-active { border-color: #666; color: var(--text); }
+    .filter-count { font-size: 0.7rem; background: rgba(255,255,255,0.18); border-radius: 10px; padding: 0.05rem 0.4rem; display: none; }
+    .filter-toggle.has-active .filter-count { display: inline; }
+    .toggle-arrow { display: inline-block; transition: transform 0.2s; font-style: normal; line-height: 1; }
+    .filter-toggle.open .toggle-arrow { transform: rotate(180deg); }
+    .stats-bar { color: var(--muted); font-size: 0.8rem; font-weight: 300; line-height: 1.4; }
+    .filters { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; overflow: hidden; max-height: 0; transition: max-height 0.3s ease, padding-bottom 0.3s ease; }
+    .filters.open { max-height: 2000px; padding-bottom: 1.25rem; }
+    .filter-group { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+    .filter-label { font-size: 0.68rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; min-width: 7rem; flex-shrink: 0; }
+    .filter-pill { padding: 0.3rem 0.7rem; border-radius: 20px; border: 1px solid #333; background: transparent; color: var(--muted); font-family: inherit; font-size: 0.75rem; font-weight: 500; cursor: pointer; transition: all 0.2s; text-transform: capitalize; display: inline-flex; align-items: center; gap: 0.3rem; }
     .filter-pill:hover { border-color: #555; color: var(--text); }
     .filter-pill.active { background: rgba(255,255,255,0.12); border-color: #666; color: var(--text); }
-    .filter-clear { padding: 0.35rem 0.75rem; border-radius: 20px; border: 1px solid transparent; background: none; color: var(--muted); font-family: inherit; font-size: 0.75rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+    .pill-swatch { width: 0.6rem; height: 0.6rem; border-radius: 50%; flex-shrink: 0; }
+    .filter-clear { align-self: flex-start; margin-top: 0.1rem; padding: 0.3rem 0.7rem; border-radius: 20px; border: 1px solid transparent; background: none; color: var(--muted); font-family: inherit; font-size: 0.75rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
     .filter-clear.show { opacity: 1; pointer-events: auto; }
     .filter-clear:hover { color: var(--text); }
     .grid { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 2rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
@@ -196,6 +208,8 @@ INDEX_HEAD = """\
     .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
     .card a { display: block; text-decoration: none; color: inherit; }
     .card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .card-colors { display: flex; height: 5px; }
+    .card-color { flex: 1; }
     .card-title { display: block; padding: 0.75rem 1rem 0.15rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
     .card-date { display: block; padding: 0 1rem 0.15rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); opacity: 0.9; }
     .card-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; padding: 0 1rem 0.75rem; }
@@ -219,7 +233,13 @@ INDEX_HEAD = """\
   <header class="header">
     <h1>Bing image of the day</h1>
     <p class="meta">New photo each day from Bing. Click any image to view full size.</p>
-    <div class="search-wrap"><input type="text" id="search" placeholder="Loading search\u2026" autocomplete="off" disabled></div>
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="Loading search\u2026" autocomplete="off" disabled>
+      <button class="filter-toggle" id="filter-toggle" aria-expanded="false">
+        Filters <span class="filter-count" id="filter-count"></span><i class="toggle-arrow">&#8964;</i>
+      </button>
+      <span class="stats-bar" id="stats-bar"></span>
+    </div>
   </header>
   <div class="filters" id="filters"></div>
   <div class="grid">
@@ -248,59 +268,227 @@ INDEX_TAIL = """\
       var lbDate = lb.querySelector('.lb-date');
       var lbDl = lb.querySelector('.lb-download');
       var searchInput = document.getElementById('search');
+      var statsEl = document.getElementById('stats-bar');
       var cards = Array.from(document.querySelectorAll('.card'));
       var visibleCards = cards.slice();
       var currentIdx = -1;
-      var activeFilters = {};
       var searchIndex = null;
       var browseIndex = null;
       var debounceTimer = null;
 
-      var subjects = ['landscape','mountain','ocean','lake','river','forest',
-        'desert','cave','island','city','architecture','bridge','castle',
-        'ruins','animal','bird','flower','garden','farm','snow','ice','aurora',
-        'two_animals'];
+      // Multi-dimensional filter state: AND across dimensions, OR within
+      var activeFilters = { subject:{}, mood:{}, season:{}, tod:{}, country:{}, color:{} };
+
+      // Color family definitions (names drawn from color_extract.py CSS_COLORS vocab)
+      var colorFamilies = [
+        {id:'red',    label:'Red',       hex:'#c94040',
+         names:['red','dark red','crimson','firebrick','tomato','coral','indian red',
+                'light coral','dark salmon','salmon','light salmon','orange red','maroon']},
+        {id:'orange', label:'Orange',    hex:'#d97020',
+         names:['dark orange','orange']},
+        {id:'yellow', label:'Yellow',    hex:'#c0980a',
+         names:['gold','golden rod','pale golden rod','yellow','dark golden rod',
+                'dark khaki','khaki','olive']},
+        {id:'green',  label:'Green',     hex:'#3d8c3d',
+         names:['dark olive green','olive drab','dark green','green','forest green',
+                'lime green','light green','pale green','dark sea green',
+                'medium spring green','spring green','sea green','medium aqua marine',
+                'medium sea green','light sea green','lawn green','chartreuse',
+                'green yellow','lime','yellow green']},
+        {id:'teal',   label:'Teal',      hex:'#1f8a7d',
+         names:['teal','dark cyan','dark turquoise','turquoise','medium turquoise',
+                'pale turquoise','aqua marine','cyan','light cyan']},
+        {id:'blue',   label:'Blue',      hex:'#2e6fad',
+         names:['powder blue','cadet blue','steel blue','corn flower blue','deep sky blue',
+                'dodger blue','light blue','sky blue','light sky blue','midnight blue',
+                'navy','dark blue','medium blue','blue','royal blue','light steel blue']},
+        {id:'purple', label:'Purple',    hex:'#7c3fbf',
+         names:['blue violet','indigo','dark slate blue','slate blue','medium slate blue',
+                'medium purple','dark magenta','dark violet','dark orchid','medium orchid',
+                'purple','thistle','plum','violet','magenta','orchid',
+                'medium violet red','pale violet red','deep pink','hot pink',
+                'light pink','pink']},
+        {id:'brown',  label:'Brown',     hex:'#7a4e28',
+         names:['saddle brown','sienna','chocolate','peru','sandy brown','burly wood',
+                'tan','rosy brown','brown']},
+        {id:'gray',   label:'Gray',      hex:'#666',
+         names:['dark slate gray','slate gray','light slate gray','dim gray','gray',
+                'dark gray','silver','light gray','gainsboro','white smoke']},
+        {id:'white',  label:'White',     hex:'#ccc',
+         names:['white','snow','ivory','azure','honeydew','ghost white','floral white',
+                'alice blue','mint cream','linen','old lace','antique white','beige',
+                'blanched almond','misty rose','lavender blush']}
+      ];
+
+      var colorNameToFamily = {};
+      colorFamilies.forEach(function(fam) {
+        fam.names.forEach(function(n) { colorNameToFamily[n] = fam.id; });
+      });
+
+      var subjectOrder = ['landscape','mountain','ocean','lake','river','forest',
+        'desert','cave','island','city','architecture','bridge','castle','ruins',
+        'animal','bird','flower','garden','farm','snow','ice','aurora','two_animals'];
       var subjectLabels = {'two_animals':'Two animals'};
+      var todOrder = ['dawn','day','dusk','night'];
+      var seasonOrder = ['spring','summer','autumn','winter'];
 
       var filtersEl = document.getElementById('filters');
+      var filterToggle = document.getElementById('filter-toggle');
+      var filterCountEl = document.getElementById('filter-count');
       var clearBtn = document.createElement('button');
       clearBtn.className = 'filter-clear';
       clearBtn.textContent = 'Clear filters';
       filtersEl.appendChild(clearBtn);
 
-      function buildPills(counts) {
-        counts = counts || {};
-        subjects.forEach(function(s) {
+      filterToggle.addEventListener('click', function() {
+        var open = filtersEl.classList.toggle('open');
+        filterToggle.classList.toggle('open', open);
+        filterToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      function updateClearBtn() {
+        var total = Object.keys(activeFilters).reduce(function(sum, c) {
+          return sum + Object.keys(activeFilters[c]).length;
+        }, 0);
+        clearBtn.classList.toggle('show', total > 0);
+        filterToggle.classList.toggle('has-active', total > 0);
+        if (filterCountEl) filterCountEl.textContent = total > 0 ? total : '';
+      }
+
+      clearBtn.addEventListener('click', function() {
+        Object.keys(activeFilters).forEach(function(c) { activeFilters[c] = {}; });
+        filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
+        updateClearBtn();
+        applyFilters();
+      });
+
+      function buildFilterGroup(label, items, category, stateObj) {
+        if (!items || !items.length) return;
+        var group = document.createElement('div');
+        group.className = 'filter-group';
+        var lbl = document.createElement('span');
+        lbl.className = 'filter-label';
+        lbl.textContent = label;
+        group.appendChild(lbl);
+        items.forEach(function(item) {
           var btn = document.createElement('button');
           btn.className = 'filter-pill';
-          var label = subjectLabels[s] || s;
-          btn.textContent = label + (counts[s] ? ' (' + counts[s] + ')' : '');
-          btn.setAttribute('data-subject', s);
+          btn.textContent = item.label;
+          btn.setAttribute('data-category', category);
+          btn.setAttribute('data-value', item.value);
+          if (stateObj[item.value]) btn.classList.add('active');
           btn.addEventListener('click', function() {
-            if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
-            else { activeFilters[s] = true; btn.classList.add('active'); }
-            clearBtn.classList.toggle('show', Object.keys(activeFilters).length > 0);
+            if (stateObj[item.value]) { delete stateObj[item.value]; btn.classList.remove('active'); }
+            else { stateObj[item.value] = true; btn.classList.add('active'); }
+            updateClearBtn();
             applyFilters();
           });
-          filtersEl.appendChild(btn);
+          group.appendChild(btn);
         });
-        clearBtn.addEventListener('click', function() {
-          activeFilters = {};
-          filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
-          clearBtn.classList.remove('show');
-          applyFilters();
+        filtersEl.insertBefore(group, clearBtn);
+      }
+
+      function buildColorGroup() {
+        var group = document.createElement('div');
+        group.className = 'filter-group';
+        var lbl = document.createElement('span');
+        lbl.className = 'filter-label';
+        lbl.textContent = 'Color';
+        group.appendChild(lbl);
+        colorFamilies.forEach(function(fam) {
+          var btn = document.createElement('button');
+          btn.className = 'filter-pill';
+          btn.setAttribute('data-category', 'color');
+          btn.setAttribute('data-value', fam.id);
+          if (activeFilters.color[fam.id]) btn.classList.add('active');
+          var sw = document.createElement('span');
+          sw.className = 'pill-swatch';
+          sw.style.background = fam.hex;
+          btn.appendChild(sw);
+          btn.appendChild(document.createTextNode(fam.label));
+          btn.addEventListener('click', function() {
+            if (activeFilters.color[fam.id]) { delete activeFilters.color[fam.id]; btn.classList.remove('active'); }
+            else { activeFilters.color[fam.id] = true; btn.classList.add('active'); }
+            updateClearBtn();
+            applyFilters();
+          });
+          group.appendChild(btn);
         });
+        filtersEl.insertBefore(group, clearBtn);
+      }
+
+      function buildStats(b) {
+        if (!statsEl || !b) return;
+        var parts = [cards.length + ' photos'];
+        if (b.country_counts) {
+          parts.push(Object.keys(b.country_counts).length + ' countries');
+        }
+        if (b.season_counts) {
+          var seaEntries = Object.keys(b.season_counts).map(function(k) { return [k, b.season_counts[k]]; });
+          seaEntries.sort(function(x, y) { return y[1] - x[1]; });
+          if (seaEntries[0]) parts.push('mostly ' + seaEntries[0][0]);
+        }
+        if (b.mood_counts) {
+          var moodEntries = Object.keys(b.mood_counts).map(function(k) { return [k, b.mood_counts[k]]; });
+          moodEntries.sort(function(x, y) { return y[1] - x[1]; });
+          var topMoods = moodEntries.slice(0, 2).map(function(e) { return e[0]; });
+          if (topMoods.length) parts.push(topMoods.join(', '));
+        }
+        statsEl.textContent = parts.join(' \u00b7 ');
+      }
+
+      function buildAllFilters(b) {
+        var sc = b.subject_counts || {};
+        var subjItems = subjectOrder.filter(function(s) { return sc[s]; }).map(function(s) {
+          return {value:s, label:(subjectLabels[s]||s)+' ('+sc[s]+')'};
+        });
+        buildFilterGroup('Subject', subjItems, 'subject', activeFilters.subject);
+
+        if (b.mood_counts) {
+          var moodItems = Object.keys(b.mood_counts).map(function(k) { return [k, b.mood_counts[k]]; });
+          moodItems.sort(function(a,b) { return b[1]-a[1]; });
+          buildFilterGroup('Mood', moodItems.map(function(e) {
+            return {value:e[0], label:e[0]+' ('+e[1]+')'};
+          }), 'mood', activeFilters.mood);
+        }
+
+        if (b.season_counts) {
+          var seaItems = seasonOrder.filter(function(s) { return b.season_counts[s]; }).map(function(s) {
+            return {value:s, label:s+' ('+b.season_counts[s]+')'};
+          });
+          buildFilterGroup('Season', seaItems, 'season', activeFilters.season);
+        }
+
+        if (b.tod_counts) {
+          var todItems = todOrder.filter(function(s) { return b.tod_counts[s]; }).map(function(s) {
+            return {value:s, label:s+' ('+b.tod_counts[s]+')'};
+          });
+          buildFilterGroup('Time of day', todItems, 'tod', activeFilters.tod);
+        }
+
+        if (b.country_counts) {
+          var coItems = Object.keys(b.country_counts).map(function(k) { return [k, b.country_counts[k]]; });
+          coItems.sort(function(a,b) { return b[1]-a[1]; });
+          buildFilterGroup('Country', coItems.map(function(e) {
+            return {value:e[0], label:e[0]+' ('+e[1]+')'};
+          }), 'country', activeFilters.country);
+        }
+
+        buildColorGroup();
       }
 
       function initFromUrl() {
         var params = new URLSearchParams(location.search);
-        var subjectParam = params.get('subject');
-        if (subjectParam && subjects.indexOf(subjectParam) >= 0) {
-          activeFilters[subjectParam] = true;
-          var pill = filtersEl.querySelector('[data-subject="' + subjectParam + '"]');
-          if (pill) pill.classList.add('active');
-          clearBtn.classList.add('show');
-        }
+        var dims = ['subject','mood','season','tod','country','color'];
+        dims.forEach(function(dim) {
+          var val = params.get(dim);
+          if (val && activeFilters[dim] !== undefined) {
+            activeFilters[dim][val] = true;
+            var btn = filtersEl.querySelector('[data-category="'+dim+'"][data-value="'+val+'"]');
+            if (btn) btn.classList.add('active');
+          }
+        });
+        updateClearBtn();
         applyFilters();
       }
 
@@ -308,32 +496,18 @@ INDEX_TAIL = """\
         fetch('search.json').then(function(r) { return r.json(); }),
         fetch('browse.json').then(function(r) { return r.json(); })
       ]).then(function(results) {
-        var searchData = results[0];
-        var browseData = results[1];
         searchIndex = new Map();
-        searchData.forEach(function(rec) { searchIndex.set(rec.s, rec); });
-        browseIndex = browseData;
+        results[0].forEach(function(rec) { searchIndex.set(rec.s, rec); });
+        browseIndex = results[1];
         searchInput.disabled = false;
         searchInput.placeholder = 'Refine by keyword\\u2026';
-        buildPills(browseIndex.subject_counts);
+        buildStats(browseIndex);
+        buildAllFilters(browseIndex);
         initFromUrl();
-      }).catch(function(err) {
-        console.warn('Failed to load search.json or browse.json', err);
-        searchIndex = new Map();
-        browseIndex = null;
-        Promise.all([
-          fetch('search.json').then(function(r) { return r.json(); }).then(function(data) {
-            data.forEach(function(rec) { searchIndex.set(rec.s, rec); });
-          }).catch(function() {}),
-          fetch('browse.json').then(function(r) { return r.json(); }).then(function(data) {
-            browseIndex = data;
-          }).catch(function() {})
-        ]).then(function() {
-          searchInput.disabled = false;
-          searchInput.placeholder = browseIndex ? 'Refine by keyword\\u2026' : 'Search by title\\u2026';
-          buildPills(browseIndex && browseIndex.subject_counts);
-          initFromUrl();
-        });
+      }).catch(function() {
+        searchInput.disabled = false;
+        searchInput.placeholder = 'Search by title\\u2026';
+        applyFilters();
       });
 
       function getRec(card) {
@@ -343,39 +517,60 @@ INDEX_TAIL = """\
 
       function applyFilters() {
         var q = (searchInput.value || '').trim().toLowerCase();
-        var activeKeys = Object.keys(activeFilters);
         var terms = q ? q.split(/\\s+/) : [];
         var regexes = terms.map(function(t) {
           return new RegExp('\\\\b' + t.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '\\\\b', 'i');
         });
-        var slugSet = null;
-        if (activeKeys.length > 0 && browseIndex && browseIndex.subject) {
-          slugSet = new Set();
-          activeKeys.forEach(function(k) {
-            var arr = browseIndex.subject[k];
-            if (arr) arr.forEach(function(slug) { slugSet.add(slug); });
-          });
-        }
+
+        // Build a slug Set for each active non-color dimension
+        var slugSets = {};
+        var dimIndex = {
+          subject: browseIndex && browseIndex.subject,
+          mood:    browseIndex && browseIndex.mood,
+          season:  browseIndex && browseIndex.season,
+          tod:     browseIndex && browseIndex.tod,
+          country: browseIndex && browseIndex.country
+        };
+        Object.keys(dimIndex).forEach(function(dim) {
+          var keys = Object.keys(activeFilters[dim]);
+          var idx = dimIndex[dim];
+          if (!keys.length || !idx) return;
+          var set = new Set();
+          keys.forEach(function(k) { var arr = idx[k]; if (arr) arr.forEach(function(s) { set.add(s); }); });
+          slugSets[dim] = set;
+        });
+
+        var activeColorFams = Object.keys(activeFilters.color);
+
         visibleCards = [];
         cards.forEach(function(card) {
           var a = card.querySelector('a');
           var slug = a.getAttribute('data-slug');
           var rec = getRec(card);
+
           var textMatch = true;
           if (regexes.length > 0) {
             var s = rec ? rec.q : (a.getAttribute('data-title') || '') + ' ' + (a.getAttribute('data-date') || '');
             textMatch = regexes.every(function(rx) { return rx.test(s); });
           }
-          var tagMatch = true;
-          if (activeKeys.length > 0) {
-            if (slugSet !== null) {
-              tagMatch = slugSet.has(slug);
-            } else {
-              var subs = rec ? (rec.sub || '').split(',') : [];
-              tagMatch = activeKeys.some(function(k) { return subs.indexOf(k) >= 0; });
-            }
+
+          // AND across dimensions, OR within each dimension
+          var dimMatch = Object.keys(slugSets).every(function(dim) {
+            return slugSets[dim].has(slug);
+          });
+
+          var colorMatch = true;
+          if (activeColorFams.length > 0) {
+            var palette = rec && rec.cp ? rec.cp : [];
+            var cardFams = {};
+            palette.forEach(function(c) {
+              var f = colorNameToFamily[c.name];
+              if (f) cardFams[f] = true;
+            });
+            colorMatch = activeColorFams.some(function(f) { return cardFams[f]; });
           }
-          var show = textMatch && tagMatch;
+
+          var show = textMatch && dimMatch && colorMatch;
           card.style.display = show ? '' : 'none';
           if (show) visibleCards.push(card);
         });
@@ -402,9 +597,8 @@ INDEX_TAIL = """\
       }
 
       function navigate(delta) {
-        if (currentIdx < 0 || visibleCards.length === 0) return;
-        var next = (currentIdx + delta + visibleCards.length) % visibleCards.length;
-        openLightbox(next);
+        if (currentIdx < 0 || !visibleCards.length) return;
+        openLightbox((currentIdx + delta + visibleCards.length) % visibleCards.length);
       }
 
       cards.forEach(function(card) {
@@ -456,11 +650,21 @@ def build_index(entries):
             tag_pills = "".join(
                 f'<span class="card-tag">{html.escape(s)}</span>' for s in subjects
             )
+            colors = tags.get("color_palette") or []
+            color_strip = ""
+            if colors:
+                swatches = "".join(
+                    f'<span class="card-color" style="background:{c["hex"]}"'
+                    f' title="{html.escape(c.get("name",""))}"></span>'
+                    for c in colors[:5]
+                )
+                color_strip = f'<div class="card-colors">{swatches}</div>'
             f.write(
                 f'    <div class="card"><a href="{bing_url}" '
                 f'data-slug="{slug}" data-title="{title}" data-date="{date_str}">'
                 f'<img src="{thumb}" alt="{title}" loading="lazy" '
                 f'onerror="this.closest(\'.card\').style.display=\'none\'">'
+                f'{color_strip}'
                 f'<span class="card-title">{title}</span>'
                 f'<span class="card-date">{date_str}</span>'
                 f'<div class="card-tags">{tag_pills}</div>'
@@ -501,6 +705,7 @@ def build_search_index(entries):
             "sub": ",".join(tags.get("subject", [])),
             "sea": tags.get("season") or "",
             "mood": tags.get("mood") or "",
+            "tod": tags.get("time_of_day") or "",
             "cp": tags.get("color_palette", []),
         })
     path = os.path.join(DEPLOY_DIR, "search.json")
@@ -519,6 +724,7 @@ def build_browse_index(entries):
     by_season = defaultdict(list)
     by_mood = defaultdict(list)
     by_country = defaultdict(list)
+    by_tod = defaultdict(list)
     for slug in sorted_slugs:
         entry = entries[slug]
         tags = entry.get("tags", {})
@@ -533,6 +739,9 @@ def build_browse_index(entries):
         co = tags.get("country")
         if co:
             by_country[co].append(slug)
+        tod = tags.get("time_of_day")
+        if tod and tod != "null":
+            by_tod[tod].append(slug)
 
     # Derive "two_animals" from existing tags: animal/bird + "two"/"pair" in keywords or search text
     two_animals_set = set(by_subject.get("two_animals", []))
@@ -576,6 +785,9 @@ def build_browse_index(entries):
     if by_country:
         browse["country"] = dict(by_country)
         browse["country_counts"] = {k: len(v) for k, v in by_country.items()}
+    if by_tod:
+        browse["tod"] = dict(by_tod)
+        browse["tod_counts"] = {k: len(v) for k, v in by_tod.items()}
     path = os.path.join(DEPLOY_DIR, "browse.json")
     with open(path, "w") as f:
         json.dump(browse, f, separators=(",", ":"))
