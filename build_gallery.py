@@ -258,7 +258,9 @@ INDEX_TAIL = """\
 
       var subjects = ['landscape','mountain','ocean','lake','river','forest',
         'desert','cave','island','city','architecture','bridge','castle',
-        'ruins','animal','bird','flower','garden','farm','snow','ice','aurora'];
+        'ruins','animal','bird','flower','garden','farm','snow','ice','aurora',
+        'two_animals'];
+      var subjectLabels = {'two_animals':'Two animals'};
 
       var filtersEl = document.getElementById('filters');
       var clearBtn = document.createElement('button');
@@ -271,7 +273,8 @@ INDEX_TAIL = """\
         subjects.forEach(function(s) {
           var btn = document.createElement('button');
           btn.className = 'filter-pill';
-          btn.textContent = s + (counts[s] ? ' (' + counts[s] + ')' : '');
+          var label = subjectLabels[s] || s;
+          btn.textContent = label + (counts[s] ? ' (' + counts[s] + ')' : '');
           btn.setAttribute('data-subject', s);
           btn.addEventListener('click', function() {
             if (activeFilters[s]) { delete activeFilters[s]; btn.classList.remove('active'); }
@@ -530,6 +533,36 @@ def build_browse_index(entries):
         co = tags.get("country")
         if co:
             by_country[co].append(slug)
+
+    # Derive "two_animals" from existing tags: animal/bird + "two"/"pair" in keywords or search text
+    two_animals_set = set(by_subject.get("two_animals", []))
+    quantity_terms = ("two", "pair")
+    for slug in sorted_slugs:
+        if slug in two_animals_set:
+            continue
+        entry = entries[slug]
+        tags = entry.get("tags", {})
+        subs = tags.get("subject", [])
+        if "animal" not in subs and "bird" not in subs:
+            continue
+        parts = [
+            entry.get("title") or slug,
+            " ".join(tags.get("subject", [])),
+            tags.get("country") or "",
+            tags.get("mood") or "",
+            tags.get("season") or "",
+        ]
+        if tags.get("keywords"):
+            parts.append(" ".join(tags["keywords"]))
+        if tags.get("search_text"):
+            parts.append(tags["search_text"])
+        if not tags.get("search_text") and tags.get("ai_description"):
+            parts.append(tags.get("ai_description") or "")
+        searchable = " ".join(p for p in parts if p).lower()
+        if any(re.search(r"\b" + re.escape(term) + r"\b", searchable) for term in quantity_terms):
+            two_animals_set.add(slug)
+    by_subject["two_animals"] = [s for s in sorted_slugs if s in two_animals_set]
+
     browse = {
         "subject": dict(by_subject),
         "subject_counts": {s: len(slugs) for s, slugs in by_subject.items()},

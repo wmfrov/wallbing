@@ -42,6 +42,7 @@ SUBJECT_VOCAB = [
     "landscape", "mountain", "ocean", "lake", "river", "forest", "desert",
     "cave", "island", "city", "architecture", "bridge", "castle", "ruins",
     "animal", "bird", "flower", "garden", "farm", "snow", "ice", "aurora",
+    "two_animals",
 ]
 
 SYSTEM_PROMPT = f"""\
@@ -49,6 +50,8 @@ You are an image tagger for a wallpaper gallery. Analyze the provided image \
 and return a JSON object with exactly these fields:
 
 - "subject": array of 1-3 tags from this vocabulary: {json.dumps(SUBJECT_VOCAB)}
+  If the image clearly shows exactly two animals, include "two_animals" in \
+subject (in addition to "animal" or "bird" as appropriate).
 - "season": one of "spring", "summer", "autumn", "winter", or null if unclear
 - "country": country name string if identifiable, or null. Use the title and \
 background description for clues the image alone may not reveal.
