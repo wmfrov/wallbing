@@ -13,7 +13,7 @@ Expected env vars:
 from collections import defaultdict
 import html
 import json
-import math as _math
+
 import os
 import re
 import subprocess
@@ -162,96 +162,6 @@ def dedup(entries):
         print(f"  Removed {removed} duplicate entries")
 
 
-COLOR_FAMILY_MAP = {
-    name: fam for fam, names in [
-        ('red',    ['red','dark red','crimson','firebrick','tomato','coral','indian red',
-                    'light coral','dark salmon','salmon','light salmon','orange red','maroon']),
-        ('orange', ['dark orange','orange']),
-        ('yellow', ['gold','golden rod','pale golden rod','yellow','dark golden rod',
-                    'dark khaki','khaki','olive']),
-        ('green',  ['dark olive green','olive drab','dark green','green','forest green',
-                    'lime green','light green','pale green','dark sea green',
-                    'medium spring green','spring green','sea green','medium aqua marine',
-                    'medium sea green','light sea green','lawn green','chartreuse',
-                    'green yellow','lime','yellow green']),
-        ('teal',   ['teal','dark cyan','dark turquoise','turquoise','medium turquoise',
-                    'pale turquoise','aqua marine','cyan','light cyan']),
-        ('blue',   ['powder blue','cadet blue','steel blue','corn flower blue','deep sky blue',
-                    'dodger blue','light blue','sky blue','light sky blue','midnight blue',
-                    'navy','dark blue','medium blue','blue','royal blue','light steel blue']),
-        ('purple', ['blue violet','indigo','dark slate blue','slate blue','medium slate blue',
-                    'medium purple','dark magenta','dark violet','dark orchid','medium orchid',
-                    'purple','thistle','plum','violet','magenta','orchid',
-                    'medium violet red','pale violet red','deep pink','hot pink',
-                    'light pink','pink']),
-        ('brown',  ['saddle brown','sienna','chocolate','peru','sandy brown','burly wood',
-                    'tan','rosy brown','brown']),
-        ('gray',   ['dark slate gray','slate gray','light slate gray','dim gray','gray',
-                    'dark gray','silver','light gray','gainsboro','white smoke']),
-        ('white',  ['white','snow','ivory','azure','honeydew','ghost white','floral white',
-                    'alice blue','mint cream','linen','old lace','antique white','beige',
-                    'blanched almond','misty rose','lavender blush']),
-    ] for name in names
-}
-
-
-def _hex_to_hsl(hex_str):
-    r, g, b = int(hex_str[1:3],16)/255, int(hex_str[3:5],16)/255, int(hex_str[5:7],16)/255
-    mx, mn = max(r,g,b), min(r,g,b)
-    l = (mx+mn)/2
-    if mx == mn:
-        return 0.0, 0.0, l
-    d = mx - mn
-    s = d/(2-mx-mn) if l > 0.5 else d/(mx+mn)
-    if mx == r:   hue = (g-b)/d + (6 if g<b else 0)
-    elif mx == g: hue = (b-r)/d + 2
-    else:         hue = (r-g)/d + 4
-    return hue/6*360, s, l
-
-
-def compute_palette_mood(palette):
-    """Returns (tone, vibrancy) where tone in {warm,cool,neutral}, vibrancy in {vibrant,muted}."""
-    if not palette:
-        return None, None
-    total_w = sum(c['w'] for c in palette)
-    mean_s = sum(c['w'] * _hex_to_hsl(c['hex'])[1] for c in palette) / total_w
-    vibrancy = 'vibrant' if mean_s > 0.25 else 'muted'
-    chrom = [(c, _hex_to_hsl(c['hex'])) for c in palette if _hex_to_hsl(c['hex'])[1] >= 0.15]
-    if not chrom:
-        return 'neutral', vibrancy
-    tw = sum(c['w'] for c, _ in chrom)
-    sin_s = sum(c['w'] * _math.sin(_math.radians(hsl[0])) for c, hsl in chrom) / tw
-    cos_s = sum(c['w'] * _math.cos(_math.radians(hsl[0])) for c, hsl in chrom) / tw
-    mean_h = _math.degrees(_math.atan2(sin_s, cos_s)) % 360
-    tone = 'warm' if (mean_h <= 70 or mean_h >= 290) else 'cool'
-    return tone, vibrancy
-
-
-def build_color_timeline(entries):
-    months = defaultdict(lambda: {'hex_weights': defaultdict(float),
-                                   'family_scores': defaultdict(float), 'count': 0})
-    for slug, entry in entries.items():
-        date = entry.get('date', '')
-        if not date or len(date) < 7:
-            continue
-        month = date[:7]
-        months[month]['count'] += 1
-        for c in entry.get('tags', {}).get('color_palette', []):
-            months[month]['hex_weights'][c['hex']] += c['w']
-            fam = COLOR_FAMILY_MAP.get(c['name'], 'gray')
-            months[month]['family_scores'][fam] += c['w']
-    timeline = {}
-    for month in sorted(months):
-        m = months[month]
-        sig_hex = max(m['hex_weights'], key=m['hex_weights'].get) if m['hex_weights'] else '#808080'
-        top_fams = sorted(m['family_scores'], key=m['family_scores'].get, reverse=True)[:3]
-        timeline[month] = {'hex': sig_hex, 'families': top_fams, 'count': m['count']}
-    path = os.path.join(DEPLOY_DIR, 'color_timeline.json')
-    with open(path, 'w') as f:
-        json.dump(timeline, f, separators=(',', ':'))
-    print(f"Wrote color_timeline.json ({len(timeline)} months)")
-
-
 # ── HTML generation ───────────────────────────────────────────────────────
 
 INDEX_HEAD = """\
@@ -284,7 +194,7 @@ INDEX_HEAD = """\
     .filter-toggle.open .toggle-arrow { transform: rotate(180deg); }
     .stats-bar { color: var(--muted); font-size: 0.8rem; font-weight: 300; line-height: 1.4; }
     .filters { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; overflow: hidden; max-height: 0; transition: max-height 0.3s ease, padding-bottom 0.3s ease; }
-    .filters.open { max-height: 2000px; padding-bottom: 1.25rem; }
+    .filters.open { max-height: 2000px; padding-bottom: 1.25rem; overflow: visible; }
     .filter-group { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
     .filter-label { font-size: 0.68rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; min-width: 7rem; flex-shrink: 0; }
     .filter-pill { padding: 0.3rem 0.7rem; border-radius: 20px; border: 1px solid #333; background: transparent; color: var(--muted); font-family: inherit; font-size: 0.75rem; font-weight: 500; cursor: pointer; transition: all 0.2s; text-transform: capitalize; display: inline-flex; align-items: center; gap: 0.3rem; }
@@ -303,9 +213,7 @@ INDEX_HEAD = """\
     .card:hover .card-colors { transform: scaleY(4.4); }
     .card-color { transition: flex 0.25s; }
     .card-title { display: block; padding: 0.75rem 1rem 0.15rem; font-size: 0.85rem; font-weight: 500; color: var(--muted); }
-    .card-date { display: block; padding: 0 1rem 0.15rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); opacity: 0.9; }
-    .card-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; padding: 0 1rem 0.75rem; }
-    .card-tag { font-size: 0.6rem; padding: 0.15rem 0.45rem; border-radius: 10px; background: rgba(255,255,255,0.07); color: var(--muted); text-transform: capitalize; }
+    .card-date { display: block; padding: 0 1rem 0.75rem; font-size: 0.75rem; font-weight: 300; color: var(--muted); opacity: 0.9; }
     #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 100; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
     #lightbox.show { display: flex; }
     .lb-main { display: flex; align-items: center; gap: 1rem; max-width: 100%; max-height: calc(100vh - 8rem); }
@@ -327,12 +235,24 @@ INDEX_HEAD = """\
     .similarity-banner-swatch { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
     .similarity-clear { background: none; border: 1px solid #444; border-radius: 12px; color: var(--muted); font-family: inherit; font-size: 0.75rem; padding: 0.2rem 0.6rem; cursor: pointer; }
     .similarity-clear:hover { color: var(--text); }
-    .timeline-wrap { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 0.75rem; }
-    .timeline { display: flex; flex-wrap: wrap; gap: 3px; align-items: flex-end; }
-    .timeline-year { font-size: 0.65rem; color: #444; font-weight: 600; letter-spacing: 0.05em; align-self: center; margin: 0 4px 0 2px; }
-    .timeline-cell { width: 13px; height: 28px; border: none; border-radius: 3px; cursor: pointer; padding: 0; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
-    .timeline-cell:hover { transform: scaleY(1.43); opacity: 1; }
-    .timeline-cell.active { transform: scaleY(1.43); opacity: 1; outline: 2px solid rgba(255,255,255,0.6); outline-offset: 1px; }
+    .color-grid-wrap { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 0.75rem; }
+    .color-grid { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; }
+    .color-cell { width: 13px; height: 28px; border: none; border-radius: 3px; cursor: pointer; padding: 0; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
+    .color-cell:hover { transform: scaleY(1.43); opacity: 1; }
+    .color-cell.active { transform: scaleY(1.43); opacity: 1; outline: 2px solid rgba(255,255,255,0.6); outline-offset: 1px; }
+    .geo-dropdown-wrap { position: relative; display: inline-block; }
+    .geo-trigger { padding: 0.3rem 0.7rem; border-radius: 20px; border: 1px solid #333; background: transparent; color: var(--muted); font-family: inherit; font-size: 0.75rem; font-weight: 500; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.3rem; }
+    .geo-trigger:hover { border-color: #555; color: var(--text); }
+    .geo-trigger.active { background: rgba(255,255,255,0.12); border-color: #666; color: var(--text); }
+    .geo-dropdown { display: none; position: absolute; top: calc(100% + 4px); left: 0; background: var(--card); border: 1px solid #333; border-radius: 8px; max-height: 360px; overflow-y: auto; width: 280px; z-index: 50; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+    .geo-dropdown.open { display: block; }
+    .geo-search { width: calc(100% - 1rem); margin: 0.5rem; padding: 0.4rem 0.6rem; border-radius: 6px; border: 1px solid #333; background: var(--bg); color: var(--text); font-family: inherit; font-size: 0.8rem; outline: none; }
+    .geo-search:focus { border-color: #555; }
+    .geo-region-header { position: sticky; top: 0; padding: 0.35rem 0.75rem; font-size: 0.65rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; background: var(--card); }
+    .geo-option { padding: 0.3rem 0.75rem; font-size: 0.8rem; color: var(--muted); cursor: pointer; transition: all 0.15s; display: flex; justify-content: space-between; }
+    .geo-option:hover { background: rgba(255,255,255,0.06); color: var(--text); }
+    .geo-option.active { background: rgba(255,255,255,0.1); color: var(--text); }
+    .geo-count { font-size: 0.7rem; color: #555; }
   </style>
 </head>
 <body>
@@ -388,54 +308,8 @@ INDEX_TAIL = """\
       var browseIndex = null;
       var debounceTimer = null;
 
-      // Multi-dimensional filter state: AND across dimensions, OR within
-      var activeFilters = { subject:{}, mood:{}, season:{}, tod:{}, country:{}, color:{}, tone:{}, vibrancy:{}, month:{} };
-
-      // Color family definitions (names drawn from color_extract.py CSS_COLORS vocab)
-      var colorFamilies = [
-        {id:'red',    label:'Red',       hex:'#c94040',
-         names:['red','dark red','crimson','firebrick','tomato','coral','indian red',
-                'light coral','dark salmon','salmon','light salmon','orange red','maroon']},
-        {id:'orange', label:'Orange',    hex:'#d97020',
-         names:['dark orange','orange']},
-        {id:'yellow', label:'Yellow',    hex:'#c0980a',
-         names:['gold','golden rod','pale golden rod','yellow','dark golden rod',
-                'dark khaki','khaki','olive']},
-        {id:'green',  label:'Green',     hex:'#3d8c3d',
-         names:['dark olive green','olive drab','dark green','green','forest green',
-                'lime green','light green','pale green','dark sea green',
-                'medium spring green','spring green','sea green','medium aqua marine',
-                'medium sea green','light sea green','lawn green','chartreuse',
-                'green yellow','lime','yellow green']},
-        {id:'teal',   label:'Teal',      hex:'#1f8a7d',
-         names:['teal','dark cyan','dark turquoise','turquoise','medium turquoise',
-                'pale turquoise','aqua marine','cyan','light cyan']},
-        {id:'blue',   label:'Blue',      hex:'#2e6fad',
-         names:['powder blue','cadet blue','steel blue','corn flower blue','deep sky blue',
-                'dodger blue','light blue','sky blue','light sky blue','midnight blue',
-                'navy','dark blue','medium blue','blue','royal blue','light steel blue']},
-        {id:'purple', label:'Purple',    hex:'#7c3fbf',
-         names:['blue violet','indigo','dark slate blue','slate blue','medium slate blue',
-                'medium purple','dark magenta','dark violet','dark orchid','medium orchid',
-                'purple','thistle','plum','violet','magenta','orchid',
-                'medium violet red','pale violet red','deep pink','hot pink',
-                'light pink','pink']},
-        {id:'brown',  label:'Brown',     hex:'#7a4e28',
-         names:['saddle brown','sienna','chocolate','peru','sandy brown','burly wood',
-                'tan','rosy brown','brown']},
-        {id:'gray',   label:'Gray',      hex:'#666',
-         names:['dark slate gray','slate gray','light slate gray','dim gray','gray',
-                'dark gray','silver','light gray','gainsboro','white smoke']},
-        {id:'white',  label:'White',     hex:'#ccc',
-         names:['white','snow','ivory','azure','honeydew','ghost white','floral white',
-                'alice blue','mint cream','linen','old lace','antique white','beige',
-                'blanched almond','misty rose','lavender blush']}
-      ];
-
-      var colorNameToFamily = {};
-      colorFamilies.forEach(function(fam) {
-        fam.names.forEach(function(n) { colorNameToFamily[n] = fam.id; });
-      });
+      // Multi-dimensional filter state: AND across dimensions, AND within
+      var activeFilters = { subject:{}, mood:{}, season:{}, tod:{}, country:{}, color_name:{} };
 
       var subjectOrder = ['landscape','mountain','ocean','lake','river','forest',
         'desert','cave','island','city','architecture','bridge','castle','ruins',
@@ -470,7 +344,10 @@ INDEX_TAIL = """\
       clearBtn.addEventListener('click', function() {
         Object.keys(activeFilters).forEach(function(c) { activeFilters[c] = {}; });
         filtersEl.querySelectorAll('.filter-pill').forEach(function(b) { b.classList.remove('active'); });
-        document.querySelectorAll('.timeline-cell').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelectorAll('.color-cell').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelectorAll('.geo-option').forEach(function(b) { b.classList.remove('active'); });
+        var geoTrigger = document.querySelector('.geo-trigger');
+        if (geoTrigger) { geoTrigger.textContent = 'Location \u25BE'; geoTrigger.classList.remove('active'); }
         updateClearBtn();
         applyFilters();
       });
@@ -493,35 +370,6 @@ INDEX_TAIL = """\
           btn.addEventListener('click', function() {
             if (stateObj[item.value]) { delete stateObj[item.value]; btn.classList.remove('active'); }
             else { stateObj[item.value] = true; btn.classList.add('active'); }
-            updateClearBtn();
-            applyFilters();
-          });
-          group.appendChild(btn);
-        });
-        filtersEl.insertBefore(group, clearBtn);
-      }
-
-      function buildColorGroup() {
-        var group = document.createElement('div');
-        group.className = 'filter-group';
-        var lbl = document.createElement('span');
-        lbl.className = 'filter-label';
-        lbl.textContent = 'Color';
-        group.appendChild(lbl);
-        colorFamilies.forEach(function(fam) {
-          var btn = document.createElement('button');
-          btn.className = 'filter-pill';
-          btn.setAttribute('data-category', 'color');
-          btn.setAttribute('data-value', fam.id);
-          if (activeFilters.color[fam.id]) btn.classList.add('active');
-          var sw = document.createElement('span');
-          sw.className = 'pill-swatch';
-          sw.style.background = fam.hex;
-          btn.appendChild(sw);
-          btn.appendChild(document.createTextNode(fam.label));
-          btn.addEventListener('click', function() {
-            if (activeFilters.color[fam.id]) { delete activeFilters.color[fam.id]; btn.classList.remove('active'); }
-            else { activeFilters.color[fam.id] = true; btn.classList.add('active'); }
             updateClearBtn();
             applyFilters();
           });
@@ -579,37 +427,32 @@ INDEX_TAIL = """\
           buildFilterGroup('Time of day', todItems, 'tod', activeFilters.tod);
         }
 
-        if (b.country_counts) {
-          var coItems = Object.keys(b.country_counts).map(function(k) { return [k, b.country_counts[k]]; });
-          coItems.sort(function(a,b) { return b[1]-a[1]; });
-          buildFilterGroup('Country', coItems.map(function(e) {
-            return {value:e[0], label:e[0]+' ('+e[1]+')'};
-          }), 'country', activeFilters.country);
-        }
-
-        if (b.tone_counts) {
-          var toneOrder = ['warm','cool','neutral'];
-          buildFilterGroup('Tone', toneOrder.filter(function(t){return b.tone_counts[t];}).map(function(t){
-            return {value:t, label:t+' ('+b.tone_counts[t]+')'};
-          }), 'tone', activeFilters.tone);
-        }
-        if (b.vibrancy_counts) {
-          buildFilterGroup('Vibrancy', ['vibrant','muted'].filter(function(v){return b.vibrancy_counts[v];}).map(function(v){
-            return {value:v, label:v+' ('+b.vibrancy_counts[v]+')'};
-          }), 'vibrancy', activeFilters.vibrancy);
-        }
-        buildColorGroup();
+        buildGeoDropdown(b);
       }
 
       function initFromUrl() {
         var params = new URLSearchParams(location.search);
-        var dims = ['subject','mood','season','tod','country','color','tone','vibrancy'];
+        var dims = ['subject','mood','season','tod','country','color_name'];
         dims.forEach(function(dim) {
           var val = params.get(dim);
           if (val && activeFilters[dim] !== undefined) {
             activeFilters[dim][val] = true;
-            var btn = filtersEl.querySelector('[data-category="'+dim+'"][data-value="'+val+'"]');
-            if (btn) btn.classList.add('active');
+            if (dim === 'color_name') {
+              var cell = document.querySelector('.color-cell[data-color-name="'+val+'"]');
+              if (cell) cell.classList.add('active');
+            } else if (dim === 'country') {
+              var opt = document.querySelector('.geo-option[data-country="'+val+'"]');
+              if (opt) opt.classList.add('active');
+              var geoTrigger = document.querySelector('.geo-trigger');
+              if (geoTrigger) {
+                var cnt = Object.keys(activeFilters.country).length;
+                geoTrigger.textContent = cnt ? 'Location ('+cnt+') \u25BE' : 'Location \u25BE';
+                geoTrigger.classList.toggle('active', cnt > 0);
+              }
+            } else {
+              var btn = filtersEl.querySelector('[data-category="'+dim+'"][data-value="'+val+'"]');
+              if (btn) btn.classList.add('active');
+            }
           }
         });
         updateClearBtn();
@@ -618,8 +461,7 @@ INDEX_TAIL = """\
 
       Promise.all([
         fetch('search.json').then(function(r) { return r.json(); }),
-        fetch('browse.json').then(function(r) { return r.json(); }),
-        fetch('color_timeline.json').then(function(r) { return r.json(); }).catch(function() { return null; })
+        fetch('browse.json').then(function(r) { return r.json(); })
       ]).then(function(results) {
         searchIndex = new Map();
         results[0].forEach(function(rec) { searchIndex.set(rec.s, rec); });
@@ -628,7 +470,7 @@ INDEX_TAIL = """\
         searchInput.placeholder = 'Refine by keyword\\u2026';
         buildStats(browseIndex);
         buildAllFilters(browseIndex);
-        if (results[2]) buildTimeline(results[2]);
+        buildColorGrid(browseIndex);
         initFromUrl();
       }).catch(function() {
         searchInput.disabled = false;
@@ -648,28 +490,29 @@ INDEX_TAIL = """\
           return new RegExp('\\\\b' + t.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&') + '\\\\b', 'i');
         });
 
-        // Build a slug Set for each active non-color dimension
+        // Build a slug Set for each active dimension (AND within, AND across)
         var slugSets = {};
         var dimIndex = {
-          subject:  browseIndex && browseIndex.subject,
-          mood:     browseIndex && browseIndex.mood,
-          season:   browseIndex && browseIndex.season,
-          tod:      browseIndex && browseIndex.tod,
-          country:  browseIndex && browseIndex.country,
-          tone:     browseIndex && browseIndex.tone,
-          vibrancy: browseIndex && browseIndex.vibrancy,
-          month:    browseIndex && browseIndex.month
+          subject:    browseIndex && browseIndex.subject,
+          mood:       browseIndex && browseIndex.mood,
+          season:     browseIndex && browseIndex.season,
+          tod:        browseIndex && browseIndex.tod,
+          country:    browseIndex && browseIndex.country,
+          color_name: browseIndex && browseIndex.color_name
         };
         Object.keys(dimIndex).forEach(function(dim) {
           var keys = Object.keys(activeFilters[dim]);
           var idx = dimIndex[dim];
           if (!keys.length || !idx) return;
-          var set = new Set();
-          keys.forEach(function(k) { var arr = idx[k]; if (arr) arr.forEach(function(s) { set.add(s); }); });
-          slugSets[dim] = set;
+          var set = null;
+          keys.forEach(function(k) {
+            var arr = idx[k];
+            if (!arr) return;
+            if (!set) { set = new Set(arr); }
+            else { set = new Set(arr.filter(function(s) { return set.has(s); })); }
+          });
+          if (set) slugSets[dim] = set;
         });
-
-        var activeColorFams = Object.keys(activeFilters.color);
 
         visibleCards = [];
         cards.forEach(function(card) {
@@ -683,23 +526,12 @@ INDEX_TAIL = """\
             textMatch = regexes.every(function(rx) { return rx.test(s); });
           }
 
-          // AND across dimensions, OR within each dimension
+          // AND across dimensions
           var dimMatch = Object.keys(slugSets).every(function(dim) {
             return slugSets[dim].has(slug);
           });
 
-          var colorMatch = true;
-          if (activeColorFams.length > 0) {
-            var palette = rec && rec.cp ? rec.cp : [];
-            var cardFams = {};
-            palette.forEach(function(c) {
-              var f = colorNameToFamily[c.name];
-              if (f) cardFams[f] = true;
-            });
-            colorMatch = activeColorFams.some(function(f) { return cardFams[f]; });
-          }
-
-          var show = textMatch && dimMatch && colorMatch;
+          var show = textMatch && dimMatch;
           card.style.display = show ? '' : 'none';
           if (show) visibleCards.push(card);
         });
@@ -772,39 +604,156 @@ INDEX_TAIL = """\
         debounceTimer = setTimeout(applyFilters, 200);
       });
 
-      function buildTimeline(timelineData) {
-        var months = Object.keys(timelineData).sort();
-        var wrap = document.createElement('div');
-        wrap.className = 'timeline-wrap';
-        var inner = document.createElement('div');
-        inner.className = 'timeline';
-        var curYear = null;
-        months.forEach(function(m) {
-          var d = timelineData[m];
-          var year = m.slice(0,4);
-          if (year !== curYear) {
-            var yl = document.createElement('span');
-            yl.className = 'timeline-year';
-            yl.textContent = year;
-            inner.appendChild(yl);
-            curYear = year;
+      function buildColorGrid(browseData) {
+        if (!browseData.color_name || !browseData.color_name_hex) return;
+        var nameToSlugs = browseData.color_name;
+        var nameToHex = browseData.color_name_hex;
+        var names = Object.keys(nameToSlugs);
+        // Sort by hue
+        function hexToHsl(hex) {
+          var r = parseInt(hex.slice(1,3),16)/255, g = parseInt(hex.slice(3,5),16)/255, b = parseInt(hex.slice(5,7),16)/255;
+          var mx = Math.max(r,g,b), mn = Math.min(r,g,b), l = (mx+mn)/2, h = 0, s = 0;
+          if (mx !== mn) {
+            var d = mx - mn;
+            s = l > 0.5 ? d/(2-mx-mn) : d/(mx+mn);
+            if (mx === r) h = (g-b)/d + (g<b?6:0);
+            else if (mx === g) h = (b-r)/d + 2;
+            else h = (r-g)/d + 4;
+            h /= 6;
           }
+          return [h*360, s, l];
+        }
+        names.sort(function(a,b) {
+          var ha = hexToHsl(nameToHex[a]), hb = hexToHsl(nameToHex[b]);
+          return ha[0] - hb[0] || ha[1] - hb[1] || ha[2] - hb[2];
+        });
+        var wrap = document.createElement('div');
+        wrap.className = 'color-grid-wrap';
+        var grid = document.createElement('div');
+        grid.className = 'color-grid';
+        names.forEach(function(name) {
+          var hex = nameToHex[name];
+          var count = nameToSlugs[name].length;
           var cell = document.createElement('button');
-          cell.className = 'timeline-cell';
-          cell.style.background = d.hex;
-          cell.title = m + ' \\u00b7 ' + d.count + ' photos \\u00b7 ' + d.families.join(', ');
-          cell.setAttribute('data-month', m);
-          if (activeFilters.month[m]) cell.classList.add('active');
+          cell.className = 'color-cell';
+          cell.style.background = hex;
+          cell.title = name + ' (' + count + ')';
+          cell.setAttribute('data-color-name', name);
+          if (activeFilters.color_name[name]) cell.classList.add('active');
           cell.addEventListener('click', function() {
-            if (activeFilters.month[m]) { delete activeFilters.month[m]; cell.classList.remove('active'); }
-            else { activeFilters.month[m] = true; cell.classList.add('active'); }
+            if (activeFilters.color_name[name]) { delete activeFilters.color_name[name]; cell.classList.remove('active'); }
+            else { activeFilters.color_name[name] = true; cell.classList.add('active'); }
             updateClearBtn();
             applyFilters();
           });
-          inner.appendChild(cell);
+          grid.appendChild(cell);
         });
-        wrap.appendChild(inner);
+        wrap.appendChild(grid);
         document.querySelector('.filters').before(wrap);
+      }
+
+      function buildGeoDropdown(b) {
+        if (!b.country_counts) return;
+        var countryToRegion = b.country_to_region || {};
+        var countries = Object.keys(b.country_counts).map(function(k) {
+          return { name: k, count: b.country_counts[k], region: countryToRegion[k] || 'Other' };
+        });
+        // Group by region
+        var regionMap = {};
+        countries.forEach(function(c) {
+          if (!regionMap[c.region]) regionMap[c.region] = [];
+          regionMap[c.region].push(c);
+        });
+        // Sort countries within each region by count desc
+        Object.keys(regionMap).forEach(function(r) {
+          regionMap[r].sort(function(a,b) { return b.count - a.count; });
+        });
+        // Sort regions by total count desc
+        var regionOrder = Object.keys(regionMap).sort(function(a,b) {
+          var ta = regionMap[a].reduce(function(s,c) { return s+c.count; }, 0);
+          var tb = regionMap[b].reduce(function(s,c) { return s+c.count; }, 0);
+          return tb - ta;
+        });
+
+        var group = document.createElement('div');
+        group.className = 'filter-group';
+        var lbl = document.createElement('span');
+        lbl.className = 'filter-label';
+        lbl.textContent = 'Location';
+        group.appendChild(lbl);
+
+        var ddWrap = document.createElement('div');
+        ddWrap.className = 'geo-dropdown-wrap';
+        var trigger = document.createElement('button');
+        trigger.className = 'geo-trigger';
+        trigger.textContent = 'Location \u25BE';
+        ddWrap.appendChild(trigger);
+
+        var dd = document.createElement('div');
+        dd.className = 'geo-dropdown';
+        var searchInput2 = document.createElement('input');
+        searchInput2.className = 'geo-search';
+        searchInput2.placeholder = 'Search countries\\u2026';
+        dd.appendChild(searchInput2);
+
+        var listEl = document.createElement('div');
+        regionOrder.forEach(function(region) {
+          var header = document.createElement('div');
+          header.className = 'geo-region-header';
+          header.textContent = region;
+          header.setAttribute('data-region', region);
+          listEl.appendChild(header);
+          regionMap[region].forEach(function(c) {
+            var opt = document.createElement('div');
+            opt.className = 'geo-option';
+            opt.setAttribute('data-country', c.name);
+            opt.setAttribute('data-region', region);
+            var nameSpan = document.createElement('span');
+            nameSpan.textContent = c.name;
+            var countSpan = document.createElement('span');
+            countSpan.className = 'geo-count';
+            countSpan.textContent = c.count;
+            opt.appendChild(nameSpan);
+            opt.appendChild(countSpan);
+            if (activeFilters.country[c.name]) opt.classList.add('active');
+            opt.addEventListener('click', function() {
+              if (activeFilters.country[c.name]) { delete activeFilters.country[c.name]; opt.classList.remove('active'); }
+              else { activeFilters.country[c.name] = true; opt.classList.add('active'); }
+              var cnt = Object.keys(activeFilters.country).length;
+              trigger.textContent = cnt ? 'Location ('+cnt+') \u25BE' : 'Location \u25BE';
+              trigger.classList.toggle('active', cnt > 0);
+              updateClearBtn();
+              applyFilters();
+            });
+            listEl.appendChild(opt);
+          });
+        });
+        dd.appendChild(listEl);
+        ddWrap.appendChild(dd);
+        group.appendChild(ddWrap);
+        filtersEl.insertBefore(group, clearBtn);
+
+        trigger.addEventListener('click', function(e) {
+          e.stopPropagation();
+          dd.classList.toggle('open');
+        });
+        document.addEventListener('click', function(e) {
+          if (!ddWrap.contains(e.target)) dd.classList.remove('open');
+        });
+
+        searchInput2.addEventListener('input', function() {
+          var q = searchInput2.value.toLowerCase();
+          var visibleRegions = {};
+          listEl.querySelectorAll('.geo-option').forEach(function(opt) {
+            var name = opt.getAttribute('data-country').toLowerCase();
+            var show = !q || name.indexOf(q) >= 0;
+            opt.style.display = show ? '' : 'none';
+            if (show) visibleRegions[opt.getAttribute('data-region')] = true;
+          });
+          listEl.querySelectorAll('.geo-region-header').forEach(function(h) {
+            h.style.display = visibleRegions[h.getAttribute('data-region')] ? '' : 'none';
+          });
+        });
       }
 
       function hexToRgb(hex) {
@@ -874,10 +823,6 @@ def build_index(entries):
             title = html.escape(entry.get("title") or slug)
             date_str = entry.get("date", "")
             tags = entry.get("tags", {})
-            subjects = tags.get("subject", [])
-            tag_pills = "".join(
-                f'<span class="card-tag">{html.escape(s)}</span>' for s in subjects
-            )
             colors = tags.get("color_palette") or []
             color_strip = ""
             if colors:
@@ -895,7 +840,6 @@ def build_index(entries):
                 f'{color_strip}'
                 f'<span class="card-title">{title}</span>'
                 f'<span class="card-date">{date_str}</span>'
-                f'<div class="card-tags">{tag_pills}</div>'
                 f"</a></div>\n"
             )
         f.write(INDEX_TAIL)
@@ -925,7 +869,6 @@ def build_search_index(entries):
         if not tags.get("search_text") and tags.get("ai_description"):
             parts.append(tags["ai_description"])
         q = " ".join(p for p in parts if p).lower()
-        tone, vibrancy = compute_palette_mood(tags.get("color_palette", []))
         index.append({
             "s": slug,
             "q": q,
@@ -936,8 +879,6 @@ def build_search_index(entries):
             "mood": tags.get("mood") or "",
             "tod": tags.get("time_of_day") or "",
             "cp": tags.get("color_palette", []),
-            "tone": tone or "",
-            "vib": vibrancy or "",
         })
     path = os.path.join(DEPLOY_DIR, "search.json")
     with open(path, "w") as f:
@@ -956,9 +897,8 @@ def build_browse_index(entries):
     by_mood = defaultdict(list)
     by_country = defaultdict(list)
     by_tod = defaultdict(list)
-    by_tone = defaultdict(list)
-    by_vibrancy = defaultdict(list)
-    by_month = defaultdict(list)
+    by_color_name = defaultdict(list)
+    country_to_region = {}
     for slug in sorted_slugs:
         entry = entries[slug]
         tags = entry.get("tags", {})
@@ -973,17 +913,16 @@ def build_browse_index(entries):
         co = tags.get("country")
         if co:
             by_country[co].append(slug)
+            region = tags.get("region")
+            if region and co not in country_to_region:
+                country_to_region[co] = region
         tod = tags.get("time_of_day")
         if tod and tod != "null":
             by_tod[tod].append(slug)
-        tone, vibrancy = compute_palette_mood(tags.get("color_palette", []))
-        if tone:
-            by_tone[tone].append(slug)
-        if vibrancy:
-            by_vibrancy[vibrancy].append(slug)
-        month = entry.get("date", "")[:7]
-        if month:
-            by_month[month].append(slug)
+        for c in tags.get("color_palette", []):
+            cname = c.get("name")
+            if cname:
+                by_color_name[cname].append(slug)
 
     # Derive "two_animals" from existing tags: animal/bird + "two"/"pair" in keywords or search text
     two_animals_set = set(by_subject.get("two_animals", []))
@@ -1014,6 +953,14 @@ def build_browse_index(entries):
             two_animals_set.add(slug)
     by_subject["two_animals"] = [s for s in sorted_slugs if s in two_animals_set]
 
+    # Build color_name_hex mapping from color_extract.py CSS_COLORS
+    from color_extract import CSS_COLORS
+    color_name_hex = {}
+    for cname in by_color_name:
+        if cname in CSS_COLORS:
+            r, g, b = CSS_COLORS[cname]
+            color_name_hex[cname] = f"#{r:02x}{g:02x}{b:02x}"
+
     browse = {
         "subject": dict(by_subject),
         "subject_counts": {s: len(slugs) for s, slugs in by_subject.items()},
@@ -1027,17 +974,13 @@ def build_browse_index(entries):
     if by_country:
         browse["country"] = dict(by_country)
         browse["country_counts"] = {k: len(v) for k, v in by_country.items()}
+        browse["country_to_region"] = country_to_region
     if by_tod:
         browse["tod"] = dict(by_tod)
         browse["tod_counts"] = {k: len(v) for k, v in by_tod.items()}
-    if by_tone:
-        browse["tone"] = dict(by_tone)
-        browse["tone_counts"] = {k: len(v) for k, v in by_tone.items()}
-    if by_vibrancy:
-        browse["vibrancy"] = dict(by_vibrancy)
-        browse["vibrancy_counts"] = {k: len(v) for k, v in by_vibrancy.items()}
-    if by_month:
-        browse["month"] = dict(by_month)
+    if by_color_name:
+        browse["color_name"] = dict(by_color_name)
+        browse["color_name_hex"] = color_name_hex
     path = os.path.join(DEPLOY_DIR, "browse.json")
     with open(path, "w") as f:
         json.dump(browse, f, separators=(",", ":"))
@@ -1085,7 +1028,6 @@ def main():
     build_index(entries)
     build_search_index(entries)
     build_browse_index(entries)
-    build_color_timeline(entries)
     commit_and_push(entries)
 
 
