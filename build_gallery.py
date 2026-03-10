@@ -898,6 +898,7 @@ def build_browse_index(entries):
     by_country = defaultdict(list)
     by_tod = defaultdict(list)
     by_color_name = defaultdict(list)
+    color_name_hex = {}
     country_to_region = {}
     for slug in sorted_slugs:
         entry = entries[slug]
@@ -923,6 +924,8 @@ def build_browse_index(entries):
             cname = c.get("name")
             if cname:
                 by_color_name[cname].append(slug)
+                if cname not in color_name_hex and c.get("hex"):
+                    color_name_hex[cname] = c["hex"]
 
     # Derive "two_animals" from existing tags: animal/bird + "two"/"pair" in keywords or search text
     two_animals_set = set(by_subject.get("two_animals", []))
@@ -952,14 +955,6 @@ def build_browse_index(entries):
         if any(re.search(r"\b" + re.escape(term) + r"\b", searchable) for term in quantity_terms):
             two_animals_set.add(slug)
     by_subject["two_animals"] = [s for s in sorted_slugs if s in two_animals_set]
-
-    # Build color_name_hex mapping from color_extract.py CSS_COLORS
-    from color_extract import CSS_COLORS
-    color_name_hex = {}
-    for cname in by_color_name:
-        if cname in CSS_COLORS:
-            r, g, b = CSS_COLORS[cname]
-            color_name_hex[cname] = f"#{r:02x}{g:02x}{b:02x}"
 
     browse = {
         "subject": dict(by_subject),
