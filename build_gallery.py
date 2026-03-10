@@ -237,7 +237,7 @@ INDEX_HEAD = """\
     .similarity-clear:hover { color: var(--text); }
     .color-grid-wrap { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 0.75rem; }
     .color-grid { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; }
-    .color-cell { width: 44px; height: 28px; border: none; border-radius: 3px; cursor: pointer; padding: 0; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
+    .color-cell { flex: 1; min-width: 44px; height: 28px; border: none; border-radius: 3px; cursor: pointer; padding: 0; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
     .color-cell:hover { transform: scaleY(1.43); opacity: 1; }
     .color-cell.active { transform: scaleY(1.43); opacity: 1; outline: 2px solid rgba(255,255,255,0.6); outline-offset: 1px; }
     .geo-dropdown-wrap { position: relative; display: inline-block; }
