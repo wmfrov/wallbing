@@ -9,8 +9,11 @@ A browsable gallery of every Bing image of the day, updated automatically and ho
 1,755+ wallpapers from February 2021 to today, with a new image added daily. Every image is analyzed by AI to enable:
 
 - **Filter by subject** -- landscape, animal, architecture, ocean, snow, aurora, and more
+- **Filter by color** -- 16-color spectrum grid to browse by dominant palette color
+- **Filter by location** -- searchable dropdown grouped by region
+- **Filter by mood, season, time of day** -- multi-dimensional AND filtering
 - **Freeform search** -- search for "coral reef", "red bridge", or "snowy village" and find matches even when those words aren't in the original title
-- **Full-res viewing** -- click any image for a UHD lightbox with download
+- **Full-res viewing** -- click any image for a UHD lightbox with palette swatches and download
 
 All images are served from Bing's CDN. Nothing is hosted in this repo.
 
