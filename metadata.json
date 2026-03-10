@@ -122783,6 +122783,68 @@
   "SpringIceland_EN-US6846318257_UHD": {
     "date": "2026-03-10",
     "title": "Geothermal blue pool Bl\u00e1hver at Hveravellir, Iceland",
-    "bing_url": "https://www.bing.com/th?id=OHR.SpringIceland_EN-US6846318257_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.SpringIceland_EN-US6846318257_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "landscape",
+        "lake"
+      ],
+      "season": null,
+      "country": "Iceland",
+      "region": "Northern Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases a stunning geothermal blue pool, known as Bl\u00e1hver, located at Hveravellir in Iceland. The pool is surrounded by a variety of textures, including vibrant green moss and rocky terrain, creating a striking contrast with the deep blue water. A wooden walkway meanders through the landscape, providing access to the natural wonder. The background features geothermal activity with steam rising from the ground, adding to the otherworldly atmosphere of this unique location.",
+      "search_text": "Explore the stunning geothermal blue pool Bl\u00e1hver at Hveravellir in Iceland. This natural wonder features vibrant green moss, rocky terrain, and a wooden walkway that enhances the landscape. Discover the unique geothermal activity with steam rising from the ground, creating a serene and otherworldly atmosphere. Ideal for nature lovers and travelers seeking breathtaking landscapes, this location is a must-visit for anyone interested in geology and outdoor adventures.",
+      "keywords": [
+        "Bl\u00e1hver",
+        "Hveravellir",
+        "Iceland",
+        "geothermal",
+        "blue pool",
+        "landscape",
+        "natural wonder",
+        "moss",
+        "rocky terrain",
+        "wooden walkway",
+        "steam",
+        "hot springs",
+        "nature",
+        "serene",
+        "outdoor",
+        "geology",
+        "tourism",
+        "travel",
+        "landmark",
+        "lake"
+      ],
+      "color_palette": [
+        {
+          "hex": "#CFC1AE",
+          "name": "silver",
+          "w": 0.28
+        },
+        {
+          "hex": "#9E834A",
+          "name": "peru",
+          "w": 0.22
+        },
+        {
+          "hex": "#95AAAB",
+          "name": "dark gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#59593D",
+          "name": "dark olive green",
+          "w": 0.18
+        },
+        {
+          "hex": "#617E73",
+          "name": "dim gray",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
