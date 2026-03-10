@@ -237,7 +237,7 @@ INDEX_HEAD = """\
     .similarity-clear:hover { color: var(--text); }
     .color-grid-wrap { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 0.75rem; }
     .color-grid { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; }
-    .color-cell { width: 13px; height: 28px; border: none; border-radius: 3px; cursor: pointer; padding: 0; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
+    .color-cell { width: 44px; height: 28px; border: none; border-radius: 3px; cursor: pointer; padding: 0; transition: transform 0.15s, opacity 0.15s; opacity: 0.75; }
     .color-cell:hover { transform: scaleY(1.43); opacity: 1; }
     .color-cell.active { transform: scaleY(1.43); opacity: 1; outline: 2px solid rgba(255,255,255,0.6); outline-offset: 1px; }
     .geo-dropdown-wrap { position: relative; display: inline-block; }
@@ -309,7 +309,7 @@ INDEX_TAIL = """\
       var debounceTimer = null;
 
       // Multi-dimensional filter state: AND across dimensions, AND within
-      var activeFilters = { subject:{}, mood:{}, season:{}, tod:{}, country:{}, color_name:{} };
+      var activeFilters = { subject:{}, mood:{}, season:{}, tod:{}, country:{}, color_bucket:{} };
 
       var subjectOrder = ['landscape','mountain','ocean','lake','river','forest',
         'desert','cave','island','city','architecture','bridge','castle','ruins',
@@ -432,13 +432,13 @@ INDEX_TAIL = """\
 
       function initFromUrl() {
         var params = new URLSearchParams(location.search);
-        var dims = ['subject','mood','season','tod','country','color_name'];
+        var dims = ['subject','mood','season','tod','country','color_bucket'];
         dims.forEach(function(dim) {
           var val = params.get(dim);
           if (val && activeFilters[dim] !== undefined) {
             activeFilters[dim][val] = true;
-            if (dim === 'color_name') {
-              var cell = document.querySelector('.color-cell[data-color-name="'+val+'"]');
+            if (dim === 'color_bucket') {
+              var cell = document.querySelector('.color-cell[data-color-bucket="'+val+'"]');
               if (cell) cell.classList.add('active');
             } else if (dim === 'country') {
               var opt = document.querySelector('.geo-option[data-country="'+val+'"]');
@@ -498,7 +498,7 @@ INDEX_TAIL = """\
           season:     browseIndex && browseIndex.season,
           tod:        browseIndex && browseIndex.tod,
           country:    browseIndex && browseIndex.country,
-          color_name: browseIndex && browseIndex.color_name
+          color_bucket: browseIndex && browseIndex.color_bucket
         };
         Object.keys(dimIndex).forEach(function(dim) {
           var keys = Object.keys(activeFilters[dim]);
@@ -605,44 +605,27 @@ INDEX_TAIL = """\
       });
 
       function buildColorGrid(browseData) {
-        if (!browseData.color_name || !browseData.color_name_hex) return;
-        var nameToSlugs = browseData.color_name;
-        var nameToHex = browseData.color_name_hex;
-        var names = Object.keys(nameToSlugs);
-        // Sort by hue
-        function hexToHsl(hex) {
-          var r = parseInt(hex.slice(1,3),16)/255, g = parseInt(hex.slice(3,5),16)/255, b = parseInt(hex.slice(5,7),16)/255;
-          var mx = Math.max(r,g,b), mn = Math.min(r,g,b), l = (mx+mn)/2, h = 0, s = 0;
-          if (mx !== mn) {
-            var d = mx - mn;
-            s = l > 0.5 ? d/(2-mx-mn) : d/(mx+mn);
-            if (mx === r) h = (g-b)/d + (g<b?6:0);
-            else if (mx === g) h = (b-r)/d + 2;
-            else h = (r-g)/d + 4;
-            h /= 6;
-          }
-          return [h*360, s, l];
-        }
-        names.sort(function(a,b) {
-          var ha = hexToHsl(nameToHex[a]), hb = hexToHsl(nameToHex[b]);
-          return ha[0] - hb[0] || ha[1] - hb[1] || ha[2] - hb[2];
-        });
+        if (!browseData.color_bucket || !browseData.color_bucket_hex) return;
+        var bucketToSlugs = browseData.color_bucket;
+        var bucketToHex = browseData.color_bucket_hex;
+        var bucketOrder = browseData.color_bucket_order || Object.keys(bucketToSlugs);
         var wrap = document.createElement('div');
         wrap.className = 'color-grid-wrap';
         var grid = document.createElement('div');
         grid.className = 'color-grid';
-        names.forEach(function(name) {
-          var hex = nameToHex[name];
-          var count = nameToSlugs[name].length;
+        bucketOrder.forEach(function(label) {
+          if (!bucketToSlugs[label]) return;
+          var hex = bucketToHex[label];
+          var count = bucketToSlugs[label].length;
           var cell = document.createElement('button');
           cell.className = 'color-cell';
           cell.style.background = hex;
-          cell.title = name + ' (' + count + ')';
-          cell.setAttribute('data-color-name', name);
-          if (activeFilters.color_name[name]) cell.classList.add('active');
+          cell.title = label + ' (' + count + ')';
+          cell.setAttribute('data-color-bucket', label);
+          if (activeFilters.color_bucket[label]) cell.classList.add('active');
           cell.addEventListener('click', function() {
-            if (activeFilters.color_name[name]) { delete activeFilters.color_name[name]; cell.classList.remove('active'); }
-            else { activeFilters.color_name[name] = true; cell.classList.add('active'); }
+            if (activeFilters.color_bucket[label]) { delete activeFilters.color_bucket[label]; cell.classList.remove('active'); }
+            else { activeFilters.color_bucket[label] = true; cell.classList.add('active'); }
             updateClearBtn();
             applyFilters();
           });
@@ -887,6 +870,25 @@ def build_search_index(entries):
     print(f"Wrote search.json ({len(index)} entries, {size_kb:.0f} KB)")
 
 
+COLOR_BUCKETS = [
+    ("Red",     "#dc3545", ["red", "dark red", "crimson", "firebrick", "indian red", "maroon"]),
+    ("Coral",   "#ff6b5b", ["tomato", "coral", "light coral", "salmon", "dark salmon", "light salmon", "orange red"]),
+    ("Orange",  "#ff8c00", ["dark orange", "orange"]),
+    ("Gold",    "#daa520", ["gold", "golden rod", "dark golden rod", "dark khaki"]),
+    ("Yellow",  "#e6d520", ["yellow", "khaki", "pale golden rod", "olive", "lemon chiffon"]),
+    ("Lime",    "#7cb342", ["yellow green", "lawn green", "chartreuse", "green yellow", "lime", "lime green", "olive drab"]),
+    ("Green",   "#2e7d32", ["dark green", "green", "forest green", "dark olive green", "sea green", "medium sea green"]),
+    ("Emerald", "#4caf82", ["medium spring green", "spring green", "light green", "pale green", "dark sea green", "medium aqua marine"]),
+    ("Teal",    "#00897b", ["teal", "dark cyan", "light sea green"]),
+    ("Cyan",    "#00bcd4", ["cyan", "dark turquoise", "turquoise", "medium turquoise", "pale turquoise", "aqua marine", "light cyan"]),
+    ("Sky",     "#4db6e0", ["light blue", "sky blue", "light sky blue", "powder blue", "deep sky blue", "dodger blue", "cadet blue"]),
+    ("Blue",    "#1e5fa8", ["steel blue", "corn flower blue", "royal blue", "blue", "medium blue", "dark blue", "navy", "midnight blue"]),
+    ("Purple",  "#7b1fa2", ["blue violet", "indigo", "dark slate blue", "slate blue", "medium slate blue", "medium purple", "dark magenta", "dark violet", "dark orchid", "medium orchid", "purple"]),
+    ("Pink",    "#e040a0", ["magenta", "orchid", "violet", "plum", "thistle", "medium violet red", "pale violet red", "deep pink", "hot pink", "light pink", "pink"]),
+    ("Brown",   "#8d6e3e", ["saddle brown", "sienna", "chocolate", "peru", "sandy brown", "burly wood", "tan", "rosy brown", "brown"]),
+    ("Gray",    "#9e9e9e", ["dark slate gray", "slate gray", "light slate gray", "dim gray", "gray", "dark gray", "silver", "light gray", "gainsboro", "white smoke", "white", "snow", "ivory", "azure", "honeydew", "ghost white", "floral white", "alice blue", "mint cream", "linen", "old lace", "antique white", "beige", "blanched almond", "misty rose", "lavender blush"]),
+]
+
 def build_browse_index(entries):
     """Build browse.json: category -> list of slugs (same order as gallery) and counts."""
     sorted_slugs = sorted(
@@ -897,9 +899,15 @@ def build_browse_index(entries):
     by_mood = defaultdict(list)
     by_country = defaultdict(list)
     by_tod = defaultdict(list)
-    by_color_name = defaultdict(list)
-    color_name_hex = {}
     country_to_region = {}
+
+    # Build CSS name → bucket label mapping
+    css_name_to_bucket = {}
+    for label, _hex, css_names in COLOR_BUCKETS:
+        for name in css_names:
+            css_name_to_bucket[name] = label
+    by_color_bucket = defaultdict(set)
+
     for slug in sorted_slugs:
         entry = entries[slug]
         tags = entry.get("tags", {})
@@ -923,9 +931,9 @@ def build_browse_index(entries):
         for c in tags.get("color_palette", []):
             cname = c.get("name")
             if cname:
-                by_color_name[cname].append(slug)
-                if cname not in color_name_hex and c.get("hex"):
-                    color_name_hex[cname] = c["hex"]
+                bucket = css_name_to_bucket.get(cname)
+                if bucket:
+                    by_color_bucket[bucket].add(slug)
 
     # Derive "two_animals" from existing tags: animal/bird + "two"/"pair" in keywords or search text
     two_animals_set = set(by_subject.get("two_animals", []))
@@ -973,9 +981,16 @@ def build_browse_index(entries):
     if by_tod:
         browse["tod"] = dict(by_tod)
         browse["tod_counts"] = {k: len(v) for k, v in by_tod.items()}
-    if by_color_name:
-        browse["color_name"] = dict(by_color_name)
-        browse["color_name_hex"] = color_name_hex
+    if by_color_bucket:
+        # Preserve gallery order within each bucket
+        slug_rank = {s: i for i, s in enumerate(sorted_slugs)}
+        browse["color_bucket"] = {
+            label: sorted(by_color_bucket[label], key=lambda s: slug_rank[s])
+            for label, _hex, _names in COLOR_BUCKETS
+            if label in by_color_bucket
+        }
+        browse["color_bucket_hex"] = {label: h for label, h, _names in COLOR_BUCKETS}
+        browse["color_bucket_order"] = [label for label, _h, _n in COLOR_BUCKETS]
     path = os.path.join(DEPLOY_DIR, "browse.json")
     with open(path, "w") as f:
         json.dump(browse, f, separators=(",", ":"))
