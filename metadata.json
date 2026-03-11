@@ -122850,6 +122850,69 @@
   "PeachBloom_EN-US6957157989_UHD": {
     "date": "2026-03-11",
     "title": "Peach trees in bloom, Cieza, Murcia, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.PeachBloom_EN-US6957157989_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.PeachBloom_EN-US6957157989_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "farm",
+        "flower",
+        "landscape"
+      ],
+      "season": "spring",
+      "country": "Spain",
+      "region": "Murcia",
+      "time_of_day": "dawn",
+      "mood": "vibrant",
+      "ai_description": "The image features a picturesque view of blooming peach trees in a farm setting, with rows of pink blossoms stretching across the foreground. In the background, a prominent mountain range rises against a colorful sky at dawn, showcasing hues of orange and purple. The landscape is dotted with lush greenery, enhancing the vibrant colors of the flowers. The scene conveys a sense of tranquility and beauty, typical of springtime in this region.",
+      "search_text": "Explore the beauty of blooming peach trees in Cieza, Murcia, Spain. This vibrant spring landscape features rows of pink blossoms set against a stunning mountain backdrop at dawn. Perfect for those interested in agriculture, floral photography, and scenic rural views. Discover the charm of orchards and the tranquility of nature in this picturesque setting.",
+      "keywords": [
+        "peach trees",
+        "blooming",
+        "Cieza",
+        "Murcia",
+        "Spain",
+        "flower",
+        "farm",
+        "landscape",
+        "spring",
+        "mountain",
+        "vibrant",
+        "orchard",
+        "pink blossoms",
+        "agriculture",
+        "nature",
+        "scenic",
+        "dawn",
+        "rural",
+        "countryside",
+        "flora"
+      ],
+      "color_palette": [
+        {
+          "hex": "#844F4A",
+          "name": "sienna",
+          "w": 0.25
+        },
+        {
+          "hex": "#4A3B3E",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#A96D64",
+          "name": "indian red",
+          "w": 0.22
+        },
+        {
+          "hex": "#D78877",
+          "name": "dark salmon",
+          "w": 0.17
+        },
+        {
+          "hex": "#F5BB98",
+          "name": "burly wood",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
