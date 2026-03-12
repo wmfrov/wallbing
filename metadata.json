@@ -122918,6 +122918,67 @@
   "SunbitternEcuador_EN-US7059069378_UHD": {
     "date": "2026-03-12",
     "title": "Juvenile sunbittern displaying at nest, Ecuador",
-    "bing_url": "https://www.bing.com/th?id=OHR.SunbitternEcuador_EN-US7059069378_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.SunbitternEcuador_EN-US7059069378_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "bird",
+        "forest"
+      ],
+      "season": null,
+      "country": "Ecuador",
+      "region": "South America",
+      "time_of_day": null,
+      "mood": "vibrant",
+      "ai_description": "The image features a juvenile sunbittern displaying its colorful plumage while perched on a moss-covered branch in a lush forest. The bird's wings are spread wide, showcasing intricate patterns and vibrant colors, including shades of blue, orange, and yellow. Surrounding the bird are various green leaves and plants, creating a rich, natural backdrop. The soft focus of the background emphasizes the bird's striking appearance and the serene environment.",
+      "search_text": "Explore the vibrant display of a juvenile sunbittern in Ecuador's lush forests. This striking bird showcases its colorful plumage while perched on a mossy branch, surrounded by rich green foliage. Perfect for wildlife enthusiasts and bird watchers, this image captures the beauty of avian life in tropical environments. Discover the unique patterns and colors of this bird, known for its stunning appearance and habitat in South America.",
+      "keywords": [
+        "sunbittern",
+        "Ecuador",
+        "juvenile",
+        "bird",
+        "forest",
+        "colorful plumage",
+        "displaying",
+        "moss",
+        "green leaves",
+        "tropical",
+        "wildlife",
+        "nature",
+        "vibrant colors",
+        "perched",
+        "animal",
+        "biodiversity",
+        "avian",
+        "tropical forest",
+        "wild bird"
+      ],
+      "color_palette": [
+        {
+          "hex": "#7C711F",
+          "name": "olive drab",
+          "w": 0.27
+        },
+        {
+          "hex": "#8D8A2A",
+          "name": "olive drab",
+          "w": 0.23
+        },
+        {
+          "hex": "#3D4109",
+          "name": "dark olive green",
+          "w": 0.22
+        },
+        {
+          "hex": "#92A02C",
+          "name": "olive drab",
+          "w": 0.14
+        },
+        {
+          "hex": "#B5AC54",
+          "name": "dark khaki",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
