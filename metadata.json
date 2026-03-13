@@ -122984,6 +122984,64 @@
   "VendeeVaults_EN-US7120114878_UHD": {
     "date": "2026-03-13",
     "title": "Vaults of the Church of Notre Dame de Bon-Port, Les Sables-d'Olonne, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.VendeeVaults_EN-US7120114878_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.VendeeVaults_EN-US7120114878_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "France",
+      "region": "Western Europe",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image captures the intricate vaulted ceiling of the Church of Notre Dame de Bon-Port in Les Sables-d'Olonne, France. The ceiling features a series of pointed arches and ribbed vaults, showcasing a stunning pattern of brickwork. Natural light filters through the windows, illuminating the textured surfaces and enhancing the architectural details. The perspective is from below, emphasizing the grandeur and height of the structure, with a sense of tranquility permeating the space.",
+      "search_text": "Explore the stunning vaulted ceiling of the Church of Notre Dame de Bon-Port located in Les Sables-d'Olonne, France. This architectural marvel features intricate brickwork and pointed arches typical of Gothic architecture. The serene atmosphere created by the natural light filtering through the windows enhances the beauty of the interior. Ideal for those interested in historical buildings, religious architecture, and ornate design, this image showcases the grandeur of church interiors and the artistry of vaulted ceilings.",
+      "keywords": [
+        "vaulted ceiling",
+        "architecture",
+        "Notre Dame de Bon-Port",
+        "Les Sables-d'Olonne",
+        "France",
+        "brickwork",
+        "pointed arches",
+        "ribbed vault",
+        "church interior",
+        "gothic architecture",
+        "natural light",
+        "serene atmosphere",
+        "historical building",
+        "religious architecture",
+        "ornate design",
+        "symmetry",
+        "interior design"
+      ],
+      "color_palette": [
+        {
+          "hex": "#61523E",
+          "name": "dark olive green",
+          "w": 0.26
+        },
+        {
+          "hex": "#423424",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#806F57",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#998A70",
+          "name": "gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#B8AA90",
+          "name": "rosy brown",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
