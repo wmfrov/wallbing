@@ -123047,6 +123047,68 @@
   "CornwallDolmen_EN-US7192709883_UHD": {
     "date": "2026-03-14",
     "title": "Lanyon Quoit, a Neolithic dolmen in Cornwall, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.CornwallDolmen_EN-US7192709883_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.CornwallDolmen_EN-US7192709883_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "ruins",
+        "landscape"
+      ],
+      "season": "summer",
+      "country": "England",
+      "region": "Southwest England",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image features Lanyon Quoit, a Neolithic dolmen situated in a lush green landscape. The structure consists of a large flat stone supported by three upright stones, creating a prehistoric burial chamber. In the background, the sky is painted with soft hues of orange and pink as the sun sets, casting a warm glow on the scene. The foreground is dotted with grass and small patches of wildflowers, enhancing the tranquil atmosphere of this ancient site.",
+      "search_text": "Explore Lanyon Quoit, a Neolithic dolmen located in Cornwall, England. This ancient burial chamber features a large flat stone supported by three upright stones, set against a serene landscape. The image captures the beauty of the sunset, with soft colors illuminating the sky. Perfect for those interested in archaeology, historic sites, and prehistoric structures, this landmark represents a significant part of England's ancient history.",
+      "keywords": [
+        "Lanyon Quoit",
+        "Neolithic",
+        "dolmen",
+        "Cornwall",
+        "England",
+        "ruins",
+        "landscape",
+        "sunset",
+        "prehistoric",
+        "burial chamber",
+        "grass",
+        "wildflowers",
+        "ancient",
+        "serene",
+        "stone",
+        "archaeology",
+        "historic site",
+        "outdoor",
+        "nature",
+        "landmark"
+      ],
+      "color_palette": [
+        {
+          "hex": "#366337",
+          "name": "dark slate gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#204520",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#C3AF91",
+          "name": "tan",
+          "w": 0.17
+        },
+        {
+          "hex": "#718771",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#E3CDAB",
+          "name": "wheat",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
