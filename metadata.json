@@ -123114,6 +123114,68 @@
   "PacificRimNP_EN-US7242831009_UHD": {
     "date": "2026-03-15",
     "title": "Pacific Rim National Park Reserve, Vancouver Island, Canada",
-    "bing_url": "https://www.bing.com/th?id=OHR.PacificRimNP_EN-US7242831009_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.PacificRimNP_EN-US7242831009_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "ocean",
+        "landscape"
+      ],
+      "season": "summer",
+      "country": "Canada",
+      "region": "Pacific Northwest",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a tranquil beach scene at Pacific Rim National Park Reserve on Vancouver Island. In the foreground, gentle waves lap against the shore, reflecting the warm hues of the sunset. Silhouetted against the vibrant sky, clusters of coniferous trees rise on the left, adding depth to the composition. The rocky formations in the background create a natural barrier, while the smooth sand stretches out, enhancing the peaceful atmosphere of the scene.",
+      "search_text": "Explore the serene beauty of Pacific Rim National Park Reserve on Vancouver Island, Canada. This stunning beach scene features gentle ocean waves, a vibrant sunset, and silhouetted trees. Ideal for nature lovers, photographers, and anyone seeking tranquility, this landscape showcases the natural beauty of the Pacific Northwest. Keywords include ocean, beach, sunset, and coastal scenery, making it perfect for searches related to serene landscapes and outdoor adventures.",
+      "keywords": [
+        "Pacific Rim National Park",
+        "Vancouver Island",
+        "ocean",
+        "sunset",
+        "beach",
+        "trees",
+        "landscape",
+        "serene",
+        "waves",
+        "reflection",
+        "rocky formations",
+        "nature",
+        "tranquil",
+        "coastal",
+        "sand",
+        "water",
+        "sky",
+        "horizon",
+        "serenity",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#7C7277",
+          "name": "gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#2A252A",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#FEBB63",
+          "name": "sandy brown",
+          "w": 0.18
+        },
+        {
+          "hex": "#DCAD8A",
+          "name": "burly wood",
+          "w": 0.18
+        },
+        {
+          "hex": "#FED18F",
+          "name": "khaki",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
