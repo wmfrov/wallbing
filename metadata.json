@@ -123181,6 +123181,68 @@
   "PandaForest_EN-US7436757535_UHD": {
     "date": "2026-03-16",
     "title": "Giant panda eating bamboo, China",
-    "bing_url": "https://www.bing.com/th?id=OHR.PandaForest_EN-US7436757535_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.PandaForest_EN-US7436757535_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "animal",
+        "forest"
+      ],
+      "season": null,
+      "country": "China",
+      "region": null,
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a giant panda sitting in a lush green forest, surrounded by ferns and bamboo. The panda is holding a piece of bamboo in its paws, appearing calm and content. The background is filled with dense foliage, creating a vibrant and tranquil atmosphere. The panda's distinctive black and white markings stand out against the rich greens of the forest, emphasizing its natural habitat.",
+      "search_text": "Explore the serene beauty of a giant panda, also known as Ailuropoda melanoleuca, eating bamboo in its natural habitat. This adorable animal is often found in the lush forests of China, surrounded by vibrant greenery and ferns. Ideal for wildlife enthusiasts, this image captures the essence of nature and the tranquility of forest life. Perfect for searches related to pandas, bamboo, and wildlife photography.",
+      "keywords": [
+        "giant panda",
+        "Ailuropoda melanoleuca",
+        "bamboo",
+        "animal",
+        "forest",
+        "China",
+        "eating",
+        "wildlife",
+        "serene",
+        "greenery",
+        "nature",
+        "herbivore",
+        "endangered species",
+        "cute",
+        "panda",
+        "bamboo forest",
+        "ferns",
+        "solitary",
+        "mammal",
+        "wild animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#2C5426",
+          "name": "dark slate gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#1A2215",
+          "name": "black",
+          "w": 0.24
+        },
+        {
+          "hex": "#427C3B",
+          "name": "dark olive green",
+          "w": 0.2
+        },
+        {
+          "hex": "#55A750",
+          "name": "medium sea green",
+          "w": 0.15
+        },
+        {
+          "hex": "#B3B89B",
+          "name": "dark gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
