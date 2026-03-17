@@ -123248,6 +123248,68 @@
   "DonegalFort_EN-US7529893132_UHD": {
     "date": "2026-03-17",
     "title": "Grianan of Aileach ring fort, Donegal, Ireland",
-    "bing_url": "https://www.bing.com/th?id=OHR.DonegalFort_EN-US7529893132_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.DonegalFort_EN-US7529893132_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "ruins",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Ireland",
+      "region": "Northern Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the Grianan of Aileach ring fort, a historical structure situated on a hilltop. The fort is circular, made of stone, and surrounded by lush green fields that stretch into the distance. In the background, rolling hills and patches of farmland create a picturesque landscape under a partly cloudy sky. The foreground features a well-defined pathway leading up to the fort, enhancing the sense of accessibility and exploration.",
+      "search_text": "Explore the Grianan of Aileach ring fort located in Donegal, Ireland. This ancient stone structure is a significant historical site set on a hilltop, surrounded by lush green fields and rolling hills. Ideal for those interested in archaeology, historical landmarks, and serene landscapes, this fort offers a glimpse into Ireland's rich past. Discover the beauty of the countryside and the architectural marvel of this circular fortification.",
+      "keywords": [
+        "Grianan of Aileach",
+        "ring fort",
+        "Donegal",
+        "Ireland",
+        "historical site",
+        "landscape",
+        "stone structure",
+        "hilltop",
+        "green fields",
+        "rolling hills",
+        "pathway",
+        "fortification",
+        "archaeological site",
+        "Northern Europe",
+        "serene",
+        "ancient ruins",
+        "circular fort",
+        "countryside",
+        "landmark",
+        "fort"
+      ],
+      "color_palette": [
+        {
+          "hex": "#53572C",
+          "name": "dark olive green",
+          "w": 0.25
+        },
+        {
+          "hex": "#37240F",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#798F8B",
+          "name": "light slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#543A20",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#3A3920",
+          "name": "dark slate gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
