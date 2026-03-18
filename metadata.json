@@ -123315,6 +123315,69 @@
   "PortlandBlossoms_EN-US7604107803_UHD": {
     "date": "2026-03-18",
     "title": "Cherry blossoms at Tom McCall Waterfront Park, Portland, Oregon",
-    "bing_url": "https://www.bing.com/th?id=OHR.PortlandBlossoms_EN-US7604107803_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp"
+    "bing_url": "https://www.bing.com/th?id=OHR.PortlandBlossoms_EN-US7604107803_UHD.jpg&rf=LaDigue_UHD.jpg&pid=hp",
+    "tags": {
+      "subject": [
+        "river",
+        "city",
+        "flower"
+      ],
+      "season": "spring",
+      "country": "United States",
+      "region": "Pacific Northwest",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases the Tom McCall Waterfront Park in Portland, Oregon, adorned with blooming cherry blossoms. In the foreground, the river reflects the soft blue hues of dusk, while the park's pathways are lined with flowering trees. The background features a vibrant city skyline with modern architecture, illuminated by warm lights. The overall atmosphere is calm and inviting, highlighting the beauty of spring in an urban setting.",
+      "search_text": "Explore the beauty of cherry blossoms at Tom McCall Waterfront Park in Portland, Oregon. This serene urban landscape features blooming Prunus serrulata trees along the riverbank, creating a picturesque scene at dusk. The vibrant city skyline and warm lights reflect on the water, making it a perfect spring destination. Ideal for those seeking scenic views, urban parks, and the charm of flowering trees in a metropolitan setting.",
+      "keywords": [
+        "cherry blossom",
+        "Prunus serrulata",
+        "river",
+        "Portland",
+        "Oregon",
+        "waterfront",
+        "city skyline",
+        "dusk",
+        "spring",
+        "urban park",
+        "flowering trees",
+        "architecture",
+        "reflection",
+        "serene",
+        "landscape",
+        "water",
+        "night lights",
+        "pathway",
+        "scenic view",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#26252A",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#0079DE",
+          "name": "dodger blue",
+          "w": 0.24
+        },
+        {
+          "hex": "#365576",
+          "name": "dark slate blue",
+          "w": 0.19
+        },
+        {
+          "hex": "#047EDF",
+          "name": "dodger blue",
+          "w": 0.17
+        },
+        {
+          "hex": "#8B8189",
+          "name": "gray",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
