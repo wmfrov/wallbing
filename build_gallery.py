@@ -122,6 +122,7 @@ def merge_bing_api(entries):
             continue
         url_path = img.get("url", "")
         uhd_url = BING_BASE + RES_RE.sub("_UHD.jpg", url_path)
+        uhd_url = uhd_url.split(".jpg")[0] + ".jpg"  # strip trailing query params
         slug = slug_from_bing_url(uhd_url)
         if not slug:
             continue
