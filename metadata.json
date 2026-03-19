@@ -123247,6 +123247,64 @@
   "EchidnaAustralia_EN-US7660451296_UHD": {
     "date": "2026-03-19",
     "title": "Short-beaked echidna, Adelaide Hills, Australia",
-    "bing_url": "https://www.bing.com/th?id=OHR.EchidnaAustralia_EN-US7660451296_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.EchidnaAustralia_EN-US7660451296_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Australia",
+      "region": "Southern Australia",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a short-beaked echidna, a unique monotreme native to Australia. The echidna is shown in a close-up view, highlighting its distinctive spiky fur that is a mix of brown and cream colors. It is positioned on a surface that appears to be a natural setting, possibly a forest floor. The background is softly blurred, emphasizing the echidna's features and creating a serene atmosphere.",
+      "search_text": "Explore the fascinating short-beaked echidna, a unique monotreme found in Australia, particularly in the Adelaide Hills region. Known for its spiky fur and distinctive appearance, this animal is a solitary creature often found foraging in natural habitats. Discover more about this wildlife species, its behavior, and its role in the ecosystem. Perfect for nature enthusiasts and wildlife photographers alike.",
+      "keywords": [
+        "short-beaked echidna",
+        "animal",
+        "monotreme",
+        "spiky fur",
+        "Australia",
+        "Adelaide Hills",
+        "wildlife",
+        "nature",
+        "close-up",
+        "forest",
+        "native species",
+        "mammal",
+        "foraging",
+        "cute",
+        "solitary",
+        "wild",
+        "natural habitat"
+      ],
+      "color_palette": [
+        {
+          "hex": "#BEBDC0",
+          "name": "silver",
+          "w": 0.24
+        },
+        {
+          "hex": "#AEAAAB",
+          "name": "dark gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#5A4C45",
+          "name": "dark olive green",
+          "w": 0.21
+        },
+        {
+          "hex": "#C5C5C7",
+          "name": "silver",
+          "w": 0.18
+        },
+        {
+          "hex": "#D5CED6",
+          "name": "light gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
