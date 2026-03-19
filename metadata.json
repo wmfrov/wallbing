@@ -48310,7 +48310,68 @@
     "title": "Pico Thorn",
     "bing_url": "https://www.bing.com/th?id=OHR.PicoThorn_DE-DE6861243194_UHD.jpg",
     "description": "",
-    "subtitle": ""
+    "subtitle": "",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a Pico Thorn insect perched on a slender branch amidst lush green foliage. Its vibrant coloration includes shades of green, yellow, and hints of red, creating a striking contrast against the backdrop of fern leaves. The insect's unique shape, characterized by a prominent thorn-like projection, adds to its distinctive appearance. The soft focus of the background emphasizes the intricate details of both the insect and the surrounding leaves, creating a tranquil and harmonious scene.",
+      "search_text": "Explore the beauty of the Pico Thorn insect, a vibrant creature known for its striking colors and unique shape. This close-up image showcases its intricate details against a backdrop of lush green foliage. Perfect for nature enthusiasts and those interested in entomology, this serene scene captures the essence of tropical biodiversity. Discover more about this fascinating insect and its habitat among the ferns.",
+      "keywords": [
+        "Pico Thorn",
+        "insect",
+        "animal",
+        "green",
+        "yellow",
+        "red",
+        "fern",
+        "foliage",
+        "branch",
+        "nature",
+        "macro",
+        "close-up",
+        "vibrant",
+        "serene",
+        "tropical",
+        "leaf",
+        "entomology",
+        "biodiversity",
+        "pattern",
+        "texture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#4B4C06",
+          "name": "dark olive green",
+          "w": 0.25
+        },
+        {
+          "hex": "#82951B",
+          "name": "olive drab",
+          "w": 0.24
+        },
+        {
+          "hex": "#687114",
+          "name": "olive drab",
+          "w": 0.24
+        },
+        {
+          "hex": "#9DC319",
+          "name": "yellow green",
+          "w": 0.16
+        },
+        {
+          "hex": "#BFDD41",
+          "name": "green yellow",
+          "w": 0.12
+        }
+      ]
+    }
   },
   "BrockenSunrise_EN-US8849518575_UHD": {
     "date": "2026-03-07",
@@ -91946,21 +92007,205 @@
     "title": "Baby Rhino",
     "bing_url": "https://www.bing.com/th?id=OHR.BabyRhino_EN-US4289854732_UHD.jpg",
     "description": "",
-    "subtitle": ""
+    "subtitle": "",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": null,
+      "mood": "cozy",
+      "ai_description": "The image features a tender moment between a baby rhinoceros and an adult rhinoceros, showcasing their close bond. The baby rhino is leaning in towards the adult, with their noses almost touching. The background is a soft, blurred golden hue, suggesting a natural habitat. The texture of their skin is rough and wrinkled, typical of rhinoceroses, and the lighting highlights their features beautifully.",
+      "search_text": "Explore the heartwarming connection between a baby rhinoceros and its parent in this stunning wildlife photograph. The image captures the tender moment of bonding, showcasing the unique features of these magnificent animals. Perfect for wildlife enthusiasts, this photo highlights the beauty of rhinos in their natural habitat. Search for rhinos, baby animals, and wildlife photography to find similar images celebrating nature and animal relationships.",
+      "keywords": [
+        "rhinoceros",
+        "baby rhino",
+        "adult rhino",
+        "animal",
+        "wildlife",
+        "mammal",
+        "nature",
+        "bonding",
+        "close-up",
+        "cozy",
+        "endangered species",
+        "African wildlife",
+        "herbivore",
+        "skin texture",
+        "natural habitat",
+        "soft background",
+        "animal behavior",
+        "family",
+        "two animals"
+      ],
+      "color_palette": [
+        {
+          "hex": "#75676B",
+          "name": "dim gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#4C4143",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#A7867E",
+          "name": "rosy brown",
+          "w": 0.2
+        },
+        {
+          "hex": "#C79A86",
+          "name": "rosy brown",
+          "w": 0.18
+        },
+        {
+          "hex": "#D6AD9A",
+          "name": "tan",
+          "w": 0.12
+        }
+      ]
+    }
   },
   "BenagilCave_EN-US2996856855_UHD": {
     "date": "2021-09-24",
     "title": "Benagil Cave",
     "bing_url": "https://www.bing.com/th?id=OHR.BenagilCave_EN-US2996856855_UHD.jpg",
     "description": "",
-    "subtitle": ""
+    "subtitle": "",
+    "tags": {
+      "subject": [
+        "cave",
+        "ocean"
+      ],
+      "season": null,
+      "country": "Portugal",
+      "region": "Southern Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the stunning Benagil Cave in Portugal, where turquoise ocean waters meet a sandy beach. The cave's rocky edges are adorned with vibrant green vegetation, contrasting beautifully with the deep blue of the sea. Waves gently crash against the cave's entrance, creating a dynamic interplay of water and rock. The sunlight illuminates the scene, enhancing the serene atmosphere and highlighting the textures of the stone and water.",
+      "search_text": "Explore the breathtaking Benagil Cave in Portugal, a natural wonder characterized by its stunning turquoise ocean waters and sandy beach. This coastal cave features rocky edges adorned with lush vegetation and is known for its serene atmosphere. Visitors can enjoy the dynamic waves crashing against the cave entrance, making it a perfect spot for nature lovers and photographers. Discover the beauty of this unique landscape in southern Europe.",
+      "keywords": [
+        "Benagil Cave",
+        "Portugal",
+        "ocean",
+        "beach",
+        "rocky",
+        "vegetation",
+        "waves",
+        "turquoise",
+        "serene",
+        "landscape",
+        "southern Europe",
+        "natural wonder",
+        "coastal",
+        "sea",
+        "cave",
+        "water",
+        "sand",
+        "nature",
+        "scenic",
+        "outdoor"
+      ],
+      "color_palette": [
+        {
+          "hex": "#977862",
+          "name": "gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#3B6D57",
+          "name": "sea green",
+          "w": 0.23
+        },
+        {
+          "hex": "#BB9981",
+          "name": "rosy brown",
+          "w": 0.2
+        },
+        {
+          "hex": "#81A3B9",
+          "name": "cadet blue",
+          "w": 0.2
+        },
+        {
+          "hex": "#C2B7AD",
+          "name": "silver",
+          "w": 0.13
+        }
+      ]
+    }
   },
   "BlackSun_EN-US3611441755_UHD": {
     "date": "2021-09-24",
     "title": "Black Sun",
     "bing_url": "https://www.bing.com/th?id=OHR.BlackSun_EN-US3611441755_UHD.jpg",
     "description": "",
-    "subtitle": ""
+    "subtitle": "",
+    "tags": {
+      "subject": [
+        "bird",
+        "landscape"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a stunning dusk scene where silhouettes of people stand against a vibrant orange sky. Above them, a large flock of birds is in flight, creating a dramatic contrast with the warm hues of the sunset. The foreground features a dark horizon line, emphasizing the figures and the birds. The overall atmosphere is peaceful, evoking a sense of wonder at nature's beauty.",
+      "search_text": "This captivating image features a flock of birds flying against a stunning orange sunset. Silhouettes of people are seen on the horizon, creating a serene atmosphere. Ideal for those searching for nature scenes, bird migrations, or beautiful dusk landscapes. The contrast of dark figures against the vibrant sky adds to the visual appeal, making it perfect for backgrounds or wallpapers.",
+      "keywords": [
+        "birds",
+        "flock",
+        "silhouettes",
+        "sunset",
+        "dusk",
+        "people",
+        "animal",
+        "landscape",
+        "sky",
+        "orange",
+        "horizon",
+        "nature",
+        "migration",
+        "serene",
+        "evening",
+        "flight",
+        "group",
+        "dark",
+        "peaceful",
+        "scenic"
+      ],
+      "color_palette": [
+        {
+          "hex": "#D88413",
+          "name": "chocolate",
+          "w": 0.4
+        },
+        {
+          "hex": "#D48F27",
+          "name": "golden rod",
+          "w": 0.19
+        },
+        {
+          "hex": "#D88A1B",
+          "name": "golden rod",
+          "w": 0.18
+        },
+        {
+          "hex": "#D69735",
+          "name": "peru",
+          "w": 0.15
+        },
+        {
+          "hex": "#A8600E",
+          "name": "sienna",
+          "w": 0.09
+        }
+      ]
+    }
   },
   "CuscoCathedral_EN-US0974073247_UHD": {
     "date": "2021-09-24",
@@ -92037,21 +92282,206 @@
     "title": "Firefox",
     "bing_url": "https://www.bing.com/th?id=OHR.Firefox_EN-US3200029768_UHD.jpg",
     "description": "",
-    "subtitle": ""
+    "subtitle": "",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a red panda resting on a thick branch of a tree. Its vibrant reddish-brown fur contrasts beautifully with the lush green foliage surrounding it. The panda's body is draped lazily over the branch, with its front paws hanging down. The background is filled with blurred green leaves, creating a peaceful, natural setting. The animal appears relaxed and at ease in its environment.",
+      "search_text": "Explore images of red pandas, also known as Ailurus fulgens, resting in trees. These adorable animals are often found in lush green forests and are known for their vibrant reddish-brown fur. Perfect for wildlife enthusiasts and nature lovers, this serene scene captures the essence of these cute mammals in their natural habitat. Search for wildlife, red panda, animal resting, and forest images.",
+      "keywords": [
+        "red panda",
+        "Ailurus fulgens",
+        "animal",
+        "tree",
+        "branch",
+        "resting",
+        "fur",
+        "green foliage",
+        "serene",
+        "wildlife",
+        "nature",
+        "cute",
+        "mammal",
+        "forest",
+        "lazy",
+        "peaceful",
+        "sleeping",
+        "climbing",
+        "woodland"
+      ],
+      "color_palette": [
+        {
+          "hex": "#808865",
+          "name": "gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#474834",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#88644B",
+          "name": "sienna",
+          "w": 0.2
+        },
+        {
+          "hex": "#B1AC92",
+          "name": "dark gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#81A168",
+          "name": "gray",
+          "w": 0.13
+        }
+      ]
+    }
   },
   "LeCastella_EN-US3410369495_UHD": {
     "date": "2021-09-24",
     "title": "Le Castella",
     "bing_url": "https://www.bing.com/th?id=OHR.LeCastella_EN-US3410369495_UHD.jpg",
     "description": "",
-    "subtitle": ""
+    "subtitle": "",
+    "tags": {
+      "subject": [
+        "castle",
+        "ocean",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Italy",
+      "region": "Southern Italy",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases Le Castella, a historic castle situated on a rocky outcrop surrounded by the clear blue waters of the ocean. The castle's stone walls are weathered, indicating its age, and it features a prominent tower that rises above the structure. In the foreground, rocky formations jut out of the water, creating a contrast against the vibrant sea. The sky is bright and clear, enhancing the serene atmosphere of this coastal scene.",
+      "search_text": "Explore the stunning Le Castella, a historic castle located in Southern Italy. This architectural marvel features a prominent tower and weathered stone walls, surrounded by the clear blue ocean. Ideal for those interested in medieval architecture, coastal landscapes, and serene seascapes, this landmark is a must-visit. Discover the beauty of ancient fortresses and enjoy the vibrant colors of the sea and sky in this picturesque setting.",
+      "keywords": [
+        "Le Castella",
+        "castle",
+        "architecture",
+        "ocean",
+        "Italy",
+        "Southern Italy",
+        "historic",
+        "rocky outcrop",
+        "clear water",
+        "fortress",
+        "tower",
+        "coastal",
+        "serene",
+        "landmark",
+        "medieval",
+        "stone walls",
+        "tourist attraction",
+        "seascape",
+        "blue sky",
+        "ancient"
+      ],
+      "color_palette": [
+        {
+          "hex": "#548AAE",
+          "name": "steel blue",
+          "w": 0.24
+        },
+        {
+          "hex": "#66A4CC",
+          "name": "corn flower blue",
+          "w": 0.23
+        },
+        {
+          "hex": "#555652",
+          "name": "dim gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#ADB6C2",
+          "name": "silver",
+          "w": 0.17
+        },
+        {
+          "hex": "#C0CFDD",
+          "name": "light steel blue",
+          "w": 0.14
+        }
+      ]
+    }
   },
   "RisingMoon_EN-US3728383001_UHD": {
     "date": "2021-09-24",
     "title": "Rising Moon",
     "bing_url": "https://www.bing.com/th?id=OHR.RisingMoon_EN-US3728383001_UHD.jpg",
     "description": "",
-    "subtitle": ""
+    "subtitle": "",
+    "tags": {
+      "subject": [
+        "architecture",
+        "city"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": "night",
+      "mood": "vibrant",
+      "ai_description": "The image features a large, dome-shaped structure illuminated with vibrant blue and red lights, creating a striking visual effect against the night sky. Surrounding the dome are numerous red lanterns that add to the festive atmosphere. The foreground is bustling with people, suggesting a lively event or celebration. The geometric patterns of the dome's surface reflect a modern architectural style, contrasting with the traditional lanterns.",
+      "search_text": "Explore the vibrant architectural design of a dome illuminated at night, surrounded by traditional red lanterns. This festive scene captures the essence of a lively urban celebration, showcasing modern design elements and cultural significance. Ideal for those interested in night photography, urban architecture, and festive events, this image highlights the interplay of light and geometry in a city setting.",
+      "keywords": [
+        "dome",
+        "architecture",
+        "night",
+        "festival",
+        "lanterns",
+        "blue lights",
+        "red lights",
+        "modern design",
+        "celebration",
+        "urban",
+        "people",
+        "vibrant colors",
+        "geometric patterns",
+        "event",
+        "decorative lighting",
+        "cityscape",
+        "illumination",
+        "festive atmosphere",
+        "cultural event",
+        "Rising Moon"
+      ],
+      "color_palette": [
+        {
+          "hex": "#080704",
+          "name": "black",
+          "w": 0.34
+        },
+        {
+          "hex": "#384575",
+          "name": "dark slate blue",
+          "w": 0.24
+        },
+        {
+          "hex": "#040503",
+          "name": "black",
+          "w": 0.2
+        },
+        {
+          "hex": "#21131C",
+          "name": "black",
+          "w": 0.14
+        },
+        {
+          "hex": "#240607",
+          "name": "black",
+          "w": 0.08
+        }
+      ]
+    }
   },
   "BrilliantBlue_EN-US4447486564_UHD": {
     "date": "2021-09-23",
