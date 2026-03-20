@@ -123310,6 +123310,67 @@
   "SpringSnowdrops_EN-US5032204696_UHD": {
     "date": "2026-03-20",
     "title": "Snowdrops in spring",
-    "bing_url": "https://www.bing.com/th?id=OHR.SpringSnowdrops_EN-US5032204696_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SpringSnowdrops_EN-US5032204696_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower"
+      ],
+      "season": "spring",
+      "country": null,
+      "region": null,
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image showcases a vibrant patch of snowdrops, small white flowers, blooming in a lush green field. The foreground is filled with clusters of these delicate flowers, their petals glistening in the soft morning light. In the background, the landscape is slightly blurred, hinting at a tranquil, natural setting. The sunlight casts a warm glow over the scene, enhancing the fresh and peaceful atmosphere of early spring.",
+      "search_text": "Explore the beauty of snowdrops, also known as Galanthus, blooming in spring. This image captures a serene field filled with delicate white flowers, basking in the soft morning sunlight. Perfect for nature lovers and those seeking floral inspiration, this scene embodies the freshness of spring. Ideal for gardening enthusiasts and anyone looking to appreciate the beauty of early blooms in a tranquil setting.",
+      "keywords": [
+        "snowdrop",
+        "Galanthus",
+        "flower",
+        "blooming",
+        "spring",
+        "green",
+        "field",
+        "morning",
+        "sunlight",
+        "nature",
+        "flora",
+        "serene",
+        "delicate",
+        "white",
+        "landscape",
+        "garden",
+        "growth",
+        "seasonal",
+        "fresh",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3C4226",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#697646",
+          "name": "dark olive green",
+          "w": 0.24
+        },
+        {
+          "hex": "#9B9F6C",
+          "name": "dark khaki",
+          "w": 0.21
+        },
+        {
+          "hex": "#E2D29B",
+          "name": "khaki",
+          "w": 0.15
+        },
+        {
+          "hex": "#BCC693",
+          "name": "tan",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
