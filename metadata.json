@@ -123376,6 +123376,67 @@
   "LeteaForest_EN-US5404369914_UHD": {
     "date": "2026-03-21",
     "title": "Letea Forest, Danube Delta, Romania",
-    "bing_url": "https://www.bing.com/th?id=OHR.LeteaForest_EN-US5404369914_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LeteaForest_EN-US5404369914_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest"
+      ],
+      "season": null,
+      "country": "Romania",
+      "region": "Eastern Europe",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a breathtaking view of Letea Forest in the Danube Delta, Romania, shrouded in a soft, ethereal mist. The foreground features dense treetops, while the background fades into layers of trees that create a sense of depth. The light filtering through the fog gives the scene a tranquil and serene atmosphere. The colors are muted, with shades of green and gold blending harmoniously, suggesting an early morning setting.",
+      "search_text": "Explore the serene beauty of Letea Forest in the Danube Delta, Romania. This stunning landscape features dense forests enveloped in mist during dawn, creating an ethereal atmosphere. Ideal for nature lovers and photographers, the image captures the tranquility of early morning light filtering through the trees. Discover the rich biodiversity and scenic views of this Eastern European gem, perfect for outdoor adventures and wildlife observation.",
+      "keywords": [
+        "Letea Forest",
+        "Danube Delta",
+        "Romania",
+        "forest",
+        "mist",
+        "dawn",
+        "trees",
+        "nature",
+        "landscape",
+        "ethereal",
+        "tranquil",
+        "serene",
+        "Eastern Europe",
+        "fog",
+        "green",
+        "gold",
+        "depth",
+        "scenic",
+        "outdoors",
+        "wildlife"
+      ],
+      "color_palette": [
+        {
+          "hex": "#9C8E5C",
+          "name": "gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#B2A874",
+          "name": "dark khaki",
+          "w": 0.23
+        },
+        {
+          "hex": "#4F4C29",
+          "name": "dark olive green",
+          "w": 0.22
+        },
+        {
+          "hex": "#C0B986",
+          "name": "tan",
+          "w": 0.16
+        },
+        {
+          "hex": "#E0CA8A",
+          "name": "burly wood",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
