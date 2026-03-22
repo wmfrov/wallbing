@@ -123442,6 +123442,68 @@
   "TanganyikaWater_EN-US5685685365_UHD": {
     "date": "2026-03-22",
     "title": "Lake Tanganyika, Africa",
-    "bing_url": "https://www.bing.com/th?id=OHR.TanganyikaWater_EN-US5685685365_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.TanganyikaWater_EN-US5685685365_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Tanzania",
+      "region": "East Africa",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image showcases Lake Tanganyika, one of the largest freshwater lakes in the world, surrounded by a diverse landscape. The deep blue waters of the lake contrast with the earthy tones of the surrounding land, which features patches of greenery and rocky terrain. In the background, snow-capped mountains can be seen, adding a dramatic element to the serene lake setting. The spatial layout highlights the elongated shape of the lake, bordered by various landforms that create a rich tapestry of textures.",
+      "search_text": "Explore the beauty of Lake Tanganyika, a stunning freshwater lake located in East Africa. Surrounded by diverse landscapes, this lake features deep blue waters contrasted by earthy tones and rocky terrains. The serene environment is complemented by snow-capped mountains in the background, making it a perfect destination for nature lovers and photographers. Discover the geological formations and rich biodiversity that make this region unique, ideal for outdoor activities and scenic views.",
+      "keywords": [
+        "Lake Tanganyika",
+        "freshwater",
+        "East Africa",
+        "landscape",
+        "serene",
+        "mountains",
+        "earth tones",
+        "blue water",
+        "geological formations",
+        "natural beauty",
+        "wildlife habitat",
+        "scenic view",
+        "African lakes",
+        "tranquil",
+        "nature",
+        "geography",
+        "landforms",
+        "waterbody",
+        "landscape photography",
+        "outdoor"
+      ],
+      "color_palette": [
+        {
+          "hex": "#545332",
+          "name": "dark olive green",
+          "w": 0.28
+        },
+        {
+          "hex": "#636241",
+          "name": "dark olive green",
+          "w": 0.22
+        },
+        {
+          "hex": "#373D26",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#73724E",
+          "name": "dim gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#938D65",
+          "name": "gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
