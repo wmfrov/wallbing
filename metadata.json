@@ -123509,6 +123509,68 @@
   "SonoranStorm_EN-US5792303901_UHD": {
     "date": "2026-03-23",
     "title": "Lightning storm over saguaro cacti, Sonoran Desert, Arizona",
-    "bing_url": "https://www.bing.com/th?id=OHR.SonoranStorm_EN-US5792303901_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SonoranStorm_EN-US5792303901_UHD.jpg",
+    "tags": {
+      "subject": [
+        "desert",
+        "animal"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southwest",
+      "time_of_day": "dusk",
+      "mood": "dramatic",
+      "ai_description": "The image captures a dramatic lightning storm over the Sonoran Desert, showcasing towering saguaro cacti in the foreground. The sky is filled with dark storm clouds illuminated by bright flashes of lightning, creating a striking contrast against the green cacti. A faint rainbow can be seen amidst the storm, adding a touch of color to the scene. The landscape is rugged, with various desert plants scattered throughout, emphasizing the arid environment.",
+      "search_text": "Explore the dramatic beauty of a lightning storm over the Sonoran Desert in Arizona, featuring iconic saguaro cacti. This stunning landscape captures the intensity of nature with bright lightning strikes illuminating the dark storm clouds. The scene includes a faint rainbow, adding a unique touch to the otherwise arid environment. Perfect for those interested in desert flora, weather phenomena, and dramatic landscapes, this image showcases the wild beauty of the Southwest.",
+      "keywords": [
+        "saguaro cactus",
+        "Sonoran Desert",
+        "lightning",
+        "storm",
+        "rainbow",
+        "desert landscape",
+        "Arizona",
+        "cacti",
+        "dramatic sky",
+        "animal",
+        "storm clouds",
+        "arid",
+        "nature",
+        "flora",
+        "wildlife",
+        "thunder",
+        "landscape",
+        "weather phenomena",
+        "lightning strike",
+        "desert plants"
+      ],
+      "color_palette": [
+        {
+          "hex": "#52493E",
+          "name": "dark olive green",
+          "w": 0.28
+        },
+        {
+          "hex": "#76695B",
+          "name": "dim gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#382811",
+          "name": "black",
+          "w": 0.23
+        },
+        {
+          "hex": "#6B5F51",
+          "name": "dim gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#907D57",
+          "name": "gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
