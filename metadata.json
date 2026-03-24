@@ -123576,6 +123576,69 @@
   "WuhanCherryBlossom_EN-US5963967452_UHD": {
     "date": "2026-03-24",
     "title": "Cherry blossoms at East Lake Cherry Blossom Park, Wuhan, China",
-    "bing_url": "https://www.bing.com/th?id=OHR.WuhanCherryBlossom_EN-US5963967452_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.WuhanCherryBlossom_EN-US5963967452_UHD.jpg",
+    "tags": {
+      "subject": [
+        "garden",
+        "flower",
+        "architecture"
+      ],
+      "season": "spring",
+      "country": "China",
+      "region": "East Asia",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases a stunning aerial view of East Lake Cherry Blossom Park in Wuhan, China, during spring. The foreground features a beautifully designed pagoda with a golden roof, surrounded by a sea of blooming cherry blossom trees, creating a vibrant pink landscape. Visitors can be seen walking along pathways, enjoying the picturesque scenery. The park is lush with greenery, contrasting the delicate pink flowers, while the serene lake adds to the tranquil atmosphere.",
+      "search_text": "Explore the beauty of cherry blossoms at East Lake Cherry Blossom Park in Wuhan, China. This vibrant spring landscape features a stunning pagoda surrounded by blooming cherry blossom trees. Ideal for nature lovers and tourists, the park offers picturesque views and serene pathways. Discover the charm of this garden filled with flowers and lush greenery, perfect for outdoor activities and photography.",
+      "keywords": [
+        "cherry blossom",
+        "pagoda",
+        "Wuhan",
+        "China",
+        "spring",
+        "flower",
+        "garden",
+        "blooming",
+        "landscape",
+        "architecture",
+        "park",
+        "nature",
+        "trees",
+        "aerial view",
+        "vibrant",
+        "tourism",
+        "outdoor",
+        "scenery",
+        "blossoms",
+        "visitors"
+      ],
+      "color_palette": [
+        {
+          "hex": "#645E57",
+          "name": "dim gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#A395A6",
+          "name": "dark gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#887C7F",
+          "name": "gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#B1A6BA",
+          "name": "dark gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#CBB5C2",
+          "name": "silver",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
