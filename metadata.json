@@ -123644,6 +123644,67 @@
   "ManateeSpring_EN-US1203685327_UHD": {
     "date": "2026-03-25",
     "title": "Juvenile manatees in a freshwater spring, Crystal River, Florida",
-    "bing_url": "https://www.bing.com/th?id=OHR.ManateeSpring_EN-US1203685327_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ManateeSpring_EN-US1203685327_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Florida",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features two juvenile manatees swimming gracefully in a clear freshwater spring. The water is a vibrant blue, allowing for a clear view of the sandy bottom and the gentle movements of the manatees. Their round bodies and whiskered faces are distinct as they glide through the water, showcasing their peaceful nature. The background is illuminated, creating a tranquil atmosphere that highlights the beauty of these marine mammals.",
+      "search_text": "Explore the serene beauty of juvenile manatees swimming in a freshwater spring in Florida. These gentle marine mammals are often found in warm waters and are known for their peaceful demeanor. Perfect for wildlife enthusiasts and those interested in aquatic life, this image captures the essence of Florida's natural biodiversity. Discover more about manatees, their habitats, and the importance of conservation efforts to protect these unique animals.",
+      "keywords": [
+        "manatee",
+        "juvenile manatees",
+        "marine animal",
+        "Florida",
+        "freshwater spring",
+        "swimming",
+        "aquatic",
+        "serene",
+        "wildlife",
+        "animal",
+        "underwater",
+        "blue water",
+        "nature",
+        "biodiversity",
+        "spring habitat",
+        "gentle",
+        "mammal",
+        "two",
+        "florida wildlife",
+        "marine life"
+      ],
+      "color_palette": [
+        {
+          "hex": "#7EB8C1",
+          "name": "medium aqua marine",
+          "w": 0.26
+        },
+        {
+          "hex": "#125164",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#057F98",
+          "name": "dark cyan",
+          "w": 0.21
+        },
+        {
+          "hex": "#31A2B2",
+          "name": "light sea green",
+          "w": 0.18
+        },
+        {
+          "hex": "#40808C",
+          "name": "steel blue",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
