@@ -123710,6 +123710,67 @@
   "LoganCreek_EN-US6075548781_UHD": {
     "date": "2026-03-26",
     "title": "Logan Creek Suspension Bridge, West Coast Trail, Canada",
-    "bing_url": "https://www.bing.com/th?id=OHR.LoganCreek_EN-US6075548781_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LoganCreek_EN-US6075548781_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bridge",
+        "forest"
+      ],
+      "season": null,
+      "country": "Canada",
+      "region": "Pacific Northwest",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features the Logan Creek Suspension Bridge, a narrow bridge suspended above a lush forest. The bridge is made of wood and metal, with a netting on the sides for safety. Surrounding the bridge are dense green trees, creating a tranquil atmosphere. The fog adds a mystical quality to the scene, obscuring the background slightly and enhancing the feeling of being in a secluded natural environment.",
+      "search_text": "Explore the Logan Creek Suspension Bridge located in Canada\u2019s Pacific Northwest. This serene wooden bridge, surrounded by lush forests, offers a tranquil escape into nature. Ideal for hiking and outdoor adventures, the bridge features safety netting and is often shrouded in fog, creating a mystical atmosphere. Perfect for nature lovers and photographers seeking scenic landscapes and exploration opportunities.",
+      "keywords": [
+        "Logan Creek",
+        "suspension bridge",
+        "forest",
+        "Canada",
+        "Pacific Northwest",
+        "wooden bridge",
+        "fog",
+        "lush greenery",
+        "nature",
+        "tranquil",
+        "outdoor",
+        "hiking",
+        "safety netting",
+        "serene",
+        "landscape",
+        "daylight",
+        "wilderness",
+        "scenic",
+        "exploration"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3D4930",
+          "name": "dark slate gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#4F5E40",
+          "name": "dark olive green",
+          "w": 0.24
+        },
+        {
+          "hex": "#272F1C",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#697557",
+          "name": "dim gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#8C967D",
+          "name": "gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
