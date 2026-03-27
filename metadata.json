@@ -123776,6 +123776,67 @@
   "RadioCityHall_EN-US6218301556_UHD": {
     "date": "2026-03-27",
     "title": "Radio City Music Hall in New York City",
-    "bing_url": "https://www.bing.com/th?id=OHR.RadioCityHall_EN-US6218301556_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.RadioCityHall_EN-US6218301556_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "city"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Northeast",
+      "time_of_day": null,
+      "mood": "vibrant",
+      "ai_description": "The image showcases the interior of Radio City Music Hall, a renowned architectural landmark in New York City. The grand auditorium features a sweeping, curved ceiling adorned with warm orange hues, creating a vibrant atmosphere. Rows of red seats are visible in the foreground, leading to a stage that is set up for a performance. The intricate design elements and the expansive layout highlight the venue's iconic status in the world of entertainment.",
+      "search_text": "Explore the stunning interior of Radio City Music Hall, an iconic architectural masterpiece located in New York City. This vibrant auditorium features a sweeping curved ceiling in warm orange tones and rows of red seating, perfect for performances and events. Known for its cultural significance, this historic venue is a must-visit for architecture enthusiasts and entertainment lovers alike. Discover the beauty and grandeur of this landmark theater.",
+      "keywords": [
+        "Radio City Music Hall",
+        "New York City",
+        "architecture",
+        "auditorium",
+        "interior",
+        "stage",
+        "seating",
+        "performance",
+        "cultural landmark",
+        "vibrant colors",
+        "curved ceiling",
+        "theater",
+        "entertainment",
+        "historic venue",
+        "red seats",
+        "lighting",
+        "design",
+        "grand",
+        "iconic"
+      ],
+      "color_palette": [
+        {
+          "hex": "#713E1B",
+          "name": "saddle brown",
+          "w": 0.25
+        },
+        {
+          "hex": "#341C13",
+          "name": "black",
+          "w": 0.24
+        },
+        {
+          "hex": "#9F581F",
+          "name": "sienna",
+          "w": 0.23
+        },
+        {
+          "hex": "#BE7023",
+          "name": "chocolate",
+          "w": 0.18
+        },
+        {
+          "hex": "#DB953C",
+          "name": "peru",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
