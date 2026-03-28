@@ -123842,6 +123842,68 @@
   "CapeBuffalo_EN-US6304011521_UHD": {
     "date": "2026-03-28",
     "title": "African buffalo, Ngorongoro Crater, Tanzania",
-    "bing_url": "https://www.bing.com/th?id=OHR.CapeBuffalo_EN-US6304011521_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.CapeBuffalo_EN-US6304011521_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "two_animals"
+      ],
+      "season": null,
+      "country": "Tanzania",
+      "region": "East Africa",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features two African buffaloes resting in a grassy area, with one buffalo prominently in the foreground. A white egret perches on the back of the buffalo, creating a harmonious scene of wildlife interaction. The buffaloes have distinct curved horns and textured skin, while the egret adds a contrast with its bright plumage. The background is softly blurred, emphasizing the animals in the foreground, and the overall atmosphere is calm and peaceful.",
+      "search_text": "Explore the serene scene of African buffaloes in the Ngorongoro Crater, Tanzania. This image captures the interaction between two buffaloes and a white egret perched on one of them. Ideal for wildlife enthusiasts, this photograph showcases the beauty of nature in East Africa, highlighting the unique features of the Syncerus caffer species and their habitat. Perfect for searches related to animal interactions, African wildlife, and serene landscapes.",
+      "keywords": [
+        "African buffalo",
+        "Syncerus caffer",
+        "bird",
+        "egret",
+        "white egret",
+        "two animals",
+        "wildlife",
+        "Ngorongoro Crater",
+        "Tanzania",
+        "grassland",
+        "animal",
+        "serene",
+        "nature",
+        "habitat",
+        "grazing",
+        "perched",
+        "horns",
+        "textured skin",
+        "savanna",
+        "East Africa"
+      ],
+      "color_palette": [
+        {
+          "hex": "#726656",
+          "name": "dim gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#8D806B",
+          "name": "gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#494239",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#A29272",
+          "name": "rosy brown",
+          "w": 0.17
+        },
+        {
+          "hex": "#B5A47E",
+          "name": "rosy brown",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
