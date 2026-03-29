@@ -123909,6 +123909,69 @@
   "PeggysLighthouse_EN-US6365734559_UHD": {
     "date": "2026-03-29",
     "title": "Peggy's Point Lighthouse, Atlantic Coast, Nova Scotia, Canada",
-    "bing_url": "https://www.bing.com/th?id=OHR.PeggysLighthouse_EN-US6365734559_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.PeggysLighthouse_EN-US6365734559_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "architecture",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Canada",
+      "region": "Atlantic Canada",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image features Peggy's Point Lighthouse standing tall on a rocky outcrop along the Atlantic Coast of Nova Scotia. In the foreground, smooth, wet rocks reflect the soft hues of the dusk sky, which transitions from blue to warm orange and pink tones. The lighthouse, with its classic white and red color scheme, is illuminated against the fading light. The calm ocean stretches out in the background, with gentle waves lapping at the shore. A few clouds are scattered across the sky, adding texture to the serene atmosphere.",
+      "search_text": "Explore the beauty of Peggy's Point Lighthouse located on the Atlantic Coast of Nova Scotia, Canada. This serene landscape captures the lighthouse at dusk, surrounded by smooth, reflective rocks and a calm ocean. Ideal for those seeking coastal architecture, marine scenery, and tranquil evening views. Perfect for lovers of lighthouses, ocean landscapes, and picturesque sunsets. Discover the charm of this iconic landmark and its stunning natural surroundings.",
+      "keywords": [
+        "Peggy's Point Lighthouse",
+        "Nova Scotia",
+        "Atlantic Coast",
+        "ocean",
+        "dusk",
+        "architecture",
+        "lighthouse",
+        "rocky outcrop",
+        "reflection",
+        "calm water",
+        "landscape",
+        "serene",
+        "sky",
+        "clouds",
+        "evening",
+        "coastal",
+        "marine",
+        "smooth rocks",
+        "natural beauty",
+        "seascape"
+      ],
+      "color_palette": [
+        {
+          "hex": "#163049",
+          "name": "dark slate gray",
+          "w": 0.31
+        },
+        {
+          "hex": "#0D1D2D",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#285B8F",
+          "name": "dark slate blue",
+          "w": 0.15
+        },
+        {
+          "hex": "#6D9CE0",
+          "name": "corn flower blue",
+          "w": 0.15
+        },
+        {
+          "hex": "#C8BFDD",
+          "name": "thistle",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
