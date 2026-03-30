@@ -123977,6 +123977,67 @@
   "IndiaCranes_EN-US6414900321_UHD": {
     "date": "2026-03-30",
     "title": "Demoiselle cranes, India",
-    "bing_url": "https://www.bing.com/th?id=OHR.IndiaCranes_EN-US6414900321_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.IndiaCranes_EN-US6414900321_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird",
+        "animal"
+      ],
+      "season": null,
+      "country": "India",
+      "region": null,
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a close-up of a group of Demoiselle cranes, with one bird prominently displayed in the foreground. This crane has striking features, including a slender neck and vibrant red eyes, contrasting with its dark plumage. The blurred background suggests a gathering of other cranes, creating a sense of community among these elegant birds. The soft, warm colors in the background enhance the serene atmosphere of the scene.",
+      "search_text": "Explore the beauty of Demoiselle cranes in India, known for their striking appearance and graceful movements. These birds are often seen in flocks, showcasing their elegant features and social behavior. Ideal for wildlife photography enthusiasts, this image captures the essence of avian life in natural habitats. Search for related terms like cranes, birds, and wildlife to find more stunning images of these magnificent animals.",
+      "keywords": [
+        "Demoiselle crane",
+        "bird",
+        "animal",
+        "cranes",
+        "flock",
+        "wildlife",
+        "India",
+        "avian",
+        "nature",
+        "elegant",
+        "close-up",
+        "feathers",
+        "red eyes",
+        "serene",
+        "group",
+        "migratory",
+        "habitat",
+        "outdoors",
+        "photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#4C5255",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#22272E",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#9E825F",
+          "name": "gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#FBB763",
+          "name": "sandy brown",
+          "w": 0.15
+        },
+        {
+          "hex": "#CDA36F",
+          "name": "dark khaki",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
