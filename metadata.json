@@ -124043,6 +124043,67 @@
   "ParadiseCave_EN-US6470755729_UHD": {
     "date": "2026-03-31",
     "title": "Paradise Cave, Phong Nha-Ke Bang National Park, Vietnam",
-    "bing_url": "https://www.bing.com/th?id=OHR.ParadiseCave_EN-US6470755729_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ParadiseCave_EN-US6470755729_UHD.jpg",
+    "tags": {
+      "subject": [
+        "cave"
+      ],
+      "season": null,
+      "country": "Vietnam",
+      "region": "Southeast Asia",
+      "time_of_day": "night",
+      "mood": "mystical",
+      "ai_description": "The image showcases the stunning interior of Paradise Cave, located in Phong Nha-Ke Bang National Park, Vietnam. Stalactites and stalagmites create intricate formations, with a variety of textures and colors illuminated by soft artificial lighting. The foreground features a wooden pathway that guides visitors through the cave, while the expansive cavern stretches into the background, revealing towering rock formations. The overall atmosphere is enchanting and otherworldly, highlighting the natural beauty of this geological wonder.",
+      "search_text": "Explore the enchanting Paradise Cave in Phong Nha-Ke Bang National Park, Vietnam. This stunning cave features impressive stalactites and stalagmites, illuminated by soft lighting that enhances its mystical atmosphere. Ideal for adventure seekers and nature lovers, the cave offers a unique underground experience with its intricate geological formations. Discover the beauty of this natural wonder, perfect for photography and exploration in Southeast Asia.",
+      "keywords": [
+        "cave",
+        "stalactites",
+        "stalagmites",
+        "Phong Nha-Ke Bang",
+        "Vietnam",
+        "geological formations",
+        "natural wonder",
+        "illuminated",
+        "mystical",
+        "tourist attraction",
+        "underground",
+        "rock formations",
+        "pathway",
+        "exploration",
+        "nature",
+        "darkness",
+        "adventure",
+        "landscape",
+        "travel",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#302A2B",
+          "name": "dark slate gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#473F3E",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#191415",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#635754",
+          "name": "dim gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#92827A",
+          "name": "gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
