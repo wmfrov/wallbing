@@ -124109,6 +124109,68 @@
   "JapaneseTreeFrog_EN-US6527297660_UHD": {
     "date": "2026-04-01",
     "title": "Japanese tree frog in a pink morning glory",
-    "bing_url": "https://www.bing.com/th?id=OHR.JapaneseTreeFrog_EN-US6527297660_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.JapaneseTreeFrog_EN-US6527297660_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "flower"
+      ],
+      "season": "spring",
+      "country": "Japan",
+      "region": "East Asia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a Japanese tree frog nestled within the vibrant petals of a pink morning glory flower. The frog's bright green skin contrasts beautifully with the rich pink hue of the flower, creating a striking visual. The background is softly blurred, emphasizing the frog's curious expression and intricate details of its features. Dew drops can be seen on the petals, suggesting a fresh morning atmosphere.",
+      "search_text": "Explore the beauty of the Japanese tree frog, a vibrant green amphibian often found in East Asia, nestled in the delicate pink petals of a morning glory flower. This serene image captures the essence of spring, showcasing the intricate details of both the frog and the flower. Perfect for nature lovers, this macro shot highlights the colorful flora and fauna of Japan, making it ideal for wildlife enthusiasts and botanical art collectors.",
+      "keywords": [
+        "Japanese tree frog",
+        "animal",
+        "frog",
+        "morning glory",
+        "flower",
+        "pink",
+        "green",
+        "nature",
+        "macro",
+        "spring",
+        "East Asia",
+        "serene",
+        "petals",
+        "vibrant",
+        "dew",
+        "wildlife",
+        "flora",
+        "blooming",
+        "colorful",
+        "close-up"
+      ],
+      "color_palette": [
+        {
+          "hex": "#C642E1",
+          "name": "medium orchid",
+          "w": 0.33
+        },
+        {
+          "hex": "#9C34B1",
+          "name": "dark orchid",
+          "w": 0.22
+        },
+        {
+          "hex": "#DF75E7",
+          "name": "orchid",
+          "w": 0.22
+        },
+        {
+          "hex": "#D55CE2",
+          "name": "orchid",
+          "w": 0.14
+        },
+        {
+          "hex": "#D09ADD",
+          "name": "plum",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
