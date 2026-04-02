@@ -124176,6 +124176,68 @@
   "WildflowerValley_EN-US6579657743_UHD": {
     "date": "2026-04-02",
     "title": "Wildflower bloom, Central Valley, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.WildflowerValley_EN-US6579657743_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.WildflowerValley_EN-US6579657743_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain"
+      ],
+      "season": "spring",
+      "country": "United States",
+      "region": "California",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image showcases a vast landscape filled with blooming wildflowers in the foreground, creating a colorful tapestry of yellows, purples, and greens. In the background, a prominent mountain range rises, its jagged peaks silhouetted against a soft pastel sky. The light suggests early morning, with gentle hues illuminating the scene. The expansive field stretches towards the horizon, emphasizing the tranquility of the setting.",
+      "search_text": "Explore the beauty of wildflower blooms in the Central Valley of California during spring. This serene landscape features a vibrant field filled with colorful wildflowers, set against the backdrop of majestic mountains. Perfect for nature lovers and photographers, this scene captures the essence of springtime in California with its picturesque meadows and tranquil atmosphere. Discover the flora and fauna that thrive in this stunning environment.",
+      "keywords": [
+        "wildflower",
+        "bloom",
+        "California",
+        "landscape",
+        "mountain",
+        "spring",
+        "field",
+        "colorful",
+        "flora",
+        "nature",
+        "serene",
+        "pastel sky",
+        "jagged peaks",
+        "vibrant",
+        "meadow",
+        "scenic",
+        "outdoor",
+        "flora",
+        "sunrise",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A09472",
+          "name": "gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#786E4F",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#BCBEBB",
+          "name": "silver",
+          "w": 0.22
+        },
+        {
+          "hex": "#BEAA83",
+          "name": "tan",
+          "w": 0.19
+        },
+        {
+          "hex": "#E5C7A5",
+          "name": "wheat",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
