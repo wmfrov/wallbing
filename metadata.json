@@ -124243,6 +124243,68 @@
   "ArmbrugBridge_EN-US3302230248_UHD": {
     "date": "2026-04-03",
     "title": "Armbrug bridge, Amsterdam, Netherlands",
-    "bing_url": "https://www.bing.com/th?id=OHR.ArmbrugBridge_EN-US3302230248_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ArmbrugBridge_EN-US3302230248_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture",
+        "bridge"
+      ],
+      "season": "summer",
+      "country": "Netherlands",
+      "region": "Western Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases a picturesque view of Amsterdam, featuring traditional Dutch architecture reflected in the calm waters of a canal. The foreground highlights a charming black building with a distinctive gabled roof, surrounded by other historic structures. Lush green trees line the canal, adding a vibrant touch to the scene. The Armbrug bridge is visible in the background, connecting both sides of the canal, enhancing the urban landscape. The clear blue sky complements the serene atmosphere of this iconic city.",
+      "search_text": "Explore the beauty of Amsterdam with this stunning view of the Armbrug bridge and traditional Dutch architecture. The serene canals reflect the historic buildings, creating a picturesque urban landscape. Ideal for those interested in travel photography, cityscapes, and architectural designs. Discover the charm of the Netherlands in summer, with lush greenery and clear blue skies enhancing the scene. Perfect for anyone searching for images of Amsterdam, canals, bridges, and vibrant city life.",
+      "keywords": [
+        "Amsterdam",
+        "Netherlands",
+        "canal",
+        "architecture",
+        "bridge",
+        "traditional",
+        "reflection",
+        "urban",
+        "historic",
+        "summer",
+        "serene",
+        "water",
+        "buildings",
+        "gabled roof",
+        "cityscape",
+        "landscape",
+        "travel",
+        "scenic",
+        "landmark"
+      ],
+      "color_palette": [
+        {
+          "hex": "#575B60",
+          "name": "dim gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#1C1B21",
+          "name": "black",
+          "w": 0.24
+        },
+        {
+          "hex": "#869BB0",
+          "name": "light slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#D0D2D6",
+          "name": "light gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#B9B4A8",
+          "name": "dark gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
