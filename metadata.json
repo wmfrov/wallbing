@@ -124310,6 +124310,68 @@
   "GrouseGuff_EN-US4212457538_UHD": {
     "date": "2026-04-04",
     "title": "Black grouse males facing off on a lekking site, Estonia",
-    "bing_url": "https://www.bing.com/th?id=OHR.GrouseGuff_EN-US4212457538_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.GrouseGuff_EN-US4212457538_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird",
+        "animal"
+      ],
+      "season": "spring",
+      "country": "Estonia",
+      "region": "Northern Europe",
+      "time_of_day": "dawn",
+      "mood": "dramatic",
+      "ai_description": "The image captures two male black grouse engaged in a display on a lekking site, showcasing their striking plumage. The birds are prominently featured in the foreground, with their vibrant red combs and white tail feathers contrasting against the warm, golden background of dawn. The mist rising from their breaths adds a mystical quality to the scene. The soft focus in the background enhances the dramatic tension of their confrontation, emphasizing the ritualistic nature of their display.",
+      "search_text": "Explore the captivating display of male black grouse on a lekking site in Estonia during dawn. This dramatic wildlife scene features the striking plumage of Tetrao tetrix, showcasing their vibrant colors and unique behaviors. Perfect for birdwatching enthusiasts and nature lovers, this image captures the essence of spring in Northern Europe, highlighting the rituals of animal courtship in a serene yet dynamic environment.",
+      "keywords": [
+        "black grouse",
+        "Tetrao tetrix",
+        "male",
+        "lekking",
+        "Estonia",
+        "dawn",
+        "animal",
+        "bird",
+        "wildlife",
+        "display",
+        "feathers",
+        "nature",
+        "mating ritual",
+        "spring",
+        "forest",
+        "mist",
+        "dramatic",
+        "confrontation",
+        "plumage",
+        "habitat"
+      ],
+      "color_palette": [
+        {
+          "hex": "#DF7919",
+          "name": "chocolate",
+          "w": 0.28
+        },
+        {
+          "hex": "#FB923C",
+          "name": "coral",
+          "w": 0.22
+        },
+        {
+          "hex": "#F58417",
+          "name": "dark orange",
+          "w": 0.21
+        },
+        {
+          "hex": "#AB5006",
+          "name": "saddle brown",
+          "w": 0.19
+        },
+        {
+          "hex": "#FCA95D",
+          "name": "sandy brown",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
