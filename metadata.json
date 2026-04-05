@@ -124377,6 +124377,67 @@
   "LithuaniaEggs_EN-US5074250791_UHD": {
     "date": "2026-04-05",
     "title": "Colorful handmade wooden Easter eggs, Vilnius, Lithuania",
-    "bing_url": "https://www.bing.com/th?id=OHR.LithuaniaEggs_EN-US5074250791_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LithuaniaEggs_EN-US5074250791_UHD.jpg",
+    "tags": {
+      "subject": [
+        "garden"
+      ],
+      "season": "spring",
+      "country": "Lithuania",
+      "region": "Baltic States",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases a decorative arrangement of colorful handmade wooden Easter eggs hanging from thin branches. The eggs display intricate patterns and vibrant colors, including reds, blues, and greens. In the background, there are blurred figures and wooden structures, suggesting a lively market atmosphere. The focus is on the eggs, which are beautifully crafted, reflecting the festive spirit of spring.",
+      "search_text": "Explore the vibrant world of colorful handmade wooden Easter eggs from Vilnius, Lithuania. These beautifully crafted ornaments showcase intricate patterns and lively colors, perfect for spring celebrations. Discover traditional Easter decorations and the artistry behind these unique pieces. Ideal for festive occasions, these wooden eggs bring a touch of charm and creativity to any holiday decor. Perfect for collectors and those looking to enhance their springtime festivities.",
+      "keywords": [
+        "Easter",
+        "handmade",
+        "wooden eggs",
+        "colorful",
+        "Vilnius",
+        "Lithuania",
+        "decorative",
+        "spring",
+        "festive",
+        "market",
+        "craftsmanship",
+        "ornament",
+        "vibrant colors",
+        "patterns",
+        "traditional",
+        "holiday",
+        "celebration",
+        "art",
+        "nature",
+        "branches"
+      ],
+      "color_palette": [
+        {
+          "hex": "#834A33",
+          "name": "sienna",
+          "w": 0.27
+        },
+        {
+          "hex": "#2B2630",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#957972",
+          "name": "gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#A0B1BF",
+          "name": "dark gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#E3BD9E",
+          "name": "burly wood",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
