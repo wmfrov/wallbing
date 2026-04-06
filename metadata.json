@@ -124443,6 +124443,69 @@
   "CastleBlossoms_EN-US6202844131_UHD": {
     "date": "2026-04-06",
     "title": "Hirosaki Castle with cherry blossoms, Hirosaki, Japan",
-    "bing_url": "https://www.bing.com/th?id=OHR.CastleBlossoms_EN-US6202844131_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.CastleBlossoms_EN-US6202844131_UHD.jpg",
+    "tags": {
+      "subject": [
+        "castle",
+        "flower",
+        "garden"
+      ],
+      "season": "spring",
+      "country": "Japan",
+      "region": "East Asia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases Hirosaki Castle surrounded by blooming cherry blossoms. In the foreground, delicate pink flowers create a vibrant contrast against the castle's stone walls. The castle itself features traditional Japanese architecture with a multi-tiered roof. A calm moat reflects the cherry blossoms and the castle, enhancing the serene atmosphere. The scene is bathed in soft daylight, emphasizing the beauty of spring.",
+      "search_text": "Explore the beauty of Hirosaki Castle in Japan, surrounded by stunning cherry blossoms in full bloom. This serene spring scene captures the essence of Japanese culture and architecture, with traditional features and a tranquil moat reflecting the vibrant pink flowers. Ideal for those interested in historical landmarks, nature photography, and the enchanting sakura season. Discover the charm of this iconic destination in East Asia.",
+      "keywords": [
+        "Hirosaki Castle",
+        "cherry blossoms",
+        "sakura",
+        "Japanese architecture",
+        "moat",
+        "spring",
+        "blooming",
+        "flowering trees",
+        "traditional",
+        "landmark",
+        "East Asia",
+        "serene",
+        "castle walls",
+        "reflection",
+        "nature",
+        "scenery",
+        "garden",
+        "historic site",
+        "cultural heritage",
+        "landscape"
+      ],
+      "color_palette": [
+        {
+          "hex": "#CCC4C8",
+          "name": "silver",
+          "w": 0.26
+        },
+        {
+          "hex": "#8C868D",
+          "name": "gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#2F3036",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#4B4E50",
+          "name": "dark slate gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#675F62",
+          "name": "dim gray",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
