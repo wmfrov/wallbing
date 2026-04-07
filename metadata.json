@@ -124511,6 +124511,66 @@
   "BeaverPortrait_EN-US6459336252_UHD": {
     "date": "2026-04-07",
     "title": "Beaver, Germany",
-    "bing_url": "https://www.bing.com/th?id=OHR.BeaverPortrait_EN-US6459336252_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BeaverPortrait_EN-US6459336252_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Germany",
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a beaver swimming in calm water, with its head above the surface. The beaver has a thick, brown fur coat and is holding a stick in its paws. The background is filled with rippling water reflecting soft green and yellow hues, suggesting a lush environment. There are also hints of tree branches and foliage in the vicinity, contributing to a tranquil natural setting.",
+      "search_text": "Explore images of beavers in Germany, showcasing this aquatic mammal swimming in serene waters. Discover the beauty of wildlife in natural habitats, including reflections in calm ponds and lush forest backgrounds. Beavers are known for their distinctive fur and behavior, often seen holding sticks or building dams. Perfect for nature lovers and wildlife enthusiasts looking for serene animal photography.",
+      "keywords": [
+        "beaver",
+        "animal",
+        "Germany",
+        "water",
+        "swimming",
+        "stick",
+        "fur",
+        "nature",
+        "wildlife",
+        "serene",
+        "rippling",
+        "forest",
+        "aquatic",
+        "mammal",
+        "day",
+        "natural habitat",
+        "pond",
+        "calm",
+        "reflection"
+      ],
+      "color_palette": [
+        {
+          "hex": "#8B8851",
+          "name": "gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#A9A05A",
+          "name": "dark khaki",
+          "w": 0.27
+        },
+        {
+          "hex": "#51533F",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#BAB77E",
+          "name": "dark khaki",
+          "w": 0.15
+        },
+        {
+          "hex": "#D4C473",
+          "name": "burly wood",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
