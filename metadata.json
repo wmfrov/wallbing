@@ -124576,6 +124576,69 @@
   "SeattleSunrise_EN-US6729754002_UHD": {
     "date": "2026-04-08",
     "title": "Seattle, Washington",
-    "bing_url": "https://www.bing.com/th?id=OHR.SeattleSunrise_EN-US6729754002_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SeattleSunrise_EN-US6729754002_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "ocean",
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Pacific Northwest",
+      "time_of_day": "dusk",
+      "mood": "dramatic",
+      "ai_description": "The image showcases a panoramic view of Seattle, Washington, during dusk. The skyline is illuminated by vibrant hues of orange, pink, and purple as the sun sets behind the city. Prominent structures include the Space Needle and various modern skyscrapers, reflecting in the calm waters of the ocean. The foreground features a waterfront area with boats docked, while the background reveals a dramatic sky filled with clouds, creating a striking contrast against the city lights.",
+      "search_text": "Explore the stunning cityscape of Seattle, Washington, featuring iconic landmarks like the Space Needle and modern skyscrapers. This vibrant urban landscape is captured during dusk, showcasing a dramatic sunset with rich colors reflecting on the ocean. Ideal for those searching for city views, waterfront scenes, and architectural beauty in the Pacific Northwest region. Perfect for anyone interested in urban photography, city lights, and sunset imagery.",
+      "keywords": [
+        "Seattle",
+        "Washington",
+        "city",
+        "ocean",
+        "architecture",
+        "Space Needle",
+        "skyscrapers",
+        "dusk",
+        "sunset",
+        "waterfront",
+        "boats",
+        "dramatic sky",
+        "urban landscape",
+        "Pacific Northwest",
+        "vibrant colors",
+        "clouds",
+        "reflection",
+        "city lights",
+        "modern buildings",
+        "landscape"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5A578C",
+          "name": "dark slate blue",
+          "w": 0.28
+        },
+        {
+          "hex": "#A17D95",
+          "name": "rosy brown",
+          "w": 0.2
+        },
+        {
+          "hex": "#1B2645",
+          "name": "midnight blue",
+          "w": 0.2
+        },
+        {
+          "hex": "#4D456E",
+          "name": "dark slate blue",
+          "w": 0.18
+        },
+        {
+          "hex": "#3F304B",
+          "name": "dark slate gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
