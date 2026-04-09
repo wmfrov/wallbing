@@ -124644,6 +124644,67 @@
   "WalesWaterfall_EN-US7187055503_UHD": {
     "date": "2026-04-09",
     "title": "Sgwd yr Eira waterfall, Bannau Brycheiniog National Park, Wales",
-    "bing_url": "https://www.bing.com/th?id=OHR.WalesWaterfall_EN-US7187055503_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.WalesWaterfall_EN-US7187055503_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest"
+      ],
+      "season": "summer",
+      "country": "Wales",
+      "region": "United Kingdom",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features the stunning Sgwd yr Eira waterfall, cascading gracefully into a tranquil pool surrounded by lush greenery. Sunlight filters through the trees, creating a beautiful interplay of light and shadow. The foreground showcases smooth stones partially submerged in the water, while the background reveals steep, moss-covered cliffs. The scene evokes a sense of peace and natural beauty, characteristic of Bannau Brycheiniog National Park.",
+      "search_text": "Explore the breathtaking Sgwd yr Eira waterfall in Bannau Brycheiniog National Park, Wales. This serene landscape features cascading water surrounded by lush forest and vibrant greenery. Perfect for nature lovers, photographers, and hikers, this location offers stunning views and a peaceful atmosphere. Discover the beauty of waterfalls, sunlight filtering through trees, and the tranquility of outdoor adventures in the heart of Wales.",
+      "keywords": [
+        "waterfall",
+        "Sgwd yr Eira",
+        "Bannau Brycheiniog National Park",
+        "Wales",
+        "forest",
+        "nature",
+        "tranquil",
+        "sunlight",
+        "landscape",
+        "serene",
+        "rocks",
+        "greenery",
+        "cascading water",
+        "outdoors",
+        "scenic",
+        "natural beauty",
+        "photography",
+        "hiking",
+        "wildlife",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#43422D",
+          "name": "dark slate gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#26271A",
+          "name": "black",
+          "w": 0.23
+        },
+        {
+          "hex": "#625F41",
+          "name": "dark olive green",
+          "w": 0.22
+        },
+        {
+          "hex": "#8B865E",
+          "name": "gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#C4BA96",
+          "name": "tan",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
