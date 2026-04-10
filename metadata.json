@@ -124710,6 +124710,68 @@
   "FoxSiblings_EN-US7533678992_UHD": {
     "date": "2026-04-10",
     "title": "Two young red foxes at Karula National Park, Estonia",
-    "bing_url": "https://www.bing.com/th?id=OHR.FoxSiblings_EN-US7533678992_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FoxSiblings_EN-US7533678992_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "two_animals"
+      ],
+      "season": null,
+      "country": "Estonia",
+      "region": null,
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features two young red foxes sitting closely together in a grassy area. Their fur is a vibrant orange-brown, with white markings on their chests and faces. The background is softly blurred, showcasing a warm, golden light that suggests a tranquil atmosphere. The foxes appear alert and curious, with their ears perked up and eyes focused. The lush green grass adds a natural texture to the scene.",
+      "search_text": "Discover the beauty of young red foxes in their natural habitat. These adorable Vulpes vulpes cubs are often found in places like Karula National Park in Estonia. Perfect for wildlife enthusiasts, this image captures the essence of nature with its serene atmosphere and vibrant colors. Search for animal photography, fox images, or wildlife in Estonia to find similar captivating scenes. Explore the world of young animals and their playful interactions in the wild.",
+      "keywords": [
+        "red fox",
+        "Vulpes vulpes",
+        "young foxes",
+        "animal",
+        "Estonia",
+        "Karula National Park",
+        "grass",
+        "wildlife",
+        "pair",
+        "curious",
+        "nature",
+        "serene",
+        "furry",
+        "outdoors",
+        "cubs",
+        "playful",
+        "forest",
+        "habitat",
+        "wild",
+        "fox"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A9B498",
+          "name": "dark gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#999771",
+          "name": "gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#6F6A45",
+          "name": "dark olive green",
+          "w": 0.21
+        },
+        {
+          "hex": "#D2CFA8",
+          "name": "silver",
+          "w": 0.17
+        },
+        {
+          "hex": "#CAB964",
+          "name": "dark khaki",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
