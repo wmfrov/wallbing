@@ -124777,6 +124777,69 @@
   "PlayaPapagayo_EN-US7775494888_UHD": {
     "date": "2026-04-11",
     "title": "Papagayo Beach, Lanzarote, Canary Islands, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.PlayaPapagayo_EN-US7775494888_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.PlayaPapagayo_EN-US7775494888_UHD.jpg",
+    "tags": {
+      "subject": [
+        "island",
+        "ocean",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Spain",
+      "region": "Canary Islands",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases Papagayo Beach in Lanzarote, characterized by its rugged coastline and clear blue ocean waters. In the foreground, the sandy beach curves gently, meeting the vibrant turquoise sea. The background features a mountainous terrain, with a mix of brown and green hues, indicating a dry landscape typical of volcanic islands. The sky is partly cloudy, adding depth to the scene, while the overall atmosphere is calm and inviting.",
+      "search_text": "Explore the stunning Papagayo Beach in Lanzarote, located in the beautiful Canary Islands, Spain. This serene landscape features a rugged coastline with clear turquoise ocean waters and sandy beaches. Ideal for vacationers seeking natural beauty, the volcanic island offers breathtaking views of mountains and a calm atmosphere. Perfect for travelers looking for picturesque seascapes and coastal adventures.",
+      "keywords": [
+        "Papagayo Beach",
+        "Lanzarote",
+        "Canary Islands",
+        "Spain",
+        "ocean",
+        "landscape",
+        "rugged coastline",
+        "turquoise waters",
+        "sandy beach",
+        "volcanic island",
+        "mountains",
+        "clear sky",
+        "serene",
+        "daytime",
+        "natural beauty",
+        "coastal view",
+        "seascape",
+        "island",
+        "vacation",
+        "travel"
+      ],
+      "color_palette": [
+        {
+          "hex": "#C8B1A4",
+          "name": "tan",
+          "w": 0.3
+        },
+        {
+          "hex": "#01577E",
+          "name": "teal",
+          "w": 0.27
+        },
+        {
+          "hex": "#063B59",
+          "name": "midnight blue",
+          "w": 0.19
+        },
+        {
+          "hex": "#5791C8",
+          "name": "steel blue",
+          "w": 0.18
+        },
+        {
+          "hex": "#205B77",
+          "name": "dark slate gray",
+          "w": 0.06
+        }
+      ]
+    }
   }
 }
