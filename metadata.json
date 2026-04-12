@@ -124845,6 +124845,67 @@
   "SpaceTrails_EN-US8009082939_UHD": {
     "date": "2026-04-12",
     "title": "City lights streak below, taken from the International Space Station",
-    "bing_url": "https://www.bing.com/th?id=OHR.SpaceTrails_EN-US8009082939_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SpaceTrails_EN-US8009082939_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": "night",
+      "mood": "dramatic",
+      "ai_description": "The image captures a breathtaking view of city lights streaking below, taken from the International Space Station. The foreground features the structure of the ISS, while the background showcases the curvature of the Earth illuminated by urban lights. The lights create a dynamic effect, resembling streaks due to the long exposure. A faint atmospheric glow can be seen at the horizon, adding to the dramatic ambiance of the scene.",
+      "search_text": "Explore stunning views of city lights from the International Space Station, showcasing urban illumination at night. This dramatic image captures the curvature of the Earth and the atmospheric glow, emphasizing the beauty of our planet from space. Perfect for those interested in space photography, satellite imagery, and the interplay of light and darkness in urban landscapes.",
+      "keywords": [
+        "city",
+        "lights",
+        "urban",
+        "International Space Station",
+        "night",
+        "Earth",
+        "atmosphere",
+        "streaks",
+        "drama",
+        "photography",
+        "space",
+        "view",
+        "curvature",
+        "illumination",
+        "long exposure",
+        "satellite",
+        "technology",
+        "science",
+        "landscape",
+        "nighttime"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3F3C3A",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#0A090A",
+          "name": "black",
+          "w": 0.24
+        },
+        {
+          "hex": "#73898A",
+          "name": "slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#281D18",
+          "name": "black",
+          "w": 0.17
+        },
+        {
+          "hex": "#1F110C",
+          "name": "black",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
