@@ -124911,6 +124911,68 @@
   "BorregoStars_EN-US8252825773_UHD": {
     "date": "2026-04-13",
     "title": "Milky Way over Anza-Borrego Desert State Park, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.BorregoStars_EN-US8252825773_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BorregoStars_EN-US8252825773_UHD.jpg",
+    "tags": {
+      "subject": [
+        "desert",
+        "landscape"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "California",
+      "time_of_day": "night",
+      "mood": "mystical",
+      "ai_description": "The image captures the Milky Way arching over the Anza-Borrego Desert State Park in California. In the foreground, a solitary, leafless plant stands against the sandy terrain, surrounded by sparse desert vegetation. The sky is filled with countless stars, creating a vibrant display of cosmic beauty. The horizon glows softly with light, hinting at distant settlements or natural features. The contrast between the dark desert and the luminous night sky evokes a sense of wonder and tranquility.",
+      "search_text": "Explore the stunning Milky Way over Anza-Borrego Desert State Park in California. This breathtaking night sky image showcases a solitary plant against a backdrop of sandy desert terrain. The vibrant stars and cosmic beauty create a mystical atmosphere, perfect for astrophotography enthusiasts. Discover the serene landscape of California's desert, where the horizon glows softly, hinting at distant lights. Ideal for those interested in celestial photography, natural parks, and the beauty of the night sky.",
+      "keywords": [
+        "Milky Way",
+        "desert",
+        "Anza-Borrego",
+        "California",
+        "night sky",
+        "stars",
+        "solitary plant",
+        "sandy terrain",
+        "cosmic",
+        "landscape",
+        "mystical",
+        "vegetation",
+        "horizon glow",
+        "night",
+        "astrophotography",
+        "natural park",
+        "celestial",
+        "scenic",
+        "outdoors",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#9788A9",
+          "name": "light slate gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#271F1B",
+          "name": "black",
+          "w": 0.26
+        },
+        {
+          "hex": "#5B5D8D",
+          "name": "dark slate blue",
+          "w": 0.26
+        },
+        {
+          "hex": "#35333E",
+          "name": "dark slate gray",
+          "w": 0.12
+        },
+        {
+          "hex": "#403A42",
+          "name": "dark slate gray",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
