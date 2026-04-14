@@ -124978,6 +124978,67 @@
   "OcellarisClownfish_EN-US8509728179_UHD": {
     "date": "2026-04-14",
     "title": "Common clownfish in a sea anemone, Raja Ampat Islands, Indonesia",
-    "bing_url": "https://www.bing.com/th?id=OHR.OcellarisClownfish_EN-US8509728179_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.OcellarisClownfish_EN-US8509728179_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Indonesia",
+      "region": "Southeast Asia",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a vibrant sea anemone with long, flowing tentacles in shades of green and blue. Nestled among the tentacles is a common clownfish, characterized by its bright orange color and distinct white stripes. The background is a soft blue, suggesting a clear underwater environment. The texture of the anemone's tentacles contrasts with the smooth body of the clownfish, creating a visually appealing composition.",
+      "search_text": "Explore the underwater world of the Raja Ampat Islands in Indonesia, featuring the common clownfish nestled in a vibrant sea anemone. This stunning marine life showcases the beauty of tropical ecosystems, with colorful fish and flowing tentacles. Perfect for those interested in aquatic habitats, biodiversity, and oceanic adventures. Discover the serene beauty of underwater photography and marine biology.",
+      "keywords": [
+        "common clownfish",
+        "sea anemone",
+        "animal",
+        "underwater",
+        "Raja Ampat",
+        "Indonesia",
+        "marine life",
+        "coral reef",
+        "tropical",
+        "vibrant colors",
+        "fish",
+        "tentacles",
+        "aquatic",
+        "habitat",
+        "ocean",
+        "colorful",
+        "biodiversity",
+        "ecosystem",
+        "serene",
+        "sea"
+      ],
+      "color_palette": [
+        {
+          "hex": "#0080BA",
+          "name": "dark cyan",
+          "w": 0.29
+        },
+        {
+          "hex": "#A8B4A7",
+          "name": "dark gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#145A52",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#4CA879",
+          "name": "medium sea green",
+          "w": 0.2
+        },
+        {
+          "hex": "#137F99",
+          "name": "dark cyan",
+          "w": 0.03
+        }
+      ]
+    }
   }
 }
