@@ -125044,6 +125044,65 @@
   "VanGoghFields_EN-US8748933044_UHD": {
     "date": "2026-04-15",
     "title": "The Carri\u00e8res des Lumi\u00e8res exhibit of Vincent Van Gogh, Les Baux-de-Provence, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.VanGoghFields_EN-US8748933044_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.VanGoghFields_EN-US8748933044_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "France",
+      "region": "Provence",
+      "time_of_day": null,
+      "mood": "vibrant",
+      "ai_description": "The image showcases the Carri\u00e8res des Lumi\u00e8res, a unique exhibition space in Les Baux-de-Provence, France, where Vincent Van Gogh's artworks are projected onto large stone walls. The projections create a dynamic and immersive experience, with swirling colors and vivid imagery reminiscent of Van Gogh's style. Visitors can be seen exploring the space, which is illuminated by the vibrant colors of the artwork. The textures of the stone walls contrast beautifully with the fluidity of the projected images, enhancing the overall atmosphere of creativity and artistry.",
+      "search_text": "Explore the Carri\u00e8res des Lumi\u00e8res exhibit featuring the works of Vincent Van Gogh in Les Baux-de-Provence, France. This immersive art experience showcases vibrant projections of Van Gogh's masterpieces on the stone walls of an old quarry. Visitors can enjoy a unique blend of architecture and art as they walk through the illuminated space, surrounded by swirling colors and dynamic imagery. Perfect for art lovers and those seeking a cultural experience, this exhibition highlights the beauty of modern art installations.",
+      "keywords": [
+        "Vincent Van Gogh",
+        "Carri\u00e8res des Lumi\u00e8res",
+        "Les Baux-de-Provence",
+        "art exhibition",
+        "projections",
+        "immersive experience",
+        "architecture",
+        "stone walls",
+        "vibrant colors",
+        "artistic display",
+        "cultural event",
+        "modern art",
+        "interactive",
+        "light show",
+        "visual art",
+        "exhibition space",
+        "immersive art",
+        "art installation"
+      ],
+      "color_palette": [
+        {
+          "hex": "#937030",
+          "name": "sienna",
+          "w": 0.27
+        },
+        {
+          "hex": "#381E06",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#BEA356",
+          "name": "dark khaki",
+          "w": 0.21
+        },
+        {
+          "hex": "#794E16",
+          "name": "saddle brown",
+          "w": 0.15
+        },
+        {
+          "hex": "#5B3C15",
+          "name": "saddle brown",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
