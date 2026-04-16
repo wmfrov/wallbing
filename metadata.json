@@ -125108,6 +125108,68 @@
   "SkagitTulips_EN-US8944602365_UHD": {
     "date": "2026-04-16",
     "title": "Skagit Valley Tulip Fields, Washington",
-    "bing_url": "https://www.bing.com/th?id=OHR.SkagitTulips_EN-US8944602365_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SkagitTulips_EN-US8944602365_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "garden"
+      ],
+      "season": "spring",
+      "country": "United States",
+      "region": "Pacific Northwest",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image showcases a vast field of blooming tulips in Skagit Valley, Washington, with vibrant pink flowers dominating the foreground. In the background, rolling hills can be seen, partially shrouded in a soft morning mist. The light of dawn casts a gentle glow over the landscape, enhancing the colors of the tulips. The scene conveys a sense of tranquility and beauty, typical of springtime in this region.",
+      "search_text": "Explore the breathtaking beauty of the Skagit Valley tulip fields in Washington, where vibrant pink tulips bloom in spring. This serene landscape captures the essence of nature's beauty with rolling hills and a tranquil atmosphere. Ideal for flower lovers and photographers, the fields offer a stunning display of color and life. Discover the charm of blooming gardens and the peacefulness of early morning light in this picturesque region of the Pacific Northwest.",
+      "keywords": [
+        "tulip",
+        "flower",
+        "garden",
+        "blooming",
+        "field",
+        "spring",
+        "Washington",
+        "Pacific Northwest",
+        "landscape",
+        "vibrant",
+        "pink",
+        "morning",
+        "serene",
+        "nature",
+        "flora",
+        "agriculture",
+        "scenic",
+        "meadow",
+        "colorful",
+        "outdoor"
+      ],
+      "color_palette": [
+        {
+          "hex": "#564D52",
+          "name": "dark slate gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#B6438A",
+          "name": "medium violet red",
+          "w": 0.25
+        },
+        {
+          "hex": "#BEB2A9",
+          "name": "dark gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#9B7F8B",
+          "name": "gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#DEC8B5",
+          "name": "wheat",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
