@@ -125175,6 +125175,68 @@
   "FlyingFoxMom_EN-US0502464388_UHD": {
     "date": "2026-04-17",
     "title": "Grey-headed flying fox carrying her pup, Yarra Bend Park, Australia",
-    "bing_url": "https://www.bing.com/th?id=OHR.FlyingFoxMom_EN-US0502464388_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FlyingFoxMom_EN-US0502464388_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "bird"
+      ],
+      "season": null,
+      "country": "Australia",
+      "region": "Oceania",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures a Grey-headed flying fox in mid-flight, carrying its pup. The bat's large wings are spread wide, showcasing a rich brown color with a hint of translucence. In the background, blurred trees suggest a natural habitat, with hints of green foliage. The focus is on the bat, emphasizing its unique features and the tender bond with its young. The overall atmosphere is peaceful, highlighting the beauty of wildlife in its natural setting.",
+      "search_text": "Explore the fascinating world of the Grey-headed flying fox, a unique bat species found in Australia. This image features a bat in flight, carrying its pup, showcasing the beauty of wildlife in Yarra Bend Park. Perfect for nature enthusiasts and wildlife photographers, this serene scene captures the essence of animal behavior and the bond between mother and young. Discover more about bats, their habitats, and their role in the ecosystem.",
+      "keywords": [
+        "Grey-headed flying fox",
+        "Pteropus poliocephalus",
+        "bat",
+        "animal",
+        "wildlife",
+        "Yarra Bend Park",
+        "Australia",
+        "Oceania",
+        "flying",
+        "pup",
+        "nature",
+        "forest",
+        "day",
+        "mammal",
+        "furry",
+        "wings",
+        "habitat",
+        "serene",
+        "flying fox",
+        "animal behavior"
+      ],
+      "color_palette": [
+        {
+          "hex": "#907F77",
+          "name": "gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#A49488",
+          "name": "rosy brown",
+          "w": 0.22
+        },
+        {
+          "hex": "#695B55",
+          "name": "dim gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#B2A496",
+          "name": "dark gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#C3BDA3",
+          "name": "tan",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
