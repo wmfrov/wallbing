@@ -125242,6 +125242,69 @@
   "MaoiStatues_EN-US0752877903_UHD": {
     "date": "2026-04-18",
     "title": "Moai statue quarry, Rano Raraku, Easter Island, Chile",
-    "bing_url": "https://www.bing.com/th?id=OHR.MaoiStatues_EN-US0752877903_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MaoiStatues_EN-US0752877903_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ruins",
+        "landscape",
+        "mountain"
+      ],
+      "season": "spring",
+      "country": "Chile",
+      "region": "South America",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image features the iconic Moai statues at Rano Raraku, a quarry on Easter Island. In the foreground, a large Moai statue stands prominently, with its distinctive elongated face and carved features. The background showcases rolling green hills under a bright sky, with soft clouds illuminated by the early morning light. The path winding through the landscape leads deeper into the quarry, where additional Moai statues can be seen scattered across the terrain. The overall atmosphere is tranquil and historic, highlighting the cultural significance of these ancient sculptures.",
+      "search_text": "Explore the Moai statues of Rano Raraku on Easter Island, Chile. These ancient stone sculptures are renowned for their unique features and cultural significance. The serene landscape showcases rolling green hills and a tranquil atmosphere, perfect for travelers interested in archaeology and history. Discover the beauty of this UNESCO World Heritage site and its stunning natural surroundings during dawn, when the light enhances the majestic appearance of the Moai. Ideal for those searching for travel destinations in South America.",
+      "keywords": [
+        "Moai",
+        "Easter Island",
+        "Rano Raraku",
+        "statue",
+        "quarry",
+        "landscape",
+        "mountain",
+        "ancient",
+        "cultural heritage",
+        "serene",
+        "green hills",
+        "dawn",
+        "historic",
+        "sculpture",
+        "stone",
+        "island",
+        "South America",
+        "travel",
+        "tourism",
+        "archaeology"
+      ],
+      "color_palette": [
+        {
+          "hex": "#231809",
+          "name": "black",
+          "w": 0.26
+        },
+        {
+          "hex": "#5E451E",
+          "name": "dark olive green",
+          "w": 0.24
+        },
+        {
+          "hex": "#85744E",
+          "name": "dim gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#9C9F9C",
+          "name": "dark gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#C4C4BE",
+          "name": "silver",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
