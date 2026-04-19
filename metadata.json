@@ -125310,6 +125310,68 @@
   "LibraryWeek_EN-US0888768835_UHD": {
     "date": "2026-04-19",
     "title": "Books in the children's section of The New York Public Library, New York",
-    "bing_url": "https://www.bing.com/th?id=OHR.LibraryWeek_EN-US0888768835_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LibraryWeek_EN-US0888768835_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Northeast",
+      "time_of_day": null,
+      "mood": "cozy",
+      "ai_description": "The image showcases a vibrant collection of children's books neatly arranged on wooden shelves in a library setting. The spines of the books display a variety of colors and illustrations, indicating a diverse selection of stories and topics. The shelves are well-organized, with books of different sizes and thicknesses creating a visually appealing pattern. The overall atmosphere is inviting and warm, perfect for young readers exploring new adventures through literature.",
+      "search_text": "Explore the vibrant children's section of The New York Public Library, featuring a colorful array of children's books. This inviting space is perfect for young readers looking to dive into literature. With a well-organized collection of storybooks, this library serves as a cultural resource for education and imagination. Discover the joy of reading in a cozy atmosphere filled with diverse stories and adventures.",
+      "keywords": [
+        "children's books",
+        "library",
+        "New York Public Library",
+        "colorful spines",
+        "wooden shelves",
+        "reading",
+        "literature",
+        "storybooks",
+        "education",
+        "cozy atmosphere",
+        "book collection",
+        "youth literature",
+        "organized",
+        "inviting space",
+        "learning",
+        "imagination",
+        "exploration",
+        "knowledge",
+        "cultural resource",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#201F1F",
+          "name": "black",
+          "w": 0.27
+        },
+        {
+          "hex": "#6B5251",
+          "name": "dim gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#919B9A",
+          "name": "dark gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#D7CFC2",
+          "name": "light gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#D0A88F",
+          "name": "tan",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
