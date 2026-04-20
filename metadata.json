@@ -125377,6 +125377,68 @@
   "SunsetKiva_EN-US1031978429_UHD": {
     "date": "2026-04-20",
     "title": "Sunset in Canyonlands National Park, Moab, Utah",
-    "bing_url": "https://www.bing.com/th?id=OHR.SunsetKiva_EN-US1031978429_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SunsetKiva_EN-US1031978429_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Western United States",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a stunning sunset in Canyonlands National Park, showcasing a dramatic landscape of mesas and buttes silhouetted against a colorful sky. The foreground features a prominent rock formation, while the background reveals a series of distant mesas fading into the horizon. The sky is painted with soft hues of pink, purple, and blue, creating a tranquil atmosphere. The rugged terrain is characteristic of the Utah desert, with its unique geological formations and expansive vistas.",
+      "search_text": "Explore the breathtaking sunset in Canyonlands National Park, located in Moab, Utah. This serene landscape features stunning mesas and buttes silhouetted against a colorful sky at dusk. Ideal for landscape photography enthusiasts, this image captures the rugged beauty of the Utah desert and its unique geological formations. Discover the natural beauty of national parks in the Western United States, perfect for outdoor adventures and scenic views.",
+      "keywords": [
+        "Canyonlands National Park",
+        "Utah",
+        "sunset",
+        "landscape",
+        "mesa",
+        "butte",
+        "rock formation",
+        "desert",
+        "sky",
+        "dusk",
+        "serene",
+        "geological formations",
+        "horizon",
+        "colorful",
+        "rugged",
+        "expansive",
+        "natural beauty",
+        "Western United States",
+        "national park",
+        "landscape photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#091221",
+          "name": "black",
+          "w": 0.36
+        },
+        {
+          "hex": "#7C76AF",
+          "name": "light slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#8E8FC7",
+          "name": "medium purple",
+          "w": 0.17
+        },
+        {
+          "hex": "#CAB4C5",
+          "name": "silver",
+          "w": 0.13
+        },
+        {
+          "hex": "#222D51",
+          "name": "dark slate gray",
+          "w": 0.08
+        }
+      ]
+    }
   }
 }
