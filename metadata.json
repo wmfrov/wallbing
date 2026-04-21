@@ -125444,6 +125444,69 @@
   "SpringHedgehog_EN-US1312133826_UHD": {
     "date": "2026-04-21",
     "title": "European hedgehog, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.SpringHedgehog_EN-US1312133826_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SpringHedgehog_EN-US1312133826_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "flower",
+        "forest"
+      ],
+      "season": "spring",
+      "country": "France",
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a European hedgehog resting on a moss-covered log in a lush forest. Surrounding the hedgehog are delicate white flowers blooming on the forest floor, creating a vibrant contrast against the greenery. Tall trees with fresh green leaves rise in the background, indicating a lively spring atmosphere. The soft sunlight filters through the branches, enhancing the serene and peaceful mood of the scene.",
+      "search_text": "Explore the beauty of a European hedgehog in a serene forest setting in France during spring. This image captures the hedgehog resting on a mossy log surrounded by blooming white flowers, showcasing the vibrant flora of the woodland. Perfect for nature lovers and wildlife enthusiasts, this scene highlights the tranquility of a forest habitat filled with greenery and wildflowers. Ideal for searches related to hedgehogs, forest animals, and spring landscapes.",
+      "keywords": [
+        "European hedgehog",
+        "hedgehog",
+        "animal",
+        "forest",
+        "flowers",
+        "spring",
+        "moss",
+        "log",
+        "wildflowers",
+        "greenery",
+        "nature",
+        "flora",
+        "blooming",
+        "wildlife",
+        "tranquil",
+        "daylight",
+        "woodland",
+        "European wildlife",
+        "serene landscape",
+        "natural habitat"
+      ],
+      "color_palette": [
+        {
+          "hex": "#47582B",
+          "name": "dark olive green",
+          "w": 0.27
+        },
+        {
+          "hex": "#1D2C10",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#607244",
+          "name": "dark olive green",
+          "w": 0.22
+        },
+        {
+          "hex": "#73885B",
+          "name": "dim gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#96A87A",
+          "name": "dark sea green",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
