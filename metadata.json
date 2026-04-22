@@ -125512,6 +125512,69 @@
   "TartuEstonia_EN-US1627168155_UHD": {
     "date": "2026-04-22",
     "title": "Alam-Pedja Nature Reserve in Tartu County, Estonia",
-    "bing_url": "https://www.bing.com/th?id=OHR.TartuEstonia_EN-US1627168155_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.TartuEstonia_EN-US1627168155_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "forest",
+        "lake"
+      ],
+      "season": null,
+      "country": "Estonia",
+      "region": "Northern Europe",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a breathtaking aerial view of the Alam-Pedja Nature Reserve in Estonia, showcasing a vast landscape shrouded in morning mist. The foreground features numerous small lakes and wetlands, reflecting the soft hues of dawn. Surrounding the water bodies, dense patches of forest create a rich tapestry of green. The sun is rising on the horizon, casting a warm glow over the scene, enhancing the tranquil atmosphere. The mist adds a mystical quality, blurring the boundaries between land and water.",
+      "search_text": "Explore the stunning Alam-Pedja Nature Reserve in Estonia, known for its serene landscapes and abundant wetlands. This aerial view captures the beauty of the forested areas and numerous lakes, especially during dawn when the morning mist creates a mystical atmosphere. Ideal for nature lovers and photographers, this region showcases the rich biodiversity and natural beauty of Northern Europe. Perfect for those searching for tranquil outdoor experiences or scenic views of Estonia's unique ecosystems.",
+      "keywords": [
+        "Alam-Pedja Nature Reserve",
+        "Estonia",
+        "landscape",
+        "forest",
+        "lake",
+        "morning mist",
+        "aerial view",
+        "dawn",
+        "nature",
+        "wetlands",
+        "tranquil",
+        "serene",
+        "Northern Europe",
+        "sunrise",
+        "greenery",
+        "reflection",
+        "scenic",
+        "wildlife habitat",
+        "biodiversity",
+        "natural beauty"
+      ],
+      "color_palette": [
+        {
+          "hex": "#8B6D3A",
+          "name": "sienna",
+          "w": 0.28
+        },
+        {
+          "hex": "#483818",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#C6C5C3",
+          "name": "silver",
+          "w": 0.18
+        },
+        {
+          "hex": "#F7C880",
+          "name": "burly wood",
+          "w": 0.16
+        },
+        {
+          "hex": "#B8A178",
+          "name": "dark khaki",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
