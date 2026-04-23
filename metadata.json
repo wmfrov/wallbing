@@ -125580,6 +125580,68 @@
   "HathawayCottage_EN-US1795877015_UHD": {
     "date": "2026-04-23",
     "title": "Anne Hathaway's cottage and garden, Stratford-upon-Avon, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.HathawayCottage_EN-US1795877015_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.HathawayCottage_EN-US1795877015_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "garden"
+      ],
+      "season": "summer",
+      "country": "England",
+      "region": "United Kingdom",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases Anne Hathaway's cottage, a charming example of Tudor architecture, with its distinctive thatched roof and timber-framed walls. The cottage is surrounded by a lush garden filled with various plants and flowers, creating a vibrant and inviting atmosphere. In the foreground, the garden features a variety of greenery, while the background reveals a clear blue sky with scattered clouds. The overall scene conveys a peaceful and picturesque setting, perfect for a historical landmark.",
+      "search_text": "Explore Anne Hathaway's cottage in Stratford-upon-Avon, England, a stunning example of Tudor architecture featuring a thatched roof and timber-framed design. Surrounded by a beautiful garden filled with vibrant flowers and lush greenery, this historic building offers a serene atmosphere. Perfect for those interested in English landmarks, architecture, and picturesque outdoor settings, this cottage is a must-visit for history enthusiasts and nature lovers alike.",
+      "keywords": [
+        "Anne Hathaway's cottage",
+        "Tudor architecture",
+        "thatched roof",
+        "Stratford-upon-Avon",
+        "garden",
+        "England",
+        "historic building",
+        "landmark",
+        "flowers",
+        "lush greenery",
+        "summer",
+        "serene",
+        "timber-framed",
+        "cottage",
+        "outdoor",
+        "architecture",
+        "building",
+        "landscape",
+        "nature",
+        "scenic"
+      ],
+      "color_palette": [
+        {
+          "hex": "#473E16",
+          "name": "dark olive green",
+          "w": 0.28
+        },
+        {
+          "hex": "#6C7356",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#97A79F",
+          "name": "dark gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#848E85",
+          "name": "gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#BCC3B3",
+          "name": "silver",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
