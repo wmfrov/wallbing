@@ -125647,6 +125647,67 @@
   "SlashPine_EN-US2059787604_UHD": {
     "date": "2026-04-24",
     "title": "Forest hammock of slash pine and saw palmetto, Everglades National Park, Florida",
-    "bing_url": "https://www.bing.com/th?id=OHR.SlashPine_EN-US2059787604_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SlashPine_EN-US2059787604_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest"
+      ],
+      "season": "summer",
+      "country": "United States",
+      "region": "Southeast USA",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image depicts a tranquil forest scene in Everglades National Park, characterized by tall slash pine trees with slender trunks. The undergrowth is lush with saw palmetto plants, creating a rich green carpet. The lighting suggests early morning, with soft sunlight filtering through the trees, casting gentle shadows on the ground. The overall atmosphere is peaceful, inviting viewers to immerse themselves in the natural beauty of this unique ecosystem.",
+      "search_text": "Explore the serene beauty of a forest hammock in Everglades National Park, Florida. This image showcases tall slash pine trees and lush saw palmetto undergrowth, creating a vibrant ecosystem. Ideal for nature lovers, this tranquil setting captures the essence of Southeast USA's unique landscapes. Perfect for those searching for forest scenes, wildlife habitats, and peaceful natural environments.",
+      "keywords": [
+        "slash pine",
+        "saw palmetto",
+        "Everglades",
+        "Florida",
+        "forest",
+        "trees",
+        "lush",
+        "green",
+        "nature",
+        "wildlife",
+        "serene",
+        "hammock",
+        "tall trees",
+        "underbrush",
+        "morning light",
+        "ecosystem",
+        "tranquil",
+        "flora",
+        "landscape",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#616648",
+          "name": "dark olive green",
+          "w": 0.24
+        },
+        {
+          "hex": "#92A8B5",
+          "name": "dark gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#242B1F",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#504A2A",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#453625",
+          "name": "dark slate gray",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
