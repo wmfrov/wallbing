@@ -125713,6 +125713,67 @@
   "GalapagosPenguins_EN-US2287809863_UHD": {
     "date": "2026-04-25",
     "title": "Gal\u00e1pagos penguins swimming, Gal\u00e1pagos Islands, Ecuador",
-    "bing_url": "https://www.bing.com/th?id=OHR.GalapagosPenguins_EN-US2287809863_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.GalapagosPenguins_EN-US2287809863_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "ocean"
+      ],
+      "season": null,
+      "country": "Ecuador",
+      "region": "Gal\u00e1pagos Islands",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features Gal\u00e1pagos penguins swimming just below the surface of crystal-clear ocean water. The foreground shows the penguins gliding gracefully, with their distinctive black and white plumage visible. In the background, a vibrant coral reef can be seen beneath the water, adding texture and color to the scene. The sky above is bright blue with a few wispy clouds, enhancing the tranquil atmosphere of this underwater moment.",
+      "search_text": "Discover the beauty of Gal\u00e1pagos penguins swimming in the ocean. This image showcases the unique Spheniscus mendiculus species in their natural habitat, surrounded by vibrant coral reefs in the Gal\u00e1pagos Islands, Ecuador. Perfect for wildlife enthusiasts and marine life lovers, this serene underwater scene captures the essence of aquatic biodiversity. Explore more about penguins, ocean life, and the stunning landscapes of the Gal\u00e1pagos.",
+      "keywords": [
+        "Gal\u00e1pagos penguin",
+        "Spheniscus mendiculus",
+        "animal",
+        "ocean",
+        "swimming",
+        "coral reef",
+        "Ecuador",
+        "Gal\u00e1pagos Islands",
+        "marine life",
+        "underwater",
+        "sea",
+        "wildlife",
+        "aquatic",
+        "clear water",
+        "daylight",
+        "nature",
+        "biodiversity",
+        "flock",
+        "penguins"
+      ],
+      "color_palette": [
+        {
+          "hex": "#238AA6",
+          "name": "steel blue",
+          "w": 0.28
+        },
+        {
+          "hex": "#65A5D1",
+          "name": "corn flower blue",
+          "w": 0.25
+        },
+        {
+          "hex": "#195B62",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#38A2C6",
+          "name": "steel blue",
+          "w": 0.15
+        },
+        {
+          "hex": "#82CAD7",
+          "name": "sky blue",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
