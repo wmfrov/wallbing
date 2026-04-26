@@ -125779,6 +125779,68 @@
   "AppleBlossoms_EN-US2396192691_UHD": {
     "date": "2026-04-26",
     "title": "Pink apple blossoms, Avila Beach, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.AppleBlossoms_EN-US2396192691_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AppleBlossoms_EN-US2396192691_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "garden"
+      ],
+      "season": "spring",
+      "country": "United States",
+      "region": "California",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features delicate pink apple blossoms on a slender branch. The flowers display a range of pink hues, with prominent white petals and deep red centers. The background is softly blurred, emphasizing the blossoms in the foreground. Fresh green leaves accompany the flowers, adding a vibrant contrast. The overall scene conveys a sense of tranquility and the beauty of springtime.",
+      "search_text": "Explore the beauty of pink apple blossoms in California during spring. These delicate flowers bloom on slender branches, showcasing vibrant colors and intricate details. Perfect for nature lovers and those seeking serene garden scenes, this image captures the essence of springtime flora. Ideal for botanical enthusiasts, floral photography, and anyone interested in the beauty of blooming trees.",
+      "keywords": [
+        "apple blossoms",
+        "pink flowers",
+        "spring",
+        "California",
+        "garden",
+        "flora",
+        "blooming",
+        "branch",
+        "petals",
+        "nature",
+        "serene",
+        "botanical",
+        "flowering",
+        "delicate",
+        "tree",
+        "seasonal",
+        "outdoors",
+        "fresh",
+        "vibrant",
+        "flora"
+      ],
+      "color_palette": [
+        {
+          "hex": "#907F74",
+          "name": "gray",
+          "w": 0.3
+        },
+        {
+          "hex": "#815763",
+          "name": "dim gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#B9A5A1",
+          "name": "dark gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#D6C1D4",
+          "name": "thistle",
+          "w": 0.17
+        },
+        {
+          "hex": "#9B9277",
+          "name": "gray",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
