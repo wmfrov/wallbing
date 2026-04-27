@@ -125846,6 +125846,67 @@
   "MilanGalleria_EN-US2432086382_UHD": {
     "date": "2026-04-27",
     "title": "The glass dome of Galleria Vittorio Emanuele II, Milan, Italy",
-    "bing_url": "https://www.bing.com/th?id=OHR.MilanGalleria_EN-US2432086382_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MilanGalleria_EN-US2432086382_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "Italy",
+      "region": "Southern Europe",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image showcases the stunning glass dome of the Galleria Vittorio Emanuele II in Milan, Italy. The dome features an intricate design with a circular layout, surrounded by ornate architectural details. The play of light through the glass creates a vibrant atmosphere, highlighting the rich colors and textures of the surrounding structures. The foreground focuses on the dome itself, while the background includes decorative elements that enhance the grandeur of this iconic landmark.",
+      "search_text": "Explore the magnificent glass dome of Galleria Vittorio Emanuele II in Milan, Italy. This architectural masterpiece features a circular layout with intricate designs and vibrant colors. Ideal for those interested in historic buildings, ornate architecture, and stunning interiors. Discover the beauty of Milan's landmarks and the artistic details that make this location a must-visit tourist attraction.",
+      "keywords": [
+        "Galleria Vittorio Emanuele II",
+        "Milan",
+        "Italy",
+        "glass dome",
+        "architecture",
+        "ornate design",
+        "circular layout",
+        "vibrant colors",
+        "interior",
+        "historic building",
+        "decorative elements",
+        "light play",
+        "southern Europe",
+        "landmark",
+        "tourist attraction",
+        "ornamentation",
+        "ceiling",
+        "art",
+        "structure",
+        "interior design"
+      ],
+      "color_palette": [
+        {
+          "hex": "#756252",
+          "name": "dim gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#8B8D85",
+          "name": "gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#443329",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#D9C7AB",
+          "name": "silver",
+          "w": 0.14
+        },
+        {
+          "hex": "#A5B7BC",
+          "name": "dark gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
