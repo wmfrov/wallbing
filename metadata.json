@@ -125912,6 +125912,67 @@
   "AndeanBear_EN-US2465945308_UHD": {
     "date": "2026-04-28",
     "title": "Spectacled bear resting in tree, Ecuador",
-    "bing_url": "https://www.bing.com/th?id=OHR.AndeanBear_EN-US2465945308_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AndeanBear_EN-US2465945308_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "forest"
+      ],
+      "season": null,
+      "country": "Ecuador",
+      "region": "South America",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a spectacled bear, a unique species known for its distinctive facial markings, resting on a large tree branch. The bear's black fur contrasts with the lush green foliage surrounding it. The tree is thick and textured, with moss hanging down, adding to the forest atmosphere. The background is filled with dense vegetation, creating a serene and natural setting for the bear.",
+      "search_text": "Discover the spectacled bear, a unique animal found in the forests of Ecuador. This black bear is known for its distinctive facial markings and is often seen resting in trees. Explore the lush greenery and diverse wildlife of South America, where these bears thrive in their natural habitat. Ideal for nature enthusiasts and wildlife photographers, this image captures the serene beauty of the forest environment.",
+      "keywords": [
+        "spectacled bear",
+        "Ecuador",
+        "animal",
+        "forest",
+        "tree",
+        "wildlife",
+        "black bear",
+        "tropical",
+        "lush",
+        "nature",
+        "resting",
+        "climbing",
+        "biodiversity",
+        "moss",
+        "greenery",
+        "habitat",
+        "wild",
+        "endangered",
+        "mammal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5D5D3B",
+          "name": "dark olive green",
+          "w": 0.26
+        },
+        {
+          "hex": "#2C2B17",
+          "name": "black",
+          "w": 0.24
+        },
+        {
+          "hex": "#898462",
+          "name": "gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#AEA585",
+          "name": "rosy brown",
+          "w": 0.16
+        },
+        {
+          "hex": "#CFC5A7",
+          "name": "silver",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
