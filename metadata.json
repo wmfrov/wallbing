@@ -125978,6 +125978,69 @@
   "BelemTowerBank_EN-US2528466391_UHD": {
     "date": "2026-04-29",
     "title": "Bel\u00e9m Tower on the bank of the Tagus River, Lisbon, Portugal",
-    "bing_url": "https://www.bing.com/th?id=OHR.BelemTowerBank_EN-US2528466391_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BelemTowerBank_EN-US2528466391_UHD.jpg",
+    "tags": {
+      "subject": [
+        "castle",
+        "architecture",
+        "river"
+      ],
+      "season": null,
+      "country": "Portugal",
+      "region": "Southern Europe",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases the iconic Bel\u00e9m Tower, a historic castle situated on the banks of the Tagus River in Lisbon, Portugal. The tower features intricate stonework and battlements, standing majestically against a backdrop of vibrant pink and purple clouds at dusk. A wooden pier extends into the river, leading to the tower, enhancing the serene atmosphere. The water reflects the colorful sky, creating a picturesque scene that embodies the charm of Lisbon's waterfront.",
+      "search_text": "Explore the stunning Bel\u00e9m Tower located on the banks of the Tagus River in Lisbon, Portugal. This historic castle features beautiful architecture and intricate stonework, making it a popular tourist destination. The serene atmosphere at dusk, with vibrant clouds reflecting in the water, creates a picturesque scene perfect for photography. Discover more about Lisbon's landmarks, waterfront views, and southern European charm.",
+      "keywords": [
+        "Bel\u00e9m Tower",
+        "Lisbon",
+        "Portugal",
+        "Tagus River",
+        "castle",
+        "architecture",
+        "historic",
+        "dusk",
+        "serene",
+        "waterfront",
+        "stonework",
+        "battlements",
+        "pier",
+        "clouds",
+        "reflection",
+        "southern Europe",
+        "scenic",
+        "landmark",
+        "travel",
+        "tourism"
+      ],
+      "color_palette": [
+        {
+          "hex": "#71587F",
+          "name": "dim gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#9578A2",
+          "name": "light slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#3B3344",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#E1C8C9",
+          "name": "thistle",
+          "w": 0.13
+        },
+        {
+          "hex": "#BD9DB4",
+          "name": "dark gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
