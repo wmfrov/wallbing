@@ -126046,6 +126046,68 @@
   "DutchTulips_EN-US2575617067_UHD": {
     "date": "2026-04-30",
     "title": "Grape hyacinths and tulips, Keukenhof Gardens, Lisse, Netherlands",
-    "bing_url": "https://www.bing.com/th?id=OHR.DutchTulips_EN-US2575617067_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.DutchTulips_EN-US2575617067_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "garden"
+      ],
+      "season": "spring",
+      "country": "Netherlands",
+      "region": "Western Europe",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases a vibrant display of tulips and grape hyacinths in full bloom at Keukenhof Gardens. In the foreground, clusters of pink and yellow tulips create a colorful carpet, while the background features waves of blue grape hyacinths. The garden is meticulously landscaped, with neatly arranged flower beds bordered by lush green grass. A serene pond can be seen in the background, adding to the tranquil atmosphere of this iconic springtime destination.",
+      "search_text": "Explore the stunning beauty of Keukenhof Gardens in Lisse, Netherlands, where vibrant tulips and grape hyacinths bloom in spring. This iconic garden features a colorful array of flowers, including pink, yellow, and blue varieties, creating a picturesque landscape. Perfect for nature lovers and photographers, the garden showcases meticulously arranged flower beds, serene ponds, and lush greenery. Discover the charm of this botanical paradise, ideal for outdoor activities and enjoying the beauty of spring flora.",
+      "keywords": [
+        "tulip",
+        "grape hyacinth",
+        "flower",
+        "garden",
+        "Keukenhof",
+        "Lisse",
+        "spring",
+        "colorful",
+        "landscape",
+        "blooming",
+        "vibrant",
+        "flower bed",
+        "pond",
+        "Western Europe",
+        "nature",
+        "botanical",
+        "park",
+        "flora",
+        "landscaping",
+        "outdoor"
+      ],
+      "color_palette": [
+        {
+          "hex": "#62924D",
+          "name": "olive drab",
+          "w": 0.27
+        },
+        {
+          "hex": "#2B4F2D",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#C99BAC",
+          "name": "rosy brown",
+          "w": 0.21
+        },
+        {
+          "hex": "#786678",
+          "name": "dim gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#DECC91",
+          "name": "burly wood",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
