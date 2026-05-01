@@ -126113,6 +126113,67 @@
   "KoiPond_EN-US0207799352_UHD": {
     "date": "2026-05-01",
     "title": "Koi fish, Lan Su Chinese Garden, Portland, Oregon",
-    "bing_url": "https://www.bing.com/th?id=OHR.KoiPond_EN-US0207799352_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.KoiPond_EN-US0207799352_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Pacific Northwest",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a vibrant group of koi fish swimming in a tranquil pond. The fish display a variety of colors, including orange, white, black, and red, creating a lively visual contrast against the dark water. The surface of the water is gently rippled, reflecting the colors of the fish and creating a serene atmosphere. The composition captures the beauty of these ornamental fish as they interact in their aquatic environment.",
+      "search_text": "Explore the beauty of koi fish in a tranquil pond setting, showcasing vibrant colors like orange, white, black, and red. This serene aquatic scene captures the essence of nature and wildlife, perfect for those interested in ornamental fish and peaceful garden environments. Ideal for searches related to koi, ponds, and the Lan Su Chinese Garden in Portland, Oregon.",
+      "keywords": [
+        "koi",
+        "fish",
+        "animal",
+        "pond",
+        "water",
+        "orange",
+        "black",
+        "white",
+        "red",
+        "swimming",
+        "serene",
+        "Pacific Northwest",
+        "Lan Su Chinese Garden",
+        "aquatic",
+        "colorful",
+        "group",
+        "tranquil",
+        "nature",
+        "reflection",
+        "wildlife"
+      ],
+      "color_palette": [
+        {
+          "hex": "#363A49",
+          "name": "dark slate gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#444957",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#1F2D3E",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#6A5E65",
+          "name": "dim gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#A89A99",
+          "name": "dark gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
