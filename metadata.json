@@ -126246,6 +126246,67 @@
   "MasaiLeopard_EN-US0388943780_UHD": {
     "date": "2026-05-03",
     "title": "Leopard sleeping in a tree in savanna, Masai Mara National Reserve, Kenya",
-    "bing_url": "https://www.bing.com/th?id=OHR.MasaiLeopard_EN-US0388943780_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MasaiLeopard_EN-US0388943780_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Kenya",
+      "region": "East Africa",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "A leopard is seen resting on a thick branch of a tree in the savanna, showcasing its distinctive spotted coat. The background features a colorful sky at dusk, with hues of pink and purple blending together. The tree's bark is textured and rough, contrasting with the smooth fur of the leopard. Surrounding vegetation includes low shrubs and grass typical of the Masai Mara National Reserve, creating a tranquil atmosphere.",
+      "search_text": "Discover the beauty of a leopard resting in a tree in the savanna of Masai Mara National Reserve, Kenya. This stunning wildlife scene captures the essence of African landscapes at dusk, showcasing the leopard's distinctive spotted coat against a vibrant sky. Ideal for nature lovers and wildlife enthusiasts, this image highlights the serene atmosphere of the savanna and the majestic presence of this powerful predator.",
+      "keywords": [
+        "leopard",
+        "Panthera pardus",
+        "tree",
+        "savanna",
+        "Masai Mara",
+        "Kenya",
+        "animal",
+        "wildlife",
+        "dusk",
+        "sleeping",
+        "spotted",
+        "branch",
+        "serene",
+        "nature",
+        "African landscape",
+        "feline",
+        "predator",
+        "wild",
+        "safari",
+        "East Africa"
+      ],
+      "color_palette": [
+        {
+          "hex": "#827D8B",
+          "name": "gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#503720",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#864E30",
+          "name": "sienna",
+          "w": 0.19
+        },
+        {
+          "hex": "#87707A",
+          "name": "gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#AB837B",
+          "name": "rosy brown",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
