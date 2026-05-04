@@ -126312,6 +126312,68 @@
   "KsarOuledSoltane_EN-US0477407273_UHD": {
     "date": "2026-05-04",
     "title": "Ksar Ouled Soltane, Tataouine district in southern Tunisia",
-    "bing_url": "https://www.bing.com/th?id=OHR.KsarOuledSoltane_EN-US0477407273_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.KsarOuledSoltane_EN-US0477407273_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ruins",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Tunisia",
+      "region": "North Africa",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the ancient Ksar Ouled Soltane, a traditional granary located in the Tataouine district of southern Tunisia. The structure features a series of adobe buildings with arched doorways and windows, displaying a warm, earthy color palette. In the foreground, a cobblestone courtyard leads to a staircase that connects different levels of the complex. The sky above is partly cloudy, adding a serene atmosphere to the historical site.",
+      "search_text": "Explore the Ksar Ouled Soltane in Tataouine, Tunisia, a remarkable example of traditional desert architecture. This ancient granary features adobe structures with arched doorways and a serene cobblestone courtyard. Discover the rich cultural heritage of North Africa through its historical ruins and unique building styles. Ideal for those interested in architecture, history, and travel destinations in southern Tunisia.",
+      "keywords": [
+        "Ksar Ouled Soltane",
+        "Tataouine",
+        "Tunisia",
+        "ruins",
+        "architecture",
+        "adobe",
+        "courtyard",
+        "ancient",
+        "granary",
+        "cobblestone",
+        "historical",
+        "earthy colors",
+        "traditional",
+        "North Africa",
+        "building",
+        "serene",
+        "landmark",
+        "cultural heritage",
+        "desert architecture",
+        "southern Tunisia"
+      ],
+      "color_palette": [
+        {
+          "hex": "#B27D6B",
+          "name": "rosy brown",
+          "w": 0.26
+        },
+        {
+          "hex": "#9396B4",
+          "name": "dark gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#797C9B",
+          "name": "light slate gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#C69C90",
+          "name": "rosy brown",
+          "w": 0.16
+        },
+        {
+          "hex": "#724F4B",
+          "name": "dim gray",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
