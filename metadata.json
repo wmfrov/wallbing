@@ -126379,6 +126379,68 @@
   "MayoAgave_EN-US0521416350_UHD": {
     "date": "2026-05-05",
     "title": "Field of blue agave near Tequila, Jalisco, Mexico",
-    "bing_url": "https://www.bing.com/th?id=OHR.MayoAgave_EN-US0521416350_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MayoAgave_EN-US0521416350_UHD.jpg",
+    "tags": {
+      "subject": [
+        "farm",
+        "landscape"
+      ],
+      "season": "autumn",
+      "country": "Mexico",
+      "region": "North America",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases a vast field of blue agave plants, characterized by their sharp, spiky leaves that create a striking blue-green hue. In the background, rolling mountains fade into the distance, bathed in the warm, golden light of dusk. The sky is painted with soft pastel colors, hinting at the transition from day to night. A winding path cuts through the agave field, leading the eye towards the horizon where the sun is setting. The overall atmosphere is tranquil and picturesque, reflecting the beauty of the Jalisco landscape.",
+      "search_text": "Explore the stunning blue agave fields near Tequila, Jalisco, Mexico, known for their unique spiky plants and picturesque landscapes. This serene rural setting features rolling mountains and a beautiful sunset, creating a tranquil atmosphere perfect for nature lovers. Discover the beauty of agave farming and the rich culture surrounding tequila production in this breathtaking region. Ideal for those searching for landscapes, farms, and serene natural environments.",
+      "keywords": [
+        "blue agave",
+        "agave field",
+        "Tequila",
+        "Jalisco",
+        "Mexico",
+        "landscape",
+        "mountains",
+        "dusk",
+        "serene",
+        "farm",
+        "nature",
+        "sunset",
+        "path",
+        "spiky leaves",
+        "horizon",
+        "golden light",
+        "pastel sky",
+        "rural",
+        "tranquil",
+        "plantation"
+      ],
+      "color_palette": [
+        {
+          "hex": "#495D68",
+          "name": "dim gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#343E42",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#687D88",
+          "name": "slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#94A1AA",
+          "name": "dark gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#D9C2B0",
+          "name": "silver",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
