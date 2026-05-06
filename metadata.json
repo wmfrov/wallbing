@@ -126446,6 +126446,67 @@
   "BulgariaPlains_EN-US0576020979_UHD": {
     "date": "2026-05-06",
     "title": "Thunderstorm above the plains, Bulgaria",
-    "bing_url": "https://www.bing.com/th?id=OHR.BulgariaPlains_EN-US0576020979_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BulgariaPlains_EN-US0576020979_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape"
+      ],
+      "season": null,
+      "country": "Bulgaria",
+      "region": "Southeast Europe",
+      "time_of_day": "dusk",
+      "mood": "dramatic",
+      "ai_description": "The image captures a dramatic thunderstorm sweeping across the plains of Bulgaria. In the foreground, lush green fields contrast with the dark, ominous clouds that dominate the sky. Lightning strikes can be seen in the distance, illuminating the landscape. The scene transitions from a bright orange glow at the horizon to the deep gray of the storm clouds, creating a striking visual effect. The spatial layout showcases the vastness of the plains, emphasizing the power of the approaching storm.",
+      "search_text": "Explore the beauty and power of nature with this stunning image of a thunderstorm over the plains of Bulgaria. Featuring dramatic storm clouds, lightning strikes, and a vibrant dusk sky, this landscape captures the essence of severe weather. Ideal for those interested in atmospheric phenomena, rural scenery, and landscape photography, this image showcases the contrast between lush green fields and an impending storm. Perfect for nature lovers and weather enthusiasts alike.",
+      "keywords": [
+        "thunderstorm",
+        "Bulgaria",
+        "lightning",
+        "storm clouds",
+        "plains",
+        "landscape",
+        "dramatic sky",
+        "green fields",
+        "weather phenomena",
+        "dusk",
+        "nature",
+        "stormy weather",
+        "rural",
+        "scenic",
+        "atmospheric",
+        "cloud formations",
+        "landscape photography",
+        "severe weather",
+        "natural phenomena",
+        "dramatic lighting"
+      ],
+      "color_palette": [
+        {
+          "hex": "#131614",
+          "name": "black",
+          "w": 0.26
+        },
+        {
+          "hex": "#2E2E2B",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#524D48",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#7D7168",
+          "name": "dim gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#B7A487",
+          "name": "rosy brown",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
