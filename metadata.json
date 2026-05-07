@@ -126512,6 +126512,68 @@
   "Kofa_EN-US0655690866_UHD": {
     "date": "2026-05-07",
     "title": "Kofa National Wildlife Refuge, Arizona",
-    "bing_url": "https://www.bing.com/th?id=OHR.Kofa_EN-US0655690866_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Kofa_EN-US0655690866_UHD.jpg",
+    "tags": {
+      "subject": [
+        "desert",
+        "mountain"
+      ],
+      "season": "spring",
+      "country": "United States",
+      "region": "Southwestern United States",
+      "time_of_day": "dawn",
+      "mood": "vibrant",
+      "ai_description": "The image showcases the stunning landscape of Kofa National Wildlife Refuge in Arizona, featuring dramatic red rock formations rising majestically in the background. The foreground is adorned with a colorful array of desert flora, including blooming wildflowers that add vibrant hues to the scene. The warm light of dawn casts a golden glow over the rocky terrain, enhancing the textures of the rugged mountains. The overall atmosphere is lively and full of life, capturing the essence of a spring morning in the desert.",
+      "search_text": "Explore the vibrant landscape of Kofa National Wildlife Refuge in Arizona, showcasing stunning desert mountains and a rich variety of blooming wildflowers. This springtime scene captures the essence of the Southwestern United States, with its rugged terrain and colorful flora. Ideal for nature lovers and photographers, this location offers breathtaking views at dawn, making it a perfect destination for outdoor adventures and wildlife observation.",
+      "keywords": [
+        "Kofa National Wildlife Refuge",
+        "Arizona",
+        "desert",
+        "mountains",
+        "wildflowers",
+        "blooming",
+        "landscape",
+        "vibrant colors",
+        "spring",
+        "flora",
+        "rock formations",
+        "sunrise",
+        "rugged terrain",
+        "cacti",
+        "southern Arizona",
+        "nature",
+        "wildlife",
+        "scenic",
+        "outdoors",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#977B63",
+          "name": "gray",
+          "w": 0.3
+        },
+        {
+          "hex": "#AF431D",
+          "name": "sienna",
+          "w": 0.27
+        },
+        {
+          "hex": "#623F3C",
+          "name": "dark olive green",
+          "w": 0.21
+        },
+        {
+          "hex": "#9AC2DC",
+          "name": "light steel blue",
+          "w": 0.15
+        },
+        {
+          "hex": "#CABDA5",
+          "name": "tan",
+          "w": 0.08
+        }
+      ]
+    }
   }
 }
