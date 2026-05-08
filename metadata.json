@@ -126579,6 +126579,66 @@
   "SardinianDonkey_EN-US0705945312_UHD": {
     "date": "2026-05-08",
     "title": "Sardinian donkey mare and foal, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.SardinianDonkey_EN-US0705945312_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SardinianDonkey_EN-US0705945312_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": "spring",
+      "country": "France",
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a Sardinian donkey mare standing beside her foal in a lush green field. The mare has a soft gray coat with characteristic long ears, while the foal is smaller with a similar gray hue. In the background, gentle hills are visible, covered in greenery, suggesting a peaceful rural setting. The sunlight casts a warm glow on the scene, enhancing the tranquil atmosphere.",
+      "search_text": "Explore images of Sardinian donkeys, including a mare and her foal in a serene rural setting. This scene captures the beauty of domestic animals in nature, showcasing their gentle demeanor and the lush green landscapes of France. Perfect for those interested in wildlife photography, animal lovers, and pastoral scenes. Search for donkey images, mother and child animal interactions, and tranquil rural landscapes.",
+      "keywords": [
+        "Sardinian donkey",
+        "mare",
+        "foal",
+        "animal",
+        "donkey",
+        "gray coat",
+        "rural",
+        "green field",
+        "mother and child",
+        "serene",
+        "nature",
+        "daylight",
+        "gentle hills",
+        "wildlife",
+        "pastoral",
+        "spring",
+        "landscape",
+        "peaceful",
+        "domestic animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#646864",
+          "name": "dim gray",
+          "w": 0.3
+        },
+        {
+          "hex": "#74756F",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#4B4D51",
+          "name": "dark slate gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#868572",
+          "name": "gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#C0B16B",
+          "name": "dark khaki",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
