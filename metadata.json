@@ -126644,6 +126644,69 @@
   "SkradinskiBuk_EN-US0750882952_UHD": {
     "date": "2026-05-09",
     "title": "Skradinski Buk Waterfall in Krka National Park, Croatia",
-    "bing_url": "https://www.bing.com/th?id=OHR.SkradinskiBuk_EN-US0750882952_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SkradinskiBuk_EN-US0750882952_UHD.jpg",
+    "tags": {
+      "subject": [
+        "river",
+        "forest",
+        "bridge"
+      ],
+      "season": null,
+      "country": "Croatia",
+      "region": "Southeast Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the stunning Skradinski Buk Waterfall in Krka National Park, Croatia. A wooden bridge spans across a vibrant turquoise river, surrounded by lush green forest. The water is clear, revealing patches of aquatic plants beneath the surface. In the background, gentle cascades of the waterfall can be seen, contributing to the serene atmosphere of the scene. The overall layout emphasizes the harmony between the natural elements and the man-made structure.",
+      "search_text": "Explore the beauty of Skradinski Buk Waterfall in Krka National Park, Croatia. This serene landscape features a turquoise river flowing beneath a wooden bridge, surrounded by lush forests. Ideal for nature lovers and eco-tourists, this picturesque scene showcases the harmony of water and greenery. Discover the tranquility of this natural wonder, perfect for outdoor adventures, scenic photography, and relaxation in the wilderness.",
+      "keywords": [
+        "Skradinski Buk",
+        "Krka National Park",
+        "Croatia",
+        "river",
+        "bridge",
+        "forest",
+        "turquoise water",
+        "waterfall",
+        "nature",
+        "landscape",
+        "aquatic plants",
+        "wooden bridge",
+        "serene",
+        "tranquil",
+        "outdoor",
+        "scenic",
+        "travel",
+        "eco-tourism",
+        "wilderness",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#294F36",
+          "name": "dark slate gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#18281B",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#426846",
+          "name": "dark olive green",
+          "w": 0.21
+        },
+        {
+          "hex": "#67885B",
+          "name": "dim gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#A8AD84",
+          "name": "dark sea green",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
