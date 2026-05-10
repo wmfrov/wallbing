@@ -126712,6 +126712,68 @@
   "MotherCub_EN-US0916425414_UHD": {
     "date": "2026-05-10",
     "title": "Polar bear mother and cubs playing in Wapusk National Park, Manitoba, Canada",
-    "bing_url": "https://www.bing.com/th?id=OHR.MotherCub_EN-US0916425414_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MotherCub_EN-US0916425414_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "snow"
+      ],
+      "season": "winter",
+      "country": "Canada",
+      "region": "North America",
+      "time_of_day": "day",
+      "mood": "cozy",
+      "ai_description": "The image depicts a polar bear mother and her playful cubs in a snowy landscape. The foreground features the bears rolling and frolicking in the soft, white snow, showcasing their fluffy, cream-colored fur. In the background, a gentle slope of snow rises, with sparse vegetation visible. The bright, clear sky adds to the serene atmosphere, emphasizing the cold, wintry environment of Wapusk National Park. The interaction between the mother and cubs conveys a sense of warmth and affection despite the frigid surroundings.",
+      "search_text": "Explore the playful interactions of polar bears in their natural habitat. This image features a mother polar bear and her cubs enjoying the snowy landscape of Wapusk National Park in Manitoba, Canada. Perfect for wildlife enthusiasts, this scene captures the essence of winter in the Arctic, showcasing the beauty of these majestic animals. Search for polar bear cubs, snowy environments, and wildlife photography to find similar images that highlight the charm and playfulness of these animals in their cold habitat.",
+      "keywords": [
+        "polar bear",
+        "Ursus maritimus",
+        "cubs",
+        "animal",
+        "snow",
+        "winter",
+        "Wapusk National Park",
+        "Manitoba",
+        "Canada",
+        "playful",
+        "wildlife",
+        "mammal",
+        "fluffy",
+        "cold",
+        "frozen",
+        "daytime",
+        "family",
+        "nature",
+        "arctic",
+        "habitat"
+      ],
+      "color_palette": [
+        {
+          "hex": "#C6D4E3",
+          "name": "light gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#D1DEEB",
+          "name": "gainsboro",
+          "w": 0.22
+        },
+        {
+          "hex": "#CDDBEA",
+          "name": "gainsboro",
+          "w": 0.22
+        },
+        {
+          "hex": "#B9B3A4",
+          "name": "dark gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#D4DFEA",
+          "name": "gainsboro",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
