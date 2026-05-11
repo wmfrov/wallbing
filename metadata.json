@@ -126779,6 +126779,67 @@
   "QueenslandReef_EN-US0977236952_UHD": {
     "date": "2026-05-11",
     "title": "Great Barrier Reef from above, Queensland, Australia",
-    "bing_url": "https://www.bing.com/th?id=OHR.QueenslandReef_EN-US0977236952_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.QueenslandReef_EN-US0977236952_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean"
+      ],
+      "season": null,
+      "country": "Australia",
+      "region": "Queensland",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures an aerial view of the Great Barrier Reef, showcasing a vibrant expanse of turquoise ocean. The coral formations create intricate patterns beneath the surface, resembling a natural artwork. The water is clear, allowing for a stunning view of the reef's structure and the diverse marine life that inhabits it. The overall scene conveys a sense of tranquility and the beauty of nature.",
+      "search_text": "Explore the breathtaking Great Barrier Reef in Queensland, Australia, with its stunning turquoise waters and intricate coral formations. This aerial view showcases the vibrant marine life and natural patterns of the reef, making it a perfect destination for nature lovers and underwater enthusiasts. Discover the beauty of this unique ecosystem and its significance in biodiversity and conservation efforts.",
+      "keywords": [
+        "Great Barrier Reef",
+        "coral",
+        "turquoise",
+        "ocean",
+        "marine life",
+        "aerial view",
+        "Queensland",
+        "Australia",
+        "natural patterns",
+        "serene",
+        "water",
+        "sea",
+        "underwater",
+        "ecosystem",
+        "biodiversity",
+        "landscape",
+        "nature",
+        "scenic",
+        "tropical",
+        "environment"
+      ],
+      "color_palette": [
+        {
+          "hex": "#14B9CA",
+          "name": "dark turquoise",
+          "w": 0.29
+        },
+        {
+          "hex": "#289AAC",
+          "name": "light sea green",
+          "w": 0.22
+        },
+        {
+          "hex": "#156574",
+          "name": "teal",
+          "w": 0.19
+        },
+        {
+          "hex": "#5DB3C1",
+          "name": "medium aqua marine",
+          "w": 0.18
+        },
+        {
+          "hex": "#6FCAD4",
+          "name": "sky blue",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
