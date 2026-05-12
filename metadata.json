@@ -126845,6 +126845,68 @@
   "Fratercula_EN-US1020898539_UHD": {
     "date": "2026-05-12",
     "title": "Atlantic puffins, Wales",
-    "bing_url": "https://www.bing.com/th?id=OHR.Fratercula_EN-US1020898539_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Fratercula_EN-US1020898539_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird",
+        "animal"
+      ],
+      "season": "summer",
+      "country": "Wales",
+      "region": "United Kingdom",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image features a group of Atlantic puffins, known for their distinctive colorful beaks and black and white plumage. Three puffins are depicted in a lively interaction, with their beaks open as if vocalizing. The background is softly blurred with a warm golden hue, suggesting a sunny day. The foreground is dotted with green moss and small white flowers, adding to the vibrant summer atmosphere.",
+      "search_text": "Explore the vibrant world of Atlantic puffins in Wales, a stunning bird species known for their colorful beaks and charming personalities. This image captures a lively interaction among a group of puffins during the summer season, set against a backdrop of lush greenery and delicate white flowers. Perfect for wildlife enthusiasts and birdwatchers, this photograph showcases the beauty of avian life in their natural habitat.",
+      "keywords": [
+        "Atlantic puffin",
+        "Fratercula arctica",
+        "bird",
+        "animal",
+        "Wales",
+        "summer",
+        "group",
+        "colorful beak",
+        "vocalizing",
+        "wildlife",
+        "nature",
+        "moss",
+        "flowers",
+        "vibrant",
+        "interaction",
+        "flying",
+        "coastal",
+        "habitat",
+        "avian",
+        "photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A6823E",
+          "name": "peru",
+          "w": 0.31
+        },
+        {
+          "hex": "#BA944D",
+          "name": "peru",
+          "w": 0.24
+        },
+        {
+          "hex": "#62502C",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#C7A463",
+          "name": "dark khaki",
+          "w": 0.16
+        },
+        {
+          "hex": "#CBBC97",
+          "name": "tan",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
