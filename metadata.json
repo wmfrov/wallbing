@@ -126912,6 +126912,68 @@
   "AlabamaHills_EN-US1154221052_UHD": {
     "date": "2026-05-13",
     "title": "Arch and Milky Way, Alabama Hills, Sierra Nevada, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.AlabamaHills_EN-US1154221052_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AlabamaHills_EN-US1154221052_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "landscape"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "California",
+      "time_of_day": "night",
+      "mood": "mystical",
+      "ai_description": "The image features a striking rock arch set against a backdrop of the Milky Way galaxy, creating a mystical atmosphere. In the foreground, the arch is formed by large, textured boulders, while the background reveals the majestic Sierra Nevada mountains, illuminated by the starlight. The sky is filled with a vibrant array of stars, showcasing the beauty of the night. The overall composition highlights the contrast between the rugged rock formations and the ethereal quality of the cosmos.",
+      "search_text": "Explore the breathtaking beauty of the Milky Way over the Sierra Nevada mountains in California. This stunning night sky photograph captures a natural rock arch framed by the cosmos, showcasing the intricate textures of the boulders. Perfect for lovers of astrophotography, landscapes, and natural wonders, this image highlights the mystical atmosphere of the night. Ideal for searches related to night photography, rock formations, and celestial views.",
+      "keywords": [
+        "Milky Way",
+        "rock arch",
+        "Sierra Nevada",
+        "California",
+        "night sky",
+        "mountains",
+        "landscape",
+        "stars",
+        "boulders",
+        "astrophotography",
+        "mystical",
+        "natural arch",
+        "outdoors",
+        "geological formations",
+        "night",
+        "scenic",
+        "photography",
+        "sky",
+        "texture",
+        "nature"
+      ],
+      "color_palette": [
+        {
+          "hex": "#4B5E83",
+          "name": "dark slate blue",
+          "w": 0.27
+        },
+        {
+          "hex": "#312127",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#4C4351",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#5E6F9B",
+          "name": "slate gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#8C8193",
+          "name": "gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
