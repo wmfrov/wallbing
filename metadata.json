@@ -126979,6 +126979,69 @@
   "Pitigliano_EN-US1208308627_UHD": {
     "date": "2026-05-14",
     "title": "Medieval town of Pitigliano, Tuscany, Italy",
-    "bing_url": "https://www.bing.com/th?id=OHR.Pitigliano_EN-US1208308627_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Pitigliano_EN-US1208308627_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture",
+        "ruins"
+      ],
+      "season": null,
+      "country": "Italy",
+      "region": "Tuscany",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the medieval town of Pitigliano, perched on a rocky cliff in Tuscany, Italy. The town features a mix of ancient stone buildings and narrow streets, with a backdrop of dramatic clouds. The foreground displays lush greenery, contrasting with the warm tones of the stone structures. Notable architectural elements include towers and old walls that hint at the town's historical significance. The overall atmosphere is peaceful, inviting viewers to explore its rich heritage.",
+      "search_text": "Explore the medieval town of Pitigliano in Tuscany, Italy. This picturesque city is known for its stunning architecture, ancient stone buildings, and scenic cliffside views. Ideal for travelers interested in historic sites, cultural heritage, and beautiful landscapes, Pitigliano offers a serene atmosphere with lush greenery and dramatic clouds. Discover the charm of this unique village and its rich history, perfect for photography and exploration.",
+      "keywords": [
+        "Pitigliano",
+        "Tuscany",
+        "Italy",
+        "medieval town",
+        "architecture",
+        "stone buildings",
+        "cliffside",
+        "historic",
+        "landscape",
+        "serene",
+        "clouds",
+        "greenery",
+        "ancient ruins",
+        "town",
+        "village",
+        "cultural heritage",
+        "travel",
+        "tourism",
+        "scenic view",
+        "landmark"
+      ],
+      "color_palette": [
+        {
+          "hex": "#583D17",
+          "name": "saddle brown",
+          "w": 0.24
+        },
+        {
+          "hex": "#85ACC3",
+          "name": "dark gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#957A49",
+          "name": "sienna",
+          "w": 0.23
+        },
+        {
+          "hex": "#CBD1D7",
+          "name": "light gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#D0AC7B",
+          "name": "tan",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
