@@ -127047,6 +127047,68 @@
   "EndangeredWhales_EN-US0380100553_UHD": {
     "date": "2026-05-15",
     "title": "A family of sperm whales, Indian Ocean",
-    "bing_url": "https://www.bing.com/th?id=OHR.EndangeredWhales_EN-US0380100553_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.EndangeredWhales_EN-US0380100553_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "animal"
+      ],
+      "season": null,
+      "country": null,
+      "region": "Indian Ocean",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a family of sperm whales swimming gracefully in the Indian Ocean. In the foreground, a large adult sperm whale is prominently displayed, showcasing its distinct bulbous head and smooth skin. Surrounding it are three other sperm whales, creating a sense of unity and family. The deep blue water provides a tranquil backdrop, with light filtering through the surface, illuminating the whales. The scene captures the gentle movement of these majestic marine mammals in their natural habitat.",
+      "search_text": "Explore the serene underwater world of sperm whales, also known as Physeter macrocephalus, swimming in the Indian Ocean. This image captures a family of these majestic marine mammals in their natural habitat. Discover the beauty of oceanic wildlife and the gentle nature of these aquatic animals. Ideal for those interested in marine life, biodiversity, and the tranquility of underwater scenes. Perfect for searches related to whales, ocean mammals, and aquatic ecosystems.",
+      "keywords": [
+        "sperm whale",
+        "Physeter macrocephalus",
+        "ocean",
+        "marine life",
+        "family",
+        "swimming",
+        "deep blue",
+        "mammal",
+        "animal",
+        "aquatic",
+        "marine",
+        "underwater",
+        "group",
+        "wildlife",
+        "serene",
+        "nature",
+        "Indian Ocean",
+        "whale",
+        "oceanic",
+        "biodiversity"
+      ],
+      "color_palette": [
+        {
+          "hex": "#145789",
+          "name": "teal",
+          "w": 0.32
+        },
+        {
+          "hex": "#276B9F",
+          "name": "steel blue",
+          "w": 0.23
+        },
+        {
+          "hex": "#0E3F65",
+          "name": "midnight blue",
+          "w": 0.19
+        },
+        {
+          "hex": "#A3AFB6",
+          "name": "dark gray",
+          "w": 0.13
+        },
+        {
+          "hex": "#5A85A7",
+          "name": "steel blue",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
