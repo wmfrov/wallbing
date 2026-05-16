@@ -127114,6 +127114,69 @@
   "SmithRockPark_EN-US0425629050_UHD": {
     "date": "2026-05-16",
     "title": "Smith Rock State Park, Oregon",
-    "bing_url": "https://www.bing.com/th?id=OHR.SmithRockPark_EN-US0425629050_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SmithRockPark_EN-US0425629050_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "river",
+        "landscape"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Pacific Northwest",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the stunning geological formations of Smith Rock State Park in Oregon. Towering cliffs made of rugged rock dominate the landscape, with a winding river flowing gently through the valley below. The foreground features a mix of dry grass and sparse trees, while the background reveals dramatic rock faces under a cloudy sky. The interplay of light and shadow highlights the textures of the rocky surfaces, creating a serene yet majestic atmosphere.",
+      "search_text": "Explore the breathtaking landscapes of Smith Rock State Park in Oregon, featuring dramatic rock formations and a winding river. This serene location is perfect for outdoor enthusiasts looking to experience the natural beauty of the Pacific Northwest. Discover the unique geological features, including towering cliffs and lush valleys, ideal for hiking and photography. Whether you're interested in rock climbing or simply enjoying the scenery, Smith Rock offers a stunning backdrop for nature lovers.",
+      "keywords": [
+        "Smith Rock",
+        "Oregon",
+        "rock formations",
+        "river",
+        "landscape",
+        "mountains",
+        "valley",
+        "cliffs",
+        "nature",
+        "outdoors",
+        "serene",
+        "Pacific Northwest",
+        "geological",
+        "scenic",
+        "daytime",
+        "winding river",
+        "trees",
+        "cloudy sky",
+        "rugged terrain",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#73482D",
+          "name": "saddle brown",
+          "w": 0.25
+        },
+        {
+          "hex": "#3C271A",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#926F53",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#AA8C71",
+          "name": "rosy brown",
+          "w": 0.17
+        },
+        {
+          "hex": "#BFB19E",
+          "name": "dark gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
