@@ -127182,6 +127182,68 @@
   "ShenandoahSunset_EN-US0482920183_UHD": {
     "date": "2026-05-17",
     "title": "Hawksbill Mountain in Shenandoah National Park, Virginia",
-    "bing_url": "https://www.bing.com/th?id=OHR.ShenandoahSunset_EN-US0482920183_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ShenandoahSunset_EN-US0482920183_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "landscape"
+      ],
+      "season": "summer",
+      "country": "United States",
+      "region": "Southeast USA",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a stunning view from Hawksbill Mountain in Shenandoah National Park, Virginia. In the foreground, rugged rocks are scattered, leading to a lush green landscape that rolls into the distance. The sun is just rising, casting a warm glow over the mountains and valleys below. The sky is painted with soft hues of orange and purple, creating a tranquil atmosphere. The scene is rich in natural beauty, showcasing the diverse textures of the rocky foreground and the vibrant greenery of the hills.",
+      "search_text": "Explore the breathtaking views from Hawksbill Mountain in Shenandoah National Park, Virginia. This stunning landscape features rugged rocks and lush greenery, perfect for outdoor enthusiasts and nature lovers. Experience the serene atmosphere at dawn as the sun rises, casting beautiful colors across the sky. Ideal for hiking, photography, and adventure seekers, this scenic spot showcases the natural beauty of the Southeast USA.",
+      "keywords": [
+        "Hawksbill Mountain",
+        "Shenandoah National Park",
+        "Virginia",
+        "sunrise",
+        "mountain landscape",
+        "rugged rocks",
+        "lush greenery",
+        "valleys",
+        "serene",
+        "nature",
+        "outdoor",
+        "scenic view",
+        "summer",
+        "dawn",
+        "landscape photography",
+        "hiking",
+        "travel",
+        "exploration",
+        "wildlife",
+        "adventure"
+      ],
+      "color_palette": [
+        {
+          "hex": "#526175",
+          "name": "dim gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#2A3138",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#9194AF",
+          "name": "dark gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#E5C3C2",
+          "name": "thistle",
+          "w": 0.15
+        },
+        {
+          "hex": "#D3A9AF",
+          "name": "silver",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
