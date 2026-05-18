@@ -127249,6 +127249,66 @@
   "MuseumLondon_EN-US0527592013_UHD": {
     "date": "2026-05-18",
     "title": "Natural History Museum, London, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.MuseumLondon_EN-US0527592013_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MuseumLondon_EN-US0527592013_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "United Kingdom",
+      "region": "Western Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the interior of the Natural History Museum in London, characterized by its grand architecture and intricate details. The large arched ceilings are adorned with wooden beams, and natural light streams through the skylights, illuminating the stonework. A sweeping staircase leads to various levels, with ornate railings and arches creating a sense of depth. The overall atmosphere is calm and inviting, highlighting the museum's historical significance.",
+      "search_text": "Explore the stunning architecture of the Natural History Museum in London, featuring grand arched ceilings, intricate stonework, and a sweeping staircase. This historical building is known for its beautiful interior design and natural light streaming through skylights. Ideal for those interested in museum architecture, historical buildings, and serene environments, this location is a must-visit in Western Europe.",
+      "keywords": [
+        "Natural History Museum",
+        "London",
+        "architecture",
+        "interior",
+        "staircase",
+        "arched ceilings",
+        "ornate",
+        "historical",
+        "stonework",
+        "wooden beams",
+        "skylights",
+        "museum",
+        "Western Europe",
+        "building",
+        "grand",
+        "details",
+        "light",
+        "inviting",
+        "serene"
+      ],
+      "color_palette": [
+        {
+          "hex": "#16120D",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#332117",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#4B3A2E",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#6F5847",
+          "name": "dim gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#A79584",
+          "name": "rosy brown",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
