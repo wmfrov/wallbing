@@ -127314,6 +127314,69 @@
   "SpainLighthouse_EN-US0598364035_UHD": {
     "date": "2026-05-19",
     "title": "Formentor Lighthouse, Mallorca, Balearic Islands, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.SpainLighthouse_EN-US0598364035_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SpainLighthouse_EN-US0598364035_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "landscape",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Spain",
+      "region": "Balearic Islands",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image features the Formentor Lighthouse perched on a rocky cliff overlooking the ocean. The lighthouse is white, standing tall against the backdrop of a vibrant sky filled with soft clouds. In the foreground, a winding road snakes along the cliffside, leading towards the lighthouse. The ocean stretches out into the horizon, reflecting the warm hues of the dawn light. The rocky terrain is textured and rugged, contrasting with the smooth water below.",
+      "search_text": "Explore the stunning Formentor Lighthouse located in Mallorca, Spain. This architectural marvel sits atop a rocky cliff overlooking the ocean, providing breathtaking views at dawn. The winding road leading to the lighthouse adds to the scenic landscape, making it a perfect spot for photography and nature lovers. Discover the beauty of the Balearic Islands and enjoy the serene coastal atmosphere with vibrant skies and rugged terrain.",
+      "keywords": [
+        "Formentor Lighthouse",
+        "Mallorca",
+        "Balearic Islands",
+        "Spain",
+        "ocean",
+        "cliff",
+        "architecture",
+        "landscape",
+        "dawn",
+        "serene",
+        "winding road",
+        "rocky terrain",
+        "sky",
+        "clouds",
+        "coastal",
+        "seascape",
+        "lighthouse",
+        "marine",
+        "horizon",
+        "nature"
+      ],
+      "color_palette": [
+        {
+          "hex": "#0C88BB",
+          "name": "light sea green",
+          "w": 0.34
+        },
+        {
+          "hex": "#49382A",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#8C9697",
+          "name": "light slate gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#64594C",
+          "name": "dim gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#0E405B",
+          "name": "dark slate gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
