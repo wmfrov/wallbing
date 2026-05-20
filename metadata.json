@@ -127382,6 +127382,68 @@
   "BumbleBee_EN-US0634100541_UHD": {
     "date": "2026-05-20",
     "title": "Bumble bee pollinating, Worcester, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.BumbleBee_EN-US0634100541_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BumbleBee_EN-US0634100541_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "animal"
+      ],
+      "season": "summer",
+      "country": "England",
+      "region": "Western Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a bumblebee perched on a thistle flower, showcasing its vibrant yellow and black stripes. The foreground highlights the intricate details of the bee and the spiky texture of the thistle. In the background, a soft blur of yellow flowers creates a warm, inviting atmosphere. The scene captures a moment of pollination, emphasizing the importance of bees in the ecosystem. The overall composition conveys a sense of tranquility and harmony in nature.",
+      "search_text": "Explore the beauty of a bumblebee pollinating a thistle flower in Worcester, England. This serene summer scene captures the intricate details of the bee and the vibrant colors of the flowers. Perfect for nature lovers and those interested in pollinators, this image highlights the essential role of bees in the ecosystem. Discover the charm of wildflowers and the delicate balance of nature in this stunning macro photography.",
+      "keywords": [
+        "bumblebee",
+        "pollinating",
+        "thistle",
+        "flower",
+        "bee",
+        "insect",
+        "Worcester",
+        "England",
+        "summer",
+        "nature",
+        "animal",
+        "wildflower",
+        "pollinator",
+        "yellow",
+        "purple",
+        "garden",
+        "flora",
+        "blooming",
+        "macro",
+        "serene"
+      ],
+      "color_palette": [
+        {
+          "hex": "#959656",
+          "name": "gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#3A4431",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#717454",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#CFC245",
+          "name": "dark khaki",
+          "w": 0.15
+        },
+        {
+          "hex": "#B0AC54",
+          "name": "dark khaki",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
