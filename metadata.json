@@ -127449,6 +127449,68 @@
   "SichuanTea_EN-US0676754504_UHD": {
     "date": "2026-05-21",
     "title": "Tea terraces in Sichuan Province, China",
-    "bing_url": "https://www.bing.com/th?id=OHR.SichuanTea_EN-US0676754504_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SichuanTea_EN-US0676754504_UHD.jpg",
+    "tags": {
+      "subject": [
+        "farm",
+        "landscape"
+      ],
+      "season": "summer",
+      "country": "China",
+      "region": "Sichuan",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases lush green tea terraces in Sichuan Province, China, characterized by their intricate, spiraling patterns. The foreground features vibrant green rows of tea plants, meticulously arranged in a terraced layout that ascends the hillside. Surrounding the terraces, dense foliage and trees add depth and texture to the scene. The overall atmosphere is tranquil, with bright sunlight illuminating the landscape, highlighting the rich colors and patterns of the tea fields.",
+      "search_text": "Explore the stunning tea terraces in Sichuan Province, China, known for their intricate patterns and lush green landscapes. This serene agricultural setting showcases vibrant tea plants arranged in terraces on a hillside, surrounded by rich vegetation. Perfect for nature lovers and those interested in rural farming landscapes, these tea fields represent the beauty of Chinese agriculture and the tranquility of outdoor scenery. Discover the unique charm of these terraced farms in a picturesque setting.",
+      "keywords": [
+        "tea",
+        "terraces",
+        "Sichuan",
+        "China",
+        "landscape",
+        "farm",
+        "green",
+        "agriculture",
+        "hillside",
+        "lush",
+        "plantation",
+        "nature",
+        "scenic",
+        "daylight",
+        "serene",
+        "vegetation",
+        "crop",
+        "pattern",
+        "outdoor",
+        "rural"
+      ],
+      "color_palette": [
+        {
+          "hex": "#1B361D",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#0F2218",
+          "name": "black",
+          "w": 0.24
+        },
+        {
+          "hex": "#284920",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#385C22",
+          "name": "dark olive green",
+          "w": 0.17
+        },
+        {
+          "hex": "#547829",
+          "name": "dark olive green",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
