@@ -127516,6 +127516,68 @@
   "KauehiAtollLagoon_EN-US6299031230_UHD": {
     "date": "2026-05-22",
     "title": "Kauehi Atoll, Tuamotu Archipelago, French Polynesia",
-    "bing_url": "https://www.bing.com/th?id=OHR.KauehiAtollLagoon_EN-US6299031230_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.KauehiAtollLagoon_EN-US6299031230_UHD.jpg",
+    "tags": {
+      "subject": [
+        "island",
+        "ocean"
+      ],
+      "season": null,
+      "country": "French Polynesia",
+      "region": "Pacific Islands",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the stunning Kauehi Atoll in the Tuamotu Archipelago, characterized by its unique, elongated islands surrounded by vibrant turquoise waters. The foreground features sandy beaches and lush greenery, while the background reveals the deep blue ocean. The atoll's distinctive shape creates a series of shallow lagoons, highlighting the contrast between the land and water. The overall atmosphere is tranquil, evoking a sense of paradise.",
+      "search_text": "Explore the breathtaking beauty of Kauehi Atoll in the Tuamotu Archipelago, French Polynesia. This stunning island paradise features vibrant turquoise waters, sandy beaches, and lush tropical greenery. Ideal for nature lovers and travelers seeking serene landscapes, this aerial view captures the unique lagoon formations and coastal scenery. Perfect for vacation planning, island hopping, and discovering tropical destinations, this image evokes the tranquility and allure of paradise.",
+      "keywords": [
+        "Kauehi Atoll",
+        "Tuamotu Archipelago",
+        "French Polynesia",
+        "island",
+        "ocean",
+        "turquoise water",
+        "lagoon",
+        "tropical",
+        "beach",
+        "greenery",
+        "serene",
+        "paradise",
+        "landscape",
+        "aerial view",
+        "coastal",
+        "nature",
+        "vacation",
+        "travel",
+        "scenic",
+        "island hopping"
+      ],
+      "color_palette": [
+        {
+          "hex": "#033A77",
+          "name": "midnight blue",
+          "w": 0.34
+        },
+        {
+          "hex": "#999E98",
+          "name": "dark gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#37979B",
+          "name": "steel blue",
+          "w": 0.16
+        },
+        {
+          "hex": "#206070",
+          "name": "dark slate gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#B2BEBC",
+          "name": "silver",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
