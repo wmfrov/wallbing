@@ -127583,6 +127583,68 @@
   "ThreeTurtlesButterflies_EN-US0786859772_UHD": {
     "date": "2026-05-23",
     "title": "Turtles with butterflies",
-    "bing_url": "https://www.bing.com/th?id=OHR.ThreeTurtlesButterflies_EN-US0786859772_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ThreeTurtlesButterflies_EN-US0786859772_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "two_animals"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features three turtles basking on a log above a calm body of water. Two turtles are positioned on the left and right, while the third turtle is in the center, with a butterfly hovering above it. The turtles have smooth, textured shells and are partially submerged, reflecting their surroundings in the water. The butterfly is vibrant blue, contrasting beautifully with the earthy tones of the turtles and the log.",
+      "search_text": "This image showcases three turtles basking on a log in a serene environment. A vibrant blue butterfly hovers above them, creating a beautiful contrast against the earthy tones of the turtles and the water. Perfect for nature lovers, this scene captures the tranquility of wildlife interactions in a natural habitat. Ideal for searches related to reptiles, aquatic life, and serene wildlife photography.",
+      "keywords": [
+        "turtle",
+        "butterfly",
+        "animal",
+        "basking",
+        "water",
+        "log",
+        "blue butterfly",
+        "serene",
+        "reptile",
+        "wildlife",
+        "nature",
+        "three turtles",
+        "calm water",
+        "basking turtles",
+        "insect",
+        "aquatic",
+        "habitat",
+        "flora",
+        "ecosystem",
+        "tranquil"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A27F64",
+          "name": "gray",
+          "w": 0.31
+        },
+        {
+          "hex": "#BB9C81",
+          "name": "rosy brown",
+          "w": 0.22
+        },
+        {
+          "hex": "#674E3E",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#D0AD8D",
+          "name": "tan",
+          "w": 0.16
+        },
+        {
+          "hex": "#E0C5AF",
+          "name": "wheat",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
