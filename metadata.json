@@ -127650,6 +127650,68 @@
   "DolomitesPark_EN-US0828472809_UHD": {
     "date": "2026-05-24",
     "title": "Tre Cime Nature Park, South Tyrol, Italy",
-    "bing_url": "https://www.bing.com/th?id=OHR.DolomitesPark_EN-US0828472809_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.DolomitesPark_EN-US0828472809_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Italy",
+      "region": "South Tyrol",
+      "time_of_day": "night",
+      "mood": "mystical",
+      "ai_description": "The image showcases the majestic peaks of the Dolomites under a starry night sky, with the Milky Way prominently visible. In the foreground, a charming building is illuminated, contrasting with the rugged mountain landscape. The mountains rise dramatically, their jagged silhouettes creating a striking profile against the night sky. The scene evokes a sense of tranquility and wonder, enhanced by the celestial display above.",
+      "search_text": "Explore the breathtaking Dolomites in South Tyrol, Italy, featuring stunning mountain landscapes and a mesmerizing night sky filled with stars and the Milky Way. This scenic view captures the charm of illuminated buildings against rugged rock formations, perfect for nature lovers and photography enthusiasts. Discover the mystical beauty of this region, ideal for outdoor adventures, travel inspiration, and serene getaways.",
+      "keywords": [
+        "Dolomites",
+        "mountain",
+        "night sky",
+        "Milky Way",
+        "South Tyrol",
+        "Italy",
+        "landscape",
+        "stars",
+        "building",
+        "illumination",
+        "rock formations",
+        "scenic",
+        "nature",
+        "outdoors",
+        "mystical",
+        "travel",
+        "photography",
+        "night",
+        "serene",
+        "exploration"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A9998D",
+          "name": "rosy brown",
+          "w": 0.24
+        },
+        {
+          "hex": "#475158",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#121B16",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#333431",
+          "name": "dark slate gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#212B29",
+          "name": "dark slate gray",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
