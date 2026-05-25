@@ -127717,6 +127717,67 @@
   "ArlingtonAmphitheater_EN-US0872772906_UHD": {
     "date": "2026-05-25",
     "title": "Memorial Amphitheater at Arlington National Cemetery, Arlington, Virginia",
-    "bing_url": "https://www.bing.com/th?id=OHR.ArlingtonAmphitheater_EN-US0872772906_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ArlingtonAmphitheater_EN-US0872772906_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "North America",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures the intricate ceiling of the Memorial Amphitheater at Arlington National Cemetery. The architectural design features ornate patterns and detailed carvings, with a smooth, curved surface that draws the eye upward. Tall columns frame the view, adding to the grandeur of the structure. The bright blue sky peeks through the opening, providing a serene backdrop that enhances the solemnity of the memorial site.",
+      "search_text": "Explore the architectural beauty of the Memorial Amphitheater at Arlington National Cemetery in Virginia. This historical site features an intricately designed ceiling with ornate carvings and tall columns. Ideal for those interested in memorials, architecture, and significant landmarks in the United States. The serene atmosphere and stunning details make it a must-visit location for history enthusiasts and architecture lovers alike.",
+      "keywords": [
+        "Memorial Amphitheater",
+        "Arlington National Cemetery",
+        "architecture",
+        "ceiling",
+        "columns",
+        "ornate",
+        "carvings",
+        "curved",
+        "serene",
+        "memorial",
+        "United States",
+        "Virginia",
+        "historical site",
+        "dome",
+        "stone",
+        "design",
+        "landmark",
+        "outdoor",
+        "daylight",
+        "building"
+      ],
+      "color_palette": [
+        {
+          "hex": "#9198A1",
+          "name": "dark gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#6B6460",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#B6BCC6",
+          "name": "silver",
+          "w": 0.2
+        },
+        {
+          "hex": "#D5D8DF",
+          "name": "gainsboro",
+          "w": 0.17
+        },
+        {
+          "hex": "#CCC7C6",
+          "name": "silver",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
