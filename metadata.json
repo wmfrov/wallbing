@@ -127783,6 +127783,68 @@
   "LupineBloom_EN-US0920778137_UHD": {
     "date": "2026-05-26",
     "title": "Lupine flowers in bloom, Northern California",
-    "bing_url": "https://www.bing.com/th?id=OHR.LupineBloom_EN-US0920778137_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LupineBloom_EN-US0920778137_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "garden"
+      ],
+      "season": "spring",
+      "country": "United States",
+      "region": "Northern California",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image features a vast field of blooming lupine flowers, predominantly in shades of purple, creating a vibrant carpet across the landscape. In the background, gentle hills are dotted with green trees, adding depth to the scene. The sky is painted with soft hues of orange and gray, indicating the transition from day to night. The foreground is rich with the texture of the flowers, while the rolling hills provide a serene backdrop, enhancing the tranquil atmosphere of this spring landscape.",
+      "search_text": "Explore the beauty of lupine flowers in bloom in Northern California. This serene spring landscape showcases vibrant purple blooms across a lush field, surrounded by gentle hills and trees. Perfect for nature lovers and those seeking floral photography, this scene captures the essence of wildflowers in a tranquil setting during dusk. Discover the charm of blooming gardens and the peaceful atmosphere of springtime in the countryside.",
+      "keywords": [
+        "lupine",
+        "bluebonnet",
+        "flower",
+        "blooming",
+        "field",
+        "Northern California",
+        "spring",
+        "landscape",
+        "purple",
+        "garden",
+        "nature",
+        "serene",
+        "hills",
+        "trees",
+        "sunset",
+        "flora",
+        "wildflower",
+        "vibrant",
+        "meadow",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#727463",
+          "name": "dim gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#343A30",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#A39979",
+          "name": "rosy brown",
+          "w": 0.22
+        },
+        {
+          "hex": "#5D5C48",
+          "name": "dark olive green",
+          "w": 0.17
+        },
+        {
+          "hex": "#475445",
+          "name": "dark slate gray",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
