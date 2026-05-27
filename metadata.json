@@ -127850,6 +127850,66 @@
   "OtterDay_EN-US0973120905_UHD": {
     "date": "2026-05-27",
     "title": "Sea otter, Kachemak Bay, Homer, Alaska",
-    "bing_url": "https://www.bing.com/th?id=OHR.OtterDay_EN-US0973120905_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.OtterDay_EN-US0973120905_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "ocean"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Alaska",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a sea otter floating in the calm waters of Kachemak Bay, surrounded by lush kelp. The otter has a thick, wet fur coat and is holding its paws together, giving a curious expression. In the background, strands of kelp sway gently in the water, creating a textured pattern. The sunlight reflects off the surface of the water, enhancing the tranquil atmosphere of the scene.",
+      "search_text": "Explore the serene beauty of a sea otter in Kachemak Bay, Alaska. This marine animal is often found floating among kelp in the ocean. Sea otters are known for their playful behavior and thick fur. Discover more about wildlife in coastal habitats and the unique ecosystems of Alaska. Perfect for nature lovers and those interested in marine life.",
+      "keywords": [
+        "sea otter",
+        "animal",
+        "Kachemak Bay",
+        "Alaska",
+        "ocean",
+        "kelp",
+        "marine life",
+        "wildlife",
+        "floating",
+        "curious",
+        "serene",
+        "water",
+        "nature",
+        "aquatic",
+        "habitat",
+        "sea",
+        "coastal",
+        "biodiversity"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3C2E1E",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#678596",
+          "name": "slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#566263",
+          "name": "dim gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#779DB3",
+          "name": "cadet blue",
+          "w": 0.17
+        },
+        {
+          "hex": "#9EADB4",
+          "name": "dark gray",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
