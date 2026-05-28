@@ -127915,6 +127915,68 @@
   "HwaesongFortress_EN-US1012626869_UHD": {
     "date": "2026-05-28",
     "title": "Old city wall of Hwaseong Fortress, Suwon, South Korea",
-    "bing_url": "https://www.bing.com/th?id=OHR.HwaesongFortress_EN-US1012626869_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.HwaesongFortress_EN-US1012626869_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "castle"
+      ],
+      "season": null,
+      "country": "South Korea",
+      "region": "East Asia",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases the old city wall of Hwaseong Fortress in Suwon, South Korea, illuminated by the warm glow of dusk. The fortress wall is made of large stone blocks, with a slight curve following the landscape. In the foreground, lush green grass contrasts with the stone structure, while the sky above is painted in vibrant hues of purple and orange. A few trees are visible, adding to the natural beauty surrounding the historic architecture.",
+      "search_text": "Explore the historic Hwaseong Fortress in Suwon, South Korea, featuring its ancient city wall and stunning architecture. This iconic castle is a UNESCO World Heritage site, known for its impressive stone construction and beautiful sunset views. Ideal for travelers interested in cultural heritage and scenic landscapes, the fortress offers a glimpse into the past with its lush green surroundings and dramatic dusk sky.",
+      "keywords": [
+        "Hwaseong Fortress",
+        "Suwon",
+        "South Korea",
+        "castle",
+        "architecture",
+        "city wall",
+        "dusk",
+        "historic",
+        "stone",
+        "landscape",
+        "green grass",
+        "fortification",
+        "sunset",
+        "ancient",
+        "scenic",
+        "fortress",
+        "travel",
+        "East Asia",
+        "serene",
+        "cultural heritage"
+      ],
+      "color_palette": [
+        {
+          "hex": "#1F230A",
+          "name": "black",
+          "w": 0.3
+        },
+        {
+          "hex": "#3F3323",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#8B6878",
+          "name": "gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#554B3B",
+          "name": "dark olive green",
+          "w": 0.13
+        },
+        {
+          "hex": "#C09DA1",
+          "name": "rosy brown",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
