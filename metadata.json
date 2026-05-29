@@ -127982,6 +127982,68 @@
   "SummitEverest_EN-US0552794971_UHD": {
     "date": "2026-05-29",
     "title": "Mount Everest summit, Sagarmatha National Park, Nepal",
-    "bing_url": "https://www.bing.com/th?id=OHR.SummitEverest_EN-US0552794971_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SummitEverest_EN-US0552794971_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "landscape"
+      ],
+      "season": "winter",
+      "country": "Nepal",
+      "region": "Himalayas",
+      "time_of_day": "dawn",
+      "mood": "dramatic",
+      "ai_description": "The image showcases the majestic summit of Mount Everest, bathed in the warm glow of dawn. The surrounding peaks are covered in snow, contrasting with the darker, rugged terrain in the foreground. The sky transitions from deep blue to a soft orange hue near the horizon, highlighting the grandeur of the Himalayas. The sharp ridges and towering heights create a dramatic landscape that emphasizes the beauty and challenge of this iconic mountain range.",
+      "search_text": "Explore the breathtaking views of Mount Everest, the highest peak in the world, located in Sagarmatha National Park, Nepal. This stunning landscape features snow-capped mountains, dramatic ridges, and the serene beauty of dawn. Perfect for adventure seekers and nature lovers, this image captures the essence of the Himalayas and the challenges of high-altitude climbing. Discover the majestic scenery and rugged terrain that define this iconic region.",
+      "keywords": [
+        "Mount Everest",
+        "Himalayas",
+        "Nepal",
+        "snow-capped",
+        "summit",
+        "dawn",
+        "landscape",
+        "mountain",
+        "rugged terrain",
+        "national park",
+        "Sagarmatha",
+        "dramatic",
+        "peak",
+        "altitude",
+        "winter",
+        "nature",
+        "outdoor",
+        "adventure",
+        "scenic",
+        "majestic"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3679A2",
+          "name": "steel blue",
+          "w": 0.37
+        },
+        {
+          "hex": "#202F3E",
+          "name": "dark slate gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#BC9B76",
+          "name": "rosy brown",
+          "w": 0.22
+        },
+        {
+          "hex": "#464A50",
+          "name": "dark slate gray",
+          "w": 0.1
+        },
+        {
+          "hex": "#0A2F4A",
+          "name": "midnight blue",
+          "w": 0.03
+        }
+      ]
+    }
   }
 }
