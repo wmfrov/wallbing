@@ -128049,6 +128049,67 @@
   "EquusQuagga_EN-US8240577582_UHD": {
     "date": "2026-05-30",
     "title": "Plains zebra foal in Etosha National Park, Namibia",
-    "bing_url": "https://www.bing.com/th?id=OHR.EquusQuagga_EN-US8240577582_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.EquusQuagga_EN-US8240577582_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Namibia",
+      "region": "Southern Africa",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image features a silhouette of a plains zebra foal standing in tall grass during dusk. The background is bathed in a warm golden hue, creating a tranquil atmosphere. The zebra's distinctive black and white stripes are visible against the glowing backdrop. The soft focus of the surrounding grass adds to the serene mood of the scene, suggesting a peaceful moment in nature.",
+      "search_text": "Explore the beauty of a plains zebra foal captured during dusk in Etosha National Park, Namibia. This serene wildlife photograph showcases the unique stripes of the zebra against a warm golden background. Perfect for nature lovers and wildlife enthusiasts, this image highlights the tranquility of the African savanna. Ideal for searches related to zebras, wildlife photography, and serene animal moments in Southern Africa.",
+      "keywords": [
+        "plains zebra",
+        "zebra foal",
+        "animal",
+        "Namibia",
+        "Etosha National Park",
+        "silhouette",
+        "golden hour",
+        "grassland",
+        "wildlife",
+        "African savanna",
+        "dusk",
+        "serene",
+        "nature",
+        "wild animal",
+        "zebra stripes",
+        "foal",
+        "young zebra",
+        "tall grass",
+        "Southern Africa",
+        "wildlife photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#FDBE28",
+          "name": "golden rod",
+          "w": 0.28
+        },
+        {
+          "hex": "#7F2E06",
+          "name": "saddle brown",
+          "w": 0.28
+        },
+        {
+          "hex": "#FED03E",
+          "name": "sandy brown",
+          "w": 0.16
+        },
+        {
+          "hex": "#DE8311",
+          "name": "chocolate",
+          "w": 0.15
+        },
+        {
+          "hex": "#FEDC56",
+          "name": "khaki",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
