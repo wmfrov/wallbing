@@ -128115,6 +128115,68 @@
   "EvergladesWetlands_EN-US8572465847_UHD": {
     "date": "2026-05-31",
     "title": "Aerial view of Everglades National Park, Florida",
-    "bing_url": "https://www.bing.com/th?id=OHR.EvergladesWetlands_EN-US8572465847_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.EvergladesWetlands_EN-US8572465847_UHD.jpg",
+    "tags": {
+      "subject": [
+        "river",
+        "forest"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southeast USA",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases an aerial view of the Everglades National Park in Florida, characterized by its intricate network of winding rivers and lush green vegetation. The landscape features a vibrant tapestry of various shades of green, interspersed with dark blue water channels. The foreground displays a dense, marshy area, while the background reveals more open water and patches of greenery. The overall composition conveys a sense of tranquility and natural beauty, highlighting the unique ecosystem of the Everglades.",
+      "search_text": "Explore the stunning aerial view of Everglades National Park in Florida, featuring a complex network of rivers and lush wetlands. This unique ecosystem is home to diverse wildlife and rich vegetation. Ideal for nature lovers and those interested in wetlands, rivers, and the vibrant flora and fauna of the Everglades. Discover the serene beauty of this national park and its intricate waterways, perfect for outdoor activities and wildlife observation.",
+      "keywords": [
+        "Everglades",
+        "Florida",
+        "river",
+        "wetland",
+        "marsh",
+        "greenery",
+        "ecosystem",
+        "aerial view",
+        "nature",
+        "landscape",
+        "animal",
+        "water",
+        "vegetation",
+        "flora",
+        "winding",
+        "serene",
+        "park",
+        "wildlife",
+        "habitat",
+        "biodiversity"
+      ],
+      "color_palette": [
+        {
+          "hex": "#0F241E",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#334C1F",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#536C24",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#698128",
+          "name": "olive drab",
+          "w": 0.17
+        },
+        {
+          "hex": "#7E982B",
+          "name": "olive drab",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
