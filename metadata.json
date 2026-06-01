@@ -128182,6 +128182,68 @@
   "RockefellerPride_EN-US1087499810_UHD": {
     "date": "2026-06-01",
     "title": "Rainbow flags at Rockefeller Center on June 28, 2020, New York City",
-    "bing_url": "https://www.bing.com/th?id=OHR.RockefellerPride_EN-US1087499810_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.RockefellerPride_EN-US1087499810_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Northeast",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases a vibrant display of rainbow flags at Rockefeller Center in New York City. The flags are prominently lined up in neat rows, fluttering in the breeze against a backdrop of modern skyscrapers. The architectural style features a mix of classic and contemporary designs, with the iconic buildings of the city creating a dynamic urban landscape. The scene is lively and colorful, reflecting a sense of celebration and inclusivity.",
+      "search_text": "Explore the vibrant display of rainbow flags at Rockefeller Center in New York City, a symbol of LGBTQ+ pride and celebration. This urban scene features a mix of modern skyscrapers and classic architecture, creating a lively atmosphere. The colorful flags flutter in the breeze, representing diversity and community. Perfect for those interested in cityscapes, pride events, and architectural beauty in urban settings.",
+      "keywords": [
+        "rainbow flags",
+        "Rockefeller Center",
+        "New York City",
+        "urban",
+        "skyscrapers",
+        "celebration",
+        "pride",
+        "architecture",
+        "cityscape",
+        "vibrant",
+        "daytime",
+        "modern buildings",
+        "flag display",
+        "colorful",
+        "public space",
+        "LGBTQ+ pride",
+        "breeze",
+        "festivity",
+        "diversity",
+        "community"
+      ],
+      "color_palette": [
+        {
+          "hex": "#222D41",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#715C63",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#8D9DA3",
+          "name": "dark gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#B9AAA3",
+          "name": "dark gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#C2C5BF",
+          "name": "silver",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
