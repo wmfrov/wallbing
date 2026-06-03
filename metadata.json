@@ -128316,6 +128316,68 @@
   "BardenasReales_EN-US9044910730_UHD": {
     "date": "2026-06-03",
     "title": "Cyclist in Bardenas Reales Natural Park and Biosphere Reserve, Navarra, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.BardenasReales_EN-US9044910730_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BardenasReales_EN-US9044910730_UHD.jpg",
+    "tags": {
+      "subject": [
+        "desert",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Spain",
+      "region": "Navarra",
+      "time_of_day": "day",
+      "mood": "dramatic",
+      "ai_description": "The image showcases the unique geological formations of Bardenas Reales Natural Park in Navarra, Spain. The landscape features undulating ridges and valleys with a striking reddish hue, creating a dramatic and arid environment. A cyclist can be seen navigating through the rugged terrain, emphasizing the scale of the landscape. The foreground is dominated by textured earth, while the background reveals more of the undulating hills, illuminated by bright daylight.",
+      "search_text": "Explore the stunning Bardenas Reales Natural Park in Navarra, Spain, known for its dramatic desert landscape and unique geological formations. This image features a cyclist navigating the rugged terrain, showcasing the vibrant red earth and undulating hills. Ideal for outdoor enthusiasts, adventure seekers, and nature lovers, this location offers opportunities for mountain biking, hiking, and photography. Discover the beauty of Spain's natural parks and the thrill of exploring arid landscapes.",
+      "keywords": [
+        "Bardenas Reales",
+        "Spain",
+        "cyclist",
+        "desert",
+        "landscape",
+        "geological formations",
+        "arid",
+        "rugged terrain",
+        "red earth",
+        "natural park",
+        "outdoor activities",
+        "mountain biking",
+        "scenic",
+        "hiking",
+        "adventure",
+        "nature",
+        "travel",
+        "exploration",
+        "wilderness",
+        "landscape photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#492014",
+          "name": "maroon",
+          "w": 0.29
+        },
+        {
+          "hex": "#2B0E09",
+          "name": "black",
+          "w": 0.23
+        },
+        {
+          "hex": "#633A2B",
+          "name": "saddle brown",
+          "w": 0.21
+        },
+        {
+          "hex": "#855B48",
+          "name": "sienna",
+          "w": 0.16
+        },
+        {
+          "hex": "#B28971",
+          "name": "rosy brown",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
