@@ -128383,6 +128383,66 @@
   "PreeningEgret_EN-US9350488148_UHD": {
     "date": "2026-06-04",
     "title": "Snowy egret preening, central Florida, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.PreeningEgret_EN-US9350488148_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.PreeningEgret_EN-US9350488148_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird"
+      ],
+      "season": null,
+      "country": "USA",
+      "region": "Central Florida",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a snowy egret gracefully preening itself in a tranquil water setting. The bird's striking white feathers are highlighted by soft sunlight, creating a delicate and ethereal appearance. In the foreground, the egret's slender legs are partially submerged in the water, while its wings are elegantly arched over its body. The background is softly blurred, enhancing the focus on the bird and its grooming behavior, evoking a sense of calm and serenity.",
+      "search_text": "Explore the beauty of the snowy egret, a stunning white bird known for its graceful preening behavior. This image captures the essence of wildlife in Central Florida, showcasing the serene atmosphere of nature. Perfect for bird lovers and wildlife enthusiasts, this photograph highlights the delicate features and elegant posture of the egret in its natural habitat. Ideal for searches related to avian photography, waterfowl, and serene wildlife scenes.",
+      "keywords": [
+        "snowy egret",
+        "bird",
+        "preening",
+        "water",
+        "Florida",
+        "white feathers",
+        "elegant",
+        "wildlife",
+        "nature",
+        "serene",
+        "graceful",
+        "avian",
+        "reflection",
+        "tranquil",
+        "daylight",
+        "animal",
+        "waterfowl",
+        "slender legs",
+        "soft sunlight"
+      ],
+      "color_palette": [
+        {
+          "hex": "#929184",
+          "name": "gray",
+          "w": 0.33
+        },
+        {
+          "hex": "#70726A",
+          "name": "dim gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#A6A8A4",
+          "name": "dark gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#C1C3C4",
+          "name": "silver",
+          "w": 0.16
+        },
+        {
+          "hex": "#D6D6D4",
+          "name": "light gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
