@@ -128448,6 +128448,69 @@
   "WedLapland_EN-US9813120088_UHD": {
     "date": "2026-06-05",
     "title": "View from Skierffe Mountain over the Rapadalen river delta, Sarek National Park, Laponia, Lapland, Sweden",
-    "bing_url": "https://www.bing.com/th?id=OHR.WedLapland_EN-US9813120088_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.WedLapland_EN-US9813120088_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "river",
+        "landscape"
+      ],
+      "season": "summer",
+      "country": "Sweden",
+      "region": "Lapland",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases a breathtaking view from Skierffe Mountain, overlooking the expansive Rapadalen river delta in Sarek National Park. The foreground features winding rivers and lush green meadows, while the background is dominated by the rugged mountain terrain. The sky is partly cloudy, allowing sunlight to illuminate the landscape, creating a vibrant contrast between the water and the greenery. The intricate patterns formed by the riverbanks and the delta add to the visual complexity of this serene natural setting.",
+      "search_text": "Explore the stunning view from Skierffe Mountain in Sarek National Park, Lapland, Sweden. This aerial image captures the intricate patterns of the Rapadalen river delta, surrounded by lush greenery and rugged mountain terrain. Ideal for nature lovers and outdoor enthusiasts, this landscape showcases the serene beauty of the Swedish wilderness. Perfect for searches related to mountains, rivers, and scenic views in Lapland, as well as those interested in geological formations and tranquil natural settings.",
+      "keywords": [
+        "Skierffe Mountain",
+        "Rapadalen",
+        "Sarek National Park",
+        "Lapland",
+        "Sweden",
+        "river delta",
+        "landscape",
+        "mountain",
+        "lush greenery",
+        "winding rivers",
+        "nature",
+        "outdoor",
+        "scenic view",
+        "serene",
+        "daylight",
+        "partly cloudy",
+        "geological formations",
+        "wildlife",
+        "tranquil",
+        "aerial view"
+      ],
+      "color_palette": [
+        {
+          "hex": "#74703F",
+          "name": "dark olive green",
+          "w": 0.27
+        },
+        {
+          "hex": "#2A3B3D",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#949F90",
+          "name": "dark sea green",
+          "w": 0.17
+        },
+        {
+          "hex": "#CFCFC0",
+          "name": "light gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#C1AB51",
+          "name": "dark khaki",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
