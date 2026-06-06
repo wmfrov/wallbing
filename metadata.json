@@ -128516,6 +128516,67 @@
   "HikingNatchez_EN-US0663065299_UHD": {
     "date": "2026-06-06",
     "title": "Natchez Trace Parkway, Tupelo, Mississippi, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.HikingNatchez_EN-US0663065299_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.HikingNatchez_EN-US0663065299_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest"
+      ],
+      "season": "spring",
+      "country": "USA",
+      "region": "Southeast USA",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image showcases a lush green forest with a wooden boardwalk leading through the trees. Sunlight filters through the leaves, creating a warm, inviting glow. The foreground features the wooden path, while the background is filled with dense foliage and vibrant greenery. The scene evokes a sense of tranquility and connection with nature, typical of a spring morning.",
+      "search_text": "Explore the serene beauty of a lush forest in springtime, featuring a wooden boardwalk winding through vibrant greenery. This tranquil scene captures the essence of nature in Mississippi, with sunlight filtering through the trees. Perfect for nature lovers and those seeking peaceful outdoor experiences, this image highlights the rich flora and inviting atmosphere of the Southeast USA.",
+      "keywords": [
+        "forest",
+        "wooden boardwalk",
+        "sunlight",
+        "greenery",
+        "spring",
+        "pathway",
+        "trees",
+        "nature",
+        "Mississippi",
+        "tranquil",
+        "wildflowers",
+        "lush",
+        "scenic",
+        "outdoors",
+        "landscape",
+        "serene",
+        "sunshine",
+        "blooming",
+        "Southeast USA",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#416318",
+          "name": "dark olive green",
+          "w": 0.28
+        },
+        {
+          "hex": "#293D0B",
+          "name": "dark green",
+          "w": 0.22
+        },
+        {
+          "hex": "#5A861E",
+          "name": "olive drab",
+          "w": 0.22
+        },
+        {
+          "hex": "#65B029",
+          "name": "olive drab",
+          "w": 0.15
+        },
+        {
+          "hex": "#AEC446",
+          "name": "yellow green",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
