@@ -128582,6 +128582,65 @@
   "GardenAtlanta_EN-US2319128074_UHD": {
     "date": "2026-06-07",
     "title": "Atlanta Botanical Garden, Atlanta, Georgia",
-    "bing_url": "https://www.bing.com/th?id=OHR.GardenAtlanta_EN-US2319128074_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.GardenAtlanta_EN-US2319128074_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "garden"
+      ],
+      "season": "summer",
+      "country": "United States",
+      "region": "Southeast",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases a colorful display of oversized, geometric flower sculptures set against a lush garden backdrop. Bright yellow sunflowers dominate the scene, complemented by pink, white, and orange flowers made from similar materials. The foreground features a vibrant array of blooming flowers in various colors, creating a striking contrast with the green foliage. The overall atmosphere is lively and cheerful, indicative of a summer day in a botanical garden.",
+      "search_text": "Explore the vibrant floral displays at the Atlanta Botanical Garden in Georgia, featuring oversized geometric flower sculptures like sunflowers and colorful blooms. This summer garden is a perfect example of ornamental landscaping, showcasing a variety of flowers in bright colors. Ideal for nature lovers and those interested in botanical art, this garden offers a lively atmosphere filled with blooming plants and decorative art pieces.",
+      "keywords": [
+        "sunflower",
+        "flower",
+        "garden",
+        "Atlanta Botanical Garden",
+        "geometric flowers",
+        "vibrant colors",
+        "landscape",
+        "summer",
+        "blooming",
+        "ornamental plants",
+        "decorative art",
+        "floral display",
+        "colorful",
+        "botanical",
+        "landscaping",
+        "animal",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#20331F",
+          "name": "dark slate gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#5F6A41",
+          "name": "dark olive green",
+          "w": 0.26
+        },
+        {
+          "hex": "#733836",
+          "name": "saddle brown",
+          "w": 0.16
+        },
+        {
+          "hex": "#C5B259",
+          "name": "dark khaki",
+          "w": 0.15
+        },
+        {
+          "hex": "#699867",
+          "name": "gray",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
