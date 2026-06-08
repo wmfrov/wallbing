@@ -128646,6 +128646,65 @@
   "Cyanea_EN-US1146473249_UHD": {
     "date": "2026-06-08",
     "title": "Lion's mane jellyfish swimming in the ocean",
-    "bing_url": "https://www.bing.com/th?id=OHR.Cyanea_EN-US1146473249_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Cyanea_EN-US1146473249_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "animal"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": null,
+      "mood": "mystical",
+      "ai_description": "The image features a Lion's mane jellyfish gracefully swimming in the ocean. Its bell-shaped, translucent body is a vibrant pink, with long, flowing tentacles trailing behind it. The background is dark, emphasizing the jellyfish's luminous colors and delicate textures. The tentacles exhibit intricate patterns, creating a sense of movement and fluidity. The overall atmosphere is serene and otherworldly, capturing the beauty of marine life.",
+      "search_text": "Explore the mesmerizing world of the Lion's mane jellyfish, a stunning marine animal known for its vibrant colors and long, flowing tentacles. This aquatic creature is often found swimming gracefully in the ocean, showcasing its translucent body against a dark background. Perfect for those interested in marine life, underwater photography, and the beauty of jellyfish. Discover more about this mystical animal and its role in the ocean ecosystem.",
+      "keywords": [
+        "Lion's mane jellyfish",
+        "jellyfish",
+        "ocean",
+        "marine life",
+        "animal",
+        "tentacles",
+        "translucent",
+        "swimming",
+        "aquatic",
+        "underwater",
+        "sea",
+        "creature",
+        "luminescent",
+        "mystical",
+        "fluid",
+        "nature",
+        "wildlife"
+      ],
+      "color_palette": [
+        {
+          "hex": "#242B40",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#050D16",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#8A8089",
+          "name": "gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#080F17",
+          "name": "black",
+          "w": 0.2
+        },
+        {
+          "hex": "#010B17",
+          "name": "black",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
