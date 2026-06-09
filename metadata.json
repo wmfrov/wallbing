@@ -128710,6 +128710,69 @@
   "CTNPVernazza_EN-US1571456265_UHD": {
     "date": "2026-06-09",
     "title": "Vernazza, Cinque Terre, Liguria, Italy",
-    "bing_url": "https://www.bing.com/th?id=OHR.CTNPVernazza_EN-US1571456265_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.CTNPVernazza_EN-US1571456265_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture",
+        "ocean"
+      ],
+      "season": null,
+      "country": "Italy",
+      "region": "Liguria",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures the picturesque village of Vernazza, part of the Cinque Terre in Italy. The colorful buildings line the waterfront, reflecting beautifully in the calm ocean waters. A historic tower rises above the village, while a small harbor with boats adds to the charm. The sky is painted in soft hues of purple and orange as the sun sets, creating a serene atmosphere.",
+      "search_text": "Explore the beautiful village of Vernazza in Cinque Terre, Liguria, Italy. This coastal town features colorful architecture along the waterfront, with a serene ocean view. The historic tower and small harbor with boats make it a picturesque destination. Perfect for travel enthusiasts seeking scenic landscapes and charming villages, especially during sunset.",
+      "keywords": [
+        "Vernazza",
+        "Cinque Terre",
+        "Liguria",
+        "Italy",
+        "ocean",
+        "architecture",
+        "colorful buildings",
+        "sunset",
+        "harbor",
+        "boats",
+        "historic tower",
+        "village",
+        "serene",
+        "coastal",
+        "waterfront",
+        "reflection",
+        "scenic",
+        "tourism",
+        "travel",
+        "landscape"
+      ],
+      "color_palette": [
+        {
+          "hex": "#4C2F44",
+          "name": "dark slate gray",
+          "w": 0.3
+        },
+        {
+          "hex": "#11235F",
+          "name": "midnight blue",
+          "w": 0.21
+        },
+        {
+          "hex": "#5E6198",
+          "name": "slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#E3ADA6",
+          "name": "tan",
+          "w": 0.15
+        },
+        {
+          "hex": "#8489C9",
+          "name": "medium purple",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
