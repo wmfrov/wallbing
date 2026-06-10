@@ -128778,6 +128778,69 @@
   "Hnausapollur_EN-US2080493040_UHD": {
     "date": "2026-06-10",
     "title": "Hnausapollur volcanic crater lake, Fjallabak Nature Reserve, Landmannalaugar, Iceland",
-    "bing_url": "https://www.bing.com/th?id=OHR.Hnausapollur_EN-US2080493040_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Hnausapollur_EN-US2080493040_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "mountain",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Iceland",
+      "region": "Scandinavia",
+      "time_of_day": "day",
+      "mood": "dramatic",
+      "ai_description": "The image showcases the Hnausapollur volcanic crater lake surrounded by rugged mountains in the Fjallabak Nature Reserve. The lake's vibrant turquoise water contrasts sharply with the dark volcanic terrain. In the background, rolling hills and distant mountains are partially shrouded in mist, adding to the dramatic atmosphere. The sky is filled with ominous clouds, hinting at possible rain, which enhances the stark beauty of the landscape.",
+      "search_text": "Explore the stunning Hnausapollur volcanic crater lake located in the Fjallabak Nature Reserve of Iceland. This breathtaking landscape features dramatic mountains and a vibrant turquoise lake surrounded by dark volcanic terrain. Ideal for nature photography, this location showcases unique geological formations and offers a glimpse into Iceland's wild beauty. Perfect for outdoor enthusiasts and travelers seeking scenic views and dramatic skies.",
+      "keywords": [
+        "Hnausapollur",
+        "volcanic crater",
+        "lake",
+        "Iceland",
+        "Fjallabak Nature Reserve",
+        "mountains",
+        "turquoise water",
+        "dark terrain",
+        "rugged landscape",
+        "dramatic sky",
+        "mist",
+        "geological formations",
+        "nature",
+        "landscape",
+        "outdoors",
+        "scenic",
+        "travel",
+        "photography",
+        "wilderness",
+        "volcano"
+      ],
+      "color_palette": [
+        {
+          "hex": "#50595B",
+          "name": "dim gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#303139",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#9B9081",
+          "name": "gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#393C46",
+          "name": "dark slate gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#484243",
+          "name": "dark slate gray",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
