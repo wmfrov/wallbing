@@ -128846,6 +128846,68 @@
   "Limpets_EN-US1055673545_UHD": {
     "date": "2026-06-11",
     "title": "Limpets exposed at low tide on the coast of Praia da Ursa, Portugal",
-    "bing_url": "https://www.bing.com/th?id=OHR.Limpets_EN-US1055673545_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Limpets_EN-US1055673545_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Portugal",
+      "region": "Southern Europe",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a rocky coastline at Praia da Ursa in Portugal during low tide. In the foreground, large boulders are covered with limpets, showcasing their textured surfaces. The background features jagged rock formations that rise dramatically from the sandy beach. The sky is painted in soft blue hues, indicating dusk, and the overall atmosphere is calm and tranquil, inviting viewers to appreciate the natural beauty of the coastal landscape.",
+      "search_text": "Explore the serene beauty of Praia da Ursa in Portugal, where limpets cling to rocky boulders during low tide. This coastal landscape features dramatic rock formations and a tranquil beach setting. Perfect for nature lovers and those interested in marine life, this image captures the essence of Southern Europe's stunning ocean views. Discover the textures of the rocks and the peaceful atmosphere at dusk, ideal for photography and relaxation.",
+      "keywords": [
+        "limpets",
+        "rocky coastline",
+        "boulders",
+        "beach",
+        "ocean",
+        "Portugal",
+        "low tide",
+        "sea",
+        "natural landscape",
+        "serene",
+        "southern Europe",
+        "jagged rocks",
+        "marine life",
+        "textures",
+        "dusk",
+        "coastal",
+        "wildlife",
+        "scenic",
+        "landscape",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#383550",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#1B182D",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#625E7B",
+          "name": "dim gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#A1A2C2",
+          "name": "dark gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#5B98DD",
+          "name": "corn flower blue",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
