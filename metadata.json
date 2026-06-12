@@ -128913,6 +128913,68 @@
   "SpainBeeEater_EN-US5920719155_UHD": {
     "date": "2026-06-12",
     "title": "European bee-eater, Sierra de Grazalema Natural Park, C\u00e1diz, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.SpainBeeEater_EN-US5920719155_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SpainBeeEater_EN-US5920719155_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird",
+        "flower"
+      ],
+      "season": "spring",
+      "country": "Spain",
+      "region": "Southern Europe",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image features a European bee-eater in mid-flight, showcasing its vibrant plumage with shades of green, blue, and orange. The bird is surrounded by a colorful array of wildflowers, including red poppies and purple blooms, creating a lively and picturesque scene. The background is softly blurred, emphasizing the bird's dynamic movement. The setting suggests a sunny day in a natural park, with a rich tapestry of colors that highlights the beauty of spring.",
+      "search_text": "Explore the beauty of the European bee-eater, a stunning bird known for its vibrant colors and graceful flight. This image captures the essence of spring in Sierra de Grazalema Natural Park, C\u00e1diz, Spain, surrounded by a variety of wildflowers including red poppies. Perfect for nature lovers and birdwatchers, this scene embodies the lively spirit of wildlife in a natural setting. Discover more about this captivating species and its habitat.",
+      "keywords": [
+        "European bee-eater",
+        "Merops apiaster",
+        "bird",
+        "flying",
+        "wildflowers",
+        "poppies",
+        "colorful",
+        "spring",
+        "nature",
+        "Sierra de Grazalema",
+        "C\u00e1diz",
+        "Spain",
+        "vibrant",
+        "animal",
+        "natural park",
+        "flora",
+        "landscape",
+        "wildlife",
+        "colorful feathers",
+        "flight"
+      ],
+      "color_palette": [
+        {
+          "hex": "#928351",
+          "name": "gray",
+          "w": 0.32
+        },
+        {
+          "hex": "#8E9261",
+          "name": "gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#AB9257",
+          "name": "peru",
+          "w": 0.17
+        },
+        {
+          "hex": "#B8A35A",
+          "name": "dark khaki",
+          "w": 0.12
+        },
+        {
+          "hex": "#98624B",
+          "name": "sienna",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
