@@ -128980,6 +128980,68 @@
   "BadSunset_EN-US5981956630_UHD": {
     "date": "2026-06-13",
     "title": "Sunset in Badlands National Park, South Dakota, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.BadSunset_EN-US5981956630_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BadSunset_EN-US5981956630_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "desert"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Midwest",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures the stunning landscape of Badlands National Park in South Dakota during sunset. The foreground features sharply defined, layered rock formations with hues of pink, orange, and gray, creating a dramatic yet serene atmosphere. In the background, the vast plains stretch out, dotted with patches of greenery. The soft pastel sky transitions from warm tones near the horizon to cooler shades above, enhancing the tranquil mood of the scene.",
+      "search_text": "Explore the breathtaking landscape of Badlands National Park in South Dakota, known for its unique rock formations and stunning sunsets. This serene desert environment features layered geological structures with vibrant pink and orange hues. Perfect for nature lovers and photographers, the park offers scenic views of the plains and captivating outdoor experiences. Discover the natural beauty and tranquility of this iconic national park.",
+      "keywords": [
+        "Badlands",
+        "South Dakota",
+        "landscape",
+        "desert",
+        "rock formations",
+        "sunset",
+        "layered",
+        "pink",
+        "orange",
+        "serene",
+        "plains",
+        "geological",
+        "natural beauty",
+        "hills",
+        "scenic",
+        "outdoor",
+        "national park",
+        "photography",
+        "travel",
+        "nature"
+      ],
+      "color_palette": [
+        {
+          "hex": "#978584",
+          "name": "gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#B0A7A7",
+          "name": "dark gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#665B53",
+          "name": "dim gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#F3CCC1",
+          "name": "pink",
+          "w": 0.13
+        },
+        {
+          "hex": "#E7B9B7",
+          "name": "light pink",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
