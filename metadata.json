@@ -129113,6 +129113,68 @@
   "ParkEstd_EN-US6114949122_UHD": {
     "date": "2026-06-15",
     "title": "Great Smoky Mountains National Park, Tennessee",
-    "bing_url": "https://www.bing.com/th?id=OHR.ParkEstd_EN-US6114949122_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ParkEstd_EN-US6114949122_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "landscape"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southeast USA",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases the rolling hills of the Great Smoky Mountains, characterized by their layered silhouettes against a vibrant dusk sky. The mountains are covered in dense forests, creating a rich texture of greens and blues. The background features a gradient of colors transitioning from soft pink to deep purple, indicating the setting sun. The spatial layout emphasizes the depth of the landscape, with mountains receding into the distance, creating a sense of tranquility and vastness.",
+      "search_text": "Explore the stunning Great Smoky Mountains in Tennessee, featuring a serene landscape of rolling hills and dense forests. This image captures the beauty of dusk, with a vibrant sky transitioning from pink to purple. Ideal for nature lovers and outdoor enthusiasts, this picturesque view showcases the tranquility of the national park, perfect for photography and travel inspiration. Discover the rich textures and colors of this iconic mountain range.",
+      "keywords": [
+        "Great Smoky Mountains",
+        "Tennessee",
+        "mountain range",
+        "landscape",
+        "dusk",
+        "forest",
+        "hills",
+        "serene",
+        "nature",
+        "outdoors",
+        "scenic",
+        "blue",
+        "purple",
+        "sunset",
+        "tranquil",
+        "viewpoint",
+        "photography",
+        "travel",
+        "wilderness",
+        "national park"
+      ],
+      "color_palette": [
+        {
+          "hex": "#25315A",
+          "name": "dark slate gray",
+          "w": 0.3
+        },
+        {
+          "hex": "#454F8B",
+          "name": "dark slate blue",
+          "w": 0.23
+        },
+        {
+          "hex": "#12131E",
+          "name": "black",
+          "w": 0.21
+        },
+        {
+          "hex": "#FAA4BC",
+          "name": "light pink",
+          "w": 0.13
+        },
+        {
+          "hex": "#8B78B6",
+          "name": "light slate gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
