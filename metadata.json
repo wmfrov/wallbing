@@ -129180,6 +129180,69 @@
   "SevenMileTurtle_EN-US6164934763_UHD": {
     "date": "2026-06-16",
     "title": "Hawksbill sea turtle pair near Seven Mile Beach, Grand Cayman, Cayman Islands",
-    "bing_url": "https://www.bing.com/th?id=OHR.SevenMileTurtle_EN-US6164934763_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SevenMileTurtle_EN-US6164934763_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "animal",
+        "two_animals"
+      ],
+      "season": null,
+      "country": "Cayman Islands",
+      "region": "Caribbean",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a pair of Hawksbill sea turtles gracefully swimming through the clear blue waters of the ocean. The turtles are positioned in the foreground, showcasing their distinct shell patterns and colors. In the background, a rocky reef is visible, adding depth to the underwater scene. Sunlight filters down from the surface, creating a serene and tranquil atmosphere. The overall composition emphasizes the beauty of marine life in its natural habitat.",
+      "search_text": "Explore the beauty of Hawksbill sea turtles swimming in the ocean near Seven Mile Beach in the Cayman Islands. This serene underwater scene captures the grace of these marine animals in their natural habitat. Perfect for those interested in marine life, ocean photography, and tropical ecosystems, this image highlights the vibrant biodiversity of the Caribbean waters. Ideal for searches related to turtles, wildlife, and aquatic environments.",
+      "keywords": [
+        "Hawksbill sea turtle",
+        "marine life",
+        "ocean",
+        "underwater",
+        "pair",
+        "swimming",
+        "coral reef",
+        "turtle",
+        "animal",
+        "Cayman Islands",
+        "Caribbean",
+        "clear water",
+        "sea",
+        "wildlife",
+        "aquatic",
+        "tropical",
+        "serene",
+        "nature",
+        "biodiversity",
+        "ecosystem"
+      ],
+      "color_palette": [
+        {
+          "hex": "#077CC0",
+          "name": "dark cyan",
+          "w": 0.29
+        },
+        {
+          "hex": "#043464",
+          "name": "midnight blue",
+          "w": 0.25
+        },
+        {
+          "hex": "#065CA4",
+          "name": "teal",
+          "w": 0.22
+        },
+        {
+          "hex": "#00A4DB",
+          "name": "dark turquoise",
+          "w": 0.19
+        },
+        {
+          "hex": "#2AA7CB",
+          "name": "light sea green",
+          "w": 0.05
+        }
+      ]
+    }
   }
 }
