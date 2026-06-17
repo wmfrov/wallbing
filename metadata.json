@@ -129248,6 +129248,68 @@
   "TremolaRoad_EN-US6212254886_UHD": {
     "date": "2026-06-17",
     "title": "Tremola Road on the Saint Gotthard Pass in Airolo, Switzerland",
-    "bing_url": "https://www.bing.com/th?id=OHR.TremolaRoad_EN-US6212254886_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.TremolaRoad_EN-US6212254886_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Switzerland",
+      "region": "Central Europe",
+      "time_of_day": "dusk",
+      "mood": "dramatic",
+      "ai_description": "The image showcases the winding Tremola Road on the Saint Gotthard Pass, illuminated by the warm glow of the setting sun. The road snakes through rugged mountain terrain, with steep rocky cliffs on either side. In the background, a hazy valley is visible, adding depth to the scene. The contrast between the dark mountains and the bright road creates a striking visual effect, emphasizing the dramatic landscape. The sky is clear, with the sun positioned low, casting long shadows across the terrain.",
+      "search_text": "Explore the stunning Tremola Road on the Saint Gotthard Pass in Airolo, Switzerland. This winding mountain road offers dramatic views and a scenic driving experience through rugged terrain. Perfect for photography enthusiasts, the image captures the beauty of the landscape during dusk with a glowing sunset. Discover the unique geography and natural beauty of this iconic Swiss landmark, ideal for outdoor adventures and travel inspiration.",
+      "keywords": [
+        "Tremola Road",
+        "Saint Gotthard Pass",
+        "Airolo",
+        "Switzerland",
+        "mountain",
+        "landscape",
+        "winding road",
+        "dramatic",
+        "sunset",
+        "rocky cliffs",
+        "valley",
+        "scenic",
+        "highway",
+        "travel",
+        "nature",
+        "outdoors",
+        "driving",
+        "photography",
+        "landform",
+        "geography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5C7186",
+          "name": "slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#2F373D",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#0A0F12",
+          "name": "black",
+          "w": 0.2
+        },
+        {
+          "hex": "#1F2122",
+          "name": "black",
+          "w": 0.18
+        },
+        {
+          "hex": "#151A1C",
+          "name": "black",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
