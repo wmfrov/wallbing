@@ -129315,6 +129315,68 @@
   "Saqsaywaman_EN-US6250260694_UHD": {
     "date": "2026-06-18",
     "title": "Aerial view of the ruins of Sacsayhuam\u00e1n, Cusco, Peru",
-    "bing_url": "https://www.bing.com/th?id=OHR.Saqsaywaman_EN-US6250260694_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Saqsaywaman_EN-US6250260694_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ruins",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Peru",
+      "region": "South America",
+      "time_of_day": "day",
+      "mood": "stark",
+      "ai_description": "The image shows an aerial view of the ancient ruins of Sacsayhuam\u00e1n, located near Cusco, Peru. The site features a complex layout with large stone structures and geometric patterns, indicative of Incan architecture. In the foreground, the circular arrangement of stones is prominent, surrounded by various other ruins and pathways. The landscape is characterized by lush greenery on the hillsides, contrasting with the stark stonework of the ruins, reflecting the historical significance and architectural prowess of the Inca civilization.",
+      "search_text": "Explore the ancient ruins of Sacsayhuam\u00e1n in Cusco, Peru, a remarkable example of Incan architecture. This historical site features intricate stone structures and geometric layouts, set against a backdrop of lush green hills. Ideal for those interested in archeological sites, ancient civilizations, and cultural heritage. Discover the significance of this fortress and its role in the history of South America, making it a must-visit tourist destination for history enthusiasts and travelers alike.",
+      "keywords": [
+        "Sacsayhuam\u00e1n",
+        "Inca ruins",
+        "Cusco",
+        "Peru",
+        "ancient architecture",
+        "stone structures",
+        "archeological site",
+        "geometric patterns",
+        "historical landmark",
+        "South America",
+        "landscape",
+        "cultural heritage",
+        "tourist destination",
+        "ruins",
+        "historical site",
+        "ancient civilization",
+        "fortress",
+        "heritage site",
+        "building",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#C6BDAC",
+          "name": "silver",
+          "w": 0.24
+        },
+        {
+          "hex": "#908C6F",
+          "name": "gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#303829",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#595E47",
+          "name": "dark olive green",
+          "w": 0.16
+        },
+        {
+          "hex": "#756E53",
+          "name": "dim gray",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
