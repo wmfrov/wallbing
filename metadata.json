@@ -129382,6 +129382,57 @@
   "JuneteenthNMAAHC_EN-US6306942628_UHD": {
     "date": "2026-06-19",
     "title": "National Museum of African American History and Culture, Washington, DC",
-    "bing_url": "https://www.bing.com/th?id=OHR.JuneteenthNMAAHC_EN-US6306942628_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.JuneteenthNMAAHC_EN-US6306942628_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "North America",
+      "time_of_day": "dusk",
+      "mood": "dramatic",
+      "ai_description": "The image showcases the National Museum of African American History and Culture in Washington, DC. The museum's unique architectural design features a striking fa\u00e7ade with intricate patterns that reflect light beautifully against the evening sky. The building's angular shapes create a modern aesthetic, contrasting with the soft clouds in the background. The warm glow from the structure adds a dramatic effect, highlighting its significance as a cultural landmark.",
+      "search_text": "Explore the National Museum of African American History and Culture in Washington, DC, known for its modern architecture and intricate design. This cultural landmark features a unique fa\u00e7ade that reflects light beautifully, especially during dusk. Perfect for those interested in museums, architecture, and American history, this building stands out with its angular shapes and dramatic lighting, making it a must-visit destination.",
+      "keywords": [
+        "National Museum of African American History and Culture",
+        "Washington DC",
+        "architecture",
+        "modern design",
+        "cultural landmark",
+        "evening sky",
+        "dramatic lighting",
+        "angular shapes",
+        "intricate patterns",
+        "museum"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5C4427",
+          "name": "dark olive green",
+          "w": 0.28
+        },
+        {
+          "hex": "#39230D",
+          "name": "black",
+          "w": 0.27
+        },
+        {
+          "hex": "#6395D3",
+          "name": "corn flower blue",
+          "w": 0.24
+        },
+        {
+          "hex": "#7A9FCF",
+          "name": "corn flower blue",
+          "w": 0.12
+        },
+        {
+          "hex": "#5E7FA5",
+          "name": "slate gray",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
