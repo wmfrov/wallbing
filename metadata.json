@@ -129438,6 +129438,69 @@
   "ArchedIceberg_EN-US6345786269_UHD": {
     "date": "2026-06-20",
     "title": "Arched iceberg floating off the western Antarctic Peninsula, Southern Ocean",
-    "bing_url": "https://www.bing.com/th?id=OHR.ArchedIceberg_EN-US6345786269_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ArchedIceberg_EN-US6345786269_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ice",
+        "ocean",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Antarctica",
+      "region": "Southern Ocean",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image features a striking arched iceberg floating in the Southern Ocean off the western Antarctic Peninsula. The iceberg's icy blue hues contrast beautifully with the dark waters below. In the background, a cloudy sky adds a dramatic touch, hinting at the cold and remote environment. The arch of the iceberg creates a natural frame, drawing the viewer's eye towards the horizon where the ocean meets the sky. The overall scene conveys a sense of tranquility and isolation in this pristine polar landscape.",
+      "search_text": "Explore the breathtaking beauty of Antarctica with this image of an arched iceberg floating in the Southern Ocean. The striking blue ice contrasts with the dark waters, creating a serene and tranquil atmosphere. Ideal for those interested in polar landscapes, marine environments, and geological formations, this image captures the essence of the cold, remote beauty of the Antarctic region. Perfect for searches related to icebergs, Antarctic scenery, and natural wonders.",
+      "keywords": [
+        "iceberg",
+        "Antarctica",
+        "Southern Ocean",
+        "arch",
+        "blue ice",
+        "cold",
+        "marine",
+        "landscape",
+        "serene",
+        "frozen",
+        "natural formation",
+        "icy",
+        "ocean",
+        "cloudy",
+        "remote",
+        "tranquil",
+        "geological formation",
+        "polar",
+        "water",
+        "landscape photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#688A94",
+          "name": "slate gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#6EA6B4",
+          "name": "cadet blue",
+          "w": 0.21
+        },
+        {
+          "hex": "#9DA7AC",
+          "name": "dark gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#4A6D76",
+          "name": "dim gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#ABC3C9",
+          "name": "light steel blue",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
