@@ -129506,6 +129506,67 @@
   "EggDad_EN-US6390221455_UHD": {
     "date": "2026-06-21",
     "title": "King penguin father checking egg",
-    "bing_url": "https://www.bing.com/th?id=OHR.EggDad_EN-US6390221455_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.EggDad_EN-US6390221455_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "bird"
+      ],
+      "season": null,
+      "country": "Antarctica",
+      "region": "Antarctica",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a group of king penguins in a natural setting, with one penguin prominently positioned in the foreground, cradling an egg. The penguin's distinctive black and white plumage is highlighted by vibrant orange patches near its head. In the background, several other penguins are visible, creating a sense of community. The ground is textured with grass and nesting material, suggesting a breeding ground. The overall atmosphere is calm and nurturing, emphasizing the parental care of the penguin.",
+      "search_text": "Explore the fascinating world of king penguins, known for their striking black and white plumage and vibrant orange accents. This image captures a king penguin father caring for its egg in a serene Antarctic environment. Penguins are social animals, often found in large colonies, and exhibit unique parenting behaviors. Discover more about their breeding habits, natural habitats, and the beauty of wildlife in Antarctica.",
+      "keywords": [
+        "king penguin",
+        "penguin",
+        "animal",
+        "bird",
+        "egg",
+        "parenting",
+        "breeding",
+        "Antarctica",
+        "wildlife",
+        "colony",
+        "nurturing",
+        "black and white",
+        "orange",
+        "natural habitat",
+        "serene",
+        "nesting",
+        "group",
+        "plumage",
+        "frozen"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3A424F",
+          "name": "dark slate gray",
+          "w": 0.31
+        },
+        {
+          "hex": "#0A182A",
+          "name": "black",
+          "w": 0.2
+        },
+        {
+          "hex": "#16263B",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#7C7C82",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#262C39",
+          "name": "dark slate gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
