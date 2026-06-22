@@ -129572,6 +129572,67 @@
   "QuinaultFerns_EN-US6436576493_UHD": {
     "date": "2026-06-22",
     "title": "Quinault rainforest, Olympic National Park, Washington state",
-    "bing_url": "https://www.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.QuinaultFerns_EN-US6436576493_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Pacific Northwest",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures the lush Quinault rainforest in Olympic National Park, Washington. Sunlight filters through the dense canopy, creating a warm glow that highlights the vibrant green ferns in the foreground. Towering trees, draped in moss, rise majestically in the background, adding depth to the scene. The interplay of light and shadow creates a tranquil atmosphere, inviting viewers to immerse themselves in this serene natural setting.",
+      "search_text": "Explore the Quinault rainforest in Olympic National Park, Washington, known for its lush greenery and towering trees. This serene forest scene features vibrant ferns and a beautiful interplay of sunlight filtering through the dense canopy. Ideal for nature lovers and those seeking tranquil landscapes, this image captures the essence of the Pacific Northwest's rich biodiversity and stunning natural beauty.",
+      "keywords": [
+        "Quinault rainforest",
+        "Olympic National Park",
+        "Washington",
+        "forest",
+        "ferns",
+        "moss",
+        "sunlight",
+        "canopy",
+        "trees",
+        "nature",
+        "wildlife",
+        "lush",
+        "greenery",
+        "serene",
+        "tranquil",
+        "Pacific Northwest",
+        "dawn",
+        "landscape",
+        "flora",
+        "vegetation"
+      ],
+      "color_palette": [
+        {
+          "hex": "#17220D",
+          "name": "black",
+          "w": 0.28
+        },
+        {
+          "hex": "#0B1408",
+          "name": "black",
+          "w": 0.24
+        },
+        {
+          "hex": "#2A3410",
+          "name": "dark green",
+          "w": 0.22
+        },
+        {
+          "hex": "#454E18",
+          "name": "dark olive green",
+          "w": 0.16
+        },
+        {
+          "hex": "#848330",
+          "name": "olive drab",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
