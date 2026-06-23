@@ -129638,6 +129638,68 @@
   "Fujisan_EN-US6479372200_UHD": {
     "date": "2026-06-23",
     "title": "Mount Fuji on Honshu Island, Japan",
-    "bing_url": "https://www.bing.com/th?id=OHR.Fujisan_EN-US6479372200_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Fujisan_EN-US6479372200_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "landscape"
+      ],
+      "season": "autumn",
+      "country": "Japan",
+      "region": "East Asia",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image showcases Mount Fuji, a prominent peak on Honshu Island, Japan, rising majestically above a sea of clouds. The foreground features a gentle slope adorned with dark green trees, while the background reveals the snow-capped summit of the mountain, illuminated by soft pink and purple hues of dawn. Wispy clouds drift around the mountain, enhancing the tranquil atmosphere. The sky transitions from deep blue to warm pastel shades, creating a serene and picturesque landscape.",
+      "search_text": "Explore the breathtaking beauty of Mount Fuji, a majestic mountain located on Honshu Island in Japan. This serene landscape captures the essence of dawn with soft pastel colors illuminating the sky. Perfect for nature lovers and photography enthusiasts, this image showcases the tranquil atmosphere created by the clouds surrounding the peak. Ideal for searches related to Japanese landscapes, mountains, and travel destinations.",
+      "keywords": [
+        "Mount Fuji",
+        "Japan",
+        "mountain",
+        "dawn",
+        "clouds",
+        "landscape",
+        "East Asia",
+        "serene",
+        "autumn",
+        "nature",
+        "scenic",
+        "peak",
+        "sky",
+        "trees",
+        "horizon",
+        "majestic",
+        "tranquil",
+        "outdoors",
+        "travel",
+        "photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#22274C",
+          "name": "midnight blue",
+          "w": 0.26
+        },
+        {
+          "hex": "#5F5480",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#997DB0",
+          "name": "light slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#C9A5C5",
+          "name": "silver",
+          "w": 0.15
+        },
+        {
+          "hex": "#D9CCE2",
+          "name": "thistle",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
