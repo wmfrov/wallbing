@@ -129705,6 +129705,68 @@
   "BFPollin_EN-US6519187095_UHD": {
     "date": "2026-06-24",
     "title": "Butterfly pollinating on yellow flower",
-    "bing_url": "https://www.bing.com/th?id=OHR.BFPollin_EN-US6519187095_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BFPollin_EN-US6519187095_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "animal"
+      ],
+      "season": "summer",
+      "country": null,
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a vibrant yellow flower with broad petals in full bloom, serving as a backdrop for a delicate butterfly perched on its center. The butterfly displays a striking orange and white pattern with black spots, indicating it may belong to the Lycaenidae family. In the foreground, the flower's intricate details are highlighted, showcasing its textured center and bright petals. A small green insect can also be seen on the flower, adding to the lively scene. The background is softly blurred, enhancing the focus on the butterfly and flower.",
+      "search_text": "Explore the beauty of nature with this stunning image of a butterfly pollinating a vibrant yellow flower. The butterfly, likely from the Lycaenidae family, showcases an intricate orange and white pattern. Perfect for those interested in macro photography, gardening, and the delicate balance of ecosystems. Ideal for searches related to pollination, insects, and summer blooms, this image captures the essence of serene outdoor beauty.",
+      "keywords": [
+        "butterfly",
+        "flower",
+        "yellow flower",
+        "pollination",
+        "Lycaenidae",
+        "insect",
+        "nature",
+        "blooming",
+        "vibrant",
+        "animal",
+        "macro",
+        "garden",
+        "summer",
+        "pollinator",
+        "green insect",
+        "petals",
+        "serene",
+        "colorful",
+        "flora",
+        "wildflower"
+      ],
+      "color_palette": [
+        {
+          "hex": "#E1C516",
+          "name": "golden rod",
+          "w": 0.25
+        },
+        {
+          "hex": "#2D6415",
+          "name": "forest green",
+          "w": 0.19
+        },
+        {
+          "hex": "#75820F",
+          "name": "olive",
+          "w": 0.19
+        },
+        {
+          "hex": "#576910",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#324B0F",
+          "name": "dark olive green",
+          "w": 0.18
+        }
+      ]
+    }
   }
 }
