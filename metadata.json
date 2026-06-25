@@ -129772,6 +129772,67 @@
   "GrandPlace_EN-US6561229456_UHD": {
     "date": "2026-06-25",
     "title": "Buildings on Grand-Place Square in Brussels, Belgium",
-    "bing_url": "https://www.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.GrandPlace_EN-US6561229456_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "city"
+      ],
+      "season": null,
+      "country": "Belgium",
+      "region": "Western Europe",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases the ornate buildings lining the Grand-Place Square in Brussels, Belgium. These structures feature intricate designs and golden accents, reflecting the rich architectural heritage of the city. The foreground displays a row of beautifully detailed facades, each with unique elements such as sculptures and decorative motifs. The sky above is partly cloudy, adding a dynamic backdrop to the vibrant scene.",
+      "search_text": "Explore the stunning architecture of Brussels, Belgium, particularly the ornate buildings on Grand-Place Square. This vibrant city is known for its historical architecture featuring intricate designs and golden accents. Discover the unique facades and cultural heritage that make this urban landscape a must-visit tourist attraction in Western Europe. Enjoy the dynamic atmosphere created by the partly cloudy sky and the rich architectural details.",
+      "keywords": [
+        "Brussels",
+        "Belgium",
+        "Grand-Place",
+        "architecture",
+        "ornate buildings",
+        "golden accents",
+        "historical architecture",
+        "European city",
+        "facade",
+        "sculptures",
+        "detailed designs",
+        "cultural heritage",
+        "urban landscape",
+        "city square",
+        "cloudy sky",
+        "vibrant colors",
+        "tourist attraction",
+        "historic buildings",
+        "Western Europe"
+      ],
+      "color_palette": [
+        {
+          "hex": "#827566",
+          "name": "dim gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#45392D",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#C6B496",
+          "name": "tan",
+          "w": 0.19
+        },
+        {
+          "hex": "#9DA7B0",
+          "name": "dark gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#D8D1C5",
+          "name": "light gray",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
