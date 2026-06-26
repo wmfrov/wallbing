@@ -129838,6 +129838,69 @@
   "ThamesSummer_EN-US6783349970_UHD": {
     "date": "2026-06-26",
     "title": "The River Thames, London, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.ThamesSummer_EN-US6783349970_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ThamesSummer_EN-US6783349970_UHD.jpg",
+    "tags": {
+      "subject": [
+        "river",
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "England",
+      "region": "United Kingdom",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases the River Thames flowing through London, with the iconic London Eye prominently featured on the left. Various boats are seen navigating the river, adding a dynamic element to the scene. In the background, notable architectural structures, including the Houses of Parliament, can be seen against a bright blue sky with scattered clouds. The lush greenery along the riverbank contrasts with the urban landscape, creating a lively atmosphere.",
+      "search_text": "Explore the vibrant cityscape of London featuring the River Thames, the iconic London Eye, and the historic Houses of Parliament. This picturesque view captures the essence of urban life along the waterway, with boats navigating the river under a bright blue sky. Perfect for those interested in architecture, landmarks, and scenic views of England's capital city. Ideal for searches related to London attractions, river views, and city landscapes.",
+      "keywords": [
+        "River Thames",
+        "London Eye",
+        "Houses of Parliament",
+        "boat",
+        "architecture",
+        "cityscape",
+        "urban",
+        "waterway",
+        "England",
+        "landmark",
+        "daytime",
+        "vibrant",
+        "sky",
+        "clouds",
+        "greenery",
+        "tourist attraction",
+        "historic",
+        "view",
+        "scenery",
+        "riverbank"
+      ],
+      "color_palette": [
+        {
+          "hex": "#2A5068",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#A9B6C2",
+          "name": "silver",
+          "w": 0.24
+        },
+        {
+          "hex": "#6F8A9B",
+          "name": "light slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#DAD8D3",
+          "name": "light gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#CFC5B7",
+          "name": "silver",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
