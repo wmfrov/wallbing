@@ -129906,6 +129906,67 @@
   "BoneyardBeach_EN-US8247496696_UHD": {
     "date": "2026-06-27",
     "title": "Driftwood on Boneyard Beach, Hunting Island, South Carolina",
-    "bing_url": "https://www.bing.com/th?id=OHR.BoneyardBeach_EN-US8247496696_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BoneyardBeach_EN-US8247496696_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southeast",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image depicts a tranquil beach scene at dusk, featuring driftwood scattered across the sandy shore. The foreground showcases twisted, bare branches of driftwood partially submerged in the gentle waves, reflecting the soft hues of the sunset. In the background, the sky transitions from deep orange to purple, creating a dramatic backdrop. The calm water mirrors the colors of the sky, enhancing the serene atmosphere of the scene.",
+      "search_text": "Explore the beauty of Driftwood on Boneyard Beach in Hunting Island, South Carolina, where twisted branches create a stunning silhouette against a vibrant sunset. This serene coastal landscape features gentle ocean waves and soft sandy shores, perfect for nature lovers and photographers. Discover the tranquil atmosphere of dusk as the sky transitions through shades of orange and purple, reflecting on the water. Ideal for those seeking peaceful beach scenes or unique driftwood formations.",
+      "keywords": [
+        "driftwood",
+        "beach",
+        "sunset",
+        "ocean",
+        "Hunting Island",
+        "South Carolina",
+        "twisted branches",
+        "serene",
+        "coastal",
+        "reflection",
+        "sand",
+        "waves",
+        "nature",
+        "landscape",
+        "twilight",
+        "seascape",
+        "tranquil",
+        "silhouette",
+        "shoreline",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#49394C",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#B7757A",
+          "name": "rosy brown",
+          "w": 0.23
+        },
+        {
+          "hex": "#9E5057",
+          "name": "sienna",
+          "w": 0.22
+        },
+        {
+          "hex": "#CA8B84",
+          "name": "rosy brown",
+          "w": 0.17
+        },
+        {
+          "hex": "#E7C0A7",
+          "name": "burly wood",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
