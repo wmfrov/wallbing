@@ -129972,6 +129972,68 @@
   "SaguaroSun_EN-US8982109543_UHD": {
     "date": "2026-06-28",
     "title": "Saguaro cacti near Windgate Pass, McDowell Range, Arizona, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SaguaroSun_EN-US8982109543_UHD.jpg",
+    "tags": {
+      "subject": [
+        "desert",
+        "flower"
+      ],
+      "season": "spring",
+      "country": "USA",
+      "region": "Southwest",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a stunning desert landscape at dawn, featuring towering saguaro cacti silhouetted against a vibrant sunrise. In the foreground, a spiny cactus adds texture, while the background reveals rolling hills and a colorful sky. Wildflowers bloom among the desert vegetation, enhancing the scene's beauty. The warm hues of orange and purple in the sky contrast with the green cacti, creating a serene and tranquil atmosphere.",
+      "search_text": "Explore the breathtaking desert landscape of Arizona featuring iconic saguaro cacti at sunrise. This serene scene showcases blooming wildflowers and the stunning McDowell Range. Perfect for nature lovers and those seeking beautiful outdoor landscapes, this image captures the essence of the Southwest. Ideal for searches related to desert flora, cacti, and tranquil sunrise views.",
+      "keywords": [
+        "saguaro",
+        "cactus",
+        "Arizona",
+        "desert",
+        "wildflowers",
+        "sunrise",
+        "landscape",
+        "McDowell Range",
+        "flora",
+        "spiny",
+        "serene",
+        "nature",
+        "outdoors",
+        "blooming",
+        "sunlight",
+        "mountains",
+        "vegetation",
+        "landmark",
+        "Southwest",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#4A4946",
+          "name": "dark slate gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#6D6960",
+          "name": "dim gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#213236",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#90A3B7",
+          "name": "dark gray",
+          "w": 0.12
+        },
+        {
+          "hex": "#E2BB9D",
+          "name": "burly wood",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
