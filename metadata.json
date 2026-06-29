@@ -130039,6 +130039,68 @@
   "BoraBoraLagoon_EN-US1491116478_UHD": {
     "date": "2026-06-29",
     "title": "Bora Bora and its lagoon, South Pacific, French Polynesia",
-    "bing_url": "https://www.bing.com/th?id=OHR.BoraBoraLagoon_EN-US1491116478_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BoraBoraLagoon_EN-US1491116478_UHD.jpg",
+    "tags": {
+      "subject": [
+        "island",
+        "ocean"
+      ],
+      "season": null,
+      "country": "French Polynesia",
+      "region": "Pacific Islands",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases a stunning aerial view of Bora Bora and its vibrant lagoon in French Polynesia. The foreground features a rich blue ocean, transitioning to lighter turquoise hues as it meets the sandy shores of the islands. Lush green vegetation covers the islands, with some areas appearing as small, isolated patches. The sky is dotted with fluffy white clouds, adding to the tranquil atmosphere of this tropical paradise. The overall composition highlights the natural beauty and serene environment of the South Pacific.",
+      "search_text": "Explore the breathtaking beauty of Bora Bora in French Polynesia, featuring its stunning lagoon and tropical islands. This aerial view captures the vibrant turquoise waters and lush greenery, making it a perfect destination for vacationers seeking paradise. Discover the serene landscapes, exotic coastal views, and the allure of island hopping in the South Pacific. Ideal for nature lovers and travelers looking for scenic beauty and tranquility.",
+      "keywords": [
+        "Bora Bora",
+        "French Polynesia",
+        "island",
+        "ocean",
+        "lagoon",
+        "tropical",
+        "paradise",
+        "turquoise water",
+        "aerial view",
+        "serene",
+        "landscape",
+        "vacation",
+        "tropical islands",
+        "blue sky",
+        "nature",
+        "scenic",
+        "travel",
+        "exotic",
+        "coastal",
+        "island hopping"
+      ],
+      "color_palette": [
+        {
+          "hex": "#B0C5C0",
+          "name": "silver",
+          "w": 0.26
+        },
+        {
+          "hex": "#033765",
+          "name": "midnight blue",
+          "w": 0.23
+        },
+        {
+          "hex": "#026BAE",
+          "name": "dark cyan",
+          "w": 0.21
+        },
+        {
+          "hex": "#38A1CD",
+          "name": "steel blue",
+          "w": 0.18
+        },
+        {
+          "hex": "#206D91",
+          "name": "teal",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
