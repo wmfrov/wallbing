@@ -130106,6 +130106,67 @@
   "MasaiGiraffe_EN-US2240704874_UHD": {
     "date": "2026-06-30",
     "title": "Giraffes at sunset in the Masai Mara National Reserve, Kenya",
-    "bing_url": "https://www.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MasaiGiraffe_EN-US2240704874_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": "autumn",
+      "country": "Kenya",
+      "region": "East Africa",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image features a group of four giraffes silhouetted against a stunning sunset in the Masai Mara National Reserve. The sky is filled with vibrant hues of orange, pink, and purple, creating a dramatic backdrop. The giraffes stand tall in the foreground, their long necks and distinctive patterns clearly visible. The landscape appears open and expansive, with a hint of distant hills in the background, enhancing the tranquil atmosphere of the scene.",
+      "search_text": "Explore the beauty of giraffes at sunset in the Masai Mara National Reserve, Kenya. This serene image captures the silhouettes of four tall giraffes against a dramatic sky filled with vibrant colors. Ideal for wildlife enthusiasts and nature lovers, this scene showcases the majestic animals in their natural habitat, highlighting the stunning landscapes of East Africa. Perfect for searches related to wildlife photography, giraffes, and sunset landscapes.",
+      "keywords": [
+        "giraffe",
+        "animal",
+        "sunset",
+        "Masai Mara",
+        "Kenya",
+        "East Africa",
+        "silhouette",
+        "wildlife",
+        "savanna",
+        "four",
+        "tall",
+        "nature",
+        "serene",
+        "landscape",
+        "dusk",
+        "dramatic sky",
+        "group",
+        "outdoor",
+        "horizon",
+        "beautiful"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5A3636",
+          "name": "dark olive green",
+          "w": 0.32
+        },
+        {
+          "hex": "#221818",
+          "name": "black",
+          "w": 0.21
+        },
+        {
+          "hex": "#C08B4D",
+          "name": "peru",
+          "w": 0.18
+        },
+        {
+          "hex": "#945B3D",
+          "name": "sienna",
+          "w": 0.17
+        },
+        {
+          "hex": "#D6B077",
+          "name": "burly wood",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
