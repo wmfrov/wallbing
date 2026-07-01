@@ -130172,6 +130172,69 @@
   "DungeonPark_EN-US2499621341_UHD": {
     "date": "2026-07-01",
     "title": "Dungeon Provincial Park, Newfoundland and Labrador, Canada",
-    "bing_url": "https://www.bing.com/th?id=OHR.DungeonPark_EN-US2499621341_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.DungeonPark_EN-US2499621341_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "landscape",
+        "cave"
+      ],
+      "season": null,
+      "country": "Canada",
+      "region": "Atlantic Canada",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases a rugged coastal landscape at Dungeon Provincial Park in Newfoundland and Labrador, Canada. In the foreground, lush green grass and yellow wildflowers frame the scene, leading to dramatic rock formations that create natural arches. The ocean waves crash against the rocky cliffs, producing a vibrant turquoise hue in the water. The sky is overcast, adding a moody ambiance to the serene setting, while the distant hills provide a sense of depth in the background.",
+      "search_text": "Explore the stunning landscapes of Dungeon Provincial Park in Newfoundland and Labrador, Canada. This coastal area features dramatic rock formations and natural arches, surrounded by lush green grass and vibrant wildflowers. The turquoise ocean waves crash against the rugged cliffs, creating a serene and picturesque environment. Perfect for nature lovers and photographers, this location offers breathtaking views and unique geological features. Discover the beauty of Atlantic Canada and its captivating coastal scenery.",
+      "keywords": [
+        "Dungeon Provincial Park",
+        "Newfoundland",
+        "Labrador",
+        "rock formations",
+        "ocean",
+        "coastal",
+        "cave",
+        "wildflowers",
+        "landscape",
+        "rugged",
+        "serene",
+        "natural arches",
+        "green grass",
+        "turquoise water",
+        "overcast",
+        "hills",
+        "cliffs",
+        "nature",
+        "scenic",
+        "Canada"
+      ],
+      "color_palette": [
+        {
+          "hex": "#445134",
+          "name": "dark olive green",
+          "w": 0.27
+        },
+        {
+          "hex": "#28321F",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#5B705D",
+          "name": "dim gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#76A0C9",
+          "name": "corn flower blue",
+          "w": 0.15
+        },
+        {
+          "hex": "#AFCAEE",
+          "name": "light blue",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
