@@ -130240,6 +130240,67 @@
   "TempleEsna_EN-US1999215513_UHD": {
     "date": "2026-07-02",
     "title": "Ceiling of the Temple of Esna, Egypt",
-    "bing_url": "https://www.bing.com/th?id=OHR.TempleEsna_EN-US1999215513_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.TempleEsna_EN-US1999215513_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "ruins"
+      ],
+      "season": null,
+      "country": "Egypt",
+      "region": "North Africa",
+      "time_of_day": null,
+      "mood": "mystical",
+      "ai_description": "The image showcases the intricately decorated ceiling of the Temple of Esna in Egypt. The ceiling features ornate columns with colorful hieroglyphs and detailed carvings depicting ancient Egyptian figures and symbols. The vibrant colors and patterns create a striking visual effect, drawing attention to the craftsmanship of the period. The background is filled with hieroglyphic inscriptions that tell stories of gods and pharaohs, enhancing the mystical atmosphere of the temple.",
+      "search_text": "Explore the intricate architecture of the Temple of Esna in Egypt, featuring colorful hieroglyphs and ornate columns. This historical site showcases the artistry of ancient Egyptian culture, with detailed carvings that depict mythology and pharaohs. Discover the rich heritage and spiritual significance of this remarkable temple, a true marvel of ancient architecture and craftsmanship.",
+      "keywords": [
+        "Egypt",
+        "Temple of Esna",
+        "hieroglyphs",
+        "ancient architecture",
+        "columns",
+        "colorful carvings",
+        "mythology",
+        "pharaohs",
+        "ruins",
+        "historical site",
+        "ornate",
+        "decorative",
+        "ancient Egypt",
+        "cultural heritage",
+        "artifacts",
+        "religious symbols",
+        "temple",
+        "spirituality",
+        "craftsmanship"
+      ],
+      "color_palette": [
+        {
+          "hex": "#896B5E",
+          "name": "dim gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#AF9080",
+          "name": "rosy brown",
+          "w": 0.23
+        },
+        {
+          "hex": "#563D35",
+          "name": "dark olive green",
+          "w": 0.22
+        },
+        {
+          "hex": "#C6AB9C",
+          "name": "tan",
+          "w": 0.17
+        },
+        {
+          "hex": "#D7C6BD",
+          "name": "silver",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
