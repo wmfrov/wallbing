@@ -130306,6 +130306,68 @@
   "FirefliesJapan_EN-US2315956275_UHD": {
     "date": "2026-07-03",
     "title": "Fireflies glowing above a stream, Okayama Prefecture, Japan",
-    "bing_url": "https://www.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FirefliesJapan_EN-US2315956275_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest",
+        "river"
+      ],
+      "season": null,
+      "country": "Japan",
+      "region": "East Asia",
+      "time_of_day": "night",
+      "mood": "mystical",
+      "ai_description": "The scene captures a serene forest at night, illuminated by the soft glow of fireflies hovering above a gently flowing stream. In the foreground, smooth stones are partially submerged in the water, creating a tranquil atmosphere. The dense trees provide a rich backdrop, with varying shades of green and hints of light filtering through the leaves. The overall ambiance is enchanting, evoking a sense of wonder and calmness.",
+      "search_text": "Explore the enchanting beauty of a forest in Okayama Prefecture, Japan, where fireflies glow above a serene stream at night. This mystical scene captures the tranquility of nature, with the gentle flow of water and the lush greenery of the trees. Perfect for those seeking images of wildlife, landscapes, and nighttime forest settings, this captivating view highlights the magical ambiance created by glowing insects in a peaceful environment.",
+      "keywords": [
+        "fireflies",
+        "stream",
+        "forest",
+        "Japan",
+        "Okayama Prefecture",
+        "night",
+        "mystical",
+        "glowing",
+        "water",
+        "nature",
+        "tranquil",
+        "wildlife",
+        "flora",
+        "serene",
+        "landscape",
+        "animal",
+        "river",
+        "trees",
+        "glow",
+        "darkness"
+      ],
+      "color_palette": [
+        {
+          "hex": "#0A0C0A",
+          "name": "black",
+          "w": 0.26
+        },
+        {
+          "hex": "#121813",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#1C281D",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#2D3D30",
+          "name": "dark slate gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#546761",
+          "name": "dim gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
