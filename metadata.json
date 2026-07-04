@@ -130373,6 +130373,68 @@
   "LibertyHall_EN-US2562041614_UHD": {
     "date": "2026-07-04",
     "title": "Liberty Bell and Independence Hall, Independence National Historical Park, Philadelphia, Pennsylvania",
-    "bing_url": "https://www.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LibertyHall_EN-US2562041614_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "ruins"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Northeast",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features the iconic Liberty Bell prominently displayed in the foreground, showcasing its distinctive crack and bronze texture. In the background, the historic Independence Hall stands tall with its classic colonial architecture, including a clock tower and white facade. The scene is illuminated by natural light streaming through large glass panels, creating a modern contrast with the historic elements. The surrounding area is well-maintained, with green grass and trees visible outside, contributing to a peaceful atmosphere.",
+      "search_text": "Explore the Liberty Bell and Independence Hall located in Independence National Historical Park, Philadelphia, Pennsylvania. This iconic landmark symbolizes freedom and independence in American history. The image captures the historic architecture of Independence Hall alongside the famous Liberty Bell, showcasing their significance. Visitors can enjoy the serene atmosphere and beautiful landscaping around these important cultural heritage sites. Perfect for those interested in American history, architecture, and national landmarks.",
+      "keywords": [
+        "Liberty Bell",
+        "Independence Hall",
+        "Philadelphia",
+        "Pennsylvania",
+        "historic",
+        "architecture",
+        "colonial",
+        "national park",
+        "bronze",
+        "building",
+        "landmark",
+        "serene",
+        "day",
+        "glass",
+        "clock tower",
+        "green grass",
+        "tourist attraction",
+        "cultural heritage",
+        "independence",
+        "freedom"
+      ],
+      "color_palette": [
+        {
+          "hex": "#433F36",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#908973",
+          "name": "gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#D5BF95",
+          "name": "tan",
+          "w": 0.22
+        },
+        {
+          "hex": "#B7B8AF",
+          "name": "silver",
+          "w": 0.16
+        },
+        {
+          "hex": "#DFD2B7",
+          "name": "wheat",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
