@@ -130440,6 +130440,68 @@
   "LavenderRows_EN-US2831933520_UHD": {
     "date": "2026-07-05",
     "title": "Lavender rows, Plateau de Valensole, Provence, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.LavenderRows_EN-US2831933520_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LavenderRows_EN-US2831933520_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "garden"
+      ],
+      "season": "summer",
+      "country": "France",
+      "region": "Provence",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image showcases a vast field of lavender in full bloom, with rows of vibrant purple flowers stretching across the landscape. The foreground is dominated by the neatly arranged lavender rows, creating a rhythmic pattern that leads the eye toward the horizon. In the background, a few trees are silhouetted against the soft morning sky, enhancing the tranquil atmosphere. The gentle curves of the rows add depth and texture to the scene, while the early light casts a soft glow over the flowers.",
+      "search_text": "Explore the stunning lavender fields of Provence, France, where rows of blooming lavender create a picturesque landscape. This serene summer scene captures the beauty of flowering plants in neat rows, perfect for nature lovers and photographers. Discover the aromatic essence of lavender and its vibrant purple hues, set against a tranquil sky and distant trees. Ideal for anyone searching for floral gardens, agricultural landscapes, or the charm of Provence.",
+      "keywords": [
+        "lavender",
+        "flower",
+        "Provence",
+        "France",
+        "field",
+        "blooming",
+        "rows",
+        "garden",
+        "summer",
+        "serene",
+        "landscape",
+        "purple",
+        "aromatic",
+        "fragrant",
+        "nature",
+        "scenic",
+        "agriculture",
+        "plantation",
+        "horizon",
+        "trees"
+      ],
+      "color_palette": [
+        {
+          "hex": "#70616F",
+          "name": "dim gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#414052",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#997B87",
+          "name": "gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#B5909C",
+          "name": "rosy brown",
+          "w": 0.2
+        },
+        {
+          "hex": "#CBC2CD",
+          "name": "silver",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
