@@ -130507,6 +130507,69 @@
   "SyracuseItaly_EN-US3071727282_UHD": {
     "date": "2026-07-06",
     "title": "Syracuse at sunset, Sicily, Italy",
-    "bing_url": "https://www.bing.com/th?id=OHR.SyracuseItaly_EN-US3071727282_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SyracuseItaly_EN-US3071727282_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture",
+        "ocean"
+      ],
+      "season": null,
+      "country": "Italy",
+      "region": "Sicily",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures the stunning city of Syracuse in Sicily during sunset. In the foreground, the ancient fortifications and architecture are prominently displayed, showcasing a blend of historical structures. The tranquil ocean surrounds the land, reflecting the warm colors of the sunset in the background. The sky is filled with dramatic clouds, adding depth to the scene and enhancing the overall serene mood of the landscape.",
+      "search_text": "Explore the beautiful city of Syracuse in Sicily, Italy, known for its rich history and stunning architecture. This image captures the serene atmosphere during sunset, showcasing ancient fortifications along the ocean. Ideal for those searching for coastal cityscapes, historical landmarks, and breathtaking sunset views. Discover the charm of Syracuse with its unique blend of culture and natural beauty.",
+      "keywords": [
+        "Syracuse",
+        "Sicily",
+        "Italy",
+        "fortress",
+        "ocean",
+        "sunset",
+        "architecture",
+        "cityscape",
+        "historical",
+        "coastal",
+        "landmark",
+        "serene",
+        "dramatic",
+        "water",
+        "sky",
+        "clouds",
+        "evening",
+        "view",
+        "land",
+        "reflection"
+      ],
+      "color_palette": [
+        {
+          "hex": "#6C5E55",
+          "name": "dim gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#827366",
+          "name": "dim gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#2B4544",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#AA896B",
+          "name": "rosy brown",
+          "w": 0.15
+        },
+        {
+          "hex": "#D4B07B",
+          "name": "burly wood",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
