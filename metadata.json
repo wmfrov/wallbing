@@ -130575,6 +130575,67 @@
   "MountainToucanOrchids_EN-US3433249651_UHD": {
     "date": "2026-07-07",
     "title": "Plate-billed mountain toucan with orchids, Ecuador",
-    "bing_url": "https://www.bing.com/th?id=OHR.MountainToucanOrchids_EN-US3433249651_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MountainToucanOrchids_EN-US3433249651_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird"
+      ],
+      "season": null,
+      "country": "Ecuador",
+      "region": "South America",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a Plate-billed Mountain Toucan perched on a branch amidst lush green foliage. The bird displays a striking blue-gray plumage with a vibrant orange and yellow bill. In the background, delicate yellow orchids bloom, adding a touch of color to the scene. The composition highlights the toucan's vivid colors against the soft, blurred greenery, creating a tranquil atmosphere.",
+      "search_text": "Explore the vibrant Plate-billed Mountain Toucan, a stunning bird native to Ecuador. This tropical avian species is known for its colorful bill and striking plumage. The image captures the toucan perched among lush green foliage and blooming yellow orchids, showcasing the rich biodiversity of South America. Perfect for nature lovers and wildlife enthusiasts, this scene embodies the beauty of tropical ecosystems and the unique wildlife they harbor.",
+      "keywords": [
+        "Plate-billed Mountain Toucan",
+        "toucan",
+        "bird",
+        "Ecuador",
+        "orchids",
+        "yellow flowers",
+        "green foliage",
+        "perched",
+        "tropical",
+        "wildlife",
+        "animal",
+        "nature",
+        "serene",
+        "South America",
+        "colorful",
+        "forest",
+        "avian",
+        "biodiversity",
+        "flora",
+        "branch"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5E6836",
+          "name": "dark olive green",
+          "w": 0.29
+        },
+        {
+          "hex": "#717F45",
+          "name": "olive drab",
+          "w": 0.22
+        },
+        {
+          "hex": "#413F2A",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#88955D",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#A4AD7B",
+          "name": "dark khaki",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
