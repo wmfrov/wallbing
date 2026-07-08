@@ -130641,6 +130641,68 @@
   "LakeAtitlan_EN-US3747076006_UHD": {
     "date": "2026-07-08",
     "title": "Sunrise at Lake Atitl\u00e1n, Guatemala",
-    "bing_url": "https://www.bing.com/th?id=OHR.LakeAtitlan_EN-US3747076006_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LakeAtitlan_EN-US3747076006_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "mountain"
+      ],
+      "season": null,
+      "country": "Guatemala",
+      "region": "Central America",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a tranquil scene at Lake Atitl\u00e1n in Guatemala during dawn. A wooden dock extends into the calm waters, leading the viewer's eye toward the distant mountains that frame the lake. The sky transitions from deep blue to soft orange hues as the sun begins to rise. The mountains are silhouetted against the early light, creating a peaceful and serene atmosphere. The smooth surface of the lake reflects the colors of the sky, enhancing the overall tranquility of the scene.",
+      "search_text": "Explore the serene beauty of Lake Atitl\u00e1n in Guatemala at dawn. This tranquil landscape features a wooden dock extending into calm waters, framed by majestic mountains. The early morning sky showcases a stunning gradient of colors, perfect for nature lovers and photographers. Discover the peaceful atmosphere and breathtaking reflections that make this location a must-visit in Central America. Ideal for travel enthusiasts seeking picturesque views and serene outdoor experiences.",
+      "keywords": [
+        "Lake Atitl\u00e1n",
+        "Guatemala",
+        "dawn",
+        "mountains",
+        "dock",
+        "serene",
+        "water",
+        "reflection",
+        "landscape",
+        "calm",
+        "nature",
+        "travel",
+        "scenery",
+        "Central America",
+        "outdoor",
+        "peaceful",
+        "serenity",
+        "horizon",
+        "sky",
+        "sunrise"
+      ],
+      "color_palette": [
+        {
+          "hex": "#316AA3",
+          "name": "steel blue",
+          "w": 0.32
+        },
+        {
+          "hex": "#5A8ABE",
+          "name": "steel blue",
+          "w": 0.21
+        },
+        {
+          "hex": "#18476C",
+          "name": "dark slate gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#9194A5",
+          "name": "light slate gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#B6BAC1",
+          "name": "silver",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
