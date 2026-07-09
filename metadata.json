@@ -130708,6 +130708,69 @@
   "SapaVietnam_EN-US4008171614_UHD": {
     "date": "2026-07-09",
     "title": "Rice fields at Sapa, L\u00e0o Cai, Vietnam",
-    "bing_url": "https://www.bing.com/th?id=OHR.SapaVietnam_EN-US4008171614_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SapaVietnam_EN-US4008171614_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain",
+        "farm"
+      ],
+      "season": null,
+      "country": "Vietnam",
+      "region": "Southeast Asia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases a stunning mountainous landscape with lush green rice terraces cascading down the hillsides. In the foreground, a vibrant patch of rice fields is visible, while a traditional building sits prominently on the hillside. The background features misty mountains shrouded in clouds, creating a mystical atmosphere. Rays of sunlight break through the clouds, illuminating parts of the landscape and adding depth to the scene.",
+      "search_text": "Explore the breathtaking rice fields of Sapa in L\u00e0o Cai, Vietnam. This picturesque landscape features terraced farming on lush green mountains, surrounded by misty peaks and dramatic clouds. Ideal for nature lovers and photographers, the scene captures the serene beauty of Southeast Asia's agricultural heritage. Discover the unique architecture and vibrant culture of this region, perfect for travel enthusiasts seeking stunning outdoor experiences.",
+      "keywords": [
+        "rice fields",
+        "Sapa",
+        "L\u00e0o Cai",
+        "Vietnam",
+        "mountains",
+        "terraced farming",
+        "agriculture",
+        "landscape",
+        "greenery",
+        "mist",
+        "clouds",
+        "sunlight",
+        "scenic",
+        "hills",
+        "nature",
+        "serene",
+        "outdoors",
+        "travel",
+        "photography",
+        "landmark"
+      ],
+      "color_palette": [
+        {
+          "hex": "#78918F",
+          "name": "light slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#B1BFB6",
+          "name": "silver",
+          "w": 0.25
+        },
+        {
+          "hex": "#333F31",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#4A676B",
+          "name": "dim gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#68735C",
+          "name": "dim gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
