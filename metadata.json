@@ -130843,6 +130843,69 @@
   "AurayBrittany_EN-US7890619884_UHD": {
     "date": "2026-07-11",
     "title": "Port de Saint-Goustan, Auray, Brittany, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AurayBrittany_EN-US7890619884_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture",
+        "river"
+      ],
+      "season": null,
+      "country": "France",
+      "region": "Brittany",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the picturesque Port de Saint-Goustan in Auray, Brittany, France. In the foreground, a calm river reflects the charming buildings lining the waterfront. The architecture features a mix of traditional styles, with stone facades and slate roofs. Several small boats are moored along the riverbank, adding to the tranquil atmosphere. The sky is partly cloudy, creating a soft light that enhances the serene mood of the scene.",
+      "search_text": "Explore the scenic Port de Saint-Goustan in Auray, Brittany, France. This charming city features traditional architecture with stone buildings and slate roofs along a tranquil river. Ideal for travelers seeking picturesque views, the waterfront is dotted with small boats and offers a serene atmosphere. Perfect for photography enthusiasts, this location captures the essence of French coastal charm with its quaint streets and beautiful reflections in the water.",
+      "keywords": [
+        "Port de Saint-Goustan",
+        "Auray",
+        "Brittany",
+        "France",
+        "river",
+        "architecture",
+        "traditional buildings",
+        "boats",
+        "waterfront",
+        "serene",
+        "cloudy sky",
+        "historic",
+        "scenic",
+        "travel",
+        "landscape",
+        "city",
+        "quaint",
+        "picturesque",
+        "reflection",
+        "daytime"
+      ],
+      "color_palette": [
+        {
+          "hex": "#8F8B80",
+          "name": "gray",
+          "w": 0.31
+        },
+        {
+          "hex": "#A8ABA7",
+          "name": "dark gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#5F5240",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#D1D1C7",
+          "name": "light gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#C3B9A0",
+          "name": "tan",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
