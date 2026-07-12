@@ -130911,6 +130911,68 @@
   "KatahdinWWNM_EN-US8982810797_UHD": {
     "date": "2026-07-12",
     "title": "Katahdin Woods and Waters National Monument, Maine",
-    "bing_url": "https://www.bing.com/th?id=OHR.KatahdinWWNM_EN-US8982810797_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.KatahdinWWNM_EN-US8982810797_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "forest"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Northeast",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a tranquil lake surrounded by dense forest at dawn. The still water reflects the silhouettes of tall trees, creating a mirror-like effect. A soft mist hovers above the lake, adding a mystical quality to the scene. The sky transitions from dark blue to lighter hues as the sun begins to rise, illuminating the landscape subtly. The overall atmosphere is peaceful and calming, perfect for nature lovers.",
+      "search_text": "Explore the serene beauty of Katahdin Woods and Waters National Monument in Maine, featuring a tranquil lake surrounded by dense forest. This dawn scene captures the reflection of trees in the still water, enveloped in a soft mist. Ideal for nature enthusiasts, this picturesque landscape offers a peaceful retreat with stunning views and a calming atmosphere. Perfect for those seeking outdoor adventures or simply a moment of tranquility in nature.",
+      "keywords": [
+        "lake",
+        "forest",
+        "Maine",
+        "Katahdin Woods and Waters",
+        "dawn",
+        "reflection",
+        "mist",
+        "tranquil",
+        "serene",
+        "nature",
+        "wildlife",
+        "trees",
+        "silhouette",
+        "water",
+        "calm",
+        "landscape",
+        "Northeast",
+        "outdoors",
+        "scenery",
+        "serenity"
+      ],
+      "color_palette": [
+        {
+          "hex": "#070604",
+          "name": "black",
+          "w": 0.3
+        },
+        {
+          "hex": "#7CA1C4",
+          "name": "cadet blue",
+          "w": 0.25
+        },
+        {
+          "hex": "#0B0B0B",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#1F384B",
+          "name": "dark slate gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#07090A",
+          "name": "black",
+          "w": 0.07
+        }
+      ]
+    }
   }
 }
