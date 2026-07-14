@@ -131044,6 +131044,68 @@
   "LemonShark_EN-US9828936448_UHD": {
     "date": "2026-07-14",
     "title": "Lemon shark pup in mangrove forest, Eleuthera, Bahamas",
-    "bing_url": "https://www.bing.com/th?id=OHR.LemonShark_EN-US9828936448_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LemonShark_EN-US9828936448_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "forest"
+      ],
+      "season": null,
+      "country": "Bahamas",
+      "region": "Caribbean",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image captures a lemon shark pup swimming among the vibrant roots of a mangrove forest. The clear water reveals a lush underwater environment, with green foliage above and a few fish swimming in the background. The shark's smooth skin contrasts with the intricate textures of the mangrove branches. Sunlight filters through the water, creating a serene atmosphere that highlights the beauty of this unique ecosystem.",
+      "search_text": "Explore the vibrant underwater world of the Bahamas with a lemon shark pup swimming in a mangrove forest. This tropical ecosystem showcases the beauty of marine life, including various fish and lush green foliage. Perfect for those interested in aquatic habitats, wildlife photography, and the serene beauty of nature. Discover the intricate relationships between animals and their environment in this unique underwater setting.",
+      "keywords": [
+        "lemon shark",
+        "shark pup",
+        "mangrove",
+        "Bahamas",
+        "underwater",
+        "marine life",
+        "aquatic",
+        "tropical",
+        "ecosystem",
+        "green",
+        "fish",
+        "serene",
+        "nature",
+        "wildlife",
+        "branches",
+        "swimming",
+        "habitat",
+        "flora",
+        "animal",
+        "forest"
+      ],
+      "color_palette": [
+        {
+          "hex": "#135828",
+          "name": "dark green",
+          "w": 0.31
+        },
+        {
+          "hex": "#645528",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#4D9060",
+          "name": "sea green",
+          "w": 0.16
+        },
+        {
+          "hex": "#A7AB6A",
+          "name": "dark khaki",
+          "w": 0.15
+        },
+        {
+          "hex": "#C2D584",
+          "name": "tan",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
