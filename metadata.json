@@ -131111,6 +131111,69 @@
   "MarieLake_EN-US0365186943_UHD": {
     "date": "2026-07-15",
     "title": "Marie Lake, John Muir Wilderness near Bishop, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.MarieLake_EN-US0365186943_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MarieLake_EN-US0365186943_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "mountain",
+        "forest"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "California",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases Marie Lake nestled within the John Muir Wilderness, surrounded by majestic mountains. In the foreground, the clear blue waters of the lake reflect the sky and the rugged terrain. The background features a series of peaks, some capped with snow, creating a dramatic contrast against the vibrant blue sky dotted with fluffy white clouds. The landscape is interspersed with patches of greenery, indicating a healthy forest ecosystem.",
+      "search_text": "Explore the stunning beauty of Marie Lake located in the John Muir Wilderness in California. This serene lake is surrounded by majestic mountains and lush forests, making it a perfect destination for outdoor enthusiasts and nature lovers. The clear blue waters reflect the sky and the rugged terrain, while the snow-capped peaks add a dramatic touch to the landscape. Ideal for hiking, photography, and relaxation, this scenic view captures the essence of California's wilderness.",
+      "keywords": [
+        "Marie Lake",
+        "John Muir Wilderness",
+        "California",
+        "lake",
+        "mountain",
+        "forest",
+        "blue water",
+        "snow-capped peaks",
+        "wildlife",
+        "serene landscape",
+        "hiking",
+        "outdoor",
+        "nature",
+        "reflection",
+        "clouds",
+        "scenic view",
+        "landscape photography",
+        "wilderness",
+        "travel",
+        "exploration"
+      ],
+      "color_palette": [
+        {
+          "hex": "#B7C3C6",
+          "name": "silver",
+          "w": 0.26
+        },
+        {
+          "hex": "#2A3A3D",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#5D97B1",
+          "name": "cadet blue",
+          "w": 0.19
+        },
+        {
+          "hex": "#62685A",
+          "name": "dim gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#3B617B",
+          "name": "dark slate blue",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
