@@ -131179,6 +131179,68 @@
   "NavyPier_EN-US1069960047_UHD": {
     "date": "2026-07-16",
     "title": "Navy Pier, Chicago, Illinois",
-    "bing_url": "https://www.bing.com/th?id=OHR.NavyPier_EN-US1069960047_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.NavyPier_EN-US1069960047_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Midwest",
+      "time_of_day": "dusk",
+      "mood": "vibrant",
+      "ai_description": "The image showcases the iconic Navy Pier in Chicago, Illinois, with a vibrant Ferris wheel illuminated against a twilight sky. In the foreground, a modern architectural structure with a sleek, tent-like design leads the eye towards the bustling city skyline. The skyline features a mix of tall buildings, including the Willis Tower, which stands prominently. The waterway reflects the colorful lights of the city, enhancing the lively atmosphere of the scene.",
+      "search_text": "Explore the vibrant city of Chicago, Illinois, featuring the famous Navy Pier and its illuminated Ferris wheel. This urban landscape showcases modern architecture against a stunning twilight sky. Discover the iconic Willis Tower and the lively atmosphere of the city skyline reflected in the waterway. Ideal for those interested in cityscapes, architecture, and nighttime photography, this image captures the essence of Chicago's bustling downtown and its attractions.",
+      "keywords": [
+        "Navy Pier",
+        "Chicago",
+        "Illinois",
+        "Ferris wheel",
+        "city skyline",
+        "Willis Tower",
+        "modern architecture",
+        "twilight",
+        "urban landscape",
+        "waterway",
+        "vibrant lights",
+        "building",
+        "night",
+        "city",
+        "architecture",
+        "tourist attraction",
+        "entertainment",
+        "skyline",
+        "downtown",
+        "Illinois"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5292F2",
+          "name": "corn flower blue",
+          "w": 0.24
+        },
+        {
+          "hex": "#5C7FC6",
+          "name": "steel blue",
+          "w": 0.22
+        },
+        {
+          "hex": "#715D6C",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#343B57",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#ADA4B3",
+          "name": "dark gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
