@@ -131246,6 +131246,68 @@
   "VaiUmbrellas_EN-US8985051242_UHD": {
     "date": "2026-07-17",
     "title": "Sunbeds on the beach at Vai, Crete, Greece",
-    "bing_url": "https://www.bing.com/th?id=OHR.VaiUmbrellas_EN-US8985051242_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.VaiUmbrellas_EN-US8985051242_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "landscape"
+      ],
+      "season": "summer",
+      "country": "Greece",
+      "region": "Southern Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures a vibrant beach scene at Vai in Crete, Greece, featuring numerous sunbeds arranged in neat rows on the sandy shore. Each sunbed is topped with a round umbrella, creating a visually striking pattern against the golden sand. The ocean is visible in the background, adding a serene blue hue to the scene. The sunlight casts soft shadows, enhancing the textures of the sand and the umbrellas. This organized layout suggests a popular beach destination, perfect for relaxation.",
+      "search_text": "Explore the beautiful beach scene at Vai, Crete, Greece, featuring numerous sunbeds and umbrellas arranged in a striking pattern on the sandy shore. This serene summer destination is perfect for relaxation and vacation, with the ocean providing a stunning backdrop. Ideal for travelers seeking a coastal getaway, this vibrant landscape captures the essence of a tropical holiday. Keywords include beach, sunbeds, ocean, and relaxation.",
+      "keywords": [
+        "beach",
+        "sunbeds",
+        "umbrellas",
+        "sand",
+        "ocean",
+        "Greece",
+        "Crete",
+        "vacation",
+        "relaxation",
+        "summer",
+        "landscape",
+        "coastal",
+        "tropical",
+        "seaside",
+        "holiday",
+        "sunshine",
+        "pattern",
+        "serene",
+        "travel",
+        "tourism"
+      ],
+      "color_palette": [
+        {
+          "hex": "#9D8569",
+          "name": "gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#D6A77B",
+          "name": "tan",
+          "w": 0.24
+        },
+        {
+          "hex": "#665F51",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#E2C2A3",
+          "name": "burly wood",
+          "w": 0.14
+        },
+        {
+          "hex": "#B2A28B",
+          "name": "rosy brown",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
