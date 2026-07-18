@@ -131313,6 +131313,69 @@
   "DevilsBridge_EN-US3505962815_UHD": {
     "date": "2026-07-18",
     "title": "Devil's Bridge in Rhododendron Park Kromlau, Saxony, Germany",
-    "bing_url": "https://www.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.DevilsBridge_EN-US3505962815_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bridge",
+        "forest",
+        "lake"
+      ],
+      "season": "autumn",
+      "country": "Germany",
+      "region": "Saxony",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features the iconic Devil's Bridge, a stone arch bridge surrounded by lush greenery. The bridge reflects beautifully in the calm waters of the lake below, creating a symmetrical view. In the background, dense trees showcase a mix of green and autumnal colors, enhancing the tranquil atmosphere. The sky is partly cloudy, adding depth to the scene with soft light filtering through the foliage.",
+      "search_text": "Explore the beauty of Devil's Bridge in Rhododendron Park, Kromlau, Saxony, Germany. This stunning stone arch bridge is surrounded by lush forest and reflects perfectly in the calm lake waters. Ideal for nature lovers and photographers, this serene landscape captures the essence of autumn with vibrant foliage. Discover scenic views, tranquil outdoor spaces, and unique architecture in this picturesque park.",
+      "keywords": [
+        "Devil's Bridge",
+        "Rhododendron Park",
+        "Kromlau",
+        "Saxony",
+        "Germany",
+        "forest",
+        "lake",
+        "stone bridge",
+        "reflection",
+        "autumn",
+        "nature",
+        "serene",
+        "landscape",
+        "tranquil",
+        "greenery",
+        "water",
+        "scenic",
+        "outdoors",
+        "park",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#4C5725",
+          "name": "dark olive green",
+          "w": 0.3
+        },
+        {
+          "hex": "#1D1D0A",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#888E5B",
+          "name": "gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#273815",
+          "name": "dark green",
+          "w": 0.16
+        },
+        {
+          "hex": "#423C1B",
+          "name": "dark olive green",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
