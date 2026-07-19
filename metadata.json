@@ -131381,6 +131381,66 @@
   "HirundoRustica_EN-US3193611104_UHD": {
     "date": "2026-07-19",
     "title": "Barn swallows of different subspecies resting together",
-    "bing_url": "https://www.bing.com/th?id=OHR.HirundoRustica_EN-US3193611104_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.HirundoRustica_EN-US3193611104_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird"
+      ],
+      "season": "summer",
+      "country": null,
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a group of barn swallows perched on tall, slender grasses swaying gently in the breeze. The birds display a mix of vibrant blue and orange plumage, creating a striking contrast against the soft, blurred background. The foreground is dominated by the delicate textures of the grass, which adds a sense of movement to the scene. The overall atmosphere is calm and peaceful, with the swallows resting together in harmony. The background hints at a lush environment, suggesting a warm summer day.",
+      "search_text": "Explore the beauty of barn swallows, a species known for their striking blue and orange plumage. This image captures a flock of these birds resting on tall grasses, creating a serene summer scene. Perfect for birdwatching enthusiasts and nature lovers, this photograph highlights the delicate textures of the grass and the peaceful atmosphere of a warm day. Ideal for searches related to avian wildlife, summer landscapes, and serene natural environments.",
+      "keywords": [
+        "barn swallow",
+        "Hirundo rustica",
+        "bird",
+        "flock",
+        "perched",
+        "grass",
+        "summer",
+        "blue",
+        "orange",
+        "nature",
+        "wildlife",
+        "serene",
+        "swaying",
+        "feathers",
+        "avian",
+        "animal",
+        "soft focus",
+        "habitat",
+        "group"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5F6C76",
+          "name": "dim gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#7F8583",
+          "name": "gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#394C60",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#A29F92",
+          "name": "dark gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#CBC1B9",
+          "name": "silver",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
