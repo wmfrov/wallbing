@@ -131446,6 +131446,67 @@
   "Artemis_EN-US0683925849_UHD": {
     "date": "2026-07-20",
     "title": "Moon and Earth captured by the Artemis II crew",
-    "bing_url": "https://www.bing.com/th?id=OHR.Artemis_EN-US0683925849_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Artemis_EN-US0683925849_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": "night",
+      "mood": "mystical",
+      "ai_description": "The image features a close-up view of the Moon's surface, showcasing its rugged terrain filled with craters and valleys. In the background, a crescent Earth is visible, adding a striking contrast to the lunar landscape. The textures of the Moon are detailed, highlighting the rocky surface and shadows cast by the craters. The overall scene is set against a deep black backdrop of space, enhancing the celestial atmosphere.",
+      "search_text": "Explore the stunning view of the Moon and Earth captured by the Artemis II crew. This image showcases the rugged lunar surface with its craters and valleys, set against the backdrop of space. The crescent Earth adds a mystical touch to the scene, making it a perfect representation of celestial photography and lunar exploration. Ideal for those interested in astronomy, space, and the beauty of our solar system.",
+      "keywords": [
+        "Moon",
+        "Earth",
+        "crescent",
+        "craters",
+        "lunar surface",
+        "space",
+        "celestial",
+        "rugged terrain",
+        "night",
+        "mystical",
+        "photography",
+        "Artemis II",
+        "astronomy",
+        "planet",
+        "satellite",
+        "outer space",
+        "landscape",
+        "texture",
+        "darkness",
+        "exploration"
+      ],
+      "color_palette": [
+        {
+          "hex": "#06090F",
+          "name": "black",
+          "w": 0.39
+        },
+        {
+          "hex": "#04070D",
+          "name": "black",
+          "w": 0.2
+        },
+        {
+          "hex": "#A3A1A1",
+          "name": "dark gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#5D5C5F",
+          "name": "dim gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#090E12",
+          "name": "black",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
