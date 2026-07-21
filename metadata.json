@@ -131512,6 +131512,69 @@
   "SantaCatalina_EN-US1116829215_UHD": {
     "date": "2026-07-21",
     "title": "Santa Catalina Arch, Antigua, Guatemala",
-    "bing_url": "https://www.bing.com/th?id=OHR.SantaCatalina_EN-US1116829215_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SantaCatalina_EN-US1116829215_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture",
+        "mountain"
+      ],
+      "season": null,
+      "country": "Guatemala",
+      "region": "Central America",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures the iconic Santa Catalina Arch in Antigua, Guatemala, framed by cobblestone streets and colorful colonial buildings. In the background, the majestic Volc\u00e1n de Agua rises, partially shrouded in clouds. The sky is painted with soft pastel hues of pink and purple, indicating dawn. The foreground features a quiet street, showcasing the architectural details of the buildings, with warm light emanating from one of the structures, adding to the serene atmosphere.",
+      "search_text": "Explore the beauty of Santa Catalina Arch in Antigua, Guatemala, a stunning example of colonial architecture set against the backdrop of Volc\u00e1n de Agua. This serene cityscape features cobblestone streets and colorful buildings, perfect for travel enthusiasts and photographers. The dawn sky adds a magical touch to this historic landmark, making it a must-visit destination in Central America. Discover the charm of Antigua and its rich cultural heritage through this picturesque scene.",
+      "keywords": [
+        "Santa Catalina Arch",
+        "Antigua",
+        "Guatemala",
+        "Volc\u00e1n de Agua",
+        "cobblestone",
+        "colonial architecture",
+        "dawn",
+        "pastel sky",
+        "mountain",
+        "cityscape",
+        "historic buildings",
+        "serene",
+        "landmark",
+        "architecture",
+        "travel",
+        "Central America",
+        "street",
+        "landscape",
+        "scenic view",
+        "urban"
+      ],
+      "color_palette": [
+        {
+          "hex": "#8F5E60",
+          "name": "dim gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#5D475D",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#A77B95",
+          "name": "rosy brown",
+          "w": 0.22
+        },
+        {
+          "hex": "#C790A3",
+          "name": "rosy brown",
+          "w": 0.15
+        },
+        {
+          "hex": "#E6ABA5",
+          "name": "tan",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
