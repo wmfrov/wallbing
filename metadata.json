@@ -131580,6 +131580,68 @@
   "CoralAwareness_EN-US1824657819_UHD": {
     "date": "2026-07-22",
     "title": "Coral reef and beach in Raja Ampat, Indonesia",
-    "bing_url": "https://www.bing.com/th?id=OHR.CoralAwareness_EN-US1824657819_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.CoralAwareness_EN-US1824657819_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "island"
+      ],
+      "season": null,
+      "country": "Indonesia",
+      "region": "Southeast Asia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures a vibrant coral reef beneath crystal-clear waters, showcasing various coral formations in the foreground. The reef features a mix of colors, including yellow and green corals, providing a rich habitat for marine life. In the background, lush green hills rise sharply from the water, leading to a sandy beach that is partially visible. The scene is illuminated by bright sunlight, enhancing the clarity and colors of the underwater landscape.",
+      "search_text": "Explore the stunning coral reef and beach in Raja Ampat, Indonesia. This tropical paradise features vibrant marine life and clear ocean waters, perfect for snorkeling and scuba diving. Discover the diverse coral formations and lush island landscapes that make this region a top destination for nature lovers and underwater enthusiasts. Experience the serene beauty of the underwater ecosystem and the rich biodiversity found in this picturesque setting.",
+      "keywords": [
+        "coral reef",
+        "marine life",
+        "Indonesia",
+        "Raja Ampat",
+        "ocean",
+        "clear water",
+        "beach",
+        "island",
+        "underwater",
+        "tropical",
+        "vibrant colors",
+        "coral formations",
+        "aquatic",
+        "serene",
+        "landscape",
+        "nature",
+        "scuba diving",
+        "snorkeling",
+        "ecosystem",
+        "biodiversity"
+      ],
+      "color_palette": [
+        {
+          "hex": "#395142",
+          "name": "dark slate gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#4E6A57",
+          "name": "dim gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#202B24",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#658B7A",
+          "name": "slate gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#A0B9CA",
+          "name": "light steel blue",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
