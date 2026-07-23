@@ -131647,6 +131647,67 @@
   "PinkDahlia_EN-US1957205704_UHD": {
     "date": "2026-07-23",
     "title": "Pink dahlia flower",
-    "bing_url": "https://www.bing.com/th?id=OHR.PinkDahlia_EN-US1957205704_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.PinkDahlia_EN-US1957205704_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": null,
+      "mood": "vibrant",
+      "ai_description": "The image showcases a stunning pink dahlia flower, characterized by its intricate spiral arrangement of petals. The petals are a vibrant shade of pink, creating a striking visual effect. At the center, a small green area is visible, adding contrast to the overall composition. The close-up perspective highlights the delicate textures and patterns of the petals, emphasizing their smooth, curled shapes. The background is softly blurred, allowing the flower to stand out prominently.",
+      "search_text": "Explore the beauty of a pink dahlia flower in this close-up image. Featuring vibrant petals arranged in a spiral pattern, this floral photograph captures the delicate textures and colors of nature. Perfect for floral enthusiasts, gardeners, or anyone looking for stunning botanical imagery. Ideal for searches related to flowers, dahlias, and vibrant floral designs.",
+      "keywords": [
+        "dahlia",
+        "flower",
+        "pink",
+        "petals",
+        "green",
+        "vibrant",
+        "floral",
+        "botanical",
+        "nature",
+        "blooming",
+        "close-up",
+        "texture",
+        "spiral",
+        "garden",
+        "plant",
+        "colorful",
+        "botany",
+        "decorative",
+        "flora",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#63023A",
+          "name": "maroon",
+          "w": 0.27
+        },
+        {
+          "hex": "#9E0472",
+          "name": "dark magenta",
+          "w": 0.26
+        },
+        {
+          "hex": "#C140A8",
+          "name": "medium orchid",
+          "w": 0.18
+        },
+        {
+          "hex": "#9E2081",
+          "name": "dark magenta",
+          "w": 0.17
+        },
+        {
+          "hex": "#E974D4",
+          "name": "orchid",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
