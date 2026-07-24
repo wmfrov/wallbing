@@ -131713,6 +131713,68 @@
   "GalapagosFlamingos_EN-US0364264116_UHD": {
     "date": "2026-07-24",
     "title": "Flock of American flamingos, Isabela Island, Gal\u00e1pagos Islands, Ecuador",
-    "bing_url": "https://www.bing.com/th?id=OHR.GalapagosFlamingos_EN-US0364264116_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.GalapagosFlamingos_EN-US0364264116_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird",
+        "animal"
+      ],
+      "season": null,
+      "country": "Ecuador",
+      "region": "South America",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a flock of American flamingos wading through shallow water on Isabela Island in the Gal\u00e1pagos Islands. The flamingos are characterized by their vibrant pink plumage, long necks, and slender legs, creating a striking visual against the calm water. In the background, lush greenery and rolling hills can be seen, suggesting a natural habitat. The sky is overcast, adding a soft light to the scene, enhancing the serene atmosphere.",
+      "search_text": "Explore the beauty of a flock of American flamingos, also known as Phoenicopterus ruber, gracefully wading in the waters of Isabela Island in the Gal\u00e1pagos Islands, Ecuador. This vibrant pink bird species is often found in wetlands and is known for its unique long neck and legs. Ideal for nature and wildlife enthusiasts, this serene scene captures the essence of tropical habitats and migratory bird behavior. Perfect for searches related to birds, wildlife, and natural landscapes.",
+      "keywords": [
+        "American flamingo",
+        "Phoenicopterus ruber",
+        "flock",
+        "pink",
+        "wading",
+        "Ecuador",
+        "Gal\u00e1pagos Islands",
+        "Isabela Island",
+        "bird",
+        "animal",
+        "wetland",
+        "nature",
+        "wildlife",
+        "habitat",
+        "serene",
+        "tropical",
+        "shoreline",
+        "migratory",
+        "group",
+        "water"
+      ],
+      "color_palette": [
+        {
+          "hex": "#8AA9C4",
+          "name": "dark gray",
+          "w": 0.31
+        },
+        {
+          "hex": "#483927",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#ACB7CB",
+          "name": "light steel blue",
+          "w": 0.22
+        },
+        {
+          "hex": "#B9756D",
+          "name": "indian red",
+          "w": 0.13
+        },
+        {
+          "hex": "#5E6E79",
+          "name": "dim gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
