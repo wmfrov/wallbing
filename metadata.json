@@ -131780,6 +131780,68 @@
   "GaliciaBeach_EN-US1635715019_UHD": {
     "date": "2026-07-25",
     "title": "Praia das Catedrais, Galicia, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.GaliciaBeach_EN-US1635715019_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.GaliciaBeach_EN-US1635715019_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Spain",
+      "region": "Galicia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases Praia das Catedrais, a stunning beach in Galicia, Spain. The coastline features dramatic cliffs and rock formations, with gentle waves lapping at the sandy shore. In the foreground, numerous people can be seen enjoying the beach, creating a lively atmosphere. The green grass on the cliffs contrasts beautifully with the blue ocean and the light sandy beach. The overall scene is bright and inviting, capturing the essence of a perfect day at the beach.",
+      "search_text": "Explore the breathtaking Praia das Catedrais in Galicia, Spain, known for its stunning beach and dramatic ocean cliffs. This picturesque location features a sandy shore with gentle waves and vibrant green grass on the cliffs. Perfect for a day of relaxation or adventure, it attracts visitors looking for natural beauty and scenic landscapes. Ideal for beachgoers, photographers, and nature lovers, this destination offers a unique experience along the Spanish coastline.",
+      "keywords": [
+        "Praia das Catedrais",
+        "Galicia",
+        "Spain",
+        "beach",
+        "ocean",
+        "cliffs",
+        "sandy shore",
+        "waves",
+        "landscape",
+        "people",
+        "coastline",
+        "green grass",
+        "daytime",
+        "serene",
+        "natural beauty",
+        "tourism",
+        "outdoor",
+        "vacation",
+        "scenic",
+        "travel"
+      ],
+      "color_palette": [
+        {
+          "hex": "#B19B53",
+          "name": "dark khaki",
+          "w": 0.29
+        },
+        {
+          "hex": "#5E593C",
+          "name": "dark olive green",
+          "w": 0.21
+        },
+        {
+          "hex": "#B4BC91",
+          "name": "tan",
+          "w": 0.19
+        },
+        {
+          "hex": "#E4D4BE",
+          "name": "wheat",
+          "w": 0.15
+        },
+        {
+          "hex": "#DDC6A8",
+          "name": "tan",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
