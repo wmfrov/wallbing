@@ -131847,6 +131847,68 @@
   "RedMangroveSunrise_EN-US2034025633_UHD": {
     "date": "2026-07-26",
     "title": "Sunrise on a red mangrove in the Pig Keys, Honduras",
-    "bing_url": "https://www.bing.com/th?id=OHR.RedMangroveSunrise_EN-US2034025633_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.RedMangroveSunrise_EN-US2034025633_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "forest"
+      ],
+      "season": "summer",
+      "country": "Honduras",
+      "region": "Central America",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image showcases a stunning sunrise over a red mangrove in the Pig Keys, Honduras. In the foreground, the intricate roots of the mangrove trees are partially submerged in the calm ocean waters. The sky is painted in vibrant hues of orange, pink, and purple, reflecting beautifully on the water's surface. Silhouetted against the colorful backdrop, the mangrove trees create a striking contrast, adding depth to the scene. The overall atmosphere is tranquil, evoking a sense of peace and natural beauty.",
+      "search_text": "Explore the beauty of a red mangrove at sunrise in the Pig Keys, Honduras. This serene coastal landscape features intricate mangrove roots submerged in the ocean, with a vibrant sky painted in hues of orange, pink, and purple. Perfect for nature lovers and those seeking tranquil ocean views, this tropical scene captures the essence of a peaceful dawn. Ideal for searches related to mangrove forests, coastal ecosystems, and stunning sunrises.",
+      "keywords": [
+        "red mangrove",
+        "Honduras",
+        "sunrise",
+        "ocean",
+        "mangrove forest",
+        "tropical",
+        "serene",
+        "nature",
+        "reflection",
+        "silhouette",
+        "coastal",
+        "island",
+        "water",
+        "scenic",
+        "landscape",
+        "tropical forest",
+        "dawn",
+        "sky",
+        "clouds",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#74504C",
+          "name": "dim gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#31211F",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#9F7570",
+          "name": "gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#B68F8A",
+          "name": "rosy brown",
+          "w": 0.18
+        },
+        {
+          "hex": "#CFA992",
+          "name": "tan",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
