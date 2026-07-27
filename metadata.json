@@ -131914,6 +131914,65 @@
   "ChicagoTiffany_EN-US3297949501_UHD": {
     "date": "2026-07-27",
     "title": "Tiffany Dome, Chicago Cultural Center, Illinois",
-    "bing_url": "https://www.bing.com/th?id=OHR.ChicagoTiffany_EN-US3297949501_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ChicagoTiffany_EN-US3297949501_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Midwest",
+      "time_of_day": null,
+      "mood": "cozy",
+      "ai_description": "The image showcases the stunning Tiffany Dome located in the Chicago Cultural Center. The dome features intricate stained glass designs with a vibrant blue background, adorned with ornate patterns and floral motifs. The architectural details include elegant arches and decorative lighting fixtures that enhance the cozy atmosphere of the space. The marble walls and polished surfaces reflect the grandeur of the building, creating a harmonious blend of artistry and craftsmanship.",
+      "search_text": "Explore the Tiffany Dome in the Chicago Cultural Center, a stunning example of architecture featuring intricate stained glass and ornate patterns. This historic building in Illinois showcases elegant arches and decorative lighting, creating a cozy atmosphere. Ideal for those interested in interior design, decorative arts, and cultural landmarks in the Midwest. Discover the artistry and craftsmanship that make this dome a must-see in Chicago.",
+      "keywords": [
+        "Tiffany Dome",
+        "Chicago Cultural Center",
+        "architecture",
+        "stained glass",
+        "ornate patterns",
+        "floral motifs",
+        "interior design",
+        "historic building",
+        "Midwest",
+        "Illinois",
+        "elegant arches",
+        "lighting fixtures",
+        "marble",
+        "decorative arts",
+        "cultural landmark",
+        "grand interior",
+        "artistry",
+        "craftsmanship"
+      ],
+      "color_palette": [
+        {
+          "hex": "#785D20",
+          "name": "saddle brown",
+          "w": 0.28
+        },
+        {
+          "hex": "#927433",
+          "name": "sienna",
+          "w": 0.23
+        },
+        {
+          "hex": "#523F10",
+          "name": "dark olive green",
+          "w": 0.22
+        },
+        {
+          "hex": "#AB8845",
+          "name": "peru",
+          "w": 0.17
+        },
+        {
+          "hex": "#C6A76A",
+          "name": "dark khaki",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
