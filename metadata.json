@@ -131978,6 +131978,68 @@
   "ChannelKelp_EN-US3809417919_UHD": {
     "date": "2026-07-28",
     "title": "A kelp forest off Anacapa Island, Channel Islands National Park, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.ChannelKelp_EN-US3809417919_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ChannelKelp_EN-US3809417919_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "island"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "California",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image captures a vibrant underwater kelp forest located off Anacapa Island in Channel Islands National Park, California. Tall strands of kelp rise gracefully from the ocean floor, their flowing shapes creating a beautiful underwater landscape. The sunlight filters through the water, casting a serene blue-green hue over the scene. Bubbles and small marine life can be seen among the kelp, adding to the dynamic ecosystem of this underwater habitat.",
+      "search_text": "Explore the stunning underwater kelp forest off Anacapa Island in Channel Islands National Park, California. This vibrant marine ecosystem features tall strands of kelp, creating a serene underwater landscape. Discover the diverse marine life and the beauty of the ocean depths. Ideal for nature lovers and those interested in aquatic environments, this kelp forest showcases the unique flora and fauna found in California's coastal waters.",
+      "keywords": [
+        "kelp",
+        "forest",
+        "underwater",
+        "marine life",
+        "California",
+        "Anacapa Island",
+        "Channel Islands",
+        "ocean",
+        "bubbles",
+        "ecosystem",
+        "serene",
+        "aquatic",
+        "flora",
+        "seaweed",
+        "submarine",
+        "nature",
+        "wildlife",
+        "undersea",
+        "depths",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#051F17",
+          "name": "black",
+          "w": 0.28
+        },
+        {
+          "hex": "#412509",
+          "name": "maroon",
+          "w": 0.26
+        },
+        {
+          "hex": "#315634",
+          "name": "dark slate gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#238A69",
+          "name": "sea green",
+          "w": 0.16
+        },
+        {
+          "hex": "#52C9AE",
+          "name": "medium aqua marine",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
