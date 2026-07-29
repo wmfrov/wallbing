@@ -132045,6 +132045,67 @@
   "TigerFamily_EN-US4918106900_UHD": {
     "date": "2026-07-29",
     "title": "A family of Bengal tigers at Ranthambore National Park, Rajasthan, India",
-    "bing_url": "https://www.bing.com/th?id=OHR.TigerFamily_EN-US4918106900_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.TigerFamily_EN-US4918106900_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "India",
+      "region": "South Asia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a family of Bengal tigers walking through a dry, wooded area in Ranthambore National Park. Four tigers are visible, showcasing their distinctive orange coats with black stripes. The foreground is filled with sparse vegetation and tree trunks, while the background hints at a sunlit landscape. The tigers appear calm and alert, embodying the beauty and majesty of these magnificent animals in their natural habitat.",
+      "search_text": "Explore the majestic Bengal tigers in their natural habitat at Ranthambore National Park in India. This image captures a family of four tigers, showcasing their striking orange and black striped coats. Ideal for wildlife enthusiasts and those interested in animal conservation, this scene highlights the beauty of these endangered big cats. Search for Bengal tigers, wildlife photography, and nature in South Asia to find more stunning images of these incredible animals.",
+      "keywords": [
+        "Bengal tiger",
+        "animal",
+        "family",
+        "wildlife",
+        "Ranthambore National Park",
+        "India",
+        "South Asia",
+        "tiger",
+        "predator",
+        "forest",
+        "nature",
+        "wild",
+        "feline",
+        "endangered",
+        "big cat",
+        "four",
+        "walking",
+        "stripes",
+        "habitat",
+        "serene"
+      ],
+      "color_palette": [
+        {
+          "hex": "#6D5F49",
+          "name": "dim gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#352E24",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#958566",
+          "name": "gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#B29F7A",
+          "name": "rosy brown",
+          "w": 0.17
+        },
+        {
+          "hex": "#CBB48B",
+          "name": "tan",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
