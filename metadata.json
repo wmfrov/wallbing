@@ -132111,6 +132111,68 @@
   "NavajoNation_EN-US6947714656_UHD": {
     "date": "2026-07-30",
     "title": "Monument Valley, Navajo Nation, Arizona",
-    "bing_url": "https://www.bing.com/th?id=OHR.NavajoNation_EN-US6947714656_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.NavajoNation_EN-US6947714656_UHD.jpg",
+    "tags": {
+      "subject": [
+        "desert",
+        "mountain"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southwestern United States",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures the iconic landscape of Monument Valley, featuring towering sandstone buttes under a twilight sky. The foreground shows a winding dirt road illuminated by vehicle lights, leading towards the majestic formations. The buttes, with their distinct shapes, rise dramatically against the soft hues of dusk. The sky transitions from blue to purple, adding a serene ambiance to the scene, while the rugged terrain is dotted with sparse vegetation.",
+      "search_text": "Explore the stunning landscape of Monument Valley in Arizona, part of the Navajo Nation. This iconic desert region features towering sandstone buttes and a winding road illuminated by vehicle lights during dusk. Perfect for photography enthusiasts, this serene scene captures the beauty of the Southwestern United States, showcasing the unique geological formations and tranquil twilight sky. Ideal for those interested in desert landscapes, natural wonders, and travel destinations.",
+      "keywords": [
+        "Monument Valley",
+        "Navajo Nation",
+        "Arizona",
+        "desert",
+        "sandstone",
+        "buttes",
+        "twilight",
+        "landscape",
+        "winding road",
+        "vehicle lights",
+        "rugged terrain",
+        "serene",
+        "Southwestern United States",
+        "natural formations",
+        "sky",
+        "dusk",
+        "scenic",
+        "outdoor",
+        "travel",
+        "photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5482C2",
+          "name": "steel blue",
+          "w": 0.28
+        },
+        {
+          "hex": "#2D161A",
+          "name": "black",
+          "w": 0.2
+        },
+        {
+          "hex": "#53659D",
+          "name": "steel blue",
+          "w": 0.2
+        },
+        {
+          "hex": "#362225",
+          "name": "dark slate gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#432A2C",
+          "name": "dark slate gray",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
