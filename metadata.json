@@ -132178,6 +132178,68 @@
   "VirginiaTrail_EN-US9403114082_UHD": {
     "date": "2026-07-31",
     "title": "Aerial view of the Virginia Creeper Trail, Damascus, Virginia",
-    "bing_url": "https://www.bing.com/th?id=OHR.VirginiaTrail_EN-US9403114082_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.VirginiaTrail_EN-US9403114082_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest",
+        "bridge"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southeast",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures an aerial view of the Virginia Creeper Trail, surrounded by a lush green forest. A wooden bridge stretches through the dense foliage, creating a striking contrast against the vibrant greenery. The trees are abundant and varied, showcasing different shades of green, while the path leads the eye deeper into the forest. The atmosphere is tranquil, with a sense of peace emanating from the natural landscape.",
+      "search_text": "Explore the Virginia Creeper Trail in Damascus, Virginia, with its stunning aerial views of lush forests and serene wooden bridges. This picturesque landscape is perfect for hiking and outdoor adventures, showcasing the beauty of nature in the Southeast United States. Discover the tranquility of the abundant greenery and the peaceful atmosphere that invites exploration and relaxation.",
+      "keywords": [
+        "Virginia Creeper Trail",
+        "forest",
+        "bridge",
+        "wooden bridge",
+        "lush greenery",
+        "aerial view",
+        "nature",
+        "outdoors",
+        "hiking",
+        "pathway",
+        "tranquil",
+        "serene",
+        "landscape",
+        "Southeast",
+        "United States",
+        "trees",
+        "foliage",
+        "wilderness",
+        "exploration",
+        "scenic"
+      ],
+      "color_palette": [
+        {
+          "hex": "#58632B",
+          "name": "dark olive green",
+          "w": 0.24
+        },
+        {
+          "hex": "#7C864E",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#212B0C",
+          "name": "black",
+          "w": 0.19
+        },
+        {
+          "hex": "#374512",
+          "name": "dark olive green",
+          "w": 0.18
+        },
+        {
+          "hex": "#464F20",
+          "name": "dark olive green",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
