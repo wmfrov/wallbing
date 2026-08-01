@@ -132245,6 +132245,68 @@
   "HawaiiLava_EN-US4126737972_UHD": {
     "date": "2026-08-01",
     "title": "A series of lava flows spill into the ocean, Big Island, Hawaii",
-    "bing_url": "https://www.bing.com/th?id=OHR.HawaiiLava_EN-US4126737972_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.HawaiiLava_EN-US4126737972_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "landscape"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Hawaii",
+      "time_of_day": "dusk",
+      "mood": "dramatic",
+      "ai_description": "The image captures a dramatic scene where molten lava flows from rocky cliffs into the ocean, creating a striking contrast between the fiery orange of the lava and the deep blue of the water. The foreground features jagged black rocks, while the background shows the ocean waves crashing against the shore. Steam rises where the lava meets the water, adding a mystical quality to the scene. The sky is overcast, enhancing the moody atmosphere of this volcanic landscape.",
+      "search_text": "Explore the stunning volcanic landscape of Big Island, Hawaii, where lava flows dramatically spill into the ocean. This breathtaking scene features black rocky cliffs, steam rising from the interaction of lava and water, and the vibrant colors of molten rock against the deep blue sea. Ideal for those interested in geology, nature photography, and dramatic landscapes, this image captures the raw power of volcanic activity in a coastal setting.",
+      "keywords": [
+        "lava",
+        "ocean",
+        "Big Island",
+        "Hawaii",
+        "volcanic",
+        "landscape",
+        "rocks",
+        "steam",
+        "fiery",
+        "dramatic",
+        "cliffs",
+        "water",
+        "lava flow",
+        "black rocks",
+        "crashing waves",
+        "geothermal",
+        "coastline",
+        "mystical",
+        "nature",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#1D1E26",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#513A3F",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#70646B",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#8C7C80",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#9E8E88",
+          "name": "rosy brown",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
