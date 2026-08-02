@@ -132312,6 +132312,69 @@
   "HelsinkiBlue_EN-US4898215906_UHD": {
     "date": "2026-08-02",
     "title": "Helsinki's shoreline during blue hour, Uusimaa, Finland",
-    "bing_url": "https://www.bing.com/th?id=OHR.HelsinkiBlue_EN-US4898215906_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.HelsinkiBlue_EN-US4898215906_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture",
+        "ocean"
+      ],
+      "season": null,
+      "country": "Finland",
+      "region": "Uusimaa",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures the shoreline of Helsinki during the blue hour, showcasing a vibrant cityscape. In the foreground, boats are docked along the calm waters, reflecting the warm lights of the buildings. The skyline features a mix of modern and historical architecture, with a soft gradient of colors in the sky transitioning from blue to orange. The scene is peaceful, with the city lights beginning to twinkle as dusk settles in.",
+      "search_text": "Explore the serene beauty of Helsinki's shoreline during the blue hour. This stunning cityscape features a mix of modern and historical architecture along the waterfront. The calm ocean reflects the warm lights of the buildings, creating a picturesque scene at dusk. Perfect for those interested in urban landscapes, city lights, and tranquil waters, this image captures the essence of Helsinki in Uusimaa, Finland.",
+      "keywords": [
+        "Helsinki",
+        "Finland",
+        "city",
+        "architecture",
+        "blue hour",
+        "shoreline",
+        "ocean",
+        "boats",
+        "dusk",
+        "water",
+        "urban",
+        "lights",
+        "reflection",
+        "skyline",
+        "serene",
+        "Uusimaa",
+        "modern",
+        "historical",
+        "evening",
+        "landscape"
+      ],
+      "color_palette": [
+        {
+          "hex": "#546D83",
+          "name": "dim gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#2B4158",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#7290AD",
+          "name": "light slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#B19F9B",
+          "name": "dark gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#CBC1C3",
+          "name": "silver",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
