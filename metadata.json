@@ -132380,6 +132380,68 @@
   "BoatsMalta_EN-US5373607495_UHD": {
     "date": "2026-08-03",
     "title": "Colorful boats in Marsaxlokk Harbor, Malta",
-    "bing_url": "https://www.bing.com/th?id=OHR.BoatsMalta_EN-US5373607495_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BoatsMalta_EN-US5373607495_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "city"
+      ],
+      "season": null,
+      "country": "Malta",
+      "region": "Southern Europe",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases a vibrant scene of Marsaxlokk Harbor in Malta, filled with numerous colorful boats bobbing on the turquoise waters. The boats vary in size and color, with shades of blue, yellow, and red dominating the scene. The water's surface reflects the bright hues of the boats, creating a lively atmosphere. In the background, the harbor's edge features a mix of buildings and natural elements, enhancing the coastal charm of the area.",
+      "search_text": "Explore the vibrant scene of Marsaxlokk Harbor in Malta, where colorful fishing boats float on the turquoise ocean waters. This picturesque coastal area is known for its lively maritime atmosphere, featuring a variety of boats in different colors and sizes. Ideal for those interested in marine life, boating, and beautiful coastal landscapes, this image captures the essence of Southern Europe\u2019s charm. Perfect for searches related to Malta, harbors, and vibrant ocean scenes.",
+      "keywords": [
+        "Marsaxlokk",
+        "Malta",
+        "boats",
+        "harbor",
+        "ocean",
+        "turquoise",
+        "colorful",
+        "fishing boats",
+        "water",
+        "Southern Europe",
+        "daytime",
+        "vibrant",
+        "coastal",
+        "maritime",
+        "sea",
+        "dock",
+        "blue",
+        "yellow",
+        "red",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#069EA1",
+          "name": "dark cyan",
+          "w": 0.4
+        },
+        {
+          "hex": "#04A7AE",
+          "name": "light sea green",
+          "w": 0.23
+        },
+        {
+          "hex": "#01A8AD",
+          "name": "light sea green",
+          "w": 0.19
+        },
+        {
+          "hex": "#10848A",
+          "name": "dark cyan",
+          "w": 0.12
+        },
+        {
+          "hex": "#32B2B6",
+          "name": "light sea green",
+          "w": 0.07
+        }
+      ]
+    }
   }
 }
