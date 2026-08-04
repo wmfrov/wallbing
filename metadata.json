@@ -132447,6 +132447,68 @@
   "AdorableOwlet_EN-US7873975586_UHD": {
     "date": "2026-08-04",
     "title": "Florida burrowing owlet, Cape Coral, Florida, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.AdorableOwlet_EN-US7873975586_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AdorableOwlet_EN-US7873975586_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird",
+        "animal"
+      ],
+      "season": "spring",
+      "country": "USA",
+      "region": "Southeast USA",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a Florida burrowing owlet perched amidst a vibrant array of wildflowers. The owl has a round face with striking yellow eyes and a soft, speckled plumage that blends with the natural surroundings. In the foreground, delicate flowers in various colors create a lively backdrop, while the blurred background suggests a bright, sunny day. The overall composition captures the essence of a peaceful moment in nature, highlighting the beauty of wildlife in its habitat.",
+      "search_text": "Explore the beauty of the Florida burrowing owlet, a small bird native to the Southeast USA, particularly in Cape Coral, Florida. This adorable owl, known for its distinctive yellow eyes and speckled plumage, is often found in natural habitats filled with wildflowers. Perfect for birdwatching enthusiasts, this image captures a serene moment in nature, showcasing the vibrant colors of spring and the delicate balance of wildlife and flora.",
+      "keywords": [
+        "Florida burrowing owlet",
+        "Athene cunicularia",
+        "owl",
+        "bird",
+        "animal",
+        "wildflowers",
+        "nature",
+        "spring",
+        "Cape Coral",
+        "Southeast USA",
+        "perched",
+        "serene",
+        "yellow eyes",
+        "speckled plumage",
+        "flora",
+        "habitat",
+        "wildlife",
+        "daylight",
+        "soft feathers",
+        "vibrant colors"
+      ],
+      "color_palette": [
+        {
+          "hex": "#ADAD91",
+          "name": "dark gray",
+          "w": 0.31
+        },
+        {
+          "hex": "#B6B99B",
+          "name": "dark gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#908C79",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#CBC0A9",
+          "name": "silver",
+          "w": 0.16
+        },
+        {
+          "hex": "#DBD4B4",
+          "name": "wheat",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
