@@ -132514,6 +132514,67 @@
   "FezMorocco_EN-US8380353742_UHD": {
     "date": "2026-08-05",
     "title": "Decorated gate of the Royal Palace of Fez, Morocco",
-    "bing_url": "https://www.bing.com/th?id=OHR.FezMorocco_EN-US8380353742_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FezMorocco_EN-US8380353742_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "Morocco",
+      "region": "North Africa",
+      "time_of_day": null,
+      "mood": "vibrant",
+      "ai_description": "The image features a beautifully decorated gate of the Royal Palace of Fez, showcasing intricate geometric patterns and vibrant colors. The door is made of a rich, golden wood, adorned with detailed carvings that reflect traditional Moroccan artistry. Surrounding the door are colorful tiles that create a stunning mosaic effect, typical of Islamic architecture. The archway above the door is elegantly shaped, adding to the grandeur of the entrance.",
+      "search_text": "Explore the stunning architecture of the Royal Palace of Fez in Morocco, featuring a beautifully decorated gate with intricate geometric patterns and vibrant colors. This ornate entrance showcases traditional Moroccan artistry, including detailed carvings and colorful mosaics typical of Islamic art. Discover the rich cultural heritage and historical significance of this landmark in North Africa, perfect for those interested in architecture and cultural sites.",
+      "keywords": [
+        "Morocco",
+        "Royal Palace of Fez",
+        "architecture",
+        "decorated gate",
+        "intricate patterns",
+        "geometric design",
+        "vibrant colors",
+        "mosaic",
+        "Islamic art",
+        "wooden door",
+        "carvings",
+        "traditional",
+        "North Africa",
+        "ornate",
+        "historical",
+        "cultural",
+        "landmark",
+        "entrance",
+        "ornamentation",
+        "heritage"
+      ],
+      "color_palette": [
+        {
+          "hex": "#AAB0B8",
+          "name": "dark gray",
+          "w": 0.33
+        },
+        {
+          "hex": "#E78413",
+          "name": "dark orange",
+          "w": 0.29
+        },
+        {
+          "hex": "#A4816F",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#995730",
+          "name": "sienna",
+          "w": 0.13
+        },
+        {
+          "hex": "#E5B688",
+          "name": "burly wood",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
