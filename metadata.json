@@ -132580,11 +132580,134 @@
   "LimeKiln_EN-US2748515593_UHD": {
     "date": "2026-08-07",
     "title": "Lime Kiln Lighthouse on San Juan Island, Washington State",
-    "bing_url": "https://www.bing.com/th?id=OHR.LimeKiln_EN-US2748515593_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LimeKiln_EN-US2748515593_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Pacific Northwest",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image features the Lime Kiln Lighthouse situated on the rocky shore of San Juan Island in Washington State. The lighthouse, with its distinctive white exterior and red roof, stands prominently against the backdrop of a calm ocean. The sky is painted in soft blue hues, indicating dusk, with a few clouds scattered across. The foreground showcases rugged rocks leading into the water, while the distant mountains create a serene horizon.",
+      "search_text": "Explore the Lime Kiln Lighthouse on San Juan Island in Washington State, a serene coastal landmark. This picturesque lighthouse features a classic white and red architecture, set against the tranquil ocean at dusk. Perfect for those interested in seascapes, coastal views, and architectural photography. Discover the beauty of the Pacific Northwest with its rugged shores and stunning evening light.",
+      "keywords": [
+        "Lime Kiln Lighthouse",
+        "San Juan Island",
+        "Washington State",
+        "ocean",
+        "dusk",
+        "architecture",
+        "lighthouse",
+        "rocky shore",
+        "serene",
+        "calm water",
+        "Pacific Northwest",
+        "landmark",
+        "blue sky",
+        "clouds",
+        "coastal",
+        "evening light",
+        "nature",
+        "seascape",
+        "landscape"
+      ],
+      "color_palette": [
+        {
+          "hex": "#2A98CB",
+          "name": "steel blue",
+          "w": 0.31
+        },
+        {
+          "hex": "#11191F",
+          "name": "black",
+          "w": 0.3
+        },
+        {
+          "hex": "#4BA9D3",
+          "name": "medium turquoise",
+          "w": 0.14
+        },
+        {
+          "hex": "#2B5C79",
+          "name": "dark slate gray",
+          "w": 0.13
+        },
+        {
+          "hex": "#93D8F0",
+          "name": "sky blue",
+          "w": 0.12
+        }
+      ]
+    }
   },
   "MaraCrossing_EN-US8682968377_UHD": {
     "date": "2026-08-06",
     "title": "Migrating wildebeest crossing Mara River in Masai Mara, Kenya",
-    "bing_url": "https://www.bing.com/th?id=OHR.MaraCrossing_EN-US8682968377_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MaraCrossing_EN-US8682968377_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "river"
+      ],
+      "season": "winter",
+      "country": "Kenya",
+      "region": "East Africa",
+      "time_of_day": "day",
+      "mood": "dramatic",
+      "ai_description": "The image captures a dramatic scene of wildebeest migrating across the Mara River in Masai Mara, Kenya. A large herd of wildebeest is seen moving through a dusty environment, creating a cloud of dust that adds to the intensity of the moment. The river is visible in the foreground, with rocky banks framing the scene. The background features a blurred landscape of trees and grassland, emphasizing the scale of the migration. The overall atmosphere is one of movement and urgency, characteristic of this natural phenomenon.",
+      "search_text": "Experience the breathtaking migration of wildebeest across the Mara River in Masai Mara, Kenya. This dramatic wildlife event showcases herds of wildebeest navigating through dusty landscapes and rocky riverbanks. Perfect for nature enthusiasts and wildlife photographers, this scene captures the essence of animal behavior and migration patterns in East Africa. Explore stunning images of the savanna, river crossings, and the vibrant wildlife that inhabits this region.",
+      "keywords": [
+        "wildebeest",
+        "migration",
+        "Mara River",
+        "Masai Mara",
+        "Kenya",
+        "animal",
+        "herd",
+        "dust",
+        "East Africa",
+        "wildlife",
+        "river crossing",
+        "savanna",
+        "nature",
+        "dramatic",
+        "landscape",
+        "grassland",
+        "day",
+        "wildlife photography",
+        "migration pattern",
+        "animal behavior"
+      ],
+      "color_palette": [
+        {
+          "hex": "#977253",
+          "name": "sienna",
+          "w": 0.25
+        },
+        {
+          "hex": "#6A492D",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#BB8E6D",
+          "name": "rosy brown",
+          "w": 0.23
+        },
+        {
+          "hex": "#D09E7B",
+          "name": "dark salmon",
+          "w": 0.19
+        },
+        {
+          "hex": "#E9B492",
+          "name": "burly wood",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
