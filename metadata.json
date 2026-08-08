@@ -132713,6 +132713,68 @@
   "StocktonInfinity_EN-US3006724421_UHD": {
     "date": "2026-08-08",
     "title": "Infinity Bridge in Stockton-on-Tees, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.StocktonInfinity_EN-US3006724421_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.StocktonInfinity_EN-US3006724421_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bridge",
+        "city"
+      ],
+      "season": null,
+      "country": "England",
+      "region": "United Kingdom",
+      "time_of_day": "night",
+      "mood": "serene",
+      "ai_description": "The image features the Infinity Bridge in Stockton-on-Tees, illuminated against the night sky. The bridge's unique arch design is reflected in the calm waters below, creating a symmetrical visual effect. Surrounding the bridge, city lights twinkle, adding a vibrant touch to the serene atmosphere. The structure is modern, showcasing sleek lines and a minimalist aesthetic, while the reflections enhance the overall beauty of the scene.",
+      "search_text": "Explore the stunning Infinity Bridge in Stockton-on-Tees, England, illuminated at night. This modern architectural marvel features a unique arch design reflected in the calm waters below. Perfect for those interested in urban landscapes, nighttime photography, and striking city landmarks. The vibrant city lights create a serene atmosphere, making it an ideal subject for photography enthusiasts and architecture lovers alike.",
+      "keywords": [
+        "Infinity Bridge",
+        "Stockton-on-Tees",
+        "England",
+        "night",
+        "city lights",
+        "reflection",
+        "modern architecture",
+        "bridge",
+        "illuminated",
+        "water",
+        "serene",
+        "urban",
+        "nighttime",
+        "symmetry",
+        "landmark",
+        "structure",
+        "design",
+        "twinkling lights",
+        "calm waters",
+        "city"
+      ],
+      "color_palette": [
+        {
+          "hex": "#120C11",
+          "name": "black",
+          "w": 0.28
+        },
+        {
+          "hex": "#1C1518",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#08070B",
+          "name": "black",
+          "w": 0.21
+        },
+        {
+          "hex": "#302220",
+          "name": "dark slate gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#725F4A",
+          "name": "dim gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
