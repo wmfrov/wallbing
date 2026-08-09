@@ -132780,6 +132780,69 @@
   "JMTjibaou_EN-US3454380257_UHD": {
     "date": "2026-08-09",
     "title": "Jean-Marie Tjibaou Cultural Centre, New Caledonia",
-    "bing_url": "https://www.bing.com/th?id=OHR.JMTjibaou_EN-US3454380257_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.JMTjibaou_EN-US3454380257_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain",
+        "forest"
+      ],
+      "season": null,
+      "country": "New Caledonia",
+      "region": "Oceania",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the Jean-Marie Tjibaou Cultural Centre, set against a backdrop of lush greenery and mountainous terrain. In the foreground, a calm body of water reflects the surrounding landscape. The unique architectural structures of the cultural center rise prominently from the dense forest, characterized by their pointed shapes. The sky is partly cloudy, with soft light illuminating the scene, creating a tranquil atmosphere.",
+      "search_text": "Explore the Jean-Marie Tjibaou Cultural Centre in New Caledonia, a stunning architectural landmark set amidst lush landscapes and mountains. This serene location features unique structures surrounded by dense forests and calm waters, perfect for nature lovers and travelers. Discover the beauty of Oceania and its cultural heritage through this picturesque scene, ideal for those interested in architecture, outdoor adventures, and scenic views.",
+      "keywords": [
+        "Jean-Marie Tjibaou Cultural Centre",
+        "New Caledonia",
+        "landscape",
+        "mountain",
+        "forest",
+        "architecture",
+        "cultural center",
+        "serene",
+        "Oceania",
+        "nature",
+        "calm water",
+        "greenery",
+        "scenic",
+        "daytime",
+        "unique structures",
+        "tropical",
+        "travel",
+        "outdoor",
+        "landmark",
+        "tourism"
+      ],
+      "color_palette": [
+        {
+          "hex": "#554C0F",
+          "name": "dark olive green",
+          "w": 0.28
+        },
+        {
+          "hex": "#737049",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#989679",
+          "name": "gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#CCD8D3",
+          "name": "light gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#BCCFCF",
+          "name": "silver",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
