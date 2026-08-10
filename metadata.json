@@ -132848,6 +132848,68 @@
   "SandPath_EN-US3759872156_UHD": {
     "date": "2026-08-10",
     "title": "Joshua Tree National Park, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.SandPath_EN-US3759872156_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SandPath_EN-US3759872156_UHD.jpg",
+    "tags": {
+      "subject": [
+        "desert",
+        "landscape"
+      ],
+      "season": "autumn",
+      "country": "United States",
+      "region": "California",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a tranquil scene in Joshua Tree National Park, California, showcasing a sandy path that leads through a desert landscape. The foreground features sparse vegetation and rocky formations, while the background is adorned with a colorful sky filled with soft clouds at dawn. The warm hues of the sunrise create a peaceful atmosphere, highlighting the unique geological features of the park. The overall composition invites viewers to explore the natural beauty of this iconic desert environment.",
+      "search_text": "Explore the stunning landscapes of Joshua Tree National Park in California. This serene desert scene features a sandy path leading through unique geological formations and sparse vegetation. Ideal for nature lovers and outdoor enthusiasts, this image captures the beauty of dawn with colorful skies and soft clouds. Perfect for those searching for desert landscapes, tranquil outdoor scenes, or iconic national parks.",
+      "keywords": [
+        "Joshua Tree",
+        "California",
+        "desert",
+        "landscape",
+        "path",
+        "rocks",
+        "sunrise",
+        "clouds",
+        "vegetation",
+        "serene",
+        "outdoors",
+        "nature",
+        "scenic",
+        "wilderness",
+        "geological formations",
+        "tranquil",
+        "barren",
+        "arid",
+        "exploration",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#D9CEBE",
+          "name": "light gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#AA9B8B",
+          "name": "rosy brown",
+          "w": 0.2
+        },
+        {
+          "hex": "#AFB3AB",
+          "name": "dark gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#7B7368",
+          "name": "dim gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#7A98A0",
+          "name": "light slate gray",
+          "w": 0.17
+        }
+      ]
+    }
   }
 }
