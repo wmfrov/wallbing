@@ -132915,6 +132915,68 @@
   "ColorfulCop_EN-US3993977654_UHD": {
     "date": "2026-08-11",
     "title": "Colorful homes line Nyhavn Canal, Copenhagen, Denmark",
-    "bing_url": "https://www.bing.com/th?id=OHR.ColorfulCop_EN-US3993977654_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ColorfulCop_EN-US3993977654_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Denmark",
+      "region": "Scandinavia",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases a picturesque view of Nyhavn Canal in Copenhagen, Denmark, featuring a row of colorful homes with vibrant facades reflecting in the calm water. The buildings display a variety of architectural styles, predominantly with steep roofs and large windows. The scene is set during dusk, casting a soft glow over the area. In the foreground, the tranquil water mirrors the vivid colors of the buildings, creating a harmonious visual effect.",
+      "search_text": "Explore the vibrant and colorful homes lining Nyhavn Canal in Copenhagen, Denmark. This picturesque scene features stunning architecture with reflections in the water during dusk. Perfect for those interested in urban landscapes, European architecture, and travel photography. Discover the charm of this historic harbor area, a popular tourist destination known for its scenic beauty and vibrant atmosphere.",
+      "keywords": [
+        "Copenhagen",
+        "Denmark",
+        "Nyhavn",
+        "canal",
+        "colorful homes",
+        "architecture",
+        "water reflection",
+        "dusk",
+        "vibrant",
+        "serene",
+        "buildings",
+        "urban",
+        "scenic",
+        "harbor",
+        "European architecture",
+        "travel",
+        "tourism",
+        "landmark",
+        "historic",
+        "cityscape"
+      ],
+      "color_palette": [
+        {
+          "hex": "#4E9DBE",
+          "name": "steel blue",
+          "w": 0.29
+        },
+        {
+          "hex": "#423B3D",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#4C717C",
+          "name": "dim gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#A9A18B",
+          "name": "rosy brown",
+          "w": 0.14
+        },
+        {
+          "hex": "#B9CABD",
+          "name": "silver",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
