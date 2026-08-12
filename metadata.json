@@ -132982,6 +132982,68 @@
   "ElephantDay_EN-US4280370948_UHD": {
     "date": "2026-08-12",
     "title": "A group of elephants, Amboseli National Park, Kenya",
-    "bing_url": "https://www.bing.com/th?id=OHR.ElephantDay_EN-US4280370948_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ElephantDay_EN-US4280370948_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Kenya",
+      "region": "East Africa",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a group of elephants silhouetted against a vibrant orange sunset in Amboseli National Park, Kenya. In the foreground, several elephants are visible, some standing and others walking, creating a sense of movement. The background features a barren tree with twisted branches, adding to the dramatic atmosphere. The warm hues of the sky contrast with the dark shapes of the elephants, enhancing the serene yet majestic mood of the scene.",
+      "search_text": "Explore the beauty of Amboseli National Park in Kenya with this stunning image of a group of elephants at dusk. The silhouettes of these majestic animals against a vibrant sunset create a serene and dramatic atmosphere. Perfect for wildlife enthusiasts and nature lovers, this scene captures the essence of African wildlife in its natural habitat. Search for elephants, savanna landscapes, and stunning sunset photography to find similar images.",
+      "keywords": [
+        "elephants",
+        "animal",
+        "group",
+        "silhouette",
+        "sunset",
+        "Amboseli National Park",
+        "Kenya",
+        "wildlife",
+        "savanna",
+        "landscape",
+        "tree",
+        "dusk",
+        "East Africa",
+        "nature",
+        "herd",
+        "barren",
+        "majestic",
+        "serene",
+        "wild animals",
+        "African wildlife"
+      ],
+      "color_palette": [
+        {
+          "hex": "#331705",
+          "name": "black",
+          "w": 0.3
+        },
+        {
+          "hex": "#FA9B0C",
+          "name": "orange",
+          "w": 0.27
+        },
+        {
+          "hex": "#E98F10",
+          "name": "dark orange",
+          "w": 0.17
+        },
+        {
+          "hex": "#8E4E0A",
+          "name": "saddle brown",
+          "w": 0.16
+        },
+        {
+          "hex": "#F9A819",
+          "name": "orange",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
