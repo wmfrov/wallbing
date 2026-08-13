@@ -133049,6 +133049,68 @@
   "PerseidasTenerife_EN-US4798593153_UHD": {
     "date": "2026-08-13",
     "title": "Perseid meteors over Teide Observatory, Tenerife, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.PerseidasTenerife_EN-US4798593153_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.PerseidasTenerife_EN-US4798593153_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain"
+      ],
+      "season": null,
+      "country": "Spain",
+      "region": "Canary Islands",
+      "time_of_day": "night",
+      "mood": "mystical",
+      "ai_description": "The image captures a stunning night sky filled with stars, showcasing the Milky Way stretching across the horizon. In the foreground, there are grassy fields leading up to the Teide Observatory, which is silhouetted against the celestial backdrop. A bright meteor streaks across the sky, adding a dynamic element to the serene scene. The overall atmosphere is tranquil yet awe-inspiring, with the vastness of space on full display.",
+      "search_text": "Explore the breathtaking night sky over Teide Observatory in Tenerife, Spain, featuring the stunning Milky Way and Perseid meteors. This astrophotography captures the serene beauty of a star-filled sky, perfect for stargazing enthusiasts. Discover the tranquil landscapes of the Canary Islands, where the combination of mountains and open fields creates a mystical atmosphere. Ideal for those seeking to connect with nature and the cosmos.",
+      "keywords": [
+        "Milky Way",
+        "Perseid meteors",
+        "Tenerife",
+        "Teide Observatory",
+        "night sky",
+        "stars",
+        "meteor",
+        "landscape",
+        "mountain",
+        "Canary Islands",
+        "grassy fields",
+        "celestial",
+        "astrophotography",
+        "dark sky",
+        "cosmos",
+        "observatory",
+        "mystical",
+        "night",
+        "scenic",
+        "nature"
+      ],
+      "color_palette": [
+        {
+          "hex": "#343742",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#231E1E",
+          "name": "black",
+          "w": 0.23
+        },
+        {
+          "hex": "#4B4F5F",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#656578",
+          "name": "dim gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#84849F",
+          "name": "light slate gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
