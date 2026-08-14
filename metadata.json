@@ -133116,6 +133116,68 @@
   "WildlifeCrossingPoland_EN-US5004733603_UHD": {
     "date": "2026-08-14",
     "title": "Aerial view of a wildlife crossing near Zakrz\u00f3w, Poland",
-    "bing_url": "https://www.bing.com/th?id=OHR.WildlifeCrossingPoland_EN-US5004733603_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.WildlifeCrossingPoland_EN-US5004733603_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Poland",
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures an aerial view of a wildlife crossing designed to facilitate animal movement across a roadway. The structure is integrated into the landscape, featuring lush green vegetation on its surface. Surrounding the crossing are trees and shrubs, creating a natural habitat. The roadways are visible, with vehicles traveling on them, highlighting the intersection of nature and infrastructure. The overall scene conveys a sense of harmony between human development and wildlife conservation.",
+      "search_text": "Explore the innovative design of a wildlife crossing in Poland, showcasing how infrastructure can coexist with nature. This aerial view highlights the lush greenery and the integration of the crossing into the landscape, promoting animal movement and habitat conservation. Keywords include wildlife crossing, Poland, landscape architecture, and environmental design. Ideal for those interested in transportation, conservation efforts, and ecological structures.",
+      "keywords": [
+        "wildlife crossing",
+        "Poland",
+        "landscape",
+        "roadway",
+        "vegetation",
+        "nature",
+        "infrastructure",
+        "animals",
+        "habitat",
+        "aerial view",
+        "greenery",
+        "transportation",
+        "environment",
+        "conservation",
+        "trees",
+        "shrubs",
+        "daytime",
+        "serene",
+        "design",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#979E52",
+          "name": "dark khaki",
+          "w": 0.25
+        },
+        {
+          "hex": "#C2C57C",
+          "name": "dark khaki",
+          "w": 0.23
+        },
+        {
+          "hex": "#2B3C2B",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#50623C",
+          "name": "dark olive green",
+          "w": 0.17
+        },
+        {
+          "hex": "#70793F",
+          "name": "dark olive green",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
