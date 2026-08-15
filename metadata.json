@@ -133183,6 +133183,68 @@
   "ValleyDreams_EN-US5250331985_UHD": {
     "date": "2026-08-15",
     "title": "Hoodoos in Ah Shi Sle Pah Wilderness in San Juan County, New Mexico",
-    "bing_url": "https://www.bing.com/th?id=OHR.ValleyDreams_EN-US5250331985_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ValleyDreams_EN-US5250331985_UHD.jpg",
+    "tags": {
+      "subject": [
+        "desert",
+        "landscape"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southwest",
+      "time_of_day": "dusk",
+      "mood": "dramatic",
+      "ai_description": "The image captures a stunning desert landscape featuring hoodoos in the Ah Shi Sle Pah Wilderness of New Mexico. The foreground showcases intricate, textured rock formations with deep grooves and ridges, while the background reveals a dramatic sky filled with vibrant hues of orange, pink, and purple as the sun sets. The unique geological structures rise prominently against the colorful sky, creating a striking contrast. The overall atmosphere is one of awe and natural beauty, highlighting the rugged terrain of the desert.",
+      "search_text": "Explore the breathtaking hoodoos in the Ah Shi Sle Pah Wilderness of New Mexico, a stunning desert landscape characterized by unique rock formations and vibrant sunset skies. This area features dramatic geological structures and intricate textures, making it a perfect destination for nature lovers and photographers. Discover the beauty of the Southwest and its rugged terrain, ideal for outdoor adventures and scenic views. Keywords include hoodoos, desert landscape, New Mexico, and sunset photography.",
+      "keywords": [
+        "hoodoos",
+        "Ah Shi Sle Pah",
+        "New Mexico",
+        "desert",
+        "landscape",
+        "rock formations",
+        "sunset",
+        "dramatic sky",
+        "geological formations",
+        "rugged terrain",
+        "vibrant colors",
+        "natural beauty",
+        "textured rocks",
+        "Southwest",
+        "wilderness",
+        "scenic",
+        "outdoor",
+        "photography",
+        "nature",
+        "landscape photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#562F25",
+          "name": "saddle brown",
+          "w": 0.34
+        },
+        {
+          "hex": "#391F19",
+          "name": "black",
+          "w": 0.21
+        },
+        {
+          "hex": "#A77E7F",
+          "name": "rosy brown",
+          "w": 0.18
+        },
+        {
+          "hex": "#7C535B",
+          "name": "dim gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#C5AD9B",
+          "name": "tan",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
