@@ -133250,6 +133250,68 @@
   "RossErrillyRuins_EN-US5729358123_UHD": {
     "date": "2026-08-16",
     "title": "Ruins of Ross Errilly Friary, County Galway, Ireland",
-    "bing_url": "https://www.bing.com/th?id=OHR.RossErrillyRuins_EN-US5729358123_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.RossErrillyRuins_EN-US5729358123_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ruins",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Ireland",
+      "region": "Western Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image depicts the ruins of Ross Errilly Friary, showcasing its weathered stone walls and gothic-style windows. In the foreground, a gravel pathway leads through the archway, revealing the interior of the friary. The remnants of gravestones are visible, adding a historical context to the scene. The sky is overcast, providing a soft, diffused light that enhances the serene atmosphere of the ruins.",
+      "search_text": "Explore the ruins of Ross Errilly Friary located in County Galway, Ireland. This historical site features gothic architecture with weathered stone walls and intricate window designs. The serene atmosphere is enhanced by the surrounding gravestones and gravel pathways. Ideal for those interested in ancient ruins, cultural heritage, and architectural history, this friary is a significant landmark in Western Europe.",
+      "keywords": [
+        "Ross Errilly Friary",
+        "ruins",
+        "Ireland",
+        "County Galway",
+        "gothic architecture",
+        "stone walls",
+        "gravel pathway",
+        "historical site",
+        "archway",
+        "grave markers",
+        "weathered",
+        "medieval",
+        "serene",
+        "landmark",
+        "Western Europe",
+        "building",
+        "ancient",
+        "monastery",
+        "cultural heritage",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#444632",
+          "name": "dark slate gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#2A2B1C",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#5F5F4B",
+          "name": "dark olive green",
+          "w": 0.21
+        },
+        {
+          "hex": "#7A7B6F",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#A4A8A6",
+          "name": "dark gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
