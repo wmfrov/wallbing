@@ -133317,6 +133317,67 @@
   "CabilaoClowns_EN-US6302440247_UHD": {
     "date": "2026-08-17",
     "title": "Three false clownfish in a sea anemone, Cabilao Island, Bohol, Philippines",
-    "bing_url": "https://www.bing.com/th?id=OHR.CabilaoClowns_EN-US6302440247_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.CabilaoClowns_EN-US6302440247_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Philippines",
+      "region": "Southeast Asia",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features three false clownfish, also known as anemonefish, nestled within a vibrant purple sea anemone. The fish display their characteristic orange and white coloration, contrasting beautifully with the anemone's soft, flowing tentacles. The background showcases the intricate textures of the anemone, creating a serene underwater scene. The composition highlights the symbiotic relationship between the clownfish and the anemone, with the fish appearing to be in a protective embrace among the anemone's eggs.",
+      "search_text": "Explore the vibrant underwater world of the Philippines with this stunning image of three false clownfish, also known as anemonefish, nestled in a purple sea anemone. These tropical fish are known for their bright orange and white coloration and their unique symbiotic relationship with sea anemones. Perfect for marine life enthusiasts, this image captures the beauty of coral reefs and the diverse aquatic habitats found in Southeast Asia. Discover more about clownfish, anemones, and the rich biodiversity of the ocean.",
+      "keywords": [
+        "false clownfish",
+        "anemonefish",
+        "sea anemone",
+        "Cabilao Island",
+        "Bohol",
+        "Philippines",
+        "marine life",
+        "underwater",
+        "coral reef",
+        "animal",
+        "orange",
+        "purple",
+        "symbiotic",
+        "tropical",
+        "fish",
+        "aquatic",
+        "habitat",
+        "eggs",
+        "tropical fish",
+        "ocean"
+      ],
+      "color_palette": [
+        {
+          "hex": "#8459A9",
+          "name": "slate blue",
+          "w": 0.35
+        },
+        {
+          "hex": "#7F4AA6",
+          "name": "slate blue",
+          "w": 0.26
+        },
+        {
+          "hex": "#583769",
+          "name": "dark slate blue",
+          "w": 0.19
+        },
+        {
+          "hex": "#B2A182",
+          "name": "rosy brown",
+          "w": 0.13
+        },
+        {
+          "hex": "#966587",
+          "name": "gray",
+          "w": 0.07
+        }
+      ]
+    }
   }
 }
