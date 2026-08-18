@@ -133383,6 +133383,68 @@
   "Palmanova_EN-US0340289339_UHD": {
     "date": "2026-08-18",
     "title": "Aerial view of Palmanova, a fortress city in Friuli, Italy",
-    "bing_url": "https://www.bing.com/th?id=OHR.Palmanova_EN-US0340289339_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Palmanova_EN-US0340289339_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Italy",
+      "region": "Friuli",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases an aerial view of Palmanova, a unique fortress city in Italy. The layout is distinctly octagonal, with a central square surrounded by a series of radial streets. The buildings are primarily low-rise, featuring terracotta roofs that create a warm, cohesive aesthetic. The surrounding greenery adds a touch of nature to the urban environment, while the geometric patterns of the streets and structures are visually striking.",
+      "search_text": "Explore the unique architecture of Palmanova, an octagonal fortress city in Friuli, Italy. This aerial view highlights the geometric patterns of the city layout, characterized by terracotta roofs and a central square. Ideal for those interested in urban planning, historic architecture, and serene cityscapes, this image captures the essence of a well-designed urban environment surrounded by greenery.",
+      "keywords": [
+        "Palmanova",
+        "fortress city",
+        "Italy",
+        "architecture",
+        "octagonal layout",
+        "aerial view",
+        "urban planning",
+        "terracotta roofs",
+        "central square",
+        "geometric patterns",
+        "Friuli",
+        "daytime",
+        "cityscape",
+        "historic architecture",
+        "greenery",
+        "landscape",
+        "urban design",
+        "town planning",
+        "serene atmosphere",
+        "building"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5B483C",
+          "name": "dark olive green",
+          "w": 0.28
+        },
+        {
+          "hex": "#2E2D2A",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#8F755F",
+          "name": "gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#C1A081",
+          "name": "rosy brown",
+          "w": 0.17
+        },
+        {
+          "hex": "#DEC8AB",
+          "name": "wheat",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
