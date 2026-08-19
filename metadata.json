@@ -133450,6 +133450,66 @@
   "BrewsterXF2A_EN-US0417477370_UHD": {
     "date": "2026-08-19",
     "title": "NASA's Langley Research Center mounted the Navy's Brewster XF2A-1 Buffalo in the Full-Scale Tunnel, 1938, Hampton, Virginia",
-    "bing_url": "https://www.bing.com/th?id=OHR.BrewsterXF2A_EN-US0417477370_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BrewsterXF2A_EN-US0417477370_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Virginia",
+      "time_of_day": null,
+      "mood": "stark",
+      "ai_description": "The image depicts a large wind tunnel at NASA's Langley Research Center, showcasing the Brewster XF2A-1 Buffalo aircraft mounted on a support structure. The tunnel's interior is vast and cylindrical, with smooth, curved walls that emphasize its industrial design. In the foreground, two figures stand near the aircraft, providing a sense of scale. The overall atmosphere is stark and mechanical, highlighting the engineering focus of the facility.",
+      "search_text": "Explore the historical significance of the Brewster XF2A-1 Buffalo aircraft mounted in the wind tunnel at NASA's Langley Research Center in Hampton, Virginia. This image captures the industrial architecture of the facility, showcasing the engineering advancements in aviation from 1938. Discover the mechanics of wind tunnels, aircraft testing, and the evolution of aviation technology, as well as the stark design of research facilities dedicated to aerodynamics.",
+      "keywords": [
+        "Brewster XF2A-1 Buffalo",
+        "aircraft",
+        "wind tunnel",
+        "NASA",
+        "Langley Research Center",
+        "aviation",
+        "engineering",
+        "Hampton",
+        "Virginia",
+        "1938",
+        "architecture",
+        "industrial",
+        "mechanical",
+        "support structure",
+        "scale",
+        "tunnel",
+        "research facility",
+        "airflow",
+        "testing"
+      ],
+      "color_palette": [
+        {
+          "hex": "#757575",
+          "name": "gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#575757",
+          "name": "dim gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#202020",
+          "name": "black",
+          "w": 0.23
+        },
+        {
+          "hex": "#898989",
+          "name": "gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#AEAEAE",
+          "name": "dark gray",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
