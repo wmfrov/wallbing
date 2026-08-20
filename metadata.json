@@ -133515,6 +133515,69 @@
   "LynnCanalOrca_EN-US0537229184_UHD": {
     "date": "2026-08-20",
     "title": "An orca surfaces in Lynn Canal near the Chilkat Mountains, Alaska",
-    "bing_url": "https://www.bing.com/th?id=OHR.LynnCanalOrca_EN-US0537229184_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LynnCanalOrca_EN-US0537229184_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "mountain",
+        "animal"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Alaska",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures an orca surfacing in the calm waters of Lynn Canal, with its dorsal fin prominently visible. In the background, the majestic Chilkat Mountains rise, their snow-capped peaks contrasting beautifully against the warm hues of a sunset. The water reflects the colors of the sky, creating a tranquil atmosphere. The foreground features gentle ripples, enhancing the sense of serenity in this natural setting.",
+      "search_text": "Explore the beauty of Alaska with this stunning image of an orca surfacing in Lynn Canal near the Chilkat Mountains. The serene atmosphere is enhanced by the warm sunset colors reflecting on the ocean's surface. Perfect for wildlife enthusiasts and lovers of marine life, this image captures the essence of nature in the Pacific Northwest. Keywords include orca, killer whale, and the breathtaking landscape of snow-capped mountains.",
+      "keywords": [
+        "orca",
+        "killer whale",
+        "animal",
+        "Lynn Canal",
+        "Chilkat Mountains",
+        "sunset",
+        "mountain",
+        "ocean",
+        "serene",
+        "wildlife",
+        "marine",
+        "nature",
+        "water",
+        "reflection",
+        "dorsal fin",
+        "snow-capped",
+        "landscape",
+        "Alaska",
+        "Pacific Northwest",
+        "sea"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3D4654",
+          "name": "dark slate gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#132238",
+          "name": "midnight blue",
+          "w": 0.27
+        },
+        {
+          "hex": "#78706D",
+          "name": "dim gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#EBA25A",
+          "name": "sandy brown",
+          "w": 0.17
+        },
+        {
+          "hex": "#EAB26D",
+          "name": "sandy brown",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
