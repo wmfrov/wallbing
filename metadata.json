@@ -133583,6 +133583,68 @@
   "JulierPass_EN-US2643379571_UHD": {
     "date": "2026-08-21",
     "title": "Winding road of Julier Pass, Switzerland",
-    "bing_url": "https://www.bing.com/th?id=OHR.JulierPass_EN-US2643379571_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.JulierPass_EN-US2643379571_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain"
+      ],
+      "season": null,
+      "country": "Switzerland",
+      "region": "Central Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases a winding road that snakes through lush green hills, characteristic of the Julier Pass in Switzerland. The road is paved and features several vehicles traversing its curves. In the background, steep mountain slopes rise, covered in grass and dotted with rocky outcrops. A small stream can be seen flowing alongside the road, adding to the tranquil atmosphere of the scene. The overall landscape is vibrant and inviting, typical of a summer day in the Swiss Alps.",
+      "search_text": "Explore the stunning winding road of Julier Pass in Switzerland, a scenic drive through the majestic Swiss Alps. This landscape features lush green hills, a flowing stream, and a vibrant atmosphere perfect for outdoor adventures. Ideal for nature lovers and travelers seeking picturesque views, this road is a popular destination for hiking and exploration. Discover the beauty of the Swiss countryside and enjoy the serenity of this remarkable landscape.",
+      "keywords": [
+        "Julier Pass",
+        "Switzerland",
+        "mountain",
+        "landscape",
+        "winding road",
+        "vehicles",
+        "green hills",
+        "stream",
+        "Alps",
+        "scenic drive",
+        "travel",
+        "nature",
+        "outdoor",
+        "serene",
+        "daytime",
+        "curves",
+        "highway",
+        "landform",
+        "hiking",
+        "exploration"
+      ],
+      "color_palette": [
+        {
+          "hex": "#6F6C24",
+          "name": "dark olive green",
+          "w": 0.29
+        },
+        {
+          "hex": "#86852C",
+          "name": "olive drab",
+          "w": 0.22
+        },
+        {
+          "hex": "#413F1A",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#98963B",
+          "name": "olive drab",
+          "w": 0.19
+        },
+        {
+          "hex": "#C1BC91",
+          "name": "tan",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
