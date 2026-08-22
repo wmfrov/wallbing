@@ -133650,6 +133650,67 @@
   "CommonBlue_EN-US2760688799_UHD": {
     "date": "2026-08-22",
     "title": "Common blue butterfly, Devon, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.CommonBlue_EN-US2760688799_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.CommonBlue_EN-US2760688799_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "animal"
+      ],
+      "season": "summer",
+      "country": "England",
+      "region": "South West England",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a Common Blue butterfly perched delicately on a purple flower. The background is filled with soft, blurred purple blooms that create a dreamy atmosphere. The butterfly displays intricate patterns on its wings, with shades of blue and orange spots. The focus is sharp on the butterfly, while the surrounding flowers fade into a gentle bokeh effect, enhancing the serene mood of the scene.",
+      "search_text": "Explore the beauty of the Common Blue butterfly, a stunning insect found in Devon, England. This macro photography captures the delicate details of the butterfly resting on vibrant purple flowers. Ideal for nature lovers and those interested in wildlife, this image showcases the serene atmosphere of a summer garden. Discover related terms like blooming flowers, pollinators, and the enchanting world of butterflies.",
+      "keywords": [
+        "Common Blue butterfly",
+        "Polyommatus icarus",
+        "flower",
+        "purple",
+        "Devon",
+        "England",
+        "insect",
+        "nature",
+        "blooming",
+        "wildflower",
+        "serene",
+        "animal",
+        "macro",
+        "photography",
+        "summer",
+        "garden",
+        "colorful",
+        "delicate",
+        "pollinator"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A87CBA",
+          "name": "medium purple",
+          "w": 0.25
+        },
+        {
+          "hex": "#9145CB",
+          "name": "dark orchid",
+          "w": 0.23
+        },
+        {
+          "hex": "#B290B2",
+          "name": "dark gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#BAA1A1",
+          "name": "dark gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#C9B19F",
+          "name": "tan",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
