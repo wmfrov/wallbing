@@ -133716,6 +133716,68 @@
   "KatmaiBear_EN-US2844742219_UHD": {
     "date": "2026-08-23",
     "title": "Brown bear fishing in river, Katmai National Park, Alaska",
-    "bing_url": "https://www.bing.com/th?id=OHR.KatmaiBear_EN-US2844742219_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.KatmaiBear_EN-US2844742219_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "river"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Alaska",
+      "time_of_day": "day",
+      "mood": "dramatic",
+      "ai_description": "The image captures a brown bear in mid-action as it fishes in a river, surrounded by a swirling mass of salmon. The bear is partially submerged, with water splashing around its powerful body, creating a dynamic scene. The fish, characterized by their vibrant red coloration, are swimming in a dense group, indicating a spawning event. The river's clear water contrasts with the bear's fur, highlighting the natural beauty of Katmai National Park.",
+      "search_text": "Explore the thrilling scene of a brown bear fishing in a river, surrounded by a swirling school of salmon in Katmai National Park, Alaska. This dramatic wildlife moment showcases the bear's hunting prowess and the vibrant colors of the fish. Perfect for nature enthusiasts and wildlife photography lovers, this image captures the essence of a natural ecosystem where predator and prey interact in their habitat.",
+      "keywords": [
+        "brown bear",
+        "salmon",
+        "fishing",
+        "river",
+        "Katmai National Park",
+        "Alaska",
+        "animal",
+        "wildlife",
+        "splashing",
+        "nature",
+        "predator",
+        "ecosystem",
+        "aquatic",
+        "daytime",
+        "action",
+        "wild",
+        "natural habitat",
+        "red fish",
+        "spawning",
+        "water"
+      ],
+      "color_palette": [
+        {
+          "hex": "#492E27",
+          "name": "dark slate gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#534A3C",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#322119",
+          "name": "black",
+          "w": 0.23
+        },
+        {
+          "hex": "#6C6568",
+          "name": "dim gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#A39DB4",
+          "name": "dark gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
