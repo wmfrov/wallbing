@@ -133783,6 +133783,68 @@
   "BKBridge_EN-US2923468858_UHD": {
     "date": "2026-08-24",
     "title": "Brooklyn Bridge, New York City",
-    "bing_url": "https://www.bing.com/th?id=OHR.BKBridge_EN-US2923468858_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BKBridge_EN-US2923468858_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bridge",
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Northeast",
+      "time_of_day": "night",
+      "mood": "serene",
+      "ai_description": "The image showcases the Brooklyn Bridge illuminated at night, with its iconic Gothic-style towers and intricate suspension cables. The bridge spans over the East River, reflecting its lights on the calm water below. In the background, the skyline of New York City is visible, with various buildings contributing to the urban landscape. The scene is tranquil, with a clear sky enhancing the visibility of the bridge's architectural details.",
+      "search_text": "Explore the stunning Brooklyn Bridge in New York City, an iconic suspension bridge known for its Gothic architecture and beautiful nighttime illumination. This urban landmark spans the East River, offering breathtaking views of the city skyline. Perfect for photography, travel enthusiasts, and architecture lovers, the bridge reflects lights on the water, creating a serene atmosphere. Discover the charm of this architectural marvel and its significance in the heart of New York.",
+      "keywords": [
+        "Brooklyn Bridge",
+        "New York City",
+        "architecture",
+        "night",
+        "urban",
+        "suspension bridge",
+        "East River",
+        "city skyline",
+        "illuminated",
+        "Gothic",
+        "reflection",
+        "lights",
+        "landmark",
+        "travel",
+        "tourism",
+        "serene",
+        "nighttime",
+        "cityscape",
+        "water"
+      ],
+      "color_palette": [
+        {
+          "hex": "#45363D",
+          "name": "dark slate gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#58506A",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#282D4C",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#71678B",
+          "name": "slate gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#A38E8C",
+          "name": "rosy brown",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
