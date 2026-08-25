@@ -133850,6 +133850,67 @@
   "RedwoodPark_EN-US3199427613_UHD": {
     "date": "2026-08-25",
     "title": "Sunrise in Redwood National and State Parks, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.RedwoodPark_EN-US3199427613_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.RedwoodPark_EN-US3199427613_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest"
+      ],
+      "season": "spring",
+      "country": "United States",
+      "region": "Pacific Northwest",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a serene forest scene at dawn in Redwood National and State Parks, California. Towering redwood trees dominate the landscape, their trunks bathed in soft morning light. A winding dirt path meanders through the lush undergrowth, which is rich with ferns and other greenery. Sunlight filters through the branches, creating a warm and inviting atmosphere. The overall composition evokes a sense of tranquility and connection to nature.",
+      "search_text": "Explore the beauty of Redwood National and State Parks in California with this serene forest scene at dawn. The towering redwood trees create a majestic atmosphere, while the winding path invites you to wander through lush greenery and ferns. Perfect for nature lovers, this landscape captures the tranquility of early morning light filtering through the trees. Discover the rich biodiversity and scenic views of this iconic national park in the Pacific Northwest.",
+      "keywords": [
+        "redwood",
+        "forest",
+        "California",
+        "sunrise",
+        "path",
+        "ferns",
+        "trees",
+        "nature",
+        "landscape",
+        "Pacific Northwest",
+        "morning light",
+        "serene",
+        "outdoors",
+        "wildlife",
+        "lush",
+        "greenery",
+        "tranquil",
+        "scenic",
+        "national park",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#12150A",
+          "name": "black",
+          "w": 0.26
+        },
+        {
+          "hex": "#3A3D1F",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#6B6738",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#8C8B4F",
+          "name": "gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#BEB071",
+          "name": "dark khaki",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
