@@ -133916,6 +133916,69 @@
   "AurorasIceland_EN-US3293282785_UHD": {
     "date": "2026-08-26",
     "title": "Auroras over Kirkjufell, Iceland",
-    "bing_url": "https://www.bing.com/th?id=OHR.AurorasIceland_EN-US3293282785_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AurorasIceland_EN-US3293282785_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "ocean",
+        "aurora"
+      ],
+      "season": null,
+      "country": "Iceland",
+      "region": "Northern Europe",
+      "time_of_day": "night",
+      "mood": "mystical",
+      "ai_description": "The image showcases the stunning auroras dancing across the night sky above Kirkjufell mountain in Iceland. The vibrant greens and blues of the auroras contrast beautifully with the dark backdrop of the night. In the foreground, a small stream flows over rocky terrain, leading the eye towards the mountain. The landscape features gentle hills and the ocean in the background, creating a serene yet dramatic atmosphere.",
+      "search_text": "Explore the breathtaking auroras over Kirkjufell in Iceland, where the northern lights illuminate the night sky with vibrant greens and blues. This stunning landscape features the iconic mountain surrounded by a serene ocean and a flowing stream. Perfect for nature lovers and photographers, this image captures the mystical beauty of Iceland's natural wonders. Discover the magic of aurora borealis and the unique geological formations that make this region a must-see destination.",
+      "keywords": [
+        "Kirkjufell",
+        "Iceland",
+        "aurora borealis",
+        "northern lights",
+        "mountain",
+        "ocean",
+        "night sky",
+        "stream",
+        "landscape",
+        "mystical",
+        "nature",
+        "scenic",
+        "photography",
+        "geological formations",
+        "serene",
+        "vibrant",
+        "green",
+        "blue",
+        "night",
+        "Northern Europe"
+      ],
+      "color_palette": [
+        {
+          "hex": "#1C2A31",
+          "name": "dark slate gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#10131A",
+          "name": "black",
+          "w": 0.23
+        },
+        {
+          "hex": "#20424C",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#1D626B",
+          "name": "dark slate gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#24867B",
+          "name": "teal",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
