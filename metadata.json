@@ -133984,6 +133984,68 @@
   "LakeMagadi_EN-US3401664434_UHD": {
     "date": "2026-08-27",
     "title": "Lesser flamingo flock at sunrise, Lake Magadi, Kenya",
-    "bing_url": "https://www.bing.com/th?id=OHR.LakeMagadi_EN-US3401664434_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LakeMagadi_EN-US3401664434_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "bird"
+      ],
+      "season": null,
+      "country": "Kenya",
+      "region": "East Africa",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a flock of lesser flamingos gathered on the shimmering surface of Lake Magadi in Kenya at sunrise. The water reflects a golden hue, creating a tranquil atmosphere. The flamingos, with their slender legs and distinctive pink plumage, are scattered across the lake, some wading while others appear to be resting. The background features a smooth, textured surface of the lake, enhancing the serene mood of the scene.",
+      "search_text": "Explore the stunning beauty of lesser flamingos at Lake Magadi in Kenya during sunrise. This serene scene showcases a flock of these elegant birds wading in the golden waters, reflecting the tranquility of East Africa's wetlands. Perfect for nature lovers and wildlife enthusiasts, this image captures the essence of avian life in a vibrant ecosystem. Search for flamingos, lakes, and serene wildlife moments.",
+      "keywords": [
+        "lesser flamingo",
+        "flock",
+        "Lake Magadi",
+        "Kenya",
+        "bird",
+        "animal",
+        "sunrise",
+        "golden water",
+        "wading",
+        "tranquil",
+        "East Africa",
+        "serene",
+        "nature",
+        "wildlife",
+        "reflection",
+        "wetland",
+        "avian",
+        "habitat",
+        "migration",
+        "ecosystem"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3F3018",
+          "name": "dark slate gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#655027",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#9C7B3C",
+          "name": "sienna",
+          "w": 0.22
+        },
+        {
+          "hex": "#D2A248",
+          "name": "peru",
+          "w": 0.16
+        },
+        {
+          "hex": "#F1C76C",
+          "name": "burly wood",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
