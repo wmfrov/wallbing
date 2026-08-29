@@ -134119,6 +134119,67 @@
   "SantaCatarina_EN-US3600536393_UHD": {
     "date": "2026-08-29",
     "title": "Aerial view of surfers, Santa Catarina, Brazil",
-    "bing_url": "https://www.bing.com/th?id=OHR.SantaCatarina_EN-US3600536393_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SantaCatarina_EN-US3600536393_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean"
+      ],
+      "season": null,
+      "country": "Brazil",
+      "region": "South America",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image captures an aerial view of a vibrant ocean scene filled with surfers. The turquoise water contrasts beautifully with the white foam of the waves crashing on the shore. Numerous surfers can be seen paddling and waiting for waves, creating a lively atmosphere. The sunlight reflects off the water, enhancing the vivid colors and textures of the ocean surface.",
+      "search_text": "Explore the vibrant ocean scene of surfers in Santa Catarina, Brazil, captured from an aerial view. The turquoise waters and white waves create a stunning backdrop for water sports enthusiasts. This image showcases the lively atmosphere of surfing, perfect for those interested in beach activities, coastal adventures, and tropical destinations. Discover the beauty of ocean sports and the thrill of riding waves in a picturesque setting.",
+      "keywords": [
+        "surfers",
+        "ocean",
+        "turquoise water",
+        "waves",
+        "beach",
+        "Santa Catarina",
+        "Brazil",
+        "surfing",
+        "aerial view",
+        "sea",
+        "coastal",
+        "water sports",
+        "foam",
+        "sunlight",
+        "activity",
+        "vibrant",
+        "tropical",
+        "summer",
+        "hobby",
+        "outdoor"
+      ],
+      "color_palette": [
+        {
+          "hex": "#0A8087",
+          "name": "teal",
+          "w": 0.32
+        },
+        {
+          "hex": "#034B5B",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#01636F",
+          "name": "teal",
+          "w": 0.17
+        },
+        {
+          "hex": "#38A8A5",
+          "name": "light sea green",
+          "w": 0.17
+        },
+        {
+          "hex": "#0B6575",
+          "name": "teal",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
