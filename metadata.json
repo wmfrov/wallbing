@@ -134051,6 +134051,69 @@
   "MichelSunset_EN-US3527235033_UHD": {
     "date": "2026-08-28",
     "title": "Mont-Saint-Michel during high tide, Manche, Normandy, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.MichelSunset_EN-US3527235033_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MichelSunset_EN-US3527235033_UHD.jpg",
+    "tags": {
+      "subject": [
+        "castle",
+        "ocean",
+        "river"
+      ],
+      "season": null,
+      "country": "France",
+      "region": "Normandy",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases Mont-Saint-Michel, a stunning medieval castle perched on a rocky island, surrounded by water during high tide. The castle's spires rise majestically against a pastel sky, reflecting beautifully in the calm waters of the river. In the foreground, lush green grass frames the scene, while the background features the distant horizon. The overall atmosphere is tranquil, with soft colors enhancing the serene mood of the setting.",
+      "search_text": "Explore the breathtaking Mont-Saint-Michel, a historic castle in Normandy, France, known for its stunning architecture and picturesque setting during high tide. This medieval island fortress is a popular tourist attraction, featuring beautiful reflections in the surrounding waters. Ideal for travel enthusiasts and photographers, Mont-Saint-Michel offers a serene atmosphere at dusk, making it a perfect destination for capturing stunning landscapes and architectural beauty.",
+      "keywords": [
+        "Mont-Saint-Michel",
+        "castle",
+        "Normandy",
+        "France",
+        "high tide",
+        "river",
+        "medieval architecture",
+        "island",
+        "serene",
+        "reflection",
+        "pastel sky",
+        "dusk",
+        "landmark",
+        "tourist attraction",
+        "historic site",
+        "water",
+        "landscape",
+        "travel",
+        "architecture",
+        "building"
+      ],
+      "color_palette": [
+        {
+          "hex": "#CCA2AD",
+          "name": "dark gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#E7C2C3",
+          "name": "pink",
+          "w": 0.22
+        },
+        {
+          "hex": "#645F68",
+          "name": "dim gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#FAD0C6",
+          "name": "peach puff",
+          "w": 0.17
+        },
+        {
+          "hex": "#F9C3B8",
+          "name": "light pink",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
