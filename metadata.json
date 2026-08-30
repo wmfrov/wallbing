@@ -134185,6 +134185,68 @@
   "YellowShark_EN-US3678567058_UHD": {
     "date": "2026-08-30",
     "title": "Whale shark and golden trevally, Cenderawasih Bay, West Papua, Indonesia",
-    "bing_url": "https://www.bing.com/th?id=OHR.YellowShark_EN-US3678567058_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.YellowShark_EN-US3678567058_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "animal"
+      ],
+      "season": null,
+      "country": "Indonesia",
+      "region": "Southeast Asia",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a whale shark, the largest fish species, swimming gracefully in the clear blue waters of Cenderawasih Bay. Its distinctive spotted skin is clearly visible, showcasing the unique patterns that characterize this gentle giant. Surrounding the whale shark are several golden trevally fish, which add a vibrant splash of color to the scene. The underwater environment is tranquil, with sunlight filtering through the water, creating a serene atmosphere. The composition highlights the scale of the whale shark against the smaller fish, emphasizing its majestic presence.",
+      "search_text": "Explore the beauty of the ocean with this stunning image of a whale shark, Rhincodon typus, swimming in Cenderawasih Bay, West Papua, Indonesia. Accompanied by golden trevally, Caranx sexfasciatus, this serene underwater scene captures the vibrant marine life and the tranquil blue waters. Perfect for marine enthusiasts, this image showcases the biodiversity of tropical oceans and highlights the majestic presence of the largest fish species. Ideal for searches related to ocean life, underwater photography, and marine ecosystems.",
+      "keywords": [
+        "whale shark",
+        "Rhincodon typus",
+        "golden trevally",
+        "Caranx sexfasciatus",
+        "Cenderawasih Bay",
+        "West Papua",
+        "Indonesia",
+        "ocean",
+        "marine life",
+        "underwater",
+        "fish",
+        "animal",
+        "swimming",
+        "spotted",
+        "tropical",
+        "serene",
+        "aquatic",
+        "blue water",
+        "biodiversity",
+        "ecosystem"
+      ],
+      "color_palette": [
+        {
+          "hex": "#01AFD8",
+          "name": "dark turquoise",
+          "w": 0.29
+        },
+        {
+          "hex": "#0078B7",
+          "name": "dark cyan",
+          "w": 0.23
+        },
+        {
+          "hex": "#63C5D4",
+          "name": "medium turquoise",
+          "w": 0.21
+        },
+        {
+          "hex": "#094C83",
+          "name": "teal",
+          "w": 0.21
+        },
+        {
+          "hex": "#2B799E",
+          "name": "steel blue",
+          "w": 0.06
+        }
+      ]
+    }
   }
 }
