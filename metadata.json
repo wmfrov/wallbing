@@ -134252,6 +134252,67 @@
   "SamarkandCeiling_EN-US3761829748_UHD": {
     "date": "2026-08-31",
     "title": "Building detail of Registan Square, Samarkand, Uzbekistan",
-    "bing_url": "https://www.bing.com/th?id=OHR.SamarkandCeiling_EN-US3761829748_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SamarkandCeiling_EN-US3761829748_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "Uzbekistan",
+      "region": "Central Asia",
+      "time_of_day": null,
+      "mood": "vibrant",
+      "ai_description": "The image showcases the intricate ceiling design of a building in Registan Square, Samarkand. The ceiling features a stunning circular pattern adorned with vibrant colors and geometric shapes, creating a mesmerizing visual effect. The use of gold and blue hues adds to the richness of the architectural detail. The ornate craftsmanship reflects the historical significance and cultural heritage of the region, with a focus on symmetry and elaborate decoration.",
+      "search_text": "Explore the stunning architectural details of Registan Square in Samarkand, Uzbekistan. This image highlights the vibrant ceiling adorned with intricate geometric patterns and rich colors, showcasing the beauty of Islamic art and traditional architecture. Perfect for those interested in historical buildings, cultural heritage, and decorative arts from Central Asia. Discover the unique craftsmanship and ornate designs that define this iconic landmark.",
+      "keywords": [
+        "Samarkand",
+        "Registan Square",
+        "Uzbekistan",
+        "architecture",
+        "ceiling",
+        "geometric patterns",
+        "ornate design",
+        "vibrant colors",
+        "Islamic art",
+        "historical building",
+        "cultural heritage",
+        "gold",
+        "blue",
+        "symmetry",
+        "craftsmanship",
+        "decorative arts",
+        "Central Asia",
+        "traditional architecture",
+        "mosaic",
+        "interior design"
+      ],
+      "color_palette": [
+        {
+          "hex": "#774529",
+          "name": "saddle brown",
+          "w": 0.25
+        },
+        {
+          "hex": "#452931",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#92663F",
+          "name": "sienna",
+          "w": 0.22
+        },
+        {
+          "hex": "#AD8051",
+          "name": "peru",
+          "w": 0.17
+        },
+        {
+          "hex": "#CCA575",
+          "name": "dark khaki",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
