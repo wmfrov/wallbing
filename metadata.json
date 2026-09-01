@@ -134318,6 +134318,68 @@
   "HorseHairShroom_EN-US3885857486_UHD": {
     "date": "2026-09-01",
     "title": "Horsehair parachute fungus, Belarus",
-    "bing_url": "https://www.bing.com/th?id=OHR.HorseHairShroom_EN-US3885857486_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.HorseHairShroom_EN-US3885857486_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "garden"
+      ],
+      "season": null,
+      "country": "Belarus",
+      "region": null,
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a cluster of delicate horsehair parachute fungi, characterized by their slender black stems and small, pinkish caps. These mushrooms are set against a vibrant green background, likely moss, which enhances their visual appeal. The arrangement of the fungi creates a rhythmic pattern, drawing the eye along their vertical lines. The soft focus of the background adds to the serene atmosphere, making the fungi appear as if they are gently swaying in a breeze.",
+      "search_text": "Explore the beauty of horsehair parachute fungus, a delicate type of mushroom found in natural settings. This image showcases a cluster of small, pink-capped fungi with slender black stems, set against lush green moss. Perfect for nature enthusiasts and those interested in flora, this serene scene captures the essence of wild mushrooms in their natural habitat. Discover more about fungi, mushrooms, and the vibrant ecosystems they inhabit.",
+      "keywords": [
+        "horsehair parachute fungus",
+        "mushrooms",
+        "fungi",
+        "flora",
+        "nature",
+        "forest",
+        "moss",
+        "green",
+        "small",
+        "delicate",
+        "pink",
+        "stems",
+        "cap",
+        "growth",
+        "wildlife",
+        "garden",
+        "natural",
+        "vegetation",
+        "serene",
+        "blooming"
+      ],
+      "color_palette": [
+        {
+          "hex": "#7DAB05",
+          "name": "olive",
+          "w": 0.32
+        },
+        {
+          "hex": "#88BB02",
+          "name": "yellow green",
+          "w": 0.24
+        },
+        {
+          "hex": "#81B501",
+          "name": "olive",
+          "w": 0.24
+        },
+        {
+          "hex": "#698F08",
+          "name": "olive drab",
+          "w": 0.13
+        },
+        {
+          "hex": "#98C219",
+          "name": "yellow green",
+          "w": 0.07
+        }
+      ]
+    }
   }
 }
