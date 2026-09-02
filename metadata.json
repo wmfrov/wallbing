@@ -134385,6 +134385,68 @@
   "SuffolkHuts_EN-US3987062531_UHD": {
     "date": "2026-09-02",
     "title": "Traditional beach huts, Southwold, Suffolk Heritage Coast, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.SuffolkHuts_EN-US3987062531_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SuffolkHuts_EN-US3987062531_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "ocean"
+      ],
+      "season": "summer",
+      "country": "England",
+      "region": "Suffolk",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a row of traditional beach huts along the sandy shore of Southwold, Suffolk. Each hut is painted in vibrant colors, creating a cheerful and inviting atmosphere. The foreground showcases soft sand and tufts of grass, while the ocean is visible in the background, suggesting a calm day. The sky is clear with a few wispy clouds, enhancing the tranquil mood of the scene.",
+      "search_text": "Explore the charming traditional beach huts of Southwold along the Suffolk Heritage Coast in England. These colorful structures are a popular attraction for visitors seeking a serene seaside experience. Perfect for summer vacations, the beach huts line the sandy shore, offering picturesque views of the ocean and a tranquil atmosphere. Ideal for photography, these coastal buildings represent classic British seaside culture and charm.",
+      "keywords": [
+        "beach huts",
+        "Southwold",
+        "Suffolk",
+        "England",
+        "ocean",
+        "sand",
+        "traditional",
+        "colorful",
+        "coastal",
+        "architecture",
+        "summer",
+        "vacation",
+        "seaside",
+        "horizon",
+        "serene",
+        "outdoor",
+        "landscape",
+        "scenic",
+        "beach",
+        "building"
+      ],
+      "color_palette": [
+        {
+          "hex": "#948980",
+          "name": "gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#727781",
+          "name": "gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#5D5143",
+          "name": "dark olive green",
+          "w": 0.21
+        },
+        {
+          "hex": "#95A0A6",
+          "name": "dark gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#D0C2A7",
+          "name": "silver",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
