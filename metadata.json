@@ -134452,6 +134452,67 @@
   "AZWilderness_EN-US4070936347_UHD": {
     "date": "2026-09-03",
     "title": "Coyote Buttes, Vermilion Cliffs National Monument, Arizona",
-    "bing_url": "https://www.bing.com/th?id=OHR.AZWilderness_EN-US4070936347_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AZWilderness_EN-US4070936347_UHD.jpg",
+    "tags": {
+      "subject": [
+        "desert",
+        "landscape"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southwestern United States",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases the stunning rock formations of Coyote Buttes in Vermilion Cliffs National Monument, Arizona. The foreground features layered sandstone formations with smooth, wavy textures, while the background is filled with more rugged cliffs. The sky is painted with vibrant hues of pink, orange, and purple as the sun sets, creating a dramatic contrast against the earthy tones of the rocks. Sparse vegetation can be seen scattered across the desert floor, adding to the serene atmosphere of this unique landscape.",
+      "search_text": "Explore the breathtaking beauty of Coyote Buttes in Vermilion Cliffs National Monument, Arizona. This stunning desert landscape features unique sandstone formations with wavy textures and vibrant sunset colors. Ideal for photography enthusiasts and nature lovers, the area showcases the serene atmosphere of the Southwestern United States. Discover the geological wonders and arid beauty of this remarkable location, perfect for outdoor adventures and scenic views.",
+      "keywords": [
+        "Coyote Buttes",
+        "Vermilion Cliffs",
+        "Arizona",
+        "desert",
+        "landscape",
+        "rock formations",
+        "sandstone",
+        "sunset",
+        "dusk",
+        "serene",
+        "colorful sky",
+        "geological formations",
+        "outdoor",
+        "nature",
+        "wavy textures",
+        "scenic",
+        "natural beauty",
+        "arid",
+        "photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#9C9EB3",
+          "name": "dark gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#6E6B89",
+          "name": "slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#2D1114",
+          "name": "black",
+          "w": 0.2
+        },
+        {
+          "hex": "#542E2F",
+          "name": "dark slate gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#471E1E",
+          "name": "maroon",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
