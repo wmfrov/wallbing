@@ -134586,6 +134586,68 @@
   "GreenCrowned_EN-US3119017947_UHD": {
     "date": "2026-09-05",
     "title": "Green-crowned brilliant hummingbirds feeding on lobster-claw flowers, Costa Rica",
-    "bing_url": "https://www.bing.com/th?id=OHR.GreenCrowned_EN-US3119017947_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.GreenCrowned_EN-US3119017947_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird",
+        "flower"
+      ],
+      "season": null,
+      "country": "Costa Rica",
+      "region": "Central America",
+      "time_of_day": null,
+      "mood": "vibrant",
+      "ai_description": "The image features three green-crowned brilliant hummingbirds feeding on vibrant lobster-claw flowers. The birds display iridescent green plumage, with their slender bodies hovering near the bright red and orange flowers. The background is softly blurred, emphasizing the vivid colors of the flowers and the birds. The scene captures a moment of activity, with droplets of water possibly indicating a humid environment, typical of tropical regions.",
+      "search_text": "Explore the vibrant world of green-crowned brilliant hummingbirds feeding on lobster-claw flowers in Costa Rica. This tropical scene showcases the beauty of exotic birds and colorful flora, perfect for nature enthusiasts and wildlife lovers. Discover the iridescent plumage of these hummingbirds as they engage in pollination among the lush vegetation. Ideal for searches related to birds, flowers, and tropical wildlife photography.",
+      "keywords": [
+        "hummingbird",
+        "green-crowned brilliant",
+        "lobster-claw flower",
+        "animal",
+        "Costa Rica",
+        "tropical",
+        "vibrant",
+        "feeding",
+        "flora",
+        "nature",
+        "colorful",
+        "three",
+        "iridescent",
+        "birds",
+        "exotic",
+        "pollination",
+        "plant",
+        "rainforest",
+        "wildlife",
+        "blooming"
+      ],
+      "color_palette": [
+        {
+          "hex": "#282B13",
+          "name": "black",
+          "w": 0.37
+        },
+        {
+          "hex": "#453B17",
+          "name": "dark olive green",
+          "w": 0.33
+        },
+        {
+          "hex": "#A2733B",
+          "name": "sienna",
+          "w": 0.17
+        },
+        {
+          "hex": "#4C431D",
+          "name": "dark olive green",
+          "w": 0.09
+        },
+        {
+          "hex": "#682C12",
+          "name": "saddle brown",
+          "w": 0.04
+        }
+      ]
+    }
   }
 }
