@@ -134653,6 +134653,69 @@
   "LakeFyans_EN-US4295341714_UHD": {
     "date": "2026-09-06",
     "title": "Lake Fyans, Grampians National Park, Victoria, Australia",
-    "bing_url": "https://www.bing.com/th?id=OHR.LakeFyans_EN-US4295341714_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.LakeFyans_EN-US4295341714_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "forest",
+        "mountain"
+      ],
+      "season": null,
+      "country": "Australia",
+      "region": "Victoria",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures Lake Fyans in Grampians National Park, showcasing a tranquil scene at dawn. The foreground features a reflective lake with scattered trees emerging from the water, creating an intriguing silhouette. In the background, gentle mountains rise, bathed in warm morning light, while the sky is adorned with soft pastel hues of pink and purple. The overall atmosphere is peaceful, inviting viewers to appreciate the natural beauty of this Australian landscape.",
+      "search_text": "Explore the serene beauty of Lake Fyans in Grampians National Park, Victoria, Australia. This tranquil lake reflects the surrounding forest and mountains, creating a picturesque landscape at dawn. Perfect for nature lovers, photographers, and those seeking peaceful outdoor experiences. Discover the unique flora and fauna of this stunning Australian destination, ideal for hiking, wildlife observation, and enjoying breathtaking views.",
+      "keywords": [
+        "Lake Fyans",
+        "Grampians National Park",
+        "Victoria",
+        "Australia",
+        "mountains",
+        "reflections",
+        "trees",
+        "dawn",
+        "serene",
+        "landscape",
+        "water",
+        "nature",
+        "scenic",
+        "outdoors",
+        "tranquil",
+        "wildlife",
+        "serenity",
+        "sky",
+        "clouds",
+        "forest"
+      ],
+      "color_palette": [
+        {
+          "hex": "#574145",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#8891D2",
+          "name": "medium purple",
+          "w": 0.24
+        },
+        {
+          "hex": "#BFA5C8",
+          "name": "silver",
+          "w": 0.23
+        },
+        {
+          "hex": "#8C6870",
+          "name": "gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#636287",
+          "name": "dim gray",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
