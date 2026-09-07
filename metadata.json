@@ -134721,6 +134721,67 @@
   "RalphStackpole_EN-US4463800234_UHD": {
     "date": "2026-09-07",
     "title": "'Industries of California' mural by Ralph Stackpole at Coit Tower, San Francisco, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.RalphStackpole_EN-US4463800234_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.RalphStackpole_EN-US4463800234_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "city"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "California",
+      "time_of_day": null,
+      "mood": "vibrant",
+      "ai_description": "The mural 'Industries of California' by Ralph Stackpole depicts a bustling industrial scene inside a factory. In the foreground, workers are engaged in various tasks, including processing materials and preparing goods. The background features a group of women dressed in blue uniforms, indicating a sense of teamwork and collaboration. The mural showcases intricate details of machinery and the labor-intensive processes of the time, highlighting the importance of industry in California's economy.",
+      "search_text": "Explore the vibrant mural 'Industries of California' by Ralph Stackpole located at Coit Tower in San Francisco. This artwork captures the essence of industrial labor, showcasing workers in blue uniforms engaged in various tasks within a factory setting. Discover the intricate details of machinery and the collaborative spirit of the workforce, reflecting California's rich industrial history. Ideal for those interested in murals, historical art, and California's industrial heritage.",
+      "keywords": [
+        "mural",
+        "Ralph Stackpole",
+        "industries",
+        "California",
+        "factory",
+        "workers",
+        "blue uniforms",
+        "machinery",
+        "industrial scene",
+        "teamwork",
+        "labor",
+        "architecture",
+        "Coit Tower",
+        "San Francisco",
+        "art",
+        "historical",
+        "vibrant",
+        "collaboration",
+        "production"
+      ],
+      "color_palette": [
+        {
+          "hex": "#62524F",
+          "name": "dim gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#2C3749",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#828082",
+          "name": "gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#B39985",
+          "name": "rosy brown",
+          "w": 0.16
+        },
+        {
+          "hex": "#CEC0B1",
+          "name": "silver",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
