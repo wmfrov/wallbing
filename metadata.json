@@ -134787,6 +134787,67 @@
   "BeechEngland_EN-US4535769514_UHD": {
     "date": "2026-09-08",
     "title": "Beech tree in a cereal field, East Meon, South Downs National Park, Hampshire, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.BeechEngland_EN-US4535769514_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BeechEngland_EN-US4535769514_UHD.jpg",
+    "tags": {
+      "subject": [
+        "farm"
+      ],
+      "season": "summer",
+      "country": "England",
+      "region": "South Downs",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a solitary beech tree standing in a vast cereal field characterized by golden hues. The foreground showcases rolling hills of harvested crops, with scattered bales of hay dotting the landscape. In the background, the gentle undulations of the terrain create a sense of depth. The tree provides a stark contrast against the warm tones of the field, casting a small shadow on the ground. The clear blue sky above enhances the tranquil atmosphere of this rural scene.",
+      "search_text": "Explore the beauty of a solitary beech tree in a golden cereal field located in the South Downs National Park, Hampshire, England. This serene rural landscape features rolling hills, harvested crops, and scattered hay bales, perfect for nature lovers and photography enthusiasts. Ideal for searches related to agriculture, farmland, and tranquil outdoor scenes, this image captures the essence of summer in the English countryside.",
+      "keywords": [
+        "beech tree",
+        "cereal field",
+        "golden crops",
+        "hay bales",
+        "solitary tree",
+        "South Downs",
+        "Hampshire",
+        "agriculture",
+        "farmland",
+        "landscape",
+        "summer",
+        "nature",
+        "rural",
+        "serene",
+        "tree",
+        "farm",
+        "fields",
+        "harvest",
+        "scenic",
+        "outdoors"
+      ],
+      "color_palette": [
+        {
+          "hex": "#EFB75F",
+          "name": "sandy brown",
+          "w": 0.29
+        },
+        {
+          "hex": "#F5C272",
+          "name": "burly wood",
+          "w": 0.24
+        },
+        {
+          "hex": "#D39942",
+          "name": "peru",
+          "w": 0.18
+        },
+        {
+          "hex": "#F9C77C",
+          "name": "burly wood",
+          "w": 0.17
+        },
+        {
+          "hex": "#FCCD84",
+          "name": "khaki",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
