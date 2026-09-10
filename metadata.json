@@ -134920,6 +134920,68 @@
   "Olvera_EN-US4712443253_UHD": {
     "date": "2026-09-10",
     "title": "Aerial view of Olvera, Andalusia, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.Olvera_EN-US4712443253_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Olvera_EN-US4712443253_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Spain",
+      "region": "Andalusia",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases an aerial view of the town of Olvera in Andalusia, Spain, characterized by a patchwork of rooftops in various shades of red, orange, and brown. The rooftops are predominantly made of terracotta tiles, creating a warm and inviting atmosphere. Narrow streets weave through the town, connecting the buildings in a maze-like pattern. The layout reveals a blend of traditional architecture and modern elements, with greenery peeking through in certain areas, adding to the vibrant visual appeal.",
+      "search_text": "Explore the vibrant aerial view of Olvera in Andalusia, Spain, featuring a stunning patchwork of terracotta rooftops in various shades. This picturesque town showcases a blend of traditional and modern architecture, with narrow streets weaving through the colorful buildings. Perfect for those interested in urban landscapes, architecture, and scenic views, this image captures the essence of a charming Spanish town.",
+      "keywords": [
+        "Olvera",
+        "Andalusia",
+        "Spain",
+        "aerial view",
+        "rooftops",
+        "architecture",
+        "city",
+        "terracotta",
+        "vibrant",
+        "urban",
+        "colorful",
+        "town",
+        "narrow streets",
+        "building",
+        "landscape",
+        "historic",
+        "traditional",
+        "modern",
+        "pattern",
+        "viewpoint"
+      ],
+      "color_palette": [
+        {
+          "hex": "#494842",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#A65D3C",
+          "name": "sienna",
+          "w": 0.23
+        },
+        {
+          "hex": "#D8975E",
+          "name": "sandy brown",
+          "w": 0.2
+        },
+        {
+          "hex": "#A29D8B",
+          "name": "rosy brown",
+          "w": 0.18
+        },
+        {
+          "hex": "#E1C099",
+          "name": "burly wood",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
