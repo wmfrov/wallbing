@@ -134987,6 +134987,68 @@
   "Flight93_EN-US5966783443_UHD": {
     "date": "2026-09-11",
     "title": "The Flight 93 National Memorial Visitor Center near Shanksville, Pennsylvania",
-    "bing_url": "https://www.bing.com/th?id=OHR.Flight93_EN-US5966783443_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Flight93_EN-US5966783443_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "ruins"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Northeast",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image depicts the Flight 93 National Memorial Visitor Center, characterized by its modern concrete architecture. The structure features sweeping, curved walls that create a sense of openness and reflection. In the foreground, a pathway leads visitors through the memorial, flanked by dark stone elements. The background showcases a vibrant blue sky dotted with fluffy white clouds, enhancing the serene atmosphere of the site. The surrounding landscape is green, indicating a well-maintained area that invites contemplation.",
+      "search_text": "Explore the Flight 93 National Memorial Visitor Center in Pennsylvania, featuring modern concrete architecture and serene landscapes. This memorial site is designed for reflection and remembrance, with curved walls and a welcoming pathway. Ideal for visitors seeking to honor the memory of Flight 93, the center is surrounded by greenery and offers a tranquil atmosphere. Perfect for those interested in architecture, memorials, and historical sites in the Northeast United States.",
+      "keywords": [
+        "Flight 93",
+        "National Memorial",
+        "Visitor Center",
+        "Pennsylvania",
+        "concrete",
+        "modern architecture",
+        "memorial",
+        "landscape",
+        "pathway",
+        "serene",
+        "curved walls",
+        "reflection",
+        "visitors",
+        "Northeast",
+        "outdoor",
+        "sky",
+        "clouds",
+        "greenery",
+        "landscaping",
+        "building"
+      ],
+      "color_palette": [
+        {
+          "hex": "#716E65",
+          "name": "dim gray",
+          "w": 0.4
+        },
+        {
+          "hex": "#838175",
+          "name": "gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#433F3D",
+          "name": "dark slate gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#93ADC8",
+          "name": "dark gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#C9CED6",
+          "name": "light gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
