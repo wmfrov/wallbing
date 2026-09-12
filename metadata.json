@@ -135054,6 +135054,68 @@
   "SardineBait_EN-US4802395270_UHD": {
     "date": "2026-09-12",
     "title": "California sea lions hunting a sardine bait ball, offshore Mexico, Pacific Ocean",
-    "bing_url": "https://www.bing.com/th?id=OHR.SardineBait_EN-US4802395270_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SardineBait_EN-US4802395270_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "animal"
+      ],
+      "season": null,
+      "country": "Mexico",
+      "region": "Pacific Ocean",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image captures a dynamic underwater scene in the Pacific Ocean, showcasing California sea lions actively hunting a large bait ball of sardines. In the foreground, a sea lion is gracefully swimming towards the bait ball, while several other sea lions can be seen in the background, creating a sense of movement and energy. The sunlight filters through the water, illuminating the swirling mass of sardines, which creates a shimmering effect. The vibrant blue hues of the ocean enhance the lively atmosphere of this marine environment.",
+      "search_text": "Explore the vibrant underwater world of the Pacific Ocean, featuring California sea lions hunting sardines in a dynamic bait ball. This stunning marine scene showcases the beauty of ocean life, with sea lions swimming amidst a shimmering school of fish. Perfect for those interested in marine biology, wildlife photography, and ocean ecosystems, this image captures the essence of aquatic hunting behavior and the rich biodiversity found in ocean habitats.",
+      "keywords": [
+        "California sea lion",
+        "sardine",
+        "bait ball",
+        "ocean",
+        "marine life",
+        "hunting",
+        "swimming",
+        "Pacific Ocean",
+        "underwater",
+        "animal",
+        "fish",
+        "schooling",
+        "wildlife",
+        "dynamic",
+        "vibrant",
+        "daylight",
+        "aquatic",
+        "biodiversity",
+        "ecosystem",
+        "predator"
+      ],
+      "color_palette": [
+        {
+          "hex": "#0E5486",
+          "name": "teal",
+          "w": 0.27
+        },
+        {
+          "hex": "#1369A1",
+          "name": "teal",
+          "w": 0.23
+        },
+        {
+          "hex": "#083559",
+          "name": "midnight blue",
+          "w": 0.21
+        },
+        {
+          "hex": "#187FC2",
+          "name": "steel blue",
+          "w": 0.17
+        },
+        {
+          "hex": "#4A8FC0",
+          "name": "steel blue",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
