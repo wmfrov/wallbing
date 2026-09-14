@@ -135187,6 +135187,67 @@
   "KochiaChina_EN-US5037126636_UHD": {
     "date": "2026-09-14",
     "title": "Field of kochia plants, China",
-    "bing_url": "https://www.bing.com/th?id=OHR.KochiaChina_EN-US5037126636_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.KochiaChina_EN-US5037126636_UHD.jpg",
+    "tags": {
+      "subject": [
+        "garden"
+      ],
+      "season": "autumn",
+      "country": "China",
+      "region": null,
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image showcases a vibrant field filled with kochia plants, characterized by their round, bushy shapes. The plants display a stunning array of colors, transitioning from bright green to deep red and burgundy, indicative of the autumn season. The foreground is dominated by these colorful mounds, creating a visually striking pattern across the landscape. The background is blurred, emphasizing the rich textures and hues of the kochia, which are densely packed together, forming a lush, colorful garden.",
+      "search_text": "Explore the vibrant beauty of a field of kochia plants in China, showcasing their unique round shapes and stunning color transitions from green to red in the autumn season. This garden scene captures the lush textures and patterns of these bushy plants, perfect for nature lovers and garden enthusiasts. Discover the seasonal changes in flora and the rich landscapes that highlight the beauty of outdoor vegetation.",
+      "keywords": [
+        "kochia",
+        "autumn",
+        "garden",
+        "colorful",
+        "plants",
+        "bushy",
+        "green",
+        "red",
+        "vibrant",
+        "landscape",
+        "field",
+        "flora",
+        "nature",
+        "blooming",
+        "texture",
+        "seasonal",
+        "China",
+        "outdoor",
+        "scenery",
+        "vegetation"
+      ],
+      "color_palette": [
+        {
+          "hex": "#36210C",
+          "name": "black",
+          "w": 0.27
+        },
+        {
+          "hex": "#813525",
+          "name": "saddle brown",
+          "w": 0.22
+        },
+        {
+          "hex": "#9C6133",
+          "name": "sienna",
+          "w": 0.22
+        },
+        {
+          "hex": "#B98C3C",
+          "name": "peru",
+          "w": 0.16
+        },
+        {
+          "hex": "#D6C140",
+          "name": "golden rod",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
