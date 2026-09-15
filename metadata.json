@@ -135253,6 +135253,67 @@
   "FortUnion_EN-US5138724452_UHD": {
     "date": "2026-09-15",
     "title": "Fort Union National Monument, New Mexico",
-    "bing_url": "https://www.bing.com/th?id=OHR.FortUnion_EN-US5138724452_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FortUnion_EN-US5138724452_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ruins",
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southwest",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the ruins of Fort Union National Monument in New Mexico. The foreground features a weathered adobe structure with several arched openings and remnants of old wooden wheels and a wagon. The background highlights the expansive desert landscape under a clear blue sky. The textures of the adobe walls are rough and earthy, contrasting with the smooth shadows cast on the ground. The overall scene evokes a sense of history and tranquility.",
+      "search_text": "Explore the historical ruins of Fort Union National Monument in New Mexico, showcasing adobe architecture and remnants of old wagons. This serene site offers a glimpse into the past with its weathered structures and desert landscape. Perfect for those interested in cultural heritage, historical sites, and Southwest landmarks. Discover the textures of adobe and the tranquility of this historic fortification under the clear blue sky.",
+      "keywords": [
+        "Fort Union",
+        "New Mexico",
+        "ruins",
+        "architecture",
+        "adobe",
+        "desert",
+        "historical site",
+        "wagon",
+        "old wheels",
+        "Southwest",
+        "landmark",
+        "cultural heritage",
+        "sunlight",
+        "shadows",
+        "historic ruins",
+        "fortification",
+        "outdoor",
+        "landscape",
+        "serene"
+      ],
+      "color_palette": [
+        {
+          "hex": "#499FF2",
+          "name": "corn flower blue",
+          "w": 0.31
+        },
+        {
+          "hex": "#734328",
+          "name": "saddle brown",
+          "w": 0.21
+        },
+        {
+          "hex": "#38261B",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#C2B6A0",
+          "name": "tan",
+          "w": 0.17
+        },
+        {
+          "hex": "#4A3C31",
+          "name": "dark slate gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
