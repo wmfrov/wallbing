@@ -135319,6 +135319,68 @@
   "IcyCubs_EN-US5222104616_UHD": {
     "date": "2026-09-16",
     "title": "Polar bear cubs playing in Svalbard, Norway",
-    "bing_url": "https://www.bing.com/th?id=OHR.IcyCubs_EN-US5222104616_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.IcyCubs_EN-US5222104616_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "ice"
+      ],
+      "season": "summer",
+      "country": "Norway",
+      "region": "Scandinavia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features two playful polar bear cubs on a floating ice sheet in the Arctic waters of Svalbard, Norway. The cubs are depicted mid-action, with one cub leaping towards the other, creating a sense of movement and joy. The background showcases a serene landscape of ice and water, with varying shades of blue and white. The calm water reflects the icy surroundings, enhancing the tranquil atmosphere of this polar habitat.",
+      "search_text": "Explore the playful nature of polar bear cubs in their natural habitat in Svalbard, Norway. These adorable Ursus maritimus are seen jumping on ice in the Arctic waters, showcasing their playful behavior. Perfect for wildlife enthusiasts and those interested in Arctic ecosystems, this image captures the serene beauty of polar environments. Discover more about polar bears, their habitats, and the importance of preserving these majestic animals in the wild.",
+      "keywords": [
+        "polar bear",
+        "Ursus maritimus",
+        "cub",
+        "two",
+        "ice",
+        "Arctic",
+        "Svalbard",
+        "Norway",
+        "animal",
+        "frozen",
+        "playful",
+        "wildlife",
+        "habitat",
+        "water",
+        "serene",
+        "nature",
+        "snow",
+        "environment",
+        "marine",
+        "ecosystem"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A1B9BB",
+          "name": "dark gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#B1CCD4",
+          "name": "light steel blue",
+          "w": 0.23
+        },
+        {
+          "hex": "#7D948F",
+          "name": "light slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#CEDFE7",
+          "name": "gainsboro",
+          "w": 0.17
+        },
+        {
+          "hex": "#C8D5D8",
+          "name": "light gray",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
