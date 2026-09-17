@@ -135386,6 +135386,69 @@
   "Santenay_EN-US5299702509_UHD": {
     "date": "2026-09-17",
     "title": "Sorine windmill and vineyards, Santenay wine region, C\u00f4te de Beaune, Burgundy, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.Santenay_EN-US5299702509_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Santenay_EN-US5299702509_UHD.jpg",
+    "tags": {
+      "subject": [
+        "farm",
+        "landscape",
+        "architecture"
+      ],
+      "season": "autumn",
+      "country": "France",
+      "region": "Burgundy",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image features a picturesque windmill set amidst rolling vineyards in the Santenay wine region of Burgundy, France. The foreground showcases rows of grapevines with vibrant autumn foliage, displaying shades of yellow and gold. In the background, gentle hills and a clear sky create a tranquil atmosphere. The windmill, with its traditional design and wooden blades, stands as a charming focal point against the scenic landscape. The overall composition evokes a sense of peace and rural beauty.",
+      "search_text": "Explore the beautiful Santenay wine region in Burgundy, France, featuring a charming windmill surrounded by vibrant vineyards. This serene landscape showcases the rich colors of autumn, with rows of grapevines displaying yellow and gold leaves. Ideal for those interested in rural architecture, agriculture, and picturesque countryside views, this image captures the essence of traditional French viticulture and the tranquil beauty of the region.",
+      "keywords": [
+        "windmill",
+        "vineyards",
+        "grapevines",
+        "autumn",
+        "Burgundy",
+        "Santenay",
+        "France",
+        "landscape",
+        "farm",
+        "architecture",
+        "rural",
+        "countryside",
+        "scenic",
+        "agriculture",
+        "yellow",
+        "gold",
+        "hills",
+        "serene",
+        "traditional",
+        "nature"
+      ],
+      "color_palette": [
+        {
+          "hex": "#CCCFB8",
+          "name": "silver",
+          "w": 0.26
+        },
+        {
+          "hex": "#382A16",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#BDA249",
+          "name": "peru",
+          "w": 0.2
+        },
+        {
+          "hex": "#956C20",
+          "name": "sienna",
+          "w": 0.16
+        },
+        {
+          "hex": "#5E583B",
+          "name": "dark olive green",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
