@@ -135454,6 +135454,69 @@
   "WinnatsPassPeak_EN-US6112068451_UHD": {
     "date": "2026-09-18",
     "title": "Winnats Pass, Peak District National Park, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.WinnatsPassPeak_EN-US6112068451_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.WinnatsPassPeak_EN-US6112068451_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain",
+        "river"
+      ],
+      "season": null,
+      "country": "England",
+      "region": "United Kingdom",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a breathtaking view of Winnats Pass in the Peak District National Park, England. In the foreground, rolling green hills rise steeply, dotted with rocky outcrops. A winding road snakes through the valley, leading the eye towards the horizon where the sun is just beginning to rise, casting a warm glow over the landscape. Mist blankets the lower areas, adding a mystical quality to the scene, while the sky is painted in soft hues of orange and purple, suggesting the early morning light.",
+      "search_text": "Explore the stunning landscape of Winnats Pass in the Peak District National Park, England. This scenic view features rolling green hills, a winding road, and a river, all bathed in the warm light of dawn. The mist adds a serene and mystical atmosphere to the early morning scene. Perfect for nature lovers and photographers, this image captures the beauty of the English countryside, showcasing mountains and valleys under a colorful sky.",
+      "keywords": [
+        "Winnats Pass",
+        "Peak District",
+        "England",
+        "landscape",
+        "mountain",
+        "river",
+        "sunrise",
+        "mist",
+        "green hills",
+        "winding road",
+        "serene",
+        "nature",
+        "scenic view",
+        "outcrop",
+        "valley",
+        "morning light",
+        "horizon",
+        "sky",
+        "dramatic",
+        "beautiful"
+      ],
+      "color_palette": [
+        {
+          "hex": "#2C3318",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#504D2D",
+          "name": "dark olive green",
+          "w": 0.26
+        },
+        {
+          "hex": "#7D6E4C",
+          "name": "dim gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#B39374",
+          "name": "rosy brown",
+          "w": 0.15
+        },
+        {
+          "hex": "#E3BD9B",
+          "name": "burly wood",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
