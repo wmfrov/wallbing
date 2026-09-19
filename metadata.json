@@ -135522,6 +135522,69 @@
   "AlphornBavaria_EN-US6200857270_UHD": {
     "date": "2026-09-19",
     "title": "Alphorn players, Bavaria, Germany",
-    "bing_url": "https://www.bing.com/th?id=OHR.AlphornBavaria_EN-US6200857270_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AlphornBavaria_EN-US6200857270_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Germany",
+      "region": "Bavaria",
+      "time_of_day": "day",
+      "mood": "vibrant",
+      "ai_description": "The image depicts a group of alphorn players standing on a grassy hill in Bavaria, Germany. They are dressed in traditional attire, playing their long wooden instruments, which are prominently featured in the foreground. The background showcases a dramatic sky filled with fluffy clouds, creating a vibrant contrast against the green grass. The scene captures a cultural performance, highlighting the musical tradition of the region.",
+      "search_text": "Explore the vibrant scene of alphorn players in Bavaria, Germany, showcasing traditional musicianship and cultural heritage. This image features a group of musicians dressed in traditional attire, playing long wooden alphorns on a grassy hill under a dramatic sky. Perfect for those interested in music, culture, and beautiful landscapes, this scene captures the essence of Bavarian traditions and outdoor performances.",
+      "keywords": [
+        "alphorn",
+        "Bavaria",
+        "Germany",
+        "musicians",
+        "traditional attire",
+        "grass",
+        "clouds",
+        "cultural performance",
+        "landscape",
+        "daytime",
+        "vibrant",
+        "group",
+        "wooden instruments",
+        "hill",
+        "music",
+        "heritage",
+        "outdoors",
+        "nature",
+        "performance",
+        "celebration"
+      ],
+      "color_palette": [
+        {
+          "hex": "#303A16",
+          "name": "dark slate gray",
+          "w": 0.32
+        },
+        {
+          "hex": "#9AA2B3",
+          "name": "dark gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#C6C9D2",
+          "name": "light gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#646F49",
+          "name": "dark olive green",
+          "w": 0.1
+        },
+        {
+          "hex": "#33625F",
+          "name": "dark slate gray",
+          "w": 0.06
+        }
+      ]
+    }
   }
 }
