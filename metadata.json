@@ -135590,6 +135590,67 @@
   "ParisSunset_EN-US6532307523_UHD": {
     "date": "2026-09-20",
     "title": "Eiffel Tower at sunset, Paris, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.ParisSunset_EN-US6532307523_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ParisSunset_EN-US6532307523_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "France",
+      "region": "Western Europe",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a stunning view of Paris at sunset, with the iconic Eiffel Tower prominently in the foreground. The cityscape stretches out beneath a warm orange and pink sky, creating a serene atmosphere. The buildings are densely packed, showcasing a mix of architectural styles typical of Paris. In the background, the skyline features modern structures, contrasting with the historic charm of the city.",
+      "search_text": "Explore the breathtaking view of the Eiffel Tower in Paris at sunset. This stunning cityscape showcases the blend of historic and modern architecture, with a warm, serene atmosphere. Ideal for travel enthusiasts and those seeking romantic destinations, this image captures the essence of Paris, a city known for its iconic landmarks and beautiful skyline. Perfect for anyone looking to experience the charm of France.",
+      "keywords": [
+        "Eiffel Tower",
+        "Paris",
+        "France",
+        "cityscape",
+        "sunset",
+        "architecture",
+        "urban",
+        "skyline",
+        "dusk",
+        "landmark",
+        "historic",
+        "modern",
+        "view",
+        "landscape",
+        "travel",
+        "tourism",
+        "romantic",
+        "serene",
+        "beautiful"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A06E63",
+          "name": "gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#593D37",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#E8A376",
+          "name": "dark salmon",
+          "w": 0.2
+        },
+        {
+          "hex": "#FBC981",
+          "name": "khaki",
+          "w": 0.17
+        },
+        {
+          "hex": "#F6D7AA",
+          "name": "wheat",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
