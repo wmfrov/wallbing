@@ -135722,6 +135722,67 @@
   "FallAspens_EN-US7211031109_UHD": {
     "date": "2026-09-22",
     "title": "Fall aspen trees near Guardsman Pass, Utah, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.FallAspens_EN-US7211031109_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FallAspens_EN-US7211031109_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest"
+      ],
+      "season": "autumn",
+      "country": "USA",
+      "region": "Western United States",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases a vibrant forest of aspen trees, predominantly displaying bright yellow foliage characteristic of autumn. The trees are arranged in a dense pattern, with some areas showing a mix of green and bare trunks, indicating the transition of the season. The foreground features a rich carpet of golden leaves, while the background reveals a gradient of colors, from yellow to grayish tones of the trees. The overall scene conveys a peaceful and picturesque autumn landscape.",
+      "search_text": "Explore the beauty of autumn with stunning images of aspen trees in fall colors. This serene forest landscape near Guardsman Pass in Utah showcases vibrant yellow leaves and a peaceful atmosphere. Perfect for nature lovers and those seeking scenic views, this image captures the essence of the autumn season with its rich biodiversity and tranquil woodland setting. Ideal for searches related to fall foliage, forest landscapes, and outdoor photography.",
+      "keywords": [
+        "aspen",
+        "autumn",
+        "forest",
+        "yellow leaves",
+        "fall colors",
+        "Utah",
+        "USA",
+        "nature",
+        "landscape",
+        "trees",
+        "serene",
+        "vibrant",
+        "woodland",
+        "tranquil",
+        "seasonal",
+        "scenic",
+        "foliage",
+        "biodiversity",
+        "wildlife",
+        "outdoors"
+      ],
+      "color_palette": [
+        {
+          "hex": "#9C8945",
+          "name": "peru",
+          "w": 0.25
+        },
+        {
+          "hex": "#D8B524",
+          "name": "golden rod",
+          "w": 0.23
+        },
+        {
+          "hex": "#605F49",
+          "name": "dark olive green",
+          "w": 0.2
+        },
+        {
+          "hex": "#B1A046",
+          "name": "peru",
+          "w": 0.18
+        },
+        {
+          "hex": "#D0A03A",
+          "name": "peru",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
