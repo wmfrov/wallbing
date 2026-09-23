@@ -135788,6 +135788,68 @@
   "TolkienWeek_EN-US7313336185_UHD": {
     "date": "2026-09-23",
     "title": "Hobbit house at Hobbiton Movie Set, Matamata, New Zealand",
-    "bing_url": "https://www.bing.com/th?id=OHR.TolkienWeek_EN-US7313336185_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.TolkienWeek_EN-US7313336185_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "garden"
+      ],
+      "season": "spring",
+      "country": "New Zealand",
+      "region": "Oceania",
+      "time_of_day": "day",
+      "mood": "cozy",
+      "ai_description": "The image features a charming hobbit house with a distinctive round yellow door, nestled into a grassy hillside. Surrounding the entrance are vibrant flowers and lush greenery, creating a picturesque garden scene. The foreground includes a stone pathway leading to the door, while the background showcases trees and additional hobbit-style structures. The overall atmosphere is inviting and whimsical, reminiscent of a fantasy setting.",
+      "search_text": "Explore the enchanting hobbit house at Hobbiton Movie Set in Matamata, New Zealand. This unique architecture features a round yellow door and is surrounded by a vibrant garden filled with flowers and greenery. Ideal for fans of fantasy and whimsical landscapes, this picturesque setting offers a cozy atmosphere reminiscent of the Shire. Perfect for nature lovers and those seeking a magical outdoor experience in Oceania.",
+      "keywords": [
+        "hobbit house",
+        "architecture",
+        "garden",
+        "New Zealand",
+        "Hobbiton",
+        "yellow door",
+        "flowers",
+        "grassy hillside",
+        "stone pathway",
+        "whimsical",
+        "fantasy",
+        "cozy",
+        "landscape",
+        "Oceania",
+        "outdoor",
+        "nature",
+        "landmark",
+        "Matamata",
+        "vibrant",
+        "lush"
+      ],
+      "color_palette": [
+        {
+          "hex": "#6E6032",
+          "name": "dark olive green",
+          "w": 0.25
+        },
+        {
+          "hex": "#23200A",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#B19F5D",
+          "name": "dark khaki",
+          "w": 0.21
+        },
+        {
+          "hex": "#52451F",
+          "name": "dark olive green",
+          "w": 0.17
+        },
+        {
+          "hex": "#493015",
+          "name": "dark olive green",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
