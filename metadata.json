@@ -135855,6 +135855,68 @@
   "ElGolfo_EN-US9261454857_UHD": {
     "date": "2026-09-24",
     "title": "Aerial view of black lava beach, El Golfo, Lanzarote, Canary Islands, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.ElGolfo_EN-US9261454857_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ElGolfo_EN-US9261454857_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "landscape"
+      ],
+      "season": null,
+      "country": "Spain",
+      "region": "Canary Islands",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures an aerial view of a striking black lava beach located in El Golfo, Lanzarote. The shoreline is characterized by dark volcanic rocks contrasting with the vibrant turquoise waves crashing against them. In the background, a sandy area is visible, dotted with a few vehicles. The rugged cliffs and unique geological formations create a dramatic landscape, while the clear blue water adds a serene touch to the scene.",
+      "search_text": "Explore the breathtaking aerial view of El Golfo, a black lava beach in Lanzarote, Canary Islands, Spain. This stunning landscape features dramatic volcanic rocks and turquoise ocean waves. Perfect for nature lovers and travelers seeking scenic coastal views, this unique beach showcases the beauty of volcanic geology. Discover the serene atmosphere and picturesque surroundings, ideal for photography and relaxation. Keywords include Lanzarote, black lava beach, ocean, waves, and geological formations.",
+      "keywords": [
+        "Lanzarote",
+        "Canary Islands",
+        "black lava beach",
+        "ocean",
+        "waves",
+        "volcanic rocks",
+        "landscape",
+        "El Golfo",
+        "turquoise water",
+        "beach",
+        "serene",
+        "coastal",
+        "aerial view",
+        "geological formations",
+        "sandy area",
+        "vehicles",
+        "nature",
+        "scenic",
+        "travel",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#352F2F",
+          "name": "dark slate gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#609CB1",
+          "name": "cadet blue",
+          "w": 0.23
+        },
+        {
+          "hex": "#C0D5E1",
+          "name": "light blue",
+          "w": 0.19
+        },
+        {
+          "hex": "#6A5F4F",
+          "name": "dim gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#B99474",
+          "name": "rosy brown",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
