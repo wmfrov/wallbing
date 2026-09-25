@@ -135922,6 +135922,67 @@
   "MidAutumn2026_EN-US9341405351_UHD": {
     "date": "2026-09-25",
     "title": "Chinese lanterns for Mid-Autumn Festival celebration",
-    "bing_url": "https://www.bing.com/th?id=OHR.MidAutumn2026_EN-US9341405351_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MidAutumn2026_EN-US9341405351_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": "autumn",
+      "country": "China",
+      "region": "East Asia",
+      "time_of_day": "night",
+      "mood": "vibrant",
+      "ai_description": "The image features a vibrant display of Chinese lanterns, predominantly in shades of red, orange, and purple, creating a festive atmosphere. The lanterns are various shapes and sizes, some resembling traditional round forms while others are elongated. They are illuminated from within, casting a warm glow against the dark background. This scene is typical of celebrations like the Mid-Autumn Festival, where such decorations are commonly used.",
+      "search_text": "Explore the vibrant world of Chinese lanterns, commonly used during the Mid-Autumn Festival celebration. These colorful decorations, featuring shades of red, orange, and purple, create a festive atmosphere at night. Lanterns come in various shapes and sizes, illuminating the surroundings and enhancing the cultural experience. Perfect for those interested in traditional celebrations, festival decorations, and East Asian culture.",
+      "keywords": [
+        "lanterns",
+        "Chinese lanterns",
+        "Mid-Autumn Festival",
+        "festival",
+        "celebration",
+        "red",
+        "orange",
+        "purple",
+        "night",
+        "vibrant",
+        "decorations",
+        "illumination",
+        "traditional",
+        "East Asia",
+        "autumn",
+        "lighting",
+        "cultural",
+        "festive",
+        "hanging",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#DB0105",
+          "name": "red",
+          "w": 0.33
+        },
+        {
+          "hex": "#710108",
+          "name": "maroon",
+          "w": 0.23
+        },
+        {
+          "hex": "#AF0C0B",
+          "name": "firebrick",
+          "w": 0.22
+        },
+        {
+          "hex": "#E38724",
+          "name": "golden rod",
+          "w": 0.12
+        },
+        {
+          "hex": "#C33616",
+          "name": "firebrick",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
