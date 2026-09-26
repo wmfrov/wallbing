@@ -135988,6 +135988,69 @@
   "BearsEars_EN-US9429791451_UHD": {
     "date": "2026-09-26",
     "title": "Cedar Mesa and Muley Point near Bears Ears National Monument, Utah, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.BearsEars_EN-US9429791451_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BearsEars_EN-US9429791451_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain",
+        "desert"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Western United States",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a stunning desert landscape at dusk near Cedar Mesa and Muley Point in Utah. In the foreground, rugged rock formations are illuminated by the warm hues of the setting sun, while a solitary tree adds a touch of greenery. The background features rolling hills and distant mountains under a sky filled with dramatic clouds painted in shades of orange, pink, and blue. The overall atmosphere is tranquil, evoking a sense of vastness and natural beauty.",
+      "search_text": "Explore the breathtaking landscape of Cedar Mesa and Muley Point near Bears Ears National Monument in Utah. This serene desert scene features stunning rock formations, a solitary tree, and a dramatic sky at dusk. Perfect for nature lovers and outdoor enthusiasts, this image captures the essence of the rugged beauty of the Western United States. Ideal for searches related to desert landscapes, sunset views, and natural scenery.",
+      "keywords": [
+        "Cedar Mesa",
+        "Muley Point",
+        "Bears Ears National Monument",
+        "Utah",
+        "desert",
+        "landscape",
+        "mountain",
+        "sunset",
+        "rock formations",
+        "tree",
+        "clouds",
+        "serene",
+        "natural beauty",
+        "rugged terrain",
+        "sky",
+        "dusk",
+        "wildlife",
+        "outdoor",
+        "scenic",
+        "view"
+      ],
+      "color_palette": [
+        {
+          "hex": "#7F9CBF",
+          "name": "light slate gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#533921",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#896D6D",
+          "name": "gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#CA8B6C",
+          "name": "dark salmon",
+          "w": 0.18
+        },
+        {
+          "hex": "#E7AD8B",
+          "name": "burly wood",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
