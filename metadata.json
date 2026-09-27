@@ -136056,6 +136056,68 @@
   "DecoCrab_EN-US9587426678_UHD": {
     "date": "2026-09-27",
     "title": "Decorator crab on a sea pen, Komodo National Park, Indonesia",
-    "bing_url": "https://www.bing.com/th?id=OHR.DecoCrab_EN-US9587426678_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.DecoCrab_EN-US9587426678_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "animal"
+      ],
+      "season": null,
+      "country": "Indonesia",
+      "region": "Southeast Asia",
+      "time_of_day": null,
+      "mood": "mystical",
+      "ai_description": "The image features a decorator crab perched on a vibrant sea pen, showcasing a striking array of colors. The sea pen's structure is intricate, with a fan-like arrangement of polyps that are illuminated in shades of purple and pink. The crab, adorned with bits of algae and other materials for camouflage, is positioned in the foreground, while the delicate tendrils of the sea pen extend gracefully into the background. The overall scene evokes a sense of underwater wonder and the rich biodiversity of marine life.",
+      "search_text": "Explore the vibrant underwater world of Komodo National Park in Indonesia, featuring a decorator crab on a colorful sea pen. This mystical marine scene showcases the rich biodiversity of ocean life, including various invertebrates and coral structures. Perfect for those interested in marine biology, underwater photography, and the unique ecosystems of tropical waters. Discover the beauty of aquatic habitats and the fascinating behaviors of animals like the decorator crab, known for its camouflage skills.",
+      "keywords": [
+        "decorator crab",
+        "sea pen",
+        "marine life",
+        "underwater",
+        "Komodo National Park",
+        "Indonesia",
+        "ocean",
+        "coral",
+        "colorful",
+        "biodiversity",
+        "animal",
+        "crustacean",
+        "camouflage",
+        "aquatic",
+        "tropical",
+        "vibrant",
+        "ecosystem",
+        "invertebrate",
+        "habitat",
+        "sea creature"
+      ],
+      "color_palette": [
+        {
+          "hex": "#7F3691",
+          "name": "dark magenta",
+          "w": 0.29
+        },
+        {
+          "hex": "#8B58A7",
+          "name": "slate blue",
+          "w": 0.22
+        },
+        {
+          "hex": "#40215D",
+          "name": "midnight blue",
+          "w": 0.21
+        },
+        {
+          "hex": "#B37BC2",
+          "name": "medium orchid",
+          "w": 0.15
+        },
+        {
+          "hex": "#D2A4D9",
+          "name": "plum",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
