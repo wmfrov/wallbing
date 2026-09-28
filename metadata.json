@@ -136123,6 +136123,67 @@
   "AmberHall_EN-US9930812541_UHD": {
     "date": "2026-09-28",
     "title": "Sattais Katcheri Hall in Amber Fort near Jaipur, Rajasthan, India",
-    "bing_url": "https://www.bing.com/th?id=OHR.AmberHall_EN-US9930812541_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AmberHall_EN-US9930812541_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "India",
+      "region": "South Asia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the Sattais Katcheri Hall, located within the Amber Fort near Jaipur, Rajasthan. The hall features a series of intricately designed arches supported by ornate columns, creating a symmetrical and rhythmic pattern. The warm hues of the sandstone walls and pillars add to the historical ambiance. The space is well-lit, highlighting the architectural details and the smooth textures of the stone. The background is minimal, emphasizing the grandeur of the hall's structure.",
+      "search_text": "Explore the architectural beauty of the Sattais Katcheri Hall in Amber Fort, Jaipur, Rajasthan, India. This stunning hall features intricate arches and ornate columns made of sandstone, showcasing historical Indian architecture. Ideal for those interested in cultural heritage, tourism, and landmark buildings, this serene space is perfect for photography and exploration. Discover the rich history and design elements that make this fort a must-visit destination in South Asia.",
+      "keywords": [
+        "Amber Fort",
+        "Jaipur",
+        "Rajasthan",
+        "India",
+        "architecture",
+        "hall",
+        "arches",
+        "columns",
+        "sandstone",
+        "ornate",
+        "historical",
+        "symmetrical",
+        "interior",
+        "design",
+        "cultural",
+        "heritage",
+        "tourism",
+        "landmark",
+        "building",
+        "fort"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A5754A",
+          "name": "peru",
+          "w": 0.28
+        },
+        {
+          "hex": "#C8A584",
+          "name": "tan",
+          "w": 0.19
+        },
+        {
+          "hex": "#5A320E",
+          "name": "saddle brown",
+          "w": 0.19
+        },
+        {
+          "hex": "#764D28",
+          "name": "saddle brown",
+          "w": 0.17
+        },
+        {
+          "hex": "#8F5C30",
+          "name": "sienna",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
