@@ -136189,6 +136189,68 @@
   "KasilofRiver_EN-US0047556055_UHD": {
     "date": "2026-09-29",
     "title": "The blue, glacier-fed waters of the Kasilof River, Alaska, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.KasilofRiver_EN-US0047556055_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.KasilofRiver_EN-US0047556055_UHD.jpg",
+    "tags": {
+      "subject": [
+        "river",
+        "forest"
+      ],
+      "season": "autumn",
+      "country": "USA",
+      "region": "Alaska",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the Kasilof River in Alaska, characterized by its striking blue, glacier-fed waters. The river meanders through a vibrant forest, with trees displaying a stunning array of autumn colors, including shades of yellow and orange. In the foreground, the river's clear waters contrast beautifully with the surrounding foliage. The background features dense clusters of evergreen trees, creating a picturesque and tranquil landscape.",
+      "search_text": "Explore the stunning Kasilof River in Alaska, known for its blue, glacier-fed waters and vibrant autumn foliage. This picturesque landscape features a meandering river surrounded by a mix of evergreen and deciduous trees, showcasing brilliant shades of yellow and orange. Perfect for nature lovers and photographers, this serene setting captures the essence of Alaska's wilderness. Search for autumn landscapes, Alaskan rivers, and tranquil nature scenes.",
+      "keywords": [
+        "Kasilof River",
+        "Alaska",
+        "autumn",
+        "blue water",
+        "glacier-fed",
+        "forest",
+        "evergreen",
+        "yellow leaves",
+        "meandering river",
+        "tranquil",
+        "nature",
+        "landscape",
+        "wildlife",
+        "scenic",
+        "outdoors",
+        "wilderness",
+        "reflection",
+        "serene",
+        "animal",
+        "river"
+      ],
+      "color_palette": [
+        {
+          "hex": "#62CCD6",
+          "name": "medium turquoise",
+          "w": 0.29
+        },
+        {
+          "hex": "#322D13",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#7D6021",
+          "name": "saddle brown",
+          "w": 0.19
+        },
+        {
+          "hex": "#8B8C4E",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#505430",
+          "name": "dark olive green",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
