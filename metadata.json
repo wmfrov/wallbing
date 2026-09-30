@@ -136256,6 +136256,67 @@
   "BeardReedling_EN-US0124350202_UHD": {
     "date": "2026-09-30",
     "title": "Male bearded reedling, Norfolk, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.BeardReedling_EN-US0124350202_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BeardReedling_EN-US0124350202_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird"
+      ],
+      "season": "autumn",
+      "country": "England",
+      "region": "United Kingdom",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a male bearded reedling perched on a slender stalk amidst tall, golden grasses. The bird displays a distinctive appearance with a light gray body, a black mustache, and a vibrant orange tail. The background is filled with soft, blurred golden hues, suggesting a tranquil autumn setting. The gentle sway of the grasses adds a sense of calm to the scene, highlighting the bird's delicate presence in its natural habitat.",
+      "search_text": "Explore the beauty of the male bearded reedling, a charming bird found in Norfolk, England. This species, known for its distinctive gray body and striking orange tail, thrives in grassland habitats. Perfect for birdwatching enthusiasts, this serene image captures the essence of autumn with golden grasses swaying gently in the breeze. Discover more about avian wildlife and the natural beauty of England's landscapes.",
+      "keywords": [
+        "bearded reedling",
+        "Panurus biarmicus",
+        "bird",
+        "male",
+        "Norfolk",
+        "England",
+        "autumn",
+        "golden grasses",
+        "perched",
+        "wildlife",
+        "nature",
+        "serene",
+        "avian",
+        "feathers",
+        "orange tail",
+        "black mustache",
+        "grassland",
+        "habitat",
+        "soft focus",
+        "daylight"
+      ],
+      "color_palette": [
+        {
+          "hex": "#DDA04B",
+          "name": "sandy brown",
+          "w": 0.36
+        },
+        {
+          "hex": "#E0A54F",
+          "name": "sandy brown",
+          "w": 0.22
+        },
+        {
+          "hex": "#E3A954",
+          "name": "sandy brown",
+          "w": 0.21
+        },
+        {
+          "hex": "#CC913F",
+          "name": "peru",
+          "w": 0.12
+        },
+        {
+          "hex": "#EAB461",
+          "name": "sandy brown",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
