@@ -136322,6 +136322,68 @@
   "OlmstedPoint_EN-US0964858045_UHD": {
     "date": "2026-10-01",
     "title": "Sunset from Olmsted Point, Yosemite National Park, California, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.OlmstedPoint_EN-US0964858045_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.OlmstedPoint_EN-US0964858045_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "landscape"
+      ],
+      "season": "autumn",
+      "country": "USA",
+      "region": "California",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a breathtaking sunset view from Olmsted Point in Yosemite National Park. In the foreground, large granite boulders are scattered across a smooth rock surface, while the background features majestic mountain ranges illuminated by the warm hues of the setting sun. The sky is painted in shades of orange, pink, and purple, creating a dramatic contrast against the rugged landscape. A solitary pine tree stands prominently, adding a touch of greenery to the rocky terrain.",
+      "search_text": "Explore the stunning sunset view from Olmsted Point in Yosemite National Park, California. This picturesque landscape features majestic mountains, granite boulders, and a vibrant sky filled with shades of orange and pink. Perfect for nature lovers and photographers, this serene scene captures the beauty of autumn in the outdoors. Discover the unique rock formations and tranquil atmosphere of this iconic location.",
+      "keywords": [
+        "Yosemite National Park",
+        "California",
+        "sunset",
+        "mountains",
+        "granite",
+        "boulders",
+        "pine tree",
+        "landscape",
+        "dusk",
+        "autumn",
+        "scenic view",
+        "nature",
+        "outdoors",
+        "rock formations",
+        "serene",
+        "sky",
+        "horizon",
+        "colorful",
+        "photography",
+        "travel"
+      ],
+      "color_palette": [
+        {
+          "hex": "#805853",
+          "name": "dim gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#4A2D28",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#AB7E7B",
+          "name": "rosy brown",
+          "w": 0.2
+        },
+        {
+          "hex": "#F3A593",
+          "name": "light salmon",
+          "w": 0.18
+        },
+        {
+          "hex": "#FAB69C",
+          "name": "burly wood",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
