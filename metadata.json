@@ -136389,6 +136389,68 @@
   "ChattoogaRiver_EN-US5042787453_UHD": {
     "date": "2026-10-02",
     "title": "Chattooga River in the Appalachian Mountains, North Carolina",
-    "bing_url": "https://www.bing.com/th?id=OHR.ChattoogaRiver_EN-US5042787453_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ChattoogaRiver_EN-US5042787453_UHD.jpg",
+    "tags": {
+      "subject": [
+        "river",
+        "forest"
+      ],
+      "season": "autumn",
+      "country": "United States",
+      "region": "Southeast",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures the Chattooga River flowing gently through the Appalachian Mountains in North Carolina. In the foreground, smooth rocks are partially submerged in the water, adorned with a colorful array of autumn leaves. The background features lush green trees, some beginning to change color, creating a vibrant tapestry of fall hues. Soft mist hangs in the air, adding a tranquil atmosphere to the scene, while the gentle flow of the river creates a soothing soundscape.",
+      "search_text": "Explore the serene beauty of the Chattooga River in the Appalachian Mountains of North Carolina. This picturesque landscape features flowing water surrounded by vibrant autumn leaves and lush forests. Ideal for nature lovers, photographers, and outdoor enthusiasts, this scene captures the essence of fall with its colorful foliage and tranquil atmosphere. Discover the beauty of rivers, forests, and the stunning landscapes of the Southeast United States.",
+      "keywords": [
+        "Chattooga River",
+        "Appalachian Mountains",
+        "North Carolina",
+        "autumn leaves",
+        "flowing water",
+        "forest",
+        "tranquil",
+        "serene",
+        "landscape",
+        "nature",
+        "river",
+        "smooth rocks",
+        "mist",
+        "green trees",
+        "colorful foliage",
+        "outdoor",
+        "scenic",
+        "waterfall",
+        "wildlife",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3F3422",
+          "name": "dark slate gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#1F1D13",
+          "name": "black",
+          "w": 0.23
+        },
+        {
+          "hex": "#574D33",
+          "name": "dark olive green",
+          "w": 0.22
+        },
+        {
+          "hex": "#776B47",
+          "name": "dim gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#A99A70",
+          "name": "dark khaki",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
