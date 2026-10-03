@@ -136456,6 +136456,65 @@
   "GrizzlySwim_EN-US5133524829_UHD": {
     "date": "2026-10-03",
     "title": "Brown bear in Silver Salmon Creek, Lake Clark National Park and Preserve, Alaska",
-    "bing_url": "https://www.bing.com/th?id=OHR.GrizzlySwim_EN-US5133524829_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.GrizzlySwim_EN-US5133524829_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Alaska",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a brown bear swimming in Silver Salmon Creek, located in Lake Clark National Park and Preserve, Alaska. The bear's head is partially submerged, with water droplets glistening on its fur. The background is blurred, suggesting a natural, tranquil environment. The colors are muted, with earthy tones dominating the scene, enhancing the serene atmosphere.",
+      "search_text": "This image showcases a brown bear swimming in Silver Salmon Creek, located in Lake Clark National Park, Alaska. The serene scene captures the essence of wildlife in its natural habitat. Search for images of brown bears, swimming animals, or Alaskan wildlife to find similar content. Explore terms like Ursus arctos, nature photography, and outdoor adventures related to bears and their ecosystems.",
+      "keywords": [
+        "brown bear",
+        "Ursus arctos",
+        "animal",
+        "swimming",
+        "Alaska",
+        "Lake Clark National Park",
+        "wildlife",
+        "nature",
+        "creek",
+        "serene",
+        "water",
+        "fur",
+        "natural habitat",
+        "outdoors",
+        "mammal",
+        "wild animal",
+        "ecosystem",
+        "biodiversity"
+      ],
+      "color_palette": [
+        {
+          "hex": "#6A5D3B",
+          "name": "dark olive green",
+          "w": 0.36
+        },
+        {
+          "hex": "#483B23",
+          "name": "dark olive green",
+          "w": 0.2
+        },
+        {
+          "hex": "#C7C9C8",
+          "name": "silver",
+          "w": 0.16
+        },
+        {
+          "hex": "#968B73",
+          "name": "gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#D5D8D9",
+          "name": "light gray",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
