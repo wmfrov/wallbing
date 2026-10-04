@@ -136520,6 +136520,67 @@
   "ArtemisRocket_EN-US5256990037_UHD": {
     "date": "2026-10-04",
     "title": "Artemis I moon rocket at Launch Complex 39B, Kennedy Space Center, Florida, June 15, 2022",
-    "bing_url": "https://www.bing.com/th?id=OHR.ArtemisRocket_EN-US5256990037_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ArtemisRocket_EN-US5256990037_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "North America",
+      "time_of_day": "night",
+      "mood": "dramatic",
+      "ai_description": "The image features the Artemis I moon rocket positioned at Launch Complex 39B at Kennedy Space Center. A large, bright full moon looms in the background, casting a dramatic glow over the scene. The rocket is predominantly orange and white, with intricate details visible on its structure. The launch pad is surrounded by various support structures and equipment, emphasizing the technological aspect of space exploration. The deep blue sky enhances the contrast between the rocket and the moon.",
+      "search_text": "Explore the Artemis I moon rocket at Launch Complex 39B in Kennedy Space Center, Florida. This stunning image captures the rocket against a dramatic night sky, illuminated by a full moon. Perfect for those interested in space exploration, NASA missions, and aerospace technology. Discover the intricate architecture of the launch pad and the significance of this historic site in the context of modern space travel.",
+      "keywords": [
+        "Artemis I",
+        "moon",
+        "rocket",
+        "NASA",
+        "Launch Complex 39B",
+        "Kennedy Space Center",
+        "Florida",
+        "space exploration",
+        "full moon",
+        "night sky",
+        "architecture",
+        "launch pad",
+        "technology",
+        "spacecraft",
+        "drama",
+        "cosmos",
+        "launch",
+        "engineering",
+        "aerospace",
+        "NASA mission"
+      ],
+      "color_palette": [
+        {
+          "hex": "#06418D",
+          "name": "midnight blue",
+          "w": 0.28
+        },
+        {
+          "hex": "#192130",
+          "name": "dark slate gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#073B83",
+          "name": "midnight blue",
+          "w": 0.21
+        },
+        {
+          "hex": "#012C70",
+          "name": "midnight blue",
+          "w": 0.13
+        },
+        {
+          "hex": "#606E7C",
+          "name": "dim gray",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
