@@ -136586,6 +136586,67 @@
   "AdelieTeacher_EN-US5343194378_UHD": {
     "date": "2026-10-05",
     "title": "Ad\u00e9lie penguins, Antarctica",
-    "bing_url": "https://www.bing.com/th?id=OHR.AdelieTeacher_EN-US5343194378_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AdelieTeacher_EN-US5343194378_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Antarctica",
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a group of Ad\u00e9lie penguins on a snowy ice shelf in Antarctica. In the foreground, two penguins are captured mid-leap, diving into the water below. The background shows a line of penguins standing closely together, their black and white plumage contrasting against the bright white snow. The icy landscape is expansive, with hints of blue icebergs in the distance, suggesting a cold, crisp day. The overall scene conveys a sense of calmness and the natural behavior of these charming animals.",
+      "search_text": "Explore the fascinating world of Ad\u00e9lie penguins in Antarctica. These charming animals are known for their distinctive black and white coloring and playful behavior. Witness their unique diving skills as they leap off icy shelves into the frigid waters. This image captures a serene moment in their natural habitat, showcasing the beauty of polar wildlife and the stunning icy landscapes of Antarctica. Perfect for nature lovers and wildlife enthusiasts interested in marine life and cold climate ecosystems.",
+      "keywords": [
+        "Ad\u00e9lie penguin",
+        "penguins",
+        "animal",
+        "Antarctica",
+        "ice",
+        "snow",
+        "diving",
+        "group",
+        "wildlife",
+        "cold",
+        "habitat",
+        "marine",
+        "frozen",
+        "ice shelf",
+        "nature",
+        "polar",
+        "sea",
+        "birds",
+        "flock",
+        "behavior"
+      ],
+      "color_palette": [
+        {
+          "hex": "#C9C6C8",
+          "name": "silver",
+          "w": 0.31
+        },
+        {
+          "hex": "#C1BEBD",
+          "name": "silver",
+          "w": 0.28
+        },
+        {
+          "hex": "#E2D8D2",
+          "name": "gainsboro",
+          "w": 0.14
+        },
+        {
+          "hex": "#D3CFCD",
+          "name": "light gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#767069",
+          "name": "dim gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
