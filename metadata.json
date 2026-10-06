@@ -136652,6 +136652,68 @@
   "DanxiaLandform_EN-US5459628079_UHD": {
     "date": "2026-10-06",
     "title": "Danxia landform, Zhangye National Geopark, Gansu, China",
-    "bing_url": "https://www.bing.com/th?id=OHR.DanxiaLandform_EN-US5459628079_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.DanxiaLandform_EN-US5459628079_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain"
+      ],
+      "season": null,
+      "country": "China",
+      "region": "East Asia",
+      "time_of_day": "day",
+      "mood": "dramatic",
+      "ai_description": "The image showcases the stunning Danxia landform in Zhangye National Geopark, characterized by its vibrant, multi-colored mountains. The foreground features rugged peaks with hues of red, orange, and yellow, while the background reveals a sprawling landscape of undulating hills. The unique geological formations create a striking visual contrast against the clear blue sky. The intricate patterns of the terrain highlight the erosion processes that shaped this remarkable area.",
+      "search_text": "Explore the breathtaking Danxia landform in Zhangye National Geopark, China, known for its vibrant, multi-colored mountains and unique geological formations. This stunning landscape features rugged peaks and intricate patterns shaped by erosion, making it a popular destination for nature lovers, hikers, and photographers. Discover the dramatic scenery of East Asia and the beauty of natural landforms in this remarkable area.",
+      "keywords": [
+        "Danxia landform",
+        "Zhangye National Geopark",
+        "China",
+        "mountains",
+        "landscape",
+        "geological formations",
+        "vibrant colors",
+        "erosion",
+        "rugged peaks",
+        "multi-colored",
+        "East Asia",
+        "nature",
+        "outdoor",
+        "scenic",
+        "dramatic",
+        "hiking",
+        "travel",
+        "photography",
+        "geology",
+        "landforms"
+      ],
+      "color_palette": [
+        {
+          "hex": "#CEB19A",
+          "name": "tan",
+          "w": 0.23
+        },
+        {
+          "hex": "#645C5A",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#987C70",
+          "name": "gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#9B98A1",
+          "name": "dark gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#976450",
+          "name": "sienna",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
