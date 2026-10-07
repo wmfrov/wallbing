@@ -136719,6 +136719,68 @@
   "ForestofDean_EN-US7262962048_UHD": {
     "date": "2026-10-07",
     "title": "Moss-covered rocks in Puzzlewood, Forest of Dean, Gloucestershire, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.ForestofDean_EN-US7262962048_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ForestofDean_EN-US7262962048_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest",
+        "cave"
+      ],
+      "season": null,
+      "country": "England",
+      "region": "South West England",
+      "time_of_day": null,
+      "mood": "mystical",
+      "ai_description": "The image depicts a narrow pathway winding through moss-covered rocks in a dense forest. The rocks are adorned with vibrant green moss, creating a lush and enchanting atmosphere. Tall trees surround the area, their leaves filtering sunlight and adding to the mystical feel. The ground is earthy and slightly damp, indicating a rich ecosystem. The overall composition evokes a sense of adventure and exploration in a hidden woodland.",
+      "search_text": "Explore the enchanting moss-covered rocks in Puzzlewood, located in the Forest of Dean, Gloucestershire, England. This mystical forest features a narrow pathway surrounded by lush greenery and towering trees. Ideal for nature lovers and adventurers, the vibrant moss creates a unique atmosphere perfect for exploration. Discover the rich ecosystem and captivating landscapes of South West England, where every corner reveals the beauty of nature.",
+      "keywords": [
+        "moss",
+        "rocks",
+        "forest",
+        "pathway",
+        "lush",
+        "greenery",
+        "trees",
+        "mystical",
+        "nature",
+        "landscape",
+        "Puzzlewood",
+        "Gloucestershire",
+        "England",
+        "South West England",
+        "ecosystem",
+        "adventure",
+        "exploration",
+        "dense",
+        "earthy",
+        "flora"
+      ],
+      "color_palette": [
+        {
+          "hex": "#373B19",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#0A0E03",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#66713A",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#25270F",
+          "name": "black",
+          "w": 0.17
+        },
+        {
+          "hex": "#1B1A0B",
+          "name": "black",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
