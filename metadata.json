@@ -136786,6 +136786,67 @@
   "MayotteOctopus_EN-US5694987016_UHD": {
     "date": "2026-10-08",
     "title": "Octopus in defensive posture, Mayotte, Indian Ocean",
-    "bing_url": "https://www.bing.com/th?id=OHR.MayotteOctopus_EN-US5694987016_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.MayotteOctopus_EN-US5694987016_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "animal"
+      ],
+      "season": null,
+      "country": "Mayotte",
+      "region": "Indian Ocean",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures an octopus in a defensive posture, showcasing its intricate patterns and textures. The octopus is positioned on the sandy ocean floor, surrounded by clear blue water that reflects light beautifully. In the background, subtle hints of coral formations can be seen, adding to the underwater scenery. The octopus's tentacles are spread out, demonstrating its adaptability and fluid movement in the marine environment.",
+      "search_text": "Explore the fascinating world of marine life with this stunning image of an octopus in its natural habitat. This underwater photograph captures the beauty and complexity of the octopus, showcasing its defensive posture and vibrant patterns. Perfect for ocean lovers, this image highlights the biodiversity of the Indian Ocean and the intricate relationships within aquatic ecosystems. Ideal for searches related to marine animals, underwater photography, and oceanic wildlife.",
+      "keywords": [
+        "octopus",
+        "animal",
+        "Indian Ocean",
+        "defensive posture",
+        "marine life",
+        "underwater",
+        "coral",
+        "sea",
+        "tentacles",
+        "ocean floor",
+        "aquatic",
+        "biodiversity",
+        "creature",
+        "swimming",
+        "colorful",
+        "nature",
+        "wildlife",
+        "sea life",
+        "photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#B0B1BA",
+          "name": "dark gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#52545B",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#6AB8DD",
+          "name": "corn flower blue",
+          "w": 0.2
+        },
+        {
+          "hex": "#6591AC",
+          "name": "cadet blue",
+          "w": 0.18
+        },
+        {
+          "hex": "#BBD0E2",
+          "name": "light blue",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
