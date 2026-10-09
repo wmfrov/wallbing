@@ -136852,6 +136852,69 @@
   "IlesSanguinaires_EN-US5801644173_UHD": {
     "date": "2026-10-09",
     "title": "View of the Sanguinaires Islands from Corsica, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.IlesSanguinaires_EN-US5801644173_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.IlesSanguinaires_EN-US5801644173_UHD.jpg",
+    "tags": {
+      "subject": [
+        "island",
+        "ocean",
+        "landscape"
+      ],
+      "season": null,
+      "country": "France",
+      "region": "Corsica",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a stunning view of the Sanguinaires Islands off the coast of Corsica, France, during dusk. In the foreground, a prominent rocky hill features a historic tower, while the background showcases several smaller islands, each with its own lighthouse. The ocean reflects the warm hues of the sunset, creating a tranquil atmosphere. Lush greenery covers the hills, contrasting with the rugged textures of the rocks and the calm water.",
+      "search_text": "Explore the breathtaking view of the Sanguinaires Islands from Corsica, France. This picturesque landscape features a historic tower on a rocky hill, surrounded by the serene ocean and multiple lighthouses on nearby islands. Ideal for those seeking coastal beauty, nature photography, and travel inspiration. Perfect for sunset lovers and anyone interested in the stunning landscapes of Corsica.",
+      "keywords": [
+        "Sanguinaires Islands",
+        "Corsica",
+        "France",
+        "tower",
+        "lighthouse",
+        "ocean",
+        "sunset",
+        "landscape",
+        "island",
+        "rocky",
+        "serene",
+        "coastal",
+        "scenic",
+        "historic",
+        "nature",
+        "water",
+        "hills",
+        "greenery",
+        "travel",
+        "vacation"
+      ],
+      "color_palette": [
+        {
+          "hex": "#90A3BC",
+          "name": "dark gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#DDAB7D",
+          "name": "burly wood",
+          "w": 0.23
+        },
+        {
+          "hex": "#293C3E",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#405956",
+          "name": "dark slate gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#7D746E",
+          "name": "gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
