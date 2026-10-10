@@ -136920,6 +136920,68 @@
   "CormorantsFlight_EN-US5972403355_UHD": {
     "date": "2026-10-10",
     "title": "Double-crested cormorants over Monterey Bay, California",
-    "bing_url": "https://www.bing.com/th?id=OHR.CormorantsFlight_EN-US5972403355_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.CormorantsFlight_EN-US5972403355_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "bird"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "California",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a dramatic ocean scene at dusk, with waves crashing against a rocky outcrop. In the foreground, a group of double-crested cormorants is seen flying over the turbulent waters, silhouetted against the warm golden hues of the setting sun. The background features a vast expanse of ocean, with layers of waves creating a dynamic texture. The scene evokes a sense of tranquility amidst the powerful forces of nature.",
+      "search_text": "Explore the beauty of Monterey Bay, California, featuring double-crested cormorants flying over the ocean at dusk. This serene scene captures the dynamic waves crashing against rocks, creating a stunning coastal landscape. Perfect for nature lovers and bird watchers, this image showcases the tranquility of marine life and the breathtaking colors of a sunset over the sea. Ideal for searches related to ocean wildlife, coastal scenery, and serene landscapes.",
+      "keywords": [
+        "double-crested cormorant",
+        "bird",
+        "ocean",
+        "waves",
+        "rock",
+        "California",
+        "Monterey Bay",
+        "flying",
+        "dusk",
+        "serene",
+        "water",
+        "sea",
+        "wildlife",
+        "nature",
+        "marine",
+        "silhouette",
+        "coastal",
+        "sunset",
+        "animal",
+        "landscape"
+      ],
+      "color_palette": [
+        {
+          "hex": "#555655",
+          "name": "dim gray",
+          "w": 0.31
+        },
+        {
+          "hex": "#3C3A36",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#91856F",
+          "name": "gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#E3C17F",
+          "name": "burly wood",
+          "w": 0.15
+        },
+        {
+          "hex": "#E9CB87",
+          "name": "burly wood",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
