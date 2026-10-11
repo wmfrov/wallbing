@@ -136987,6 +136987,68 @@
   "BabcockSP_EN-US6068931791_UHD": {
     "date": "2026-10-11",
     "title": "Glade Creek Grist Mill, Babcock State Park, West Virginia",
-    "bing_url": "https://www.bing.com/th?id=OHR.BabcockSP_EN-US6068931791_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BabcockSP_EN-US6068931791_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest",
+        "architecture"
+      ],
+      "season": "autumn",
+      "country": "United States",
+      "region": "Appalachia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features the Glade Creek Grist Mill nestled among vibrant autumn foliage in Babcock State Park. The foreground showcases a gentle waterfall cascading over rocks, while the mill, constructed of wood, stands prominently in the background. The surrounding trees are adorned with brilliant shades of orange, yellow, and red, creating a picturesque autumn scene. The sunlight filters through the leaves, enhancing the warm colors and tranquil atmosphere of this serene landscape.",
+      "search_text": "Explore the beauty of Glade Creek Grist Mill located in Babcock State Park, West Virginia, surrounded by stunning autumn foliage. This serene landscape features a picturesque waterfall and vibrant forest colors, making it a perfect destination for nature lovers and photographers. Discover the charm of rustic architecture and tranquil outdoor settings in the heart of Appalachia. Ideal for those seeking peaceful rural escapes or autumn scenery.",
+      "keywords": [
+        "Glade Creek Grist Mill",
+        "Babcock State Park",
+        "West Virginia",
+        "autumn",
+        "waterfall",
+        "forest",
+        "architecture",
+        "mill",
+        "fall foliage",
+        "serene",
+        "nature",
+        "landscape",
+        "wood",
+        "cascading water",
+        "tranquil",
+        "scenic",
+        "outdoors",
+        "rural",
+        "Appalachia",
+        "stream"
+      ],
+      "color_palette": [
+        {
+          "hex": "#2D2E14",
+          "name": "black",
+          "w": 0.26
+        },
+        {
+          "hex": "#7F4517",
+          "name": "saddle brown",
+          "w": 0.22
+        },
+        {
+          "hex": "#8B6A22",
+          "name": "sienna",
+          "w": 0.2
+        },
+        {
+          "hex": "#A3832C",
+          "name": "dark golden rod",
+          "w": 0.2
+        },
+        {
+          "hex": "#C2A254",
+          "name": "dark khaki",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
