@@ -137054,6 +137054,68 @@
   "WhiteHouse_EN-US6161912809_UHD": {
     "date": "2026-10-12",
     "title": "White House Ruin at Canyon de Chelly National Monument in Arizona",
-    "bing_url": "https://www.bing.com/th?id=OHR.WhiteHouse_EN-US6161912809_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.WhiteHouse_EN-US6161912809_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ruins",
+        "landscape"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Southwest",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the White House Ruin, an ancient cliff dwelling nestled within the dramatic rock formations of Canyon de Chelly National Monument. The ruins are partially sheltered by a large overhanging rock, which displays striking layers of reddish-orange sandstone. In the foreground, the remnants of the structure can be seen, hinting at the historical significance of the site. The background features towering canyon walls that create a sense of grandeur and isolation, with soft lighting enhancing the textures of the rock face.",
+      "search_text": "Explore the White House Ruin located in Canyon de Chelly National Monument, Arizona. This ancient cliff dwelling is a remarkable example of historic architecture nestled within stunning sandstone formations. The serene landscape showcases the beauty of the Southwest, with its dramatic canyon walls and unique geological features. Perfect for those interested in cultural heritage, ancient ruins, and breathtaking natural scenery, this site offers a glimpse into the past and the architectural ingenuity of its builders.",
+      "keywords": [
+        "White House Ruin",
+        "Canyon de Chelly",
+        "Arizona",
+        "cliff dwelling",
+        "ancient ruins",
+        "sandstone",
+        "landscape",
+        "Southwest",
+        "historic site",
+        "rock formations",
+        "serene",
+        "architecture",
+        "canyon",
+        "geological formations",
+        "overhang",
+        "desert",
+        "monument",
+        "ancient architecture",
+        "cultural heritage",
+        "building"
+      ],
+      "color_palette": [
+        {
+          "hex": "#C28871",
+          "name": "rosy brown",
+          "w": 0.26
+        },
+        {
+          "hex": "#D7A592",
+          "name": "tan",
+          "w": 0.23
+        },
+        {
+          "hex": "#905B47",
+          "name": "sienna",
+          "w": 0.21
+        },
+        {
+          "hex": "#E4B7A5",
+          "name": "burly wood",
+          "w": 0.17
+        },
+        {
+          "hex": "#EEC8B8",
+          "name": "wheat",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
