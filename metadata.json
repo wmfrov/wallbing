@@ -137121,6 +137121,68 @@
   "PlitviceAutumn_EN-US6255909048_UHD": {
     "date": "2026-10-13",
     "title": "Plitvice Lakes National Park, Croatia",
-    "bing_url": "https://www.bing.com/th?id=OHR.PlitviceAutumn_EN-US6255909048_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.PlitviceAutumn_EN-US6255909048_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "forest"
+      ],
+      "season": "autumn",
+      "country": "Croatia",
+      "region": "Southeast Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the stunning Plitvice Lakes National Park in Croatia, featuring a series of vibrant lakes surrounded by lush forests. The foreground displays cascading waterfalls flowing into the lower lake, while the background reveals deep blue and turquoise waters of the upper lakes. The autumn foliage adds a rich palette of oranges, yellows, and greens, creating a picturesque landscape. The overall scene evokes a sense of tranquility and natural beauty.",
+      "search_text": "Explore the breathtaking beauty of Plitvice Lakes National Park in Croatia, known for its stunning lakes and waterfalls. This serene landscape is perfect for nature lovers and hikers, showcasing vibrant autumn colors and crystal-clear waters. Discover the tranquility of this national park, with its lush forests and picturesque scenery. Ideal for outdoor enthusiasts seeking scenic views and a peaceful retreat in Southeast Europe.",
+      "keywords": [
+        "Plitvice Lakes",
+        "Croatia",
+        "autumn",
+        "lake",
+        "waterfall",
+        "forest",
+        "national park",
+        "landscape",
+        "nature",
+        "scenic",
+        "tranquil",
+        "vibrant",
+        "blue water",
+        "greenery",
+        "cascading",
+        "serene",
+        "outdoor",
+        "travel",
+        "hiking",
+        "wildlife"
+      ],
+      "color_palette": [
+        {
+          "hex": "#C7A44B",
+          "name": "peru",
+          "w": 0.24
+        },
+        {
+          "hex": "#867D50",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#57523A",
+          "name": "dark olive green",
+          "w": 0.2
+        },
+        {
+          "hex": "#9BA070",
+          "name": "dark khaki",
+          "w": 0.19
+        },
+        {
+          "hex": "#D1C57A",
+          "name": "burly wood",
+          "w": 0.14
+        }
+      ]
+    }
   }
 }
