@@ -137188,6 +137188,67 @@
   "AmmoniteFossils_EN-US6354038755_UHD": {
     "date": "2026-10-14",
     "title": "Ammonite fossils from the Jurassic Period",
-    "bing_url": "https://www.bing.com/th?id=OHR.AmmoniteFossils_EN-US6354038755_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AmmoniteFossils_EN-US6354038755_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ruins"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": null,
+      "mood": "stark",
+      "ai_description": "The image features a close-up of ammonite fossils embedded in a rocky surface. The fossils are characterized by their spiral shapes and intricate ridges, showcasing the detailed texture of the ancient marine creatures. Various sizes of ammonites are visible, indicating a rich fossil bed. The background rock is rough and weathered, adding to the stark appearance of the scene.",
+      "search_text": "Explore ammonite fossils from the Jurassic period, showcasing intricate spiral shapes and textures. These ancient marine fossils provide insights into prehistoric life and geology. Perfect for paleontology enthusiasts, the image highlights the beauty of natural history and the complexity of fossilized remains found in sedimentary rock formations.",
+      "keywords": [
+        "ammonite",
+        "fossil",
+        "Jurassic",
+        "spiral",
+        "marine",
+        "prehistoric",
+        "rock",
+        "texture",
+        "ancient",
+        "geology",
+        "natural history",
+        "sedimentary",
+        "paleontology",
+        "fossil bed",
+        "spiral shape",
+        "marine life",
+        "animal",
+        "nature",
+        "rock formation",
+        "stark"
+      ],
+      "color_palette": [
+        {
+          "hex": "#59514F",
+          "name": "dim gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#746C6A",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#3B3431",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#928A88",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#B9B2B1",
+          "name": "dark gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
