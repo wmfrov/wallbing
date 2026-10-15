@@ -137254,6 +137254,68 @@
   "WroclawPoland_EN-US7757698922_UHD": {
     "date": "2026-10-15",
     "title": "View of the Wroclaw Market Square from the Witches' Bridge in Wroclaw, Poland",
-    "bing_url": "https://www.bing.com/th?id=OHR.WroclawPoland_EN-US7757698922_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.WroclawPoland_EN-US7757698922_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Poland",
+      "region": "Central Europe",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a stunning view of Wroclaw Market Square from the Witches' Bridge. In the foreground, ornate rooftops with intricate architectural details are illuminated by warm lights, creating a cozy atmosphere. The background features a sprawling cityscape with various buildings and a hint of the setting sun casting a golden hue across the sky. The scene is dotted with historical architecture, showcasing a blend of styles that reflect the city's rich history.",
+      "search_text": "Explore the beautiful cityscape of Wroclaw, Poland, featuring the iconic Market Square viewed from the Witches' Bridge. This image showcases stunning architecture with illuminated rooftops during dusk. Discover the rich history and vibrant atmosphere of Wroclaw, a central European gem known for its charming streets, historic buildings, and cozy ambiance. Perfect for those interested in urban photography, city landmarks, and architectural beauty.",
+      "keywords": [
+        "Wroclaw",
+        "Poland",
+        "Market Square",
+        "Witches' Bridge",
+        "cityscape",
+        "architecture",
+        "dusk",
+        "historic buildings",
+        "illuminated",
+        "rooftops",
+        "Central Europe",
+        "urban",
+        "landmark",
+        "serene",
+        "skyline",
+        "warm lights",
+        "evening",
+        "town square",
+        "cobblestone",
+        "city lights"
+      ],
+      "color_palette": [
+        {
+          "hex": "#1B162D",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#534749",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#412A30",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#795E4B",
+          "name": "dim gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#A48157",
+          "name": "peru",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
