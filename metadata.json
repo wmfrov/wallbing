@@ -137321,6 +137321,68 @@
   "SneffelsAutumn_EN-US3953128777_UHD": {
     "date": "2026-10-16",
     "title": "Mount Sneffels in the San Juan Mountains near Ridgway, Colorado",
-    "bing_url": "https://www.bing.com/th?id=OHR.SneffelsAutumn_EN-US3953128777_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SneffelsAutumn_EN-US3953128777_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "forest"
+      ],
+      "season": "autumn",
+      "country": "United States",
+      "region": "Rocky Mountains",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases Mount Sneffels, a prominent peak in the San Juan Mountains of Colorado. In the foreground, a vibrant forest of golden aspen trees contrasts beautifully with the rugged, snow-capped mountain in the background. The sky is a soft blue with wispy clouds, adding to the tranquil atmosphere. The landscape features a gradual slope leading up to the mountain, emphasizing the height and majesty of the peak. The colors of autumn are striking, with a mix of yellows and greens in the foliage.",
+      "search_text": "Explore the stunning landscapes of Mount Sneffels in the San Juan Mountains, Colorado. This serene mountain scene features vibrant autumn colors with golden aspen trees and a majestic snow-capped peak. Perfect for nature lovers, hikers, and anyone seeking breathtaking views in the Rocky Mountains. Discover the beauty of fall foliage, rugged terrain, and tranquil outdoor settings. Ideal for photography, travel inspiration, and outdoor adventures.",
+      "keywords": [
+        "Mount Sneffels",
+        "San Juan Mountains",
+        "Colorado",
+        "autumn",
+        "aspen trees",
+        "snow-capped",
+        "mountain",
+        "forest",
+        "landscape",
+        "nature",
+        "scenic",
+        "hiking",
+        "outdoors",
+        "majestic",
+        "tranquil",
+        "blue sky",
+        "clouds",
+        "fall colors",
+        "rugged terrain",
+        "wildlife"
+      ],
+      "color_palette": [
+        {
+          "hex": "#525C42",
+          "name": "dark olive green",
+          "w": 0.32
+        },
+        {
+          "hex": "#6B98D9",
+          "name": "corn flower blue",
+          "w": 0.29
+        },
+        {
+          "hex": "#1D313A",
+          "name": "dark slate gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#607D90",
+          "name": "slate gray",
+          "w": 0.09
+        },
+        {
+          "hex": "#B9B0A5",
+          "name": "dark gray",
+          "w": 0.08
+        }
+      ]
+    }
   }
 }
