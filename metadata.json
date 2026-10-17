@@ -137388,6 +137388,68 @@
   "ChauvetPaintingsFrance_EN-US6137200151_UHD": {
     "date": "2026-10-17",
     "title": "Life-size replica of Chauvet  cave art in Vallon-Pont-d'Arc, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.ChauvetPaintingsFrance_EN-US6137200151_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.ChauvetPaintingsFrance_EN-US6137200151_UHD.jpg",
+    "tags": {
+      "subject": [
+        "cave",
+        "animal"
+      ],
+      "season": null,
+      "country": "France",
+      "region": "Western Europe",
+      "time_of_day": null,
+      "mood": "mystical",
+      "ai_description": "The image depicts a life-size replica of cave art from the Chauvet Cave, showcasing intricate drawings of various animals such as horses and bison. The artwork is illuminated, highlighting the textures of the cave walls and the detailed depictions of the animals. The background features natural rock formations that add depth to the scene. The overall atmosphere is mystical, evoking a sense of ancient history and artistry.",
+      "search_text": "Explore the life-size replica of Chauvet Cave art located in Vallon-Pont-d'Arc, France. This remarkable cave art features detailed depictions of prehistoric animals such as horses and bison, showcasing ancient artistry. The illuminated cave walls highlight the intricate textures and rock formations, creating a mystical atmosphere. Perfect for those interested in cultural heritage, ancient history, and prehistoric art.",
+      "keywords": [
+        "Chauvet Cave",
+        "cave art",
+        "animal",
+        "horses",
+        "bison",
+        "prehistoric",
+        "rock formations",
+        "replica",
+        "France",
+        "ancient history",
+        "artistry",
+        "illuminated",
+        "textures",
+        "cave paintings",
+        "wildlife",
+        "cultural heritage",
+        "stone age",
+        "mystical",
+        "depictions",
+        "art"
+      ],
+      "color_palette": [
+        {
+          "hex": "#100705",
+          "name": "black",
+          "w": 0.27
+        },
+        {
+          "hex": "#2C170C",
+          "name": "black",
+          "w": 0.27
+        },
+        {
+          "hex": "#624229",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#A88365",
+          "name": "rosy brown",
+          "w": 0.14
+        },
+        {
+          "hex": "#DABDA1",
+          "name": "tan",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
