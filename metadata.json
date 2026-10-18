@@ -137455,6 +137455,69 @@
   "DolbadarnWales_EN-US6620614213_UHD": {
     "date": "2026-10-18",
     "title": "Dolbadarn Castle, Llanberis, Eryri National Park",
-    "bing_url": "https://www.bing.com/th?id=OHR.DolbadarnWales_EN-US6620614213_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.DolbadarnWales_EN-US6620614213_UHD.jpg",
+    "tags": {
+      "subject": [
+        "castle",
+        "landscape",
+        "mountain"
+      ],
+      "season": "autumn",
+      "country": "Wales",
+      "region": "United Kingdom",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image showcases Dolbadarn Castle, a historic structure set against a backdrop of rolling mountains and autumn foliage. The castle, made of stone, stands prominently on a grassy hill, surrounded by remnants of ancient walls and pathways. In the foreground, the lush green grass contrasts with the warm tones of the autumn leaves, creating a vibrant scene. The sky is partly cloudy, with soft light illuminating the landscape, suggesting early morning or late afternoon.",
+      "search_text": "Explore Dolbadarn Castle in Eryri National Park, Wales, a historic stone fortification set against stunning mountain landscapes. This serene autumn scene features vibrant foliage and scenic views, perfect for nature lovers and history enthusiasts. Discover the beauty of this landmark and its surrounding natural environment, ideal for outdoor adventures and photography. Experience the tranquility of this picturesque location, showcasing the rich heritage and stunning landscapes of the United Kingdom.",
+      "keywords": [
+        "Dolbadarn Castle",
+        "Wales",
+        "Eryri National Park",
+        "autumn",
+        "mountain",
+        "landscape",
+        "historic",
+        "stone",
+        "fortification",
+        "architecture",
+        "ruins",
+        "grassy hill",
+        "clouds",
+        "scenic",
+        "nature",
+        "serene",
+        "outdoor",
+        "travel",
+        "landmark",
+        "tourism"
+      ],
+      "color_palette": [
+        {
+          "hex": "#65482F",
+          "name": "dark olive green",
+          "w": 0.27
+        },
+        {
+          "hex": "#3A3515",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#786955",
+          "name": "dim gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#C9D2E9",
+          "name": "light gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#9AA5BE",
+          "name": "dark gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
