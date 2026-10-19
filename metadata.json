@@ -137523,6 +137523,68 @@
   "VeniceSunrise_EN-US6714393168_UHD": {
     "date": "2026-10-19",
     "title": "Grand Canal in Venice, Italy",
-    "bing_url": "https://www.bing.com/th?id=OHR.VeniceSunrise_EN-US6714393168_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.VeniceSunrise_EN-US6714393168_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Italy",
+      "region": "Southern Europe",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures the Grand Canal in Venice, Italy, during dusk. The scene is framed by historic buildings with intricate architectural details lining the canal. The soft glow of the setting sun casts a warm hue over the water, creating a tranquil atmosphere. In the background, the dome of a prominent church is visible, adding to the city's iconic skyline. The calm water reflects the colors of the sky, enhancing the serene mood of the scene.",
+      "search_text": "Explore the stunning Grand Canal in Venice, Italy, known for its beautiful architecture and serene atmosphere during dusk. This iconic cityscape features historic buildings lining the waterway, with reflections of the sunset creating a picturesque scene. Ideal for travelers and photographers, Venice offers a unique blend of culture, history, and romance. Discover the charm of this southern European destination, perfect for urban exploration and scenic views.",
+      "keywords": [
+        "Venice",
+        "Grand Canal",
+        "Italy",
+        "architecture",
+        "historic buildings",
+        "dusk",
+        "canal",
+        "water",
+        "reflection",
+        "sunset",
+        "cityscape",
+        "travel",
+        "southern Europe",
+        "serene",
+        "landmark",
+        "skyline",
+        "tourism",
+        "romantic",
+        "urban",
+        "view"
+      ],
+      "color_palette": [
+        {
+          "hex": "#2B2020",
+          "name": "black",
+          "w": 0.26
+        },
+        {
+          "hex": "#514141",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#836965",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#B2897A",
+          "name": "rosy brown",
+          "w": 0.15
+        },
+        {
+          "hex": "#E5A178",
+          "name": "dark salmon",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
