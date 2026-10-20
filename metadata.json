@@ -137590,6 +137590,67 @@
   "BrownSloth_EN-US6816754257_UHD": {
     "date": "2026-10-20",
     "title": "Brown-throated sloth, Puerto Viejo de Talamanca, Costa Rica",
-    "bing_url": "https://www.bing.com/th?id=OHR.BrownSloth_EN-US6816754257_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BrownSloth_EN-US6816754257_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "forest"
+      ],
+      "season": null,
+      "country": "Costa Rica",
+      "region": "Central America",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a brown-throated sloth hanging comfortably from a tree branch in a lush forest. The sloth's fur is a mix of brown and gray, blending well with the surrounding foliage. The background is filled with vibrant green leaves, creating a serene and tranquil atmosphere. The sloth's face is calm and relaxed, showcasing its slow-moving nature. The overall composition emphasizes the sloth's habitat in the dense tropical rainforest.",
+      "search_text": "Explore the serene world of the brown-throated sloth, a unique animal found in the lush forests of Costa Rica. This slow-moving mammal is often seen hanging from tree branches, perfectly adapted to its tropical habitat. Discover the beauty of wildlife in Central America, including the rich biodiversity and vibrant greenery that surrounds these fascinating creatures. Perfect for nature lovers and wildlife enthusiasts looking to learn more about sloths and their environment.",
+      "keywords": [
+        "brown-throated sloth",
+        "sloth",
+        "animal",
+        "tree",
+        "forest",
+        "Costa Rica",
+        "tropical",
+        "wildlife",
+        "hanging",
+        "lush",
+        "greenery",
+        "mammal",
+        "slow-moving",
+        "nature",
+        "habitat",
+        "serene",
+        "wild",
+        "biodiversity",
+        "Central America"
+      ],
+      "color_palette": [
+        {
+          "hex": "#7D8C55",
+          "name": "gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#4A492D",
+          "name": "dark olive green",
+          "w": 0.22
+        },
+        {
+          "hex": "#9EB25B",
+          "name": "dark khaki",
+          "w": 0.22
+        },
+        {
+          "hex": "#C9D994",
+          "name": "tan",
+          "w": 0.17
+        },
+        {
+          "hex": "#ABCE75",
+          "name": "dark khaki",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
