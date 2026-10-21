@@ -137656,6 +137656,69 @@
   "VietnamBridge_EN-US6907946681_UHD": {
     "date": "2026-10-21",
     "title": "Nguyen Hoang Bridge over the Perfume River, Hue, Vietnam",
-    "bing_url": "https://www.bing.com/th?id=OHR.VietnamBridge_EN-US6907946681_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.VietnamBridge_EN-US6907946681_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bridge",
+        "city",
+        "river"
+      ],
+      "season": null,
+      "country": "Vietnam",
+      "region": "Southeast Asia",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The Nguyen Hoang Bridge gracefully arches over the Perfume River, illuminated by warm orange lights that reflect on the water's surface. In the background, gentle hills are visible under a twilight sky, adding depth to the scene. The bridge's modern design contrasts with the natural beauty surrounding it, creating a harmonious blend of architecture and landscape. The calm water enhances the serene atmosphere, making it a picturesque view.",
+      "search_text": "Explore the stunning Nguyen Hoang Bridge over the Perfume River in Hue, Vietnam, beautifully illuminated at dusk. This modern architectural marvel features an elegant arch design that reflects in the calm waters below. Perfect for cityscape photography, this serene location offers a picturesque view of the surrounding hills and urban landscape. Ideal for travelers and photography enthusiasts seeking vibrant sunset scenes and unique bridges in Southeast Asia.",
+      "keywords": [
+        "Nguyen Hoang Bridge",
+        "Perfume River",
+        "Vietnam",
+        "Southeast Asia",
+        "twilight",
+        "dusk",
+        "cityscape",
+        "modern architecture",
+        "reflection",
+        "illuminated bridge",
+        "water",
+        "hills",
+        "serene",
+        "urban",
+        "landscape",
+        "night",
+        "lighting",
+        "scenic view",
+        "travel",
+        "photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#87798B",
+          "name": "gray",
+          "w": 0.3
+        },
+        {
+          "hex": "#80534C",
+          "name": "dim gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#2B2836",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#E8CBBB",
+          "name": "wheat",
+          "w": 0.13
+        },
+        {
+          "hex": "#B4989A",
+          "name": "rosy brown",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
