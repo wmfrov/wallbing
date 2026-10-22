@@ -137724,6 +137724,68 @@
   "NaejangsanNP_EN-US7010419904_UHD": {
     "date": "2026-10-22",
     "title": "Autumn in Naejangsan National Park, South Korea",
-    "bing_url": "https://www.bing.com/th?id=OHR.NaejangsanNP_EN-US7010419904_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.NaejangsanNP_EN-US7010419904_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "forest"
+      ],
+      "season": "autumn",
+      "country": "South Korea",
+      "region": null,
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image captures a tranquil lake surrounded by vibrant autumn foliage in Naejangsan National Park, South Korea. In the foreground, a graceful pavilion sits on the water's edge, reflecting softly in the calm lake. The trees are adorned with brilliant shades of orange and red, creating a stunning contrast against the misty background. The atmosphere is peaceful, with the early morning light filtering through the branches, enhancing the serene mood of the scene.",
+      "search_text": "Explore the beauty of autumn in Naejangsan National Park, South Korea, featuring a serene lake surrounded by vibrant maple trees. The image showcases a traditional pavilion reflecting in the calm waters, with stunning shades of orange and red leaves creating a picturesque landscape. Ideal for nature lovers and those seeking tranquil outdoor scenes, this photograph captures the essence of autumn foliage and peaceful mornings in the forest.",
+      "keywords": [
+        "Naejangsan National Park",
+        "autumn",
+        "lake",
+        "pavilion",
+        "reflection",
+        "mist",
+        "maple trees",
+        "orange leaves",
+        "red leaves",
+        "serene",
+        "nature",
+        "tranquil",
+        "landscape",
+        "forest",
+        "morning light",
+        "scenic",
+        "outdoors",
+        "foliage",
+        "architecture",
+        "building"
+      ],
+      "color_palette": [
+        {
+          "hex": "#33231A",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#AB6F4B",
+          "name": "peru",
+          "w": 0.24
+        },
+        {
+          "hex": "#864326",
+          "name": "saddle brown",
+          "w": 0.24
+        },
+        {
+          "hex": "#C39575",
+          "name": "rosy brown",
+          "w": 0.15
+        },
+        {
+          "hex": "#DBBEAA",
+          "name": "tan",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
