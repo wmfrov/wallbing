@@ -137791,6 +137791,67 @@
   "YellowstoneWolves_EN-US7105521535_UHD": {
     "date": "2026-10-23",
     "title": "Two gray wolves, Yellowstone National Park, Wyoming",
-    "bing_url": "https://www.bing.com/th?id=OHR.YellowstoneWolves_EN-US7105521535_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.YellowstoneWolves_EN-US7105521535_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "two_animals"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Northwest",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features two gray wolves closely positioned in a natural setting, likely within Yellowstone National Park. Their fur is a mix of gray and brown tones, blending with the muted colors of the surrounding landscape. In the background, there are sparse shrubs and a rugged terrain that suggests a wild environment. The wolves appear calm and attentive, showcasing their natural behavior in the wild.",
+      "search_text": "Explore the beauty of gray wolves in their natural habitat at Yellowstone National Park, Wyoming. These majestic animals, known scientifically as Canis lupus, are often seen in pairs or packs. Discover the serene landscapes where these wildlife predators roam, characterized by rugged terrains and sparse vegetation. This image captures the essence of wild nature and the intricate behaviors of wolves in the wild.",
+      "keywords": [
+        "gray wolf",
+        "Canis lupus",
+        "animal",
+        "wildlife",
+        "Yellowstone National Park",
+        "Wyoming",
+        "two wolves",
+        "natural habitat",
+        "serene",
+        "carnivore",
+        "predator",
+        "pack",
+        "fur",
+        "landscape",
+        "wild",
+        "nature",
+        "shrub",
+        "terrain",
+        "forest edge"
+      ],
+      "color_palette": [
+        {
+          "hex": "#9D9C9D",
+          "name": "dark gray",
+          "w": 0.3
+        },
+        {
+          "hex": "#B4B2B1",
+          "name": "dark gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#727071",
+          "name": "dim gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#C4C1BF",
+          "name": "silver",
+          "w": 0.16
+        },
+        {
+          "hex": "#D2CFCE",
+          "name": "light gray",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
