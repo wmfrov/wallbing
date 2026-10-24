@@ -137857,6 +137857,67 @@
   "PortugueseLibrary_EN-US7519268149_UHD": {
     "date": "2026-10-24",
     "title": "Royal Portuguese Cabinet of Reading, Rio de Janeiro, Brazil",
-    "bing_url": "https://www.bing.com/th?id=OHR.PortugueseLibrary_EN-US7519268149_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.PortugueseLibrary_EN-US7519268149_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "Brazil",
+      "region": "South America",
+      "time_of_day": null,
+      "mood": "cozy",
+      "ai_description": "The image showcases the interior of the Royal Portuguese Cabinet of Reading, a stunning library located in Rio de Janeiro, Brazil. The ornate ceiling features intricate stained glass with vibrant colors, casting a warm glow over the space. Rows of wooden bookshelves filled with books create a sense of depth and history. A large chandelier hangs centrally, adding to the grandeur of the architecture, which combines classical and baroque elements. The overall ambiance is inviting and scholarly, perfect for reading and reflection.",
+      "search_text": "Explore the Royal Portuguese Cabinet of Reading in Rio de Janeiro, Brazil, a magnificent library known for its stunning architecture and intricate stained glass ceiling. This historical site features rows of wooden bookshelves filled with books, creating a cozy atmosphere perfect for reading. The elegant chandelier adds to the grandeur of the interior design, showcasing a blend of baroque and classical styles. Ideal for those interested in cultural landmarks and architectural beauty.",
+      "keywords": [
+        "library",
+        "Royal Portuguese Cabinet of Reading",
+        "Rio de Janeiro",
+        "Brazil",
+        "architecture",
+        "stained glass",
+        "chandelier",
+        "bookshelves",
+        "ornate",
+        "interior design",
+        "historical",
+        "cozy",
+        "baroque",
+        "classical",
+        "reading",
+        "cultural",
+        "interior architecture",
+        "wooden",
+        "vibrant colors",
+        "elegant"
+      ],
+      "color_palette": [
+        {
+          "hex": "#302B2E",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#0C0F17",
+          "name": "black",
+          "w": 0.2
+        },
+        {
+          "hex": "#161419",
+          "name": "black",
+          "w": 0.19
+        },
+        {
+          "hex": "#736664",
+          "name": "dim gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#22191C",
+          "name": "black",
+          "w": 0.16
+        }
+      ]
+    }
   }
 }
