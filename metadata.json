@@ -137923,6 +137923,68 @@
   "SitovoWaterfall_EN-US7626867890_UHD": {
     "date": "2026-10-25",
     "title": "Autumn waterfalls near Sitovo, Plovdiv Province, Bulgaria",
-    "bing_url": "https://www.bing.com/th?id=OHR.SitovoWaterfall_EN-US7626867890_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SitovoWaterfall_EN-US7626867890_UHD.jpg",
+    "tags": {
+      "subject": [
+        "river",
+        "forest"
+      ],
+      "season": "autumn",
+      "country": "Bulgaria",
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases a picturesque waterfall cascading down rocky steps, surrounded by vibrant autumn foliage. The water flows gently over moss-covered stones, creating a tranquil atmosphere. In the background, trees display a range of colors from orange to yellow, indicating the season. The light filtering through the leaves adds a warm glow to the scene, enhancing the serene mood.",
+      "search_text": "Explore the beauty of autumn waterfalls in Bulgaria, specifically near Sitovo in Plovdiv Province. This serene river scene features cascading water flowing over mossy rocks, surrounded by vibrant autumn foliage. Perfect for nature lovers and photographers, this landscape captures the essence of fall with its colorful leaves and tranquil atmosphere. Ideal for those seeking peaceful outdoor experiences and scenic views.",
+      "keywords": [
+        "waterfall",
+        "river",
+        "autumn",
+        "Bulgaria",
+        "Sitovo",
+        "Plovdiv Province",
+        "forest",
+        "moss",
+        "cascading water",
+        "tranquil",
+        "nature",
+        "landscape",
+        "scenic",
+        "flowing",
+        "rocks",
+        "leaves",
+        "serene",
+        "outdoors",
+        "hiking",
+        "wildlife"
+      ],
+      "color_palette": [
+        {
+          "hex": "#482F17",
+          "name": "dark olive green",
+          "w": 0.25
+        },
+        {
+          "hex": "#1F1910",
+          "name": "black",
+          "w": 0.25
+        },
+        {
+          "hex": "#664D2E",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#867356",
+          "name": "dim gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#AEAB9D",
+          "name": "dark gray",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
