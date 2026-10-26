@@ -137990,6 +137990,66 @@
   "HangingBat_EN-US7714746725_UHD": {
     "date": "2026-10-26",
     "title": "Gray-headed flying fox, Victoria, Australia",
-    "bing_url": "https://www.bing.com/th?id=OHR.HangingBat_EN-US7714746725_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.HangingBat_EN-US7714746725_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Australia",
+      "region": "Victoria",
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a gray-headed flying fox hanging upside down from a branch in a natural setting. The bat's fur is a mix of gray and orange, with its wings folded closely against its body. Rain can be seen falling in the background, creating a soft, blurred effect that adds to the serene atmosphere. The surrounding foliage is out of focus, emphasizing the bat as the main subject. The overall scene conveys a sense of calmness despite the rain.",
+      "search_text": "Explore the fascinating gray-headed flying fox, a unique bat species found in Victoria, Australia. This animal is known for its distinctive gray and orange fur, often seen hanging upside down from branches in its natural habitat. The serene image captures the essence of wildlife in the rain, showcasing the beauty of bats and their role in biodiversity. Perfect for nature enthusiasts and wildlife photographers, this scene highlights the charm of Australian fauna.",
+      "keywords": [
+        "gray-headed flying fox",
+        "bat",
+        "animal",
+        "hanging",
+        "branch",
+        "rain",
+        "Victoria",
+        "Australia",
+        "wildlife",
+        "mammal",
+        "serene",
+        "nature",
+        "flying fox",
+        "biodiversity",
+        "forest",
+        "upside down",
+        "fur",
+        "wings",
+        "natural habitat"
+      ],
+      "color_palette": [
+        {
+          "hex": "#7B7F75",
+          "name": "gray",
+          "w": 0.29
+        },
+        {
+          "hex": "#888B7E",
+          "name": "gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#626762",
+          "name": "dim gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#8F9885",
+          "name": "gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#A9B197",
+          "name": "dark gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
