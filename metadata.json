@@ -138055,6 +138055,68 @@
   "PondCypress_EN-US0123444779_UHD": {
     "date": "2026-10-27",
     "title": "A grove of pond cypress trees with fall foliage, Georgia, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.PondCypress_EN-US0123444779_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.PondCypress_EN-US0123444779_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest",
+        "lake"
+      ],
+      "season": "autumn",
+      "country": "USA",
+      "region": "Southeast USA",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases a grove of pond cypress trees standing in still water, their bases partially submerged. The trees display vibrant fall foliage, with hues of orange and yellow reflecting beautifully on the water's surface. The background is filled with more cypress trees, creating a dense forest atmosphere. The warm colors of the foliage contrast with the cool tones of the water, enhancing the tranquil mood of the scene.",
+      "search_text": "Explore the serene beauty of a grove of pond cypress trees in autumn, showcasing vibrant fall foliage in Georgia, USA. This tranquil landscape features reflections in still water, creating a picturesque scene perfect for nature lovers. Ideal for those searching for autumn landscapes, cypress trees, and serene forest settings. Discover the charm of the Southeast USA's wetlands and woodlands during the golden hour.",
+      "keywords": [
+        "pond cypress",
+        "autumn foliage",
+        "cypress trees",
+        "reflections",
+        "still water",
+        "forest",
+        "Georgia",
+        "USA",
+        "fall colors",
+        "nature",
+        "landscape",
+        "tranquil",
+        "serene",
+        "woodland",
+        "wetland",
+        "sunset",
+        "golden hour",
+        "trees",
+        "forest reflection",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#74655B",
+          "name": "dim gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#674F42",
+          "name": "dark olive green",
+          "w": 0.24
+        },
+        {
+          "hex": "#3D3E43",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#89796B",
+          "name": "gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#BE9968",
+          "name": "dark khaki",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
