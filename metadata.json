@@ -138122,6 +138122,68 @@
   "KuneticeCastle_EN-US9492527404_UHD": {
     "date": "2026-10-28",
     "title": "Kun\u011btick\u00e1 hora Castle, Bohemia, Czechia",
-    "bing_url": "https://www.bing.com/th?id=OHR.KuneticeCastle_EN-US9492527404_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.KuneticeCastle_EN-US9492527404_UHD.jpg",
+    "tags": {
+      "subject": [
+        "castle",
+        "landscape"
+      ],
+      "season": "autumn",
+      "country": "Czechia",
+      "region": "Bohemia",
+      "time_of_day": "dawn",
+      "mood": "serene",
+      "ai_description": "The image showcases Kun\u011btick\u00e1 hora Castle perched atop a rocky hill, surrounded by a misty landscape. In the foreground, the castle's stone walls and towers are illuminated by the soft glow of the rising sun. The background features a vast expanse of fog-covered fields and trees, creating a tranquil atmosphere. The warm colors of dawn contrast beautifully with the cool mist, enhancing the mystical quality of the scene.",
+      "search_text": "Explore the stunning Kun\u011btick\u00e1 hora Castle in Bohemia, Czechia, at dawn. This historic castle is set atop a rocky hill, surrounded by a serene misty landscape. The early morning light creates a magical atmosphere, perfect for photography and travel enthusiasts. Discover the beauty of Czech architecture and the tranquil nature of the region, ideal for autumn visits.",
+      "keywords": [
+        "Kun\u011btick\u00e1 hora",
+        "castle",
+        "Czechia",
+        "Bohemia",
+        "dawn",
+        "mist",
+        "landscape",
+        "hilltop",
+        "sunrise",
+        "architecture",
+        "serene",
+        "fog",
+        "historic",
+        "stone walls",
+        "towers",
+        "nature",
+        "autumn",
+        "scenic",
+        "view",
+        "travel"
+      ],
+      "color_palette": [
+        {
+          "hex": "#E4B590",
+          "name": "burly wood",
+          "w": 0.26
+        },
+        {
+          "hex": "#19110F",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#A67A68",
+          "name": "gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#342623",
+          "name": "dark slate gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#5A3F38",
+          "name": "dark olive green",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
