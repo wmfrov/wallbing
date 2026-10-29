@@ -138189,6 +138189,68 @@
   "AveburyStones_EN-US9568662876_UHD": {
     "date": "2026-10-29",
     "title": "Standing stones at Avebury in Wiltshire, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.AveburyStones_EN-US9568662876_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AveburyStones_EN-US9568662876_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ruins",
+        "landscape"
+      ],
+      "season": "autumn",
+      "country": "England",
+      "region": "South West England",
+      "time_of_day": "dawn",
+      "mood": "mystical",
+      "ai_description": "The image features ancient standing stones at Avebury, surrounded by a misty landscape. In the foreground, several large, rugged stones are scattered across a grassy field, creating a sense of history and mystery. A solitary tree stands in the background, partially obscured by fog, enhancing the ethereal atmosphere. The sky is painted with soft hues of orange and blue, indicating dawn. The overall scene evokes a serene yet enigmatic feeling, inviting contemplation of the past.",
+      "search_text": "Explore the ancient standing stones at Avebury in Wiltshire, England. This mystical landscape features megaliths shrouded in fog during dawn, creating a serene atmosphere. Ideal for those interested in archaeology, ancient history, and historical ruins. The site is known for its stone circle and natural beauty, making it a perfect destination for nature lovers and history enthusiasts alike.",
+      "keywords": [
+        "standing stones",
+        "Avebury",
+        "Wiltshire",
+        "England",
+        "ancient ruins",
+        "mystical landscape",
+        "fog",
+        "dawn",
+        "grass",
+        "tree",
+        "archaeological site",
+        "historical",
+        "serene",
+        "landscape",
+        "autumn",
+        "stone circle",
+        "megaliths",
+        "ancient history",
+        "nature",
+        "outdoors"
+      ],
+      "color_palette": [
+        {
+          "hex": "#665D3A",
+          "name": "dark olive green",
+          "w": 0.28
+        },
+        {
+          "hex": "#403A20",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#918581",
+          "name": "gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#BAAAA2",
+          "name": "dark gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#D8C4B2",
+          "name": "silver",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
