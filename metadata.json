@@ -138256,6 +138256,68 @@
   "AutumnCranes_EN-US9795571462_UHD": {
     "date": "2026-10-30",
     "title": "Sandhill cranes, Bosque del Apache National Wildlife Refuge, New Mexico, USA",
-    "bing_url": "https://www.bing.com/th?id=OHR.AutumnCranes_EN-US9795571462_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AutumnCranes_EN-US9795571462_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird",
+        "animal"
+      ],
+      "season": "autumn",
+      "country": "USA",
+      "region": "Southwest",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a flock of Sandhill cranes in flight at Bosque del Apache National Wildlife Refuge. In the foreground, several cranes are standing on the ground, while others are gracefully soaring through the air. The background features tall grasses illuminated by the warm hues of sunset, creating a tranquil atmosphere. The cranes exhibit a mix of gray and brown feathers, with some displaying striking golden accents on their wings. The overall scene conveys a sense of peacefulness and the beauty of nature during migration season.",
+      "search_text": "Explore the beauty of Sandhill cranes at Bosque del Apache National Wildlife Refuge in New Mexico. This serene autumn scene features a flock of these majestic birds in flight, showcasing their graceful movements against a backdrop of warm sunset colors. Perfect for wildlife enthusiasts and photographers, this image captures the essence of nature and migration. Discover the tranquility of birdwatching and the stunning landscapes of the Southwest USA.",
+      "keywords": [
+        "Sandhill crane",
+        "Grus canadensis",
+        "flock",
+        "wildlife",
+        "Bosque del Apache",
+        "New Mexico",
+        "autumn",
+        "flying",
+        "animal",
+        "bird",
+        "nature",
+        "sunset",
+        "refuge",
+        "migration",
+        "tranquil",
+        "grasses",
+        "serene",
+        "water",
+        "landscape",
+        "wildlife photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#DAA561",
+          "name": "sandy brown",
+          "w": 0.24
+        },
+        {
+          "hex": "#A46B37",
+          "name": "sienna",
+          "w": 0.22
+        },
+        {
+          "hex": "#593725",
+          "name": "dark olive green",
+          "w": 0.19
+        },
+        {
+          "hex": "#6D442D",
+          "name": "saddle brown",
+          "w": 0.18
+        },
+        {
+          "hex": "#794F35",
+          "name": "saddle brown",
+          "w": 0.18
+        }
+      ]
+    }
   }
 }
