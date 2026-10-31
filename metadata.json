@@ -138323,6 +138323,68 @@
   "FrankfurtHalloween_EN-US0115213682_UHD": {
     "date": "2026-10-31",
     "title": "St. Bartholomew's Cathedral in Frankfurt, Germany",
-    "bing_url": "https://www.bing.com/th?id=OHR.FrankfurtHalloween_EN-US0115213682_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FrankfurtHalloween_EN-US0115213682_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture",
+        "castle"
+      ],
+      "season": null,
+      "country": "Germany",
+      "region": "Central Europe",
+      "time_of_day": "night",
+      "mood": "mystical",
+      "ai_description": "The image features St. Bartholomew's Cathedral, a prominent Gothic structure in Frankfurt, Germany. The cathedral's towering spires rise dramatically against a misty backdrop, illuminated by a large, glowing moon. The atmosphere is shrouded in fog, adding a sense of mystery and eeriness to the scene. In the foreground, bare tree branches reach towards the sky, enhancing the haunting ambiance of the night.",
+      "search_text": "Explore the haunting beauty of St. Bartholomew's Cathedral in Frankfurt, Germany. This Gothic architectural marvel is characterized by its towering spires and intricate details, set against a mystical night sky illuminated by a full moon. The fog adds an eerie atmosphere, perfect for those interested in historic buildings, architecture, and night photography. Discover the allure of this landmark and its surrounding urban landscape.",
+      "keywords": [
+        "St. Bartholomew's Cathedral",
+        "Frankfurt",
+        "Gothic architecture",
+        "night",
+        "moon",
+        "fog",
+        "mystical",
+        "building",
+        "cathedral",
+        "Germany",
+        "spires",
+        "bare trees",
+        "mystery",
+        "dark",
+        "atmosphere",
+        "landmark",
+        "historic",
+        "architecture",
+        "urban",
+        "medieval"
+      ],
+      "color_palette": [
+        {
+          "hex": "#343238",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#747583",
+          "name": "gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#53545D",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#9596A5",
+          "name": "dark gray",
+          "w": 0.14
+        },
+        {
+          "hex": "#BCBDCF",
+          "name": "silver",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
