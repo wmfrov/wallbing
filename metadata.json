@@ -138390,6 +138390,64 @@
   "NativeBaskets_EN-US0205712064_UHD": {
     "date": "2026-11-01",
     "title": "Handmade baskets, Santa Fe, New Mexico",
-    "bing_url": "https://www.bing.com/th?id=OHR.NativeBaskets_EN-US0205712064_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.NativeBaskets_EN-US0205712064_UHD.jpg",
+    "tags": {
+      "subject": [],
+      "season": null,
+      "country": "United States",
+      "region": "Southwest",
+      "time_of_day": null,
+      "mood": "cozy",
+      "ai_description": "The image features a collection of handmade baskets stacked together, showcasing intricate designs and vibrant colors. The baskets are crafted from natural materials, displaying patterns that include geometric shapes and stylized motifs. The foreground highlights the textures of the woven fibers, while the background remains softly blurred, emphasizing the craftsmanship. The warm tones of red, black, and cream create a welcoming and artistic atmosphere.",
+      "search_text": "Explore the beauty of handmade baskets from Santa Fe, New Mexico. These artisan-crafted pieces showcase intricate geometric patterns and vibrant colors, making them perfect for home decor. Ideal for collectors of traditional crafts and decorative art, these woven baskets reflect the rich cultural heritage of the Southwest. Discover unique textiles and natural materials that add a cozy touch to any space.",
+      "keywords": [
+        "basket",
+        "handmade",
+        "craft",
+        "art",
+        "woven",
+        "Santa Fe",
+        "New Mexico",
+        "Southwest",
+        "geometric patterns",
+        "natural materials",
+        "decorative art",
+        "textiles",
+        "colorful",
+        "traditional",
+        "artisan",
+        "cozy",
+        "interior decor",
+        "home goods",
+        "cultural art"
+      ],
+      "color_palette": [
+        {
+          "hex": "#7F361E",
+          "name": "saddle brown",
+          "w": 0.26
+        },
+        {
+          "hex": "#381F14",
+          "name": "black",
+          "w": 0.24
+        },
+        {
+          "hex": "#A06A4E",
+          "name": "sienna",
+          "w": 0.21
+        },
+        {
+          "hex": "#C49A7D",
+          "name": "rosy brown",
+          "w": 0.16
+        },
+        {
+          "hex": "#DCC1A9",
+          "name": "tan",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
