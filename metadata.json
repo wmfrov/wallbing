@@ -138453,6 +138453,67 @@
   "HudsonBear_EN-US0297833232_UHD": {
     "date": "2026-11-02",
     "title": "Polar bear and cubs by Hudson Bay, Manitoba, Canada",
-    "bing_url": "https://www.bing.com/th?id=OHR.HudsonBear_EN-US0297833232_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.HudsonBear_EN-US0297833232_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "Canada",
+      "region": "North America",
+      "time_of_day": null,
+      "mood": "cozy",
+      "ai_description": "The image features a polar bear and its cubs nestled together on a rocky surface. The bears are predominantly white, blending with the frosty environment. The background shows sparse vegetation, likely indicative of a cold climate. The cubs are close to the mother, showcasing a nurturing bond. The texture of their fur appears soft and fluffy, while the rocks provide a contrasting ruggedness.",
+      "search_text": "Explore the beauty of polar bears and their cubs in their natural habitat. This image captures a mother polar bear with her young, showcasing their white fur against a rocky backdrop. Perfect for wildlife enthusiasts and those interested in animal behavior, this scene highlights the nurturing bond between the mother and her cubs. Ideal for searches related to Arctic wildlife, polar regions, and family dynamics in nature.",
+      "keywords": [
+        "polar bear",
+        "cub",
+        "animal",
+        "white bear",
+        "Hudson Bay",
+        "Manitoba",
+        "North America",
+        "wildlife",
+        "mammal",
+        "family",
+        "furry",
+        "cold climate",
+        "rocky terrain",
+        "nurturing",
+        "cozy",
+        "frozen habitat",
+        "cubs",
+        "bears",
+        "nature",
+        "animal behavior"
+      ],
+      "color_palette": [
+        {
+          "hex": "#C9CAC2",
+          "name": "silver",
+          "w": 0.28
+        },
+        {
+          "hex": "#3E3631",
+          "name": "dark slate gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#524B48",
+          "name": "dark slate gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#635751",
+          "name": "dim gray",
+          "w": 0.17
+        },
+        {
+          "hex": "#90887E",
+          "name": "gray",
+          "w": 0.17
+        }
+      ]
+    }
   }
 }
