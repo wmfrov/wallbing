@@ -138519,6 +138519,69 @@
   "AlpineBraies_EN-US6636326357_UHD": {
     "date": "2026-11-03",
     "title": "Lake Braies, Fanes\u2011Sennes\u2011Braies Nature Park, Dolomites, Italy",
-    "bing_url": "https://www.bing.com/th?id=OHR.AlpineBraies_EN-US6636326357_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AlpineBraies_EN-US6636326357_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "mountain",
+        "forest"
+      ],
+      "season": "autumn",
+      "country": "Italy",
+      "region": "Dolomites",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the stunning Lake Braies, surrounded by majestic mountains and vibrant autumn foliage. The calm water reflects the towering peaks and colorful trees, creating a mirror-like effect. In the foreground, the lake's surface is smooth, while the background features rugged mountain formations partially shrouded in mist. The scene conveys a peaceful atmosphere, enhanced by the soft pastel colors of the sky.",
+      "search_text": "Explore the breathtaking beauty of Lake Braies in the Dolomites, Italy, during autumn. This serene lake is surrounded by stunning mountains and vibrant forests, perfect for nature lovers and photographers. Discover the tranquil reflections of the peaks in the calm waters, ideal for outdoor activities like hiking and sightseeing. Experience the picturesque landscapes and vibrant colors that make this nature park a must-visit destination.",
+      "keywords": [
+        "Lake Braies",
+        "Dolomites",
+        "Italy",
+        "autumn",
+        "mountain",
+        "forest",
+        "reflection",
+        "nature park",
+        "tranquil",
+        "scenic",
+        "landscape",
+        "serene",
+        "hiking",
+        "outdoors",
+        "travel",
+        "photography",
+        "water",
+        "trees",
+        "peaks",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#816557",
+          "name": "dim gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#362720",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#D6D9DA",
+          "name": "gainsboro",
+          "w": 0.2
+        },
+        {
+          "hex": "#A5ADAF",
+          "name": "dark gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#CCBCB7",
+          "name": "silver",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
