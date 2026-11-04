@@ -138587,6 +138587,68 @@
   "AutumnChina_EN-US0467722422_UHD": {
     "date": "2026-11-04",
     "title": "People rowing among colorful bald cypress, Xuancheng, Anhui, China",
-    "bing_url": "https://www.bing.com/th?id=OHR.AutumnChina_EN-US0467722422_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AutumnChina_EN-US0467722422_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest",
+        "river"
+      ],
+      "season": "autumn",
+      "country": "China",
+      "region": "East Asia",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image captures a stunning aerial view of a river meandering through a vibrant forest of bald cypress trees, showcasing a rich palette of autumn colors. The trees display shades of orange, red, and yellow, creating a striking contrast against the calm, reflective water. A small boat with people rowing is visible in the center of the river, adding a sense of scale and activity to the tranquil scene. The overall atmosphere is peaceful, inviting viewers to appreciate the beauty of nature in this picturesque setting.",
+      "search_text": "Explore the breathtaking beauty of autumn in Xuancheng, Anhui, China, where vibrant bald cypress trees create a colorful forest landscape. This serene river scene features people rowing in a small boat, surrounded by stunning fall foliage. Ideal for nature lovers and photographers, this picturesque setting captures the essence of the season with its rich hues and tranquil waters. Discover the charm of East Asia's natural beauty and the peaceful atmosphere of this unique environment.",
+      "keywords": [
+        "bald cypress",
+        "autumn",
+        "forest",
+        "river",
+        "rowing",
+        "China",
+        "Xuancheng",
+        "East Asia",
+        "colorful trees",
+        "nature",
+        "tranquil",
+        "serene",
+        "landscape",
+        "aerial view",
+        "fall colors",
+        "water reflection",
+        "outdoor activity",
+        "scenic",
+        "wildlife habitat",
+        "natural beauty"
+      ],
+      "color_palette": [
+        {
+          "hex": "#904850",
+          "name": "sienna",
+          "w": 0.26
+        },
+        {
+          "hex": "#9D6369",
+          "name": "gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#56343C",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#B07C80",
+          "name": "rosy brown",
+          "w": 0.16
+        },
+        {
+          "hex": "#ACA5B4",
+          "name": "dark gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
