@@ -138654,6 +138654,68 @@
   "StileCrossing_EN-US9052435517_UHD": {
     "date": "2026-11-05",
     "title": "Wooden stile at a stone wall, Black Crag, Lake District, England",
-    "bing_url": "https://www.bing.com/th?id=OHR.StileCrossing_EN-US9052435517_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.StileCrossing_EN-US9052435517_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ruins",
+        "landscape"
+      ],
+      "season": "autumn",
+      "country": "England",
+      "region": "Lake District",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image features a wooden stile leading over a dry stone wall, set against the backdrop of the rolling hills of the Lake District. The foreground shows the rugged texture of the stone wall and grassy terrain, while the background reveals distant mountains under a soft, pastel sky at dusk. The scene is tranquil, with gentle lighting that enhances the natural beauty of the landscape. Sparse trees are visible, adding to the rustic charm of the area.",
+      "search_text": "Explore the serene beauty of the Lake District in England, featuring a rustic wooden stile at a stone wall. This picturesque landscape captures the essence of autumn with rolling hills and distant mountains under a pastel dusk sky. Ideal for nature lovers and hikers, this scene showcases the rugged charm of rural England, perfect for outdoor adventures and scenic photography.",
+      "keywords": [
+        "stile",
+        "stone wall",
+        "Black Crag",
+        "Lake District",
+        "England",
+        "autumn",
+        "landscape",
+        "mountains",
+        "dusk",
+        "serene",
+        "nature",
+        "hiking",
+        "rural",
+        "scenic",
+        "outdoors",
+        "grass",
+        "rocky terrain",
+        "pastel sky",
+        "wooden",
+        "architecture"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5F5034",
+          "name": "dark olive green",
+          "w": 0.27
+        },
+        {
+          "hex": "#362E15",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#958072",
+          "name": "gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#E0BAAF",
+          "name": "light pink",
+          "w": 0.16
+        },
+        {
+          "hex": "#F1CEC1",
+          "name": "peach puff",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
