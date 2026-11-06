@@ -138721,6 +138721,67 @@
   "PipiwaiTrail_EN-US0631882545_UHD": {
     "date": "2026-11-06",
     "title": "Bamboo forest, P\u012bp\u012bwai Trail, Haleakal\u0101 National Park, Maui, Hawaii",
-    "bing_url": "https://www.bing.com/th?id=OHR.PipiwaiTrail_EN-US0631882545_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.PipiwaiTrail_EN-US0631882545_UHD.jpg",
+    "tags": {
+      "subject": [
+        "forest"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Hawaii",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image depicts a lush bamboo forest along the P\u012bp\u012bwai Trail in Haleakal\u0101 National Park, Maui. Towering bamboo stalks create a dense canopy overhead, allowing dappled sunlight to filter through, illuminating the vibrant green foliage. The ground is covered with a mix of rocks and fallen leaves, leading deeper into the forest. The scene conveys a sense of tranquility and natural beauty, inviting exploration and reflection.",
+      "search_text": "Explore the serene beauty of a bamboo forest along the P\u012bp\u012bwai Trail in Haleakal\u0101 National Park, Maui, Hawaii. This lush landscape features towering bamboo stalks and a tranquil pathway, perfect for nature lovers and hikers. Discover the vibrant greenery and dappled sunlight filtering through the canopy, creating a peaceful atmosphere. Ideal for those seeking outdoor adventures and stunning natural scenery.",
+      "keywords": [
+        "bamboo",
+        "forest",
+        "Haleakal\u0101 National Park",
+        "Maui",
+        "Hawaii",
+        "lush",
+        "greenery",
+        "nature",
+        "trail",
+        "serene",
+        "canopy",
+        "wildlife",
+        "flora",
+        "landscape",
+        "outdoors",
+        "pathway",
+        "sunlight",
+        "vegetation",
+        "tranquility",
+        "animal"
+      ],
+      "color_palette": [
+        {
+          "hex": "#252C11",
+          "name": "black",
+          "w": 0.27
+        },
+        {
+          "hex": "#101205",
+          "name": "black",
+          "w": 0.26
+        },
+        {
+          "hex": "#465024",
+          "name": "dark olive green",
+          "w": 0.21
+        },
+        {
+          "hex": "#717E3A",
+          "name": "olive drab",
+          "w": 0.15
+        },
+        {
+          "hex": "#9FB358",
+          "name": "dark khaki",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
