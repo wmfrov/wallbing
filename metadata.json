@@ -138787,6 +138787,66 @@
   "DakotaBison_EN-US0710175615_UHD": {
     "date": "2026-11-07",
     "title": "A bison in the grasslands of Theodore Roosevelt National Park, North Dakota",
-    "bing_url": "https://www.bing.com/th?id=OHR.DakotaBison_EN-US0710175615_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.DakotaBison_EN-US0710175615_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "North Dakota",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a close-up of a bison, showcasing its thick, shaggy fur and prominent horn. The background consists of golden grasslands typical of Theodore Roosevelt National Park, with a clear blue sky above. The bison's head is turned slightly, allowing for a detailed view of its facial features and texture. The lighting highlights the ruggedness of the bison's coat and the gentle undulations of the grass surrounding it.",
+      "search_text": "Explore the majestic American bison in the grasslands of Theodore Roosevelt National Park, North Dakota. This iconic wildlife species is known for its shaggy fur and powerful presence. Perfect for nature lovers and wildlife enthusiasts, this image captures the serene beauty of bison in their natural habitat. Discover more about these magnificent animals and the landscapes they inhabit, including their role in the ecosystem and conservation efforts.",
+      "keywords": [
+        "bison",
+        "American bison",
+        "animal",
+        "grasslands",
+        "North Dakota",
+        "wildlife",
+        "mammal",
+        "herbivore",
+        "nature",
+        "Theodore Roosevelt National Park",
+        "wild",
+        "furry",
+        "horned",
+        "grazing",
+        "landscape",
+        "daylight",
+        "serene",
+        "biodiversity",
+        "natural habitat"
+      ],
+      "color_palette": [
+        {
+          "hex": "#341A0F",
+          "name": "black",
+          "w": 0.26
+        },
+        {
+          "hex": "#785035",
+          "name": "saddle brown",
+          "w": 0.23
+        },
+        {
+          "hex": "#CC9562",
+          "name": "dark salmon",
+          "w": 0.22
+        },
+        {
+          "hex": "#EAB782",
+          "name": "burly wood",
+          "w": 0.19
+        },
+        {
+          "hex": "#E0D1BF",
+          "name": "light gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
