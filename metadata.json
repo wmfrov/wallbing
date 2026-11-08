@@ -138852,6 +138852,68 @@
   "DiwaliLamps_EN-US0788074051_UHD": {
     "date": "2026-11-08",
     "title": "Lanterns for Diwali, Mumbai, Maharashtra, India",
-    "bing_url": "https://www.bing.com/th?id=OHR.DiwaliLamps_EN-US0788074051_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.DiwaliLamps_EN-US0788074051_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "India",
+      "region": "Maharashtra",
+      "time_of_day": "night",
+      "mood": "vibrant",
+      "ai_description": "The image showcases a vibrant display of colorful lanterns, predominantly in shades of red and gold, typical of Diwali celebrations. Various lantern designs, including hexagonal and traditional styles, are illuminated, casting a warm glow. The background features decorative elements that enhance the festive atmosphere. The lotus-shaped lantern adds a unique touch, symbolizing purity and beauty, while the intricate patterns on the lanterns reflect traditional craftsmanship.",
+      "search_text": "Explore the vibrant lanterns of Diwali in Mumbai, Maharashtra, India. This festive display features traditional designs and colorful decorations, perfect for celebrating the festival of lights. Discover the beauty of illuminated lanterns, including unique lotus shapes and intricate patterns. Ideal for those interested in cultural celebrations, architecture, and festive decor, these lanterns symbolize joy and togetherness during the Diwali season.",
+      "keywords": [
+        "lanterns",
+        "Diwali",
+        "Mumbai",
+        "Maharashtra",
+        "festival",
+        "lighting",
+        "decorations",
+        "red",
+        "gold",
+        "lotus",
+        "architecture",
+        "celebration",
+        "traditional",
+        "festive",
+        "illumination",
+        "cultural",
+        "colorful",
+        "design",
+        "craftsmanship",
+        "city"
+      ],
+      "color_palette": [
+        {
+          "hex": "#42130B",
+          "name": "maroon",
+          "w": 0.3
+        },
+        {
+          "hex": "#9A1814",
+          "name": "firebrick",
+          "w": 0.24
+        },
+        {
+          "hex": "#BF4C2F",
+          "name": "sienna",
+          "w": 0.18
+        },
+        {
+          "hex": "#9B2D1C",
+          "name": "brown",
+          "w": 0.17
+        },
+        {
+          "hex": "#E58E4B",
+          "name": "peru",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
