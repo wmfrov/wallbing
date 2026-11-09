@@ -138919,6 +138919,69 @@
   "TrianaSpain_EN-US0872031458_UHD": {
     "date": "2026-11-09",
     "title": "Historic district of Triana, Seville, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.TrianaSpain_EN-US0872031458_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.TrianaSpain_EN-US0872031458_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bridge",
+        "river",
+        "city"
+      ],
+      "season": null,
+      "country": "Spain",
+      "region": "Southern Europe",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures the historic district of Triana in Seville, Spain, showcasing a beautifully illuminated bridge arching over a calm river. The foreground features cobblestone pavement, leading the viewer's eye towards the water's reflective surface, which mirrors the warm glow of street lamps. In the background, charming buildings line the riverbank, their facades softly lit against the twilight sky. The clouds add texture to the scene, creating a serene atmosphere as day transitions to night.",
+      "search_text": "Explore the historic district of Triana in Seville, Spain, featuring a stunning bridge over a tranquil river. This picturesque cityscape showcases beautiful architecture and cobblestone streets, illuminated by warm street lamps at dusk. Perfect for those interested in urban landscapes, historic landmarks, and serene evening scenes. Discover the charm of southern Europe and the vibrant culture of Seville through this captivating image.",
+      "keywords": [
+        "bridge",
+        "river",
+        "Seville",
+        "Triana",
+        "cobblestone",
+        "architecture",
+        "historic",
+        "twilight",
+        "cityscape",
+        "water",
+        "illumination",
+        "night",
+        "southern Europe",
+        "reflections",
+        "pavement",
+        "buildings",
+        "serene",
+        "landmark",
+        "urban",
+        "evening"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5E6583",
+          "name": "dim gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#214371",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#594A52",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#777991",
+          "name": "slate gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#A69E9A",
+          "name": "dark gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
