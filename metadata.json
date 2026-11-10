@@ -138987,6 +138987,67 @@
   "RoseIsland_EN-US0952497192_UHD": {
     "date": "2026-11-10",
     "title": "Aerial view of Rose Island, The Bahamas",
-    "bing_url": "https://www.bing.com/th?id=OHR.RoseIsland_EN-US0952497192_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.RoseIsland_EN-US0952497192_UHD.jpg",
+    "tags": {
+      "subject": [
+        "island",
+        "ocean"
+      ],
+      "season": null,
+      "country": "Bahamas",
+      "region": "Caribbean",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases an aerial view of Rose Island in the Bahamas, characterized by its long, narrow shape stretching into the turquoise ocean. The foreground features a sandy beach lined with lush green vegetation, while the background reveals the vibrant blue waters of the ocean. The island is partially covered with dense trees, creating a stark contrast against the sandy shores. The overall scene is tranquil, capturing the beauty of this tropical paradise under a clear sky.",
+      "search_text": "Explore the stunning aerial view of Rose Island in the Bahamas, a tropical paradise featuring beautiful turquoise waters and sandy beaches. This serene island is surrounded by the vibrant Caribbean Sea, making it a perfect destination for relaxation and nature lovers. Discover the lush greenery and coastal landscapes that define this idyllic getaway, ideal for vacations and scenic photography. Keywords include island, ocean, beach, and tropical paradise.",
+      "keywords": [
+        "Rose Island",
+        "Bahamas",
+        "tropical",
+        "ocean",
+        "turquoise waters",
+        "beach",
+        "vegetation",
+        "aerial view",
+        "island",
+        "serene",
+        "landscape",
+        "coastal",
+        "nature",
+        "Caribbean",
+        "sand",
+        "greenery",
+        "scenic",
+        "vacation",
+        "paradise"
+      ],
+      "color_palette": [
+        {
+          "hex": "#274031",
+          "name": "dark slate gray",
+          "w": 0.25
+        },
+        {
+          "hex": "#2E96AA",
+          "name": "light sea green",
+          "w": 0.25
+        },
+        {
+          "hex": "#24737D",
+          "name": "teal",
+          "w": 0.25
+        },
+        {
+          "hex": "#A8CAD6",
+          "name": "light steel blue",
+          "w": 0.14
+        },
+        {
+          "hex": "#89A8BB",
+          "name": "dark gray",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
