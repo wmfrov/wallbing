@@ -139053,6 +139053,67 @@
   "SunsetFlags_EN-US1046151448_UHD": {
     "date": "2026-11-11",
     "title": "American flags in a public park in upstate New York",
-    "bing_url": "https://www.bing.com/th?id=OHR.SunsetFlags_EN-US1046151448_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SunsetFlags_EN-US1046151448_UHD.jpg",
+    "tags": {
+      "subject": [
+        "garden"
+      ],
+      "season": "autumn",
+      "country": "United States",
+      "region": "Northeast",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image depicts a public park in upstate New York adorned with numerous American flags. The foreground features a carpet of fallen leaves in warm autumn hues, while the background showcases a tree with vibrant orange and yellow foliage. The sun is setting, casting a warm glow that creates long shadows across the grassy area. The flags are arranged in neat rows, contributing to a patriotic atmosphere.",
+      "search_text": "Explore a serene public park in upstate New York during autumn, featuring a stunning display of American flags. The scene captures the essence of fall with vibrant leaves and a warm sunset. Ideal for those interested in patriotic displays, seasonal landscapes, and community gatherings. Perfect for searching for autumn parks, flag displays, and scenic outdoor locations.",
+      "keywords": [
+        "American flags",
+        "public park",
+        "upstate New York",
+        "autumn leaves",
+        "tree",
+        "sunset",
+        "serene",
+        "garden",
+        "patriotic",
+        "fall colors",
+        "flag display",
+        "grass",
+        "landscape",
+        "outdoor",
+        "nature",
+        "seasonal",
+        "community",
+        "memorial",
+        "celebration",
+        "scenic"
+      ],
+      "color_palette": [
+        {
+          "hex": "#64411D",
+          "name": "saddle brown",
+          "w": 0.25
+        },
+        {
+          "hex": "#412108",
+          "name": "maroon",
+          "w": 0.22
+        },
+        {
+          "hex": "#B38952",
+          "name": "peru",
+          "w": 0.21
+        },
+        {
+          "hex": "#261708",
+          "name": "black",
+          "w": 0.21
+        },
+        {
+          "hex": "#5B220A",
+          "name": "maroon",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
