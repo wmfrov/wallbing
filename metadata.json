@@ -139119,6 +139119,69 @@
   "NorthWindow_EN-US1170338293_UHD": {
     "date": "2026-11-12",
     "title": "North Window, Arches National Park, Moab, Utah",
-    "bing_url": "https://www.bing.com/th?id=OHR.NorthWindow_EN-US1170338293_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.NorthWindow_EN-US1170338293_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "mountain",
+        "desert"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Western United States",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the North Window arch in Arches National Park, surrounded by striking red rock formations. In the foreground, the textured sandstone exhibits warm hues of orange and red, while the arch itself frames a view of the sky. The background features additional rock formations and distant mountains, creating a layered landscape. The sky is partly cloudy, adding depth to the scene with varying shades of blue and white.",
+      "search_text": "Explore the stunning North Window arch located in Arches National Park, Moab, Utah. This natural rock formation is a prime example of geological beauty, showcasing vibrant red sandstone and unique desert landscapes. Perfect for outdoor enthusiasts and photographers, this serene location offers breathtaking views of the surrounding mountains and sky. Discover the beauty of the Western United States and the adventures that await in this iconic national park.",
+      "keywords": [
+        "North Window",
+        "Arches National Park",
+        "Utah",
+        "red rock",
+        "sandstone",
+        "landscape",
+        "desert",
+        "mountain",
+        "natural arch",
+        "geological formations",
+        "outdoor",
+        "hiking",
+        "scenic",
+        "daylight",
+        "serene",
+        "rocky terrain",
+        "national park",
+        "nature",
+        "travel",
+        "adventure"
+      ],
+      "color_palette": [
+        {
+          "hex": "#6E362E",
+          "name": "saddle brown",
+          "w": 0.33
+        },
+        {
+          "hex": "#48241E",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#795352",
+          "name": "dim gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#7C9DC6",
+          "name": "corn flower blue",
+          "w": 0.14
+        },
+        {
+          "hex": "#CEB9AE",
+          "name": "silver",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
