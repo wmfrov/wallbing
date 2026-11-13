@@ -139187,6 +139187,69 @@
   "AbrahamCanada_EN-US3455540217_UHD": {
     "date": "2026-11-13",
     "title": "Abraham Lake in Alberta, Canada",
-    "bing_url": "https://www.bing.com/th?id=OHR.AbrahamCanada_EN-US3455540217_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.AbrahamCanada_EN-US3455540217_UHD.jpg",
+    "tags": {
+      "subject": [
+        "lake",
+        "mountain",
+        "ice"
+      ],
+      "season": "winter",
+      "country": "Canada",
+      "region": "North America",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures Abraham Lake in Alberta, Canada, during the winter season. In the foreground, a frozen lake is visible, with intricate patterns of ice creating a textured surface. The background features majestic mountains, partially covered in snow, under a vibrant dusk sky filled with hues of purple, pink, and blue. The overall atmosphere is calm and tranquil, highlighting the beauty of nature in a winter setting.",
+      "search_text": "Explore the serene beauty of Abraham Lake in Alberta, Canada, during winter at dusk. This stunning landscape features majestic mountains and a frozen lake with intricate ice patterns. Ideal for nature lovers and photographers, this picturesque scene captures the tranquility of winter with vibrant dusk colors. Perfect for searches related to winter landscapes, frozen lakes, and mountain scenery.",
+      "keywords": [
+        "Abraham Lake",
+        "Alberta",
+        "Canada",
+        "mountains",
+        "ice",
+        "frozen lake",
+        "winter",
+        "dusk",
+        "serene",
+        "landscape",
+        "nature",
+        "reflection",
+        "sky",
+        "snow",
+        "cold",
+        "outdoors",
+        "scenery",
+        "geological formations",
+        "tranquil",
+        "beautiful"
+      ],
+      "color_palette": [
+        {
+          "hex": "#05369E",
+          "name": "dark blue",
+          "w": 0.3
+        },
+        {
+          "hex": "#B88EDD",
+          "name": "plum",
+          "w": 0.28
+        },
+        {
+          "hex": "#4159CB",
+          "name": "royal blue",
+          "w": 0.18
+        },
+        {
+          "hex": "#00339C",
+          "name": "dark blue",
+          "w": 0.15
+        },
+        {
+          "hex": "#43389A",
+          "name": "dark slate blue",
+          "w": 0.09
+        }
+      ]
+    }
   }
 }
