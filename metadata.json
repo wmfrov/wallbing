@@ -139255,6 +139255,67 @@
   "BlueHK_EN-US7870996687_UHD": {
     "date": "2026-11-14",
     "title": "Victoria Harbour, Hong Kong, China",
-    "bing_url": "https://www.bing.com/th?id=OHR.BlueHK_EN-US7870996687_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BlueHK_EN-US7870996687_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "China",
+      "region": "East Asia",
+      "time_of_day": "dusk",
+      "mood": "vibrant",
+      "ai_description": "The image captures a stunning view of Victoria Harbour in Hong Kong during dusk. The skyline is filled with towering skyscrapers, illuminated by a myriad of lights reflecting off the water. In the foreground, the lush greenery of the hills contrasts with the urban landscape. The sky is a blend of deep blues and purples, with clouds hinting at the day's end. The harbor is dotted with boats, adding to the lively atmosphere of this bustling city.",
+      "search_text": "Explore the vibrant cityscape of Victoria Harbour in Hong Kong, China, showcasing stunning skyscrapers and a lively waterfront. This dusk view highlights the architectural beauty of urban buildings illuminated by city lights, with reflections on the water. Perfect for those interested in modern architecture, city views, and East Asian landscapes. Discover the nightlife and bustling atmosphere of one of the world's most iconic harbors.",
+      "keywords": [
+        "Victoria Harbour",
+        "Hong Kong",
+        "cityscape",
+        "skyscrapers",
+        "dusk",
+        "urban",
+        "architecture",
+        "lights",
+        "waterfront",
+        "East Asia",
+        "nightlife",
+        "landscape",
+        "modern",
+        "buildings",
+        "viewpoint",
+        "hills",
+        "reflection",
+        "boats",
+        "vibrant"
+      ],
+      "color_palette": [
+        {
+          "hex": "#3D3331",
+          "name": "dark slate gray",
+          "w": 0.28
+        },
+        {
+          "hex": "#1E1A19",
+          "name": "black",
+          "w": 0.22
+        },
+        {
+          "hex": "#524D4F",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#656569",
+          "name": "dim gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#8F8A81",
+          "name": "gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
