@@ -139321,6 +139321,67 @@
   "FirstFrost_EN-US8881008245_UHD": {
     "date": "2026-11-15",
     "title": "Frozen azalea with red leaves",
-    "bing_url": "https://www.bing.com/th?id=OHR.FirstFrost_EN-US8881008245_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FirstFrost_EN-US8881008245_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower"
+      ],
+      "season": "autumn",
+      "country": null,
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a close-up view of frozen azalea leaves, showcasing vibrant red hues contrasted by a delicate layer of frost. The leaves are glossy and have a rich texture, with the frost creating intricate patterns on their surfaces. In the background, hints of blurred foliage in warm autumn colors can be seen, enhancing the seasonal feel. The overall composition conveys a sense of tranquility and the beauty of nature in colder weather.",
+      "search_text": "Explore the beauty of frozen azalea flowers with vibrant red leaves covered in frost. This close-up image captures the intricate details of autumn foliage, showcasing the glossy texture and seasonal colors. Perfect for nature lovers, this serene depiction highlights the tranquility of colder weather and the stunning visual contrasts found in gardens during fall. Ideal for searches related to flowers, autumn leaves, and frozen plants.",
+      "keywords": [
+        "azalea",
+        "frozen",
+        "red leaves",
+        "flower",
+        "autumn",
+        "frost",
+        "nature",
+        "close-up",
+        "vibrant",
+        "glossy",
+        "texture",
+        "seasonal",
+        "foliage",
+        "beautiful",
+        "tranquil",
+        "plant",
+        "garden",
+        "leaves",
+        "colorful",
+        "serene"
+      ],
+      "color_palette": [
+        {
+          "hex": "#92635B",
+          "name": "dim gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#C1A6A6",
+          "name": "dark gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#693324",
+          "name": "saddle brown",
+          "w": 0.2
+        },
+        {
+          "hex": "#46291D",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#95372A",
+          "name": "brown",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
