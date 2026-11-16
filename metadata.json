@@ -139387,6 +139387,69 @@
   "GilaCliff_EN-US2139490645_UHD": {
     "date": "2026-11-16",
     "title": "Gila Cliff Dwellings National Monument, New Mexico",
-    "bing_url": "https://www.bing.com/th?id=OHR.GilaCliff_EN-US2139490645_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.GilaCliff_EN-US2139490645_UHD.jpg",
+    "tags": {
+      "subject": [
+        "cave",
+        "ruins",
+        "forest"
+      ],
+      "season": "summer",
+      "country": "United States",
+      "region": "Southwest",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the Gila Cliff Dwellings, a historical site nestled within a rocky cave. The foreground features stone steps leading into the dwellings, which are constructed from adobe bricks. In the background, a lush forest of pine trees stretches across the canyon, indicating a vibrant ecosystem. The clear blue sky above adds to the serene atmosphere, highlighting the natural beauty of the area. The interplay of light and shadow on the rock formations creates a striking visual contrast.",
+      "search_text": "Explore the Gila Cliff Dwellings National Monument in New Mexico, a remarkable archaeological site featuring ancient cave dwellings made of adobe. Nestled in a scenic canyon surrounded by lush pine forests, this historical landmark offers a glimpse into the lives of early inhabitants. Ideal for nature lovers and history enthusiasts, the area is perfect for exploration and photography, showcasing stunning rock formations and serene landscapes. Discover the rich cultural heritage and natural beauty of the Southwest.",
+      "keywords": [
+        "Gila Cliff Dwellings",
+        "New Mexico",
+        "cave",
+        "ruins",
+        "forest",
+        "adobe",
+        "steps",
+        "historical site",
+        "archaeology",
+        "landmark",
+        "Southwest",
+        "nature",
+        "landscape",
+        "rock formations",
+        "pine trees",
+        "canyon",
+        "daylight",
+        "serene",
+        "wildlife",
+        "exploration"
+      ],
+      "color_palette": [
+        {
+          "hex": "#342D22",
+          "name": "dark slate gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#6B553A",
+          "name": "dark olive green",
+          "w": 0.23
+        },
+        {
+          "hex": "#A68059",
+          "name": "peru",
+          "w": 0.22
+        },
+        {
+          "hex": "#C7A073",
+          "name": "dark khaki",
+          "w": 0.17
+        },
+        {
+          "hex": "#C0C9C4",
+          "name": "silver",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
