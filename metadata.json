@@ -139520,6 +139520,67 @@
   "BarnOwlsUnite_EN-US9661992435_UHD": {
     "date": "2026-11-18",
     "title": "Pair of barn owls",
-    "bing_url": "https://www.bing.com/th?id=OHR.BarnOwlsUnite_EN-US9661992435_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.BarnOwlsUnite_EN-US9661992435_UHD.jpg",
+    "tags": {
+      "subject": [
+        "bird",
+        "two_animals"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image features a pair of barn owls perched on a log, their feathers illuminated by the warm glow of dusk. One owl appears to be looking down, while the other faces it, creating an intimate moment between the two. The background is softly blurred, enhancing the focus on the owls. Their plumage displays a mix of browns and whites, with distinctive heart-shaped faces that are characteristic of barn owls.",
+      "search_text": "This image features a pair of barn owls, known scientifically as Tyto alba, perched on a log during dusk. The warm glow highlights their beautiful feathers, creating a serene atmosphere. Perfect for bird lovers and wildlife enthusiasts, this photograph captures the intimate moment between these two owls. Ideal for searches related to owls, birds, and nature photography.",
+      "keywords": [
+        "barn owl",
+        "Tyto alba",
+        "pair",
+        "animal",
+        "bird",
+        "perched",
+        "dusk",
+        "feathers",
+        "wood",
+        "nature",
+        "wildlife",
+        "serene",
+        "owl",
+        "glow",
+        "intimate",
+        "soft focus",
+        "photography",
+        "avian",
+        "twilight"
+      ],
+      "color_palette": [
+        {
+          "hex": "#202828",
+          "name": "dark slate gray",
+          "w": 0.31
+        },
+        {
+          "hex": "#3C382E",
+          "name": "dark slate gray",
+          "w": 0.21
+        },
+        {
+          "hex": "#352B21",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#4B4741",
+          "name": "dark slate gray",
+          "w": 0.18
+        },
+        {
+          "hex": "#846B49",
+          "name": "dim gray",
+          "w": 0.1
+        }
+      ]
+    }
   }
 }
