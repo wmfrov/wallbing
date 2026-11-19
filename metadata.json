@@ -139586,6 +139586,67 @@
   "KnowledgeSculpture_EN-US9746703110_UHD": {
     "date": "2026-11-19",
     "title": "The \"Body of Knowledge\" sculpture by Jaume Plensa at Goethe University in Frankfurt, Germany",
-    "bing_url": "https://www.bing.com/th?id=OHR.KnowledgeSculpture_EN-US9746703110_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.KnowledgeSculpture_EN-US9746703110_UHD.jpg",
+    "tags": {
+      "subject": [
+        "architecture"
+      ],
+      "season": null,
+      "country": "Germany",
+      "region": "Western Europe",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a striking sculpture titled 'Body of Knowledge' by Jaume Plensa, located at Goethe University in Frankfurt, Germany. The sculpture is composed of numerous metallic letters and symbols, creating an intricate web-like structure against a clear blue sky. The foreground showcases the reflective surfaces of the letters, while the background is dominated by the vibrant blue, enhancing the sculpture's ethereal quality. The arrangement of the letters suggests a sense of interconnectedness and communication.",
+      "search_text": "Explore the 'Body of Knowledge' sculpture by Jaume Plensa at Goethe University in Frankfurt, Germany. This modern art installation features a web of metallic letters and symbols, representing interconnectedness and communication. Ideal for those interested in contemporary architecture, public art, and abstract design. Discover the beauty of this unique outdoor sculpture set against a vibrant blue sky, showcasing reflective surfaces and cultural expression.",
+      "keywords": [
+        "Jaume Plensa",
+        "Body of Knowledge",
+        "sculpture",
+        "metal letters",
+        "Goethe University",
+        "Frankfurt",
+        "Germany",
+        "art installation",
+        "architecture",
+        "modern art",
+        "abstract",
+        "symbolism",
+        "interconnectedness",
+        "blue sky",
+        "outdoor sculpture",
+        "public art",
+        "contemporary",
+        "design",
+        "reflective surfaces",
+        "cultural expression"
+      ],
+      "color_palette": [
+        {
+          "hex": "#6291C6",
+          "name": "steel blue",
+          "w": 0.24
+        },
+        {
+          "hex": "#A2ABB6",
+          "name": "dark gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#175288",
+          "name": "teal",
+          "w": 0.2
+        },
+        {
+          "hex": "#6D7989",
+          "name": "slate gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#2876B5",
+          "name": "steel blue",
+          "w": 0.15
+        }
+      ]
+    }
   }
 }
