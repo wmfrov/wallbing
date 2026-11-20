@@ -139652,6 +139652,68 @@
   "Megaptera_EN-US1728719939_UHD": {
     "date": "2026-11-20",
     "title": "Diving humpback whale, Kvaloya, Troms, Northern Norway",
-    "bing_url": "https://www.bing.com/th?id=OHR.Megaptera_EN-US1728719939_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.Megaptera_EN-US1728719939_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "animal"
+      ],
+      "season": null,
+      "country": "Norway",
+      "region": "Northern Norway",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a diving humpback whale in the ocean, with its distinctive tail fin breaking the surface of the water. The background features a soft gradient of colors as the sun sets, casting a warm glow across the scene. The whale's dark body contrasts beautifully with the shimmering water. The tranquil atmosphere is enhanced by the calm sea and the fading light of dusk.",
+      "search_text": "Explore the beauty of a diving humpback whale in the ocean during sunset. This serene image captures the majestic marine life of Norway, specifically in Troms and Kvaloya. The whale's tail fin is prominently displayed against the tranquil waters, creating a picturesque scene. Perfect for those interested in wildlife photography, marine animals, and the natural beauty of the ocean at dusk.",
+      "keywords": [
+        "humpback whale",
+        "whale",
+        "ocean",
+        "diving",
+        "sunset",
+        "marine life",
+        "animal",
+        "Norway",
+        "Troms",
+        "Kvaloya",
+        "serene",
+        "water",
+        "sea",
+        "nature",
+        "wildlife",
+        "mammal",
+        "marine",
+        "aquatic",
+        "tail fin",
+        "dusk"
+      ],
+      "color_palette": [
+        {
+          "hex": "#A38FB3",
+          "name": "dark gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#444867",
+          "name": "dark slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#BFA4C3",
+          "name": "silver",
+          "w": 0.2
+        },
+        {
+          "hex": "#B8ABC8",
+          "name": "silver",
+          "w": 0.18
+        },
+        {
+          "hex": "#BB9DC1",
+          "name": "dark gray",
+          "w": 0.17
+        }
+      ]
+    }
   }
 }
