@@ -139719,6 +139719,68 @@
   "RedNice_EN-US9978351403_UHD": {
     "date": "2026-11-21",
     "title": "Nice, Provence-Alpes-C\u00f4te d'Azur, France",
-    "bing_url": "https://www.bing.com/th?id=OHR.RedNice_EN-US9978351403_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.RedNice_EN-US9978351403_UHD.jpg",
+    "tags": {
+      "subject": [
+        "city",
+        "architecture"
+      ],
+      "season": null,
+      "country": "France",
+      "region": "Provence-Alpes-C\u00f4te d'Azur",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image captures a panoramic view of Nice, showcasing a vibrant cityscape with terracotta rooftops. In the foreground, various buildings exhibit a mix of architectural styles, including a prominent dome structure. The background features a gentle slope leading to the hills, with the Mediterranean Sea glistening in the distance. The sky is painted in warm hues of orange and pink, indicating sunset, which adds a serene ambiance to the scene.",
+      "search_text": "Explore the beautiful city of Nice in Provence-Alpes-C\u00f4te d'Azur, France, known for its stunning architecture and vibrant cityscape. This panoramic view showcases the iconic terracotta rooftops and the Mediterranean Sea at sunset. Discover the blend of historical and modern buildings, including notable dome structures, all set against the backdrop of gentle hills. Perfect for travelers seeking picturesque urban landscapes and serene coastal views.",
+      "keywords": [
+        "Nice",
+        "France",
+        "Provence-Alpes-C\u00f4te d'Azur",
+        "cityscape",
+        "architecture",
+        "terracotta rooftops",
+        "Mediterranean Sea",
+        "sunset",
+        "dome",
+        "buildings",
+        "urban",
+        "landscape",
+        "hills",
+        "coastal",
+        "vibrant",
+        "serene",
+        "view",
+        "sky",
+        "panorama",
+        "travel"
+      ],
+      "color_palette": [
+        {
+          "hex": "#91522F",
+          "name": "sienna",
+          "w": 0.28
+        },
+        {
+          "hex": "#484949",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#927356",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#F5C180",
+          "name": "burly wood",
+          "w": 0.14
+        },
+        {
+          "hex": "#BD996E",
+          "name": "dark khaki",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
