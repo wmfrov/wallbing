@@ -139786,6 +139786,69 @@
   "JustaHermitage_EN-US0130271816_UHD": {
     "date": "2026-11-22",
     "title": "The chapel and hermitage of Santa Justa in Cantabria, Spain",
-    "bing_url": "https://www.bing.com/th?id=OHR.JustaHermitage_EN-US0130271816_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.JustaHermitage_EN-US0130271816_UHD.jpg",
+    "tags": {
+      "subject": [
+        "ocean",
+        "landscape",
+        "architecture"
+      ],
+      "season": null,
+      "country": "Spain",
+      "region": "Cantabria",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image depicts a rugged coastal landscape in Cantabria, Spain, featuring the chapel and hermitage of Santa Justa perched on a cliff. The foreground showcases crashing waves against rocky outcrops, while the background features a dramatic sky with soft clouds transitioning into dusk. The structure on the cliff is made of stone, blending harmoniously with the natural surroundings. The overall scene conveys a sense of tranquility and isolation, enhanced by the muted colors of the evening light.",
+      "search_text": "Explore the serene coastal landscape of Cantabria, Spain, featuring the historic chapel and hermitage of Santa Justa. This picturesque scene showcases crashing ocean waves against rocky cliffs, with a dramatic sky at dusk. Perfect for those interested in coastal architecture, natural landscapes, and tranquil settings. Discover the beauty of Spain's coastline, where history meets nature in a stunning visual experience.",
+      "keywords": [
+        "Santa Justa",
+        "chapel",
+        "hermitage",
+        "Cantabria",
+        "Spain",
+        "coast",
+        "ocean",
+        "waves",
+        "rocky",
+        "landscape",
+        "dusk",
+        "architecture",
+        "cliff",
+        "serene",
+        "sky",
+        "clouds",
+        "natural",
+        "scenic",
+        "historic",
+        "building"
+      ],
+      "color_palette": [
+        {
+          "hex": "#505765",
+          "name": "dim gray",
+          "w": 0.26
+        },
+        {
+          "hex": "#30241E",
+          "name": "dark slate gray",
+          "w": 0.24
+        },
+        {
+          "hex": "#7A8498",
+          "name": "light slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#A7ADBC",
+          "name": "dark gray",
+          "w": 0.15
+        },
+        {
+          "hex": "#C9C9D1",
+          "name": "light gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
