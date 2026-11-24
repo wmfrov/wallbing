@@ -139854,6 +139854,68 @@
   "FibonacciFern_EN-US6307771770_UHD": {
     "date": "2026-11-23",
     "title": "Fiddlehead fern",
-    "bing_url": "https://www.bing.com/th?id=OHR.FibonacciFern_EN-US6307771770_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FibonacciFern_EN-US6307771770_UHD.jpg",
+    "tags": {
+      "subject": [
+        "flower",
+        "garden"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": null,
+      "mood": "serene",
+      "ai_description": "The image features a close-up of a fiddlehead fern, showcasing its distinctive coiled shape. The vibrant green fronds are adorned with tiny, textured buds that add depth to the composition. The background is dark, which enhances the brightness of the fern and creates a striking contrast. The intricate patterns of the fern's surface are highlighted, emphasizing its natural beauty and delicate structure.",
+      "search_text": "Explore the beauty of fiddlehead ferns, known for their unique spiral shape and vibrant green color. These ferns are often found in gardens and natural settings, showcasing intricate textures and patterns. Perfect for nature lovers and botanical enthusiasts, this close-up image captures the delicate growth stages of ferns, highlighting their organic beauty. Ideal for searches related to plants, flora, and garden aesthetics.",
+      "keywords": [
+        "fiddlehead fern",
+        "fern",
+        "green",
+        "spiral",
+        "bud",
+        "plant",
+        "flora",
+        "garden",
+        "nature",
+        "botanical",
+        "close-up",
+        "texture",
+        "leaf",
+        "growth",
+        "vegetation",
+        "tropical",
+        "serene",
+        "organic",
+        "outdoors",
+        "blooming"
+      ],
+      "color_palette": [
+        {
+          "hex": "#0A0A05",
+          "name": "black",
+          "w": 0.27
+        },
+        {
+          "hex": "#A0AD38",
+          "name": "yellow green",
+          "w": 0.25
+        },
+        {
+          "hex": "#040503",
+          "name": "black",
+          "w": 0.21
+        },
+        {
+          "hex": "#1C2308",
+          "name": "black",
+          "w": 0.14
+        },
+        {
+          "hex": "#080705",
+          "name": "black",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
