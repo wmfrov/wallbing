@@ -139921,6 +139921,68 @@
   "CairngormsSquirrel_EN-US7053432564_UHD": {
     "date": "2026-11-24",
     "title": "Red squirrel in Cairngorms National Park, Highlands, Scotland",
-    "bing_url": "https://www.bing.com/th?id=OHR.CairngormsSquirrel_EN-US7053432564_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.CairngormsSquirrel_EN-US7053432564_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "forest"
+      ],
+      "season": "autumn",
+      "country": "Scotland",
+      "region": "Highlands",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features a red squirrel perched on a tree branch amidst a vibrant autumn backdrop. The leaves are a striking orange, creating a warm and inviting atmosphere. The squirrel, with its bushy tail and alert posture, blends harmoniously with the surrounding foliage. The tree trunk is textured with moss, adding depth to the scene. Soft sunlight filters through the leaves, enhancing the serene mood of the forest.",
+      "search_text": "This image showcases a red squirrel in the beautiful autumn landscape of Cairngorms National Park in the Highlands of Scotland. The vibrant orange leaves create a stunning backdrop, highlighting the squirrel's natural habitat. Perfect for nature lovers and wildlife enthusiasts, this scene captures the essence of a serene forest day. Search for red squirrels, autumn foliage, and serene woodland landscapes to find similar images.",
+      "keywords": [
+        "red squirrel",
+        "Sciurus vulgaris",
+        "autumn leaves",
+        "orange foliage",
+        "tree branch",
+        "forest",
+        "Cairngorms National Park",
+        "Highlands",
+        "animal",
+        "nature",
+        "wildlife",
+        "moss",
+        "bushy tail",
+        "serene",
+        "day",
+        "scenic",
+        "outdoors",
+        "woodland",
+        "squirrel",
+        "bark"
+      ],
+      "color_palette": [
+        {
+          "hex": "#51300A",
+          "name": "saddle brown",
+          "w": 0.28
+        },
+        {
+          "hex": "#8F450E",
+          "name": "saddle brown",
+          "w": 0.22
+        },
+        {
+          "hex": "#B0681D",
+          "name": "sienna",
+          "w": 0.21
+        },
+        {
+          "hex": "#C88427",
+          "name": "peru",
+          "w": 0.17
+        },
+        {
+          "hex": "#E0A437",
+          "name": "golden rod",
+          "w": 0.12
+        }
+      ]
+    }
   }
 }
