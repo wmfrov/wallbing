@@ -139988,6 +139988,69 @@
   "SunsetPoint_EN-US0827880440_UHD": {
     "date": "2026-11-25",
     "title": "Sunset Point, Bryce Canyon National Park, Utah",
-    "bing_url": "https://www.bing.com/th?id=OHR.SunsetPoint_EN-US0827880440_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.SunsetPoint_EN-US0827880440_UHD.jpg",
+    "tags": {
+      "subject": [
+        "mountain",
+        "snow",
+        "ruins"
+      ],
+      "season": "winter",
+      "country": "United States",
+      "region": "Western United States",
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image showcases the stunning landscape of Bryce Canyon National Park, characterized by its unique rock formations known as hoodoos. These formations are blanketed in a fresh layer of snow, creating a stark contrast against the warm hues of the rocks. The foreground features rolling snowy hills dotted with evergreen trees, while the background reveals towering cliffs shrouded in mist. The overall atmosphere is tranquil and picturesque, highlighting the beauty of winter in this iconic national park.",
+      "search_text": "Explore the breathtaking winter landscape of Bryce Canyon National Park in Utah, featuring iconic hoodoo rock formations covered in snow. This serene mountain scene captures the beauty of nature in winter, with rolling hills and evergreen trees. Perfect for those interested in outdoor photography, national parks, and geological wonders, this image showcases the stunning contrasts of white snow against warm rock colors, making it an ideal choice for winter landscapes and travel enthusiasts.",
+      "keywords": [
+        "Bryce Canyon",
+        "Utah",
+        "hoodoos",
+        "snow",
+        "winter",
+        "landscape",
+        "mountains",
+        "evergreen trees",
+        "rock formations",
+        "national park",
+        "serene",
+        "nature",
+        "outdoors",
+        "scenic",
+        "travel",
+        "photography",
+        "geological formations",
+        "frozen",
+        "white",
+        "blue sky"
+      ],
+      "color_palette": [
+        {
+          "hex": "#717A93",
+          "name": "slate gray",
+          "w": 0.31
+        },
+        {
+          "hex": "#9095A6",
+          "name": "light slate gray",
+          "w": 0.2
+        },
+        {
+          "hex": "#4B4653",
+          "name": "dark slate gray",
+          "w": 0.19
+        },
+        {
+          "hex": "#B7B7BD",
+          "name": "silver",
+          "w": 0.15
+        },
+        {
+          "hex": "#D5CDC9",
+          "name": "light gray",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
