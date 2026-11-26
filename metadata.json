@@ -140056,6 +140056,68 @@
   "WildTom_EN-US1069249609_UHD": {
     "date": "2026-11-26",
     "title": "Two wild tom turkeys",
-    "bing_url": "https://www.bing.com/th?id=OHR.WildTom_EN-US1069249609_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.WildTom_EN-US1069249609_UHD.jpg",
+    "tags": {
+      "subject": [
+        "animal",
+        "bird",
+        "two_animals"
+      ],
+      "season": null,
+      "country": null,
+      "region": null,
+      "time_of_day": "day",
+      "mood": "serene",
+      "ai_description": "The image features two wild tom turkeys displaying their impressive plumage. They are positioned in the foreground, showcasing their vibrant feathers and distinctive colors. The background includes a blurred landscape with trees and soft lighting, suggesting a calm day. The turkeys are standing on grass, with some rocks visible nearby, adding texture to the scene.",
+      "search_text": "Explore the beauty of wild turkeys in their natural habitat. This image captures a pair of male wild turkeys, known for their vibrant plumage and striking appearance. Perfect for nature lovers, wildlife enthusiasts, and anyone interested in birds. The serene setting highlights the turkeys' display behavior, making it an ideal representation of outdoor wildlife. Search for wild turkey images, bird photography, and animal encounters in nature.",
+      "keywords": [
+        "wild turkey",
+        "Meleagris gallopavo",
+        "bird",
+        "animal",
+        "pair",
+        "feathers",
+        "plumage",
+        "nature",
+        "grass",
+        "outdoor",
+        "wildlife",
+        "display",
+        "serene",
+        "daytime",
+        "turkey",
+        "male turkey",
+        "colorful",
+        "landscape",
+        "rural"
+      ],
+      "color_palette": [
+        {
+          "hex": "#5A443D",
+          "name": "dark olive green",
+          "w": 0.28
+        },
+        {
+          "hex": "#7C695E",
+          "name": "dim gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#2B292C",
+          "name": "dark slate gray",
+          "w": 0.22
+        },
+        {
+          "hex": "#9C8F82",
+          "name": "gray",
+          "w": 0.16
+        },
+        {
+          "hex": "#D8B496",
+          "name": "tan",
+          "w": 0.11
+        }
+      ]
+    }
   }
 }
