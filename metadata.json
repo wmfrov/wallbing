@@ -140123,6 +140123,69 @@
   "FaceCanyon_EN-US6254374163_UHD": {
     "date": "2026-11-27",
     "title": "Butte at sunset, Face Canyon, Lake Powell, Utah",
-    "bing_url": "https://www.bing.com/th?id=OHR.FaceCanyon_EN-US6254374163_UHD.jpg"
+    "bing_url": "https://www.bing.com/th?id=OHR.FaceCanyon_EN-US6254374163_UHD.jpg",
+    "tags": {
+      "subject": [
+        "landscape",
+        "lake",
+        "mountain"
+      ],
+      "season": null,
+      "country": "United States",
+      "region": "Western United States",
+      "time_of_day": "dusk",
+      "mood": "serene",
+      "ai_description": "The image showcases a stunning sunset over Lake Powell, with vibrant hues of orange, pink, and purple illuminating the sky. In the foreground, the calm waters of the lake reflect the colorful sky, while the rugged buttes and cliffs of Face Canyon rise majestically in the background. The geological formations display layers of sedimentary rock, creating a striking contrast against the soft colors of the sunset. The overall atmosphere is peaceful and tranquil, inviting viewers to appreciate the natural beauty of this iconic landscape.",
+      "search_text": "Explore the breathtaking beauty of Lake Powell in Utah, featuring stunning sunsets over the rugged buttes and cliffs of Face Canyon. This serene landscape captures the vibrant colors of dusk reflecting on the calm waters of the lake. Ideal for nature lovers, photographers, and travelers seeking picturesque views of geological formations and tranquil outdoor settings. Discover the unique charm of this iconic destination in the Western United States.",
+      "keywords": [
+        "Lake Powell",
+        "Utah",
+        "sunset",
+        "butte",
+        "canyon",
+        "landscape",
+        "mountain",
+        "water",
+        "reflection",
+        "serene",
+        "geological formations",
+        "sedimentary rock",
+        "dusk",
+        "vibrant colors",
+        "nature",
+        "tranquil",
+        "outdoors",
+        "scenic",
+        "travel",
+        "photography"
+      ],
+      "color_palette": [
+        {
+          "hex": "#99746F",
+          "name": "gray",
+          "w": 0.27
+        },
+        {
+          "hex": "#6B5148",
+          "name": "dim gray",
+          "w": 0.23
+        },
+        {
+          "hex": "#9E5E55",
+          "name": "sienna",
+          "w": 0.23
+        },
+        {
+          "hex": "#A5867E",
+          "name": "rosy brown",
+          "w": 0.15
+        },
+        {
+          "hex": "#DAA588",
+          "name": "tan",
+          "w": 0.13
+        }
+      ]
+    }
   }
 }
